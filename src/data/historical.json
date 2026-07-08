@@ -50,165 +50,165 @@
         },
         {
           "minute": 5,
-          "groupA": 0.985,
-          "groupB": 0.993,
-          "groupAUpper": 1.005,
-          "groupALower": 0.965,
-          "groupBUpper": 1.013,
-          "groupBLower": 0.973
+          "groupA": 0.992,
+          "groupB": 0.991,
+          "groupAUpper": 1.012,
+          "groupALower": 0.972,
+          "groupBUpper": 1.011,
+          "groupBLower": 0.971
         },
         {
           "minute": 10,
-          "groupA": 0.977,
-          "groupB": 0.983,
-          "groupAUpper": 0.997,
-          "groupALower": 0.957,
-          "groupBUpper": 1.003,
-          "groupBLower": 0.963
+          "groupA": 0.98,
+          "groupB": 0.982,
+          "groupAUpper": 1.0,
+          "groupALower": 0.96,
+          "groupBUpper": 1.002,
+          "groupBLower": 0.962
         },
         {
           "minute": 15,
-          "groupA": 0.969,
-          "groupB": 0.969,
-          "groupAUpper": 0.989,
-          "groupALower": 0.949,
-          "groupBUpper": 0.989,
-          "groupBLower": 0.949
+          "groupA": 0.973,
+          "groupB": 0.973,
+          "groupAUpper": 0.993,
+          "groupALower": 0.953,
+          "groupBUpper": 0.993,
+          "groupBLower": 0.953
         },
         {
           "minute": 20,
-          "groupA": 0.954,
-          "groupB": 0.961,
-          "groupAUpper": 0.974,
-          "groupALower": 0.934,
-          "groupBUpper": 0.981,
-          "groupBLower": 0.941
+          "groupA": 0.96,
+          "groupB": 0.965,
+          "groupAUpper": 0.98,
+          "groupALower": 0.94,
+          "groupBUpper": 0.985,
+          "groupBLower": 0.945
         },
         {
           "minute": 25,
-          "groupA": 0.947,
-          "groupB": 0.948,
-          "groupAUpper": 0.967,
-          "groupALower": 0.927,
-          "groupBUpper": 0.968,
-          "groupBLower": 0.928
+          "groupA": 0.945,
+          "groupB": 0.956,
+          "groupAUpper": 0.965,
+          "groupALower": 0.925,
+          "groupBUpper": 0.976,
+          "groupBLower": 0.936
         },
         {
           "minute": 30,
-          "groupA": 0.939,
-          "groupB": 0.934,
-          "groupAUpper": 0.959,
-          "groupALower": 0.919,
-          "groupBUpper": 0.954,
-          "groupBLower": 0.914
+          "groupA": 0.936,
+          "groupB": 0.947,
+          "groupAUpper": 0.956,
+          "groupALower": 0.916,
+          "groupBUpper": 0.967,
+          "groupBLower": 0.927
         },
         {
           "minute": 35,
           "groupA": 0.927,
-          "groupB": 0.92,
+          "groupB": 0.935,
           "groupAUpper": 0.947,
           "groupALower": 0.907,
-          "groupBUpper": 0.94,
-          "groupBLower": 0.9
+          "groupBUpper": 0.955,
+          "groupBLower": 0.915
         },
         {
           "minute": 40,
-          "groupA": 0.92,
+          "groupA": 0.917,
+          "groupB": 0.925,
+          "groupAUpper": 0.937,
+          "groupALower": 0.897,
+          "groupBUpper": 0.945,
+          "groupBLower": 0.905
+        },
+        {
+          "minute": 45,
+          "groupA": 0.904,
+          "groupB": 0.911,
+          "groupAUpper": 0.924,
+          "groupALower": 0.884,
+          "groupBUpper": 0.931,
+          "groupBLower": 0.891
+        },
+        {
+          "minute": 50,
+          "groupA": 0.897,
           "groupB": 0.905,
-          "groupAUpper": 0.94,
-          "groupALower": 0.9,
+          "groupAUpper": 0.917,
+          "groupALower": 0.877,
           "groupBUpper": 0.925,
           "groupBLower": 0.885
         },
         {
-          "minute": 45,
-          "groupA": 0.914,
-          "groupB": 0.9,
-          "groupAUpper": 0.934,
-          "groupALower": 0.894,
-          "groupBUpper": 0.92,
-          "groupBLower": 0.88
-        },
-        {
-          "minute": 50,
-          "groupA": 0.906,
-          "groupB": 0.888,
-          "groupAUpper": 0.926,
-          "groupALower": 0.886,
-          "groupBUpper": 0.908,
-          "groupBLower": 0.868
-        },
-        {
           "minute": 55,
-          "groupA": 0.897,
-          "groupB": 0.874,
-          "groupAUpper": 0.917,
-          "groupALower": 0.877,
-          "groupBUpper": 0.894,
-          "groupBLower": 0.854
+          "groupA": 0.888,
+          "groupB": 0.894,
+          "groupAUpper": 0.908,
+          "groupALower": 0.868,
+          "groupBUpper": 0.914,
+          "groupBLower": 0.874
         },
         {
           "minute": 60,
-          "groupA": 0.89,
-          "groupB": 0.864,
-          "groupAUpper": 0.91,
-          "groupALower": 0.87,
-          "groupBUpper": 0.884,
-          "groupBLower": 0.844
+          "groupA": 0.877,
+          "groupB": 0.882,
+          "groupAUpper": 0.897,
+          "groupALower": 0.857,
+          "groupBUpper": 0.902,
+          "groupBLower": 0.862
         },
         {
           "minute": 65,
-          "groupA": 0.877,
-          "groupB": 0.853,
-          "groupAUpper": 0.897,
-          "groupALower": 0.857,
-          "groupBUpper": 0.873,
-          "groupBLower": 0.833
+          "groupA": 0.871,
+          "groupB": 0.875,
+          "groupAUpper": 0.891,
+          "groupALower": 0.851,
+          "groupBUpper": 0.895,
+          "groupBLower": 0.855
         },
         {
           "minute": 70,
-          "groupA": 0.863,
-          "groupB": 0.84,
-          "groupAUpper": 0.883,
-          "groupALower": 0.843,
-          "groupBUpper": 0.86,
-          "groupBLower": 0.82
+          "groupA": 0.856,
+          "groupB": 0.863,
+          "groupAUpper": 0.876,
+          "groupALower": 0.836,
+          "groupBUpper": 0.883,
+          "groupBLower": 0.843
         },
         {
           "minute": 75,
-          "groupA": 0.848,
-          "groupB": 0.829,
-          "groupAUpper": 0.868,
-          "groupALower": 0.828,
-          "groupBUpper": 0.849,
-          "groupBLower": 0.809
+          "groupA": 0.845,
+          "groupB": 0.851,
+          "groupAUpper": 0.865,
+          "groupALower": 0.825,
+          "groupBUpper": 0.871,
+          "groupBLower": 0.831
         },
         {
           "minute": 80,
-          "groupA": 0.842,
-          "groupB": 0.82,
-          "groupAUpper": 0.862,
-          "groupALower": 0.822,
-          "groupBUpper": 0.84,
-          "groupBLower": 0.8
+          "groupA": 0.835,
+          "groupB": 0.843,
+          "groupAUpper": 0.855,
+          "groupALower": 0.815,
+          "groupBUpper": 0.863,
+          "groupBLower": 0.823
         },
         {
           "minute": 85,
-          "groupA": 0.833,
-          "groupB": 0.814,
-          "groupAUpper": 0.853,
-          "groupALower": 0.813,
-          "groupBUpper": 0.834,
-          "groupBLower": 0.794
+          "groupA": 0.821,
+          "groupB": 0.834,
+          "groupAUpper": 0.841,
+          "groupALower": 0.801,
+          "groupBUpper": 0.854,
+          "groupBLower": 0.814
         },
         {
           "minute": 90,
-          "groupA": 0.824,
-          "groupB": 0.8,
-          "groupAUpper": 0.844,
-          "groupALower": 0.804,
-          "groupBUpper": 0.82,
-          "groupBLower": 0.78
+          "groupA": 0.814,
+          "groupB": 0.822,
+          "groupAUpper": 0.834,
+          "groupALower": 0.794,
+          "groupBUpper": 0.842,
+          "groupBLower": 0.802
         }
       ],
       "logRankP": 0.5112,
@@ -296,165 +296,165 @@
         },
         {
           "minute": 5,
-          "groupA": 0.985,
-          "groupB": 0.993,
-          "groupAUpper": 1.005,
-          "groupALower": 0.965,
-          "groupBUpper": 1.013,
-          "groupBLower": 0.973
+          "groupA": 0.992,
+          "groupB": 0.991,
+          "groupAUpper": 1.012,
+          "groupALower": 0.972,
+          "groupBUpper": 1.011,
+          "groupBLower": 0.971
         },
         {
           "minute": 10,
-          "groupA": 0.977,
-          "groupB": 0.983,
-          "groupAUpper": 0.997,
-          "groupALower": 0.957,
-          "groupBUpper": 1.003,
-          "groupBLower": 0.963
+          "groupA": 0.98,
+          "groupB": 0.982,
+          "groupAUpper": 1.0,
+          "groupALower": 0.96,
+          "groupBUpper": 1.002,
+          "groupBLower": 0.962
         },
         {
           "minute": 15,
-          "groupA": 0.969,
-          "groupB": 0.969,
-          "groupAUpper": 0.989,
-          "groupALower": 0.949,
-          "groupBUpper": 0.989,
-          "groupBLower": 0.949
+          "groupA": 0.973,
+          "groupB": 0.973,
+          "groupAUpper": 0.993,
+          "groupALower": 0.953,
+          "groupBUpper": 0.993,
+          "groupBLower": 0.953
         },
         {
           "minute": 20,
-          "groupA": 0.954,
-          "groupB": 0.961,
-          "groupAUpper": 0.974,
-          "groupALower": 0.934,
-          "groupBUpper": 0.981,
-          "groupBLower": 0.941
+          "groupA": 0.96,
+          "groupB": 0.965,
+          "groupAUpper": 0.98,
+          "groupALower": 0.94,
+          "groupBUpper": 0.985,
+          "groupBLower": 0.945
         },
         {
           "minute": 25,
-          "groupA": 0.947,
-          "groupB": 0.948,
-          "groupAUpper": 0.967,
-          "groupALower": 0.927,
-          "groupBUpper": 0.968,
-          "groupBLower": 0.928
+          "groupA": 0.945,
+          "groupB": 0.956,
+          "groupAUpper": 0.965,
+          "groupALower": 0.925,
+          "groupBUpper": 0.976,
+          "groupBLower": 0.936
         },
         {
           "minute": 30,
-          "groupA": 0.939,
-          "groupB": 0.934,
-          "groupAUpper": 0.959,
-          "groupALower": 0.919,
-          "groupBUpper": 0.954,
-          "groupBLower": 0.914
+          "groupA": 0.936,
+          "groupB": 0.947,
+          "groupAUpper": 0.956,
+          "groupALower": 0.916,
+          "groupBUpper": 0.967,
+          "groupBLower": 0.927
         },
         {
           "minute": 35,
           "groupA": 0.927,
-          "groupB": 0.92,
+          "groupB": 0.935,
           "groupAUpper": 0.947,
           "groupALower": 0.907,
-          "groupBUpper": 0.94,
-          "groupBLower": 0.9
+          "groupBUpper": 0.955,
+          "groupBLower": 0.915
         },
         {
           "minute": 40,
-          "groupA": 0.92,
+          "groupA": 0.917,
+          "groupB": 0.925,
+          "groupAUpper": 0.937,
+          "groupALower": 0.897,
+          "groupBUpper": 0.945,
+          "groupBLower": 0.905
+        },
+        {
+          "minute": 45,
+          "groupA": 0.904,
+          "groupB": 0.911,
+          "groupAUpper": 0.924,
+          "groupALower": 0.884,
+          "groupBUpper": 0.931,
+          "groupBLower": 0.891
+        },
+        {
+          "minute": 50,
+          "groupA": 0.897,
           "groupB": 0.905,
-          "groupAUpper": 0.94,
-          "groupALower": 0.9,
+          "groupAUpper": 0.917,
+          "groupALower": 0.877,
           "groupBUpper": 0.925,
           "groupBLower": 0.885
         },
         {
-          "minute": 45,
-          "groupA": 0.914,
-          "groupB": 0.9,
-          "groupAUpper": 0.934,
-          "groupALower": 0.894,
-          "groupBUpper": 0.92,
-          "groupBLower": 0.88
-        },
-        {
-          "minute": 50,
-          "groupA": 0.906,
-          "groupB": 0.888,
-          "groupAUpper": 0.926,
-          "groupALower": 0.886,
-          "groupBUpper": 0.908,
-          "groupBLower": 0.868
-        },
-        {
           "minute": 55,
-          "groupA": 0.897,
-          "groupB": 0.874,
-          "groupAUpper": 0.917,
-          "groupALower": 0.877,
-          "groupBUpper": 0.894,
-          "groupBLower": 0.854
+          "groupA": 0.888,
+          "groupB": 0.894,
+          "groupAUpper": 0.908,
+          "groupALower": 0.868,
+          "groupBUpper": 0.914,
+          "groupBLower": 0.874
         },
         {
           "minute": 60,
-          "groupA": 0.89,
-          "groupB": 0.864,
-          "groupAUpper": 0.91,
-          "groupALower": 0.87,
-          "groupBUpper": 0.884,
-          "groupBLower": 0.844
+          "groupA": 0.877,
+          "groupB": 0.882,
+          "groupAUpper": 0.897,
+          "groupALower": 0.857,
+          "groupBUpper": 0.902,
+          "groupBLower": 0.862
         },
         {
           "minute": 65,
-          "groupA": 0.877,
-          "groupB": 0.853,
-          "groupAUpper": 0.897,
-          "groupALower": 0.857,
-          "groupBUpper": 0.873,
-          "groupBLower": 0.833
+          "groupA": 0.871,
+          "groupB": 0.875,
+          "groupAUpper": 0.891,
+          "groupALower": 0.851,
+          "groupBUpper": 0.895,
+          "groupBLower": 0.855
         },
         {
           "minute": 70,
-          "groupA": 0.863,
-          "groupB": 0.84,
-          "groupAUpper": 0.883,
-          "groupALower": 0.843,
-          "groupBUpper": 0.86,
-          "groupBLower": 0.82
+          "groupA": 0.856,
+          "groupB": 0.863,
+          "groupAUpper": 0.876,
+          "groupALower": 0.836,
+          "groupBUpper": 0.883,
+          "groupBLower": 0.843
         },
         {
           "minute": 75,
-          "groupA": 0.848,
-          "groupB": 0.829,
-          "groupAUpper": 0.868,
-          "groupALower": 0.828,
-          "groupBUpper": 0.849,
-          "groupBLower": 0.809
+          "groupA": 0.845,
+          "groupB": 0.851,
+          "groupAUpper": 0.865,
+          "groupALower": 0.825,
+          "groupBUpper": 0.871,
+          "groupBLower": 0.831
         },
         {
           "minute": 80,
-          "groupA": 0.842,
-          "groupB": 0.82,
-          "groupAUpper": 0.862,
-          "groupALower": 0.822,
-          "groupBUpper": 0.84,
-          "groupBLower": 0.8
+          "groupA": 0.835,
+          "groupB": 0.843,
+          "groupAUpper": 0.855,
+          "groupALower": 0.815,
+          "groupBUpper": 0.863,
+          "groupBLower": 0.823
         },
         {
           "minute": 85,
-          "groupA": 0.833,
-          "groupB": 0.814,
-          "groupAUpper": 0.853,
-          "groupALower": 0.813,
-          "groupBUpper": 0.834,
-          "groupBLower": 0.794
+          "groupA": 0.821,
+          "groupB": 0.834,
+          "groupAUpper": 0.841,
+          "groupALower": 0.801,
+          "groupBUpper": 0.854,
+          "groupBLower": 0.814
         },
         {
           "minute": 90,
-          "groupA": 0.824,
-          "groupB": 0.8,
-          "groupAUpper": 0.844,
-          "groupALower": 0.804,
-          "groupBUpper": 0.82,
-          "groupBLower": 0.78
+          "groupA": 0.814,
+          "groupB": 0.822,
+          "groupAUpper": 0.834,
+          "groupALower": 0.794,
+          "groupBUpper": 0.842,
+          "groupBLower": 0.802
         }
       ],
       "logRankP": 0.5112,
@@ -542,165 +542,165 @@
         },
         {
           "minute": 5,
-          "groupA": 0.985,
-          "groupB": 0.993,
-          "groupAUpper": 1.005,
-          "groupALower": 0.965,
-          "groupBUpper": 1.013,
-          "groupBLower": 0.973
+          "groupA": 0.992,
+          "groupB": 0.991,
+          "groupAUpper": 1.012,
+          "groupALower": 0.972,
+          "groupBUpper": 1.011,
+          "groupBLower": 0.971
         },
         {
           "minute": 10,
-          "groupA": 0.977,
-          "groupB": 0.983,
-          "groupAUpper": 0.997,
-          "groupALower": 0.957,
-          "groupBUpper": 1.003,
-          "groupBLower": 0.963
+          "groupA": 0.98,
+          "groupB": 0.982,
+          "groupAUpper": 1.0,
+          "groupALower": 0.96,
+          "groupBUpper": 1.002,
+          "groupBLower": 0.962
         },
         {
           "minute": 15,
-          "groupA": 0.969,
-          "groupB": 0.969,
-          "groupAUpper": 0.989,
-          "groupALower": 0.949,
-          "groupBUpper": 0.989,
-          "groupBLower": 0.949
+          "groupA": 0.973,
+          "groupB": 0.973,
+          "groupAUpper": 0.993,
+          "groupALower": 0.953,
+          "groupBUpper": 0.993,
+          "groupBLower": 0.953
         },
         {
           "minute": 20,
-          "groupA": 0.954,
-          "groupB": 0.961,
-          "groupAUpper": 0.974,
-          "groupALower": 0.934,
-          "groupBUpper": 0.981,
-          "groupBLower": 0.941
+          "groupA": 0.96,
+          "groupB": 0.965,
+          "groupAUpper": 0.98,
+          "groupALower": 0.94,
+          "groupBUpper": 0.985,
+          "groupBLower": 0.945
         },
         {
           "minute": 25,
-          "groupA": 0.947,
-          "groupB": 0.948,
-          "groupAUpper": 0.967,
-          "groupALower": 0.927,
-          "groupBUpper": 0.968,
-          "groupBLower": 0.928
+          "groupA": 0.945,
+          "groupB": 0.956,
+          "groupAUpper": 0.965,
+          "groupALower": 0.925,
+          "groupBUpper": 0.976,
+          "groupBLower": 0.936
         },
         {
           "minute": 30,
-          "groupA": 0.939,
-          "groupB": 0.934,
-          "groupAUpper": 0.959,
-          "groupALower": 0.919,
-          "groupBUpper": 0.954,
-          "groupBLower": 0.914
+          "groupA": 0.936,
+          "groupB": 0.947,
+          "groupAUpper": 0.956,
+          "groupALower": 0.916,
+          "groupBUpper": 0.967,
+          "groupBLower": 0.927
         },
         {
           "minute": 35,
           "groupA": 0.927,
-          "groupB": 0.92,
+          "groupB": 0.935,
           "groupAUpper": 0.947,
           "groupALower": 0.907,
-          "groupBUpper": 0.94,
-          "groupBLower": 0.9
+          "groupBUpper": 0.955,
+          "groupBLower": 0.915
         },
         {
           "minute": 40,
-          "groupA": 0.92,
+          "groupA": 0.917,
+          "groupB": 0.925,
+          "groupAUpper": 0.937,
+          "groupALower": 0.897,
+          "groupBUpper": 0.945,
+          "groupBLower": 0.905
+        },
+        {
+          "minute": 45,
+          "groupA": 0.904,
+          "groupB": 0.911,
+          "groupAUpper": 0.924,
+          "groupALower": 0.884,
+          "groupBUpper": 0.931,
+          "groupBLower": 0.891
+        },
+        {
+          "minute": 50,
+          "groupA": 0.897,
           "groupB": 0.905,
-          "groupAUpper": 0.94,
-          "groupALower": 0.9,
+          "groupAUpper": 0.917,
+          "groupALower": 0.877,
           "groupBUpper": 0.925,
           "groupBLower": 0.885
         },
         {
-          "minute": 45,
-          "groupA": 0.914,
-          "groupB": 0.9,
-          "groupAUpper": 0.934,
-          "groupALower": 0.894,
-          "groupBUpper": 0.92,
-          "groupBLower": 0.88
-        },
-        {
-          "minute": 50,
-          "groupA": 0.906,
-          "groupB": 0.888,
-          "groupAUpper": 0.926,
-          "groupALower": 0.886,
-          "groupBUpper": 0.908,
-          "groupBLower": 0.868
-        },
-        {
           "minute": 55,
-          "groupA": 0.897,
-          "groupB": 0.874,
-          "groupAUpper": 0.917,
-          "groupALower": 0.877,
-          "groupBUpper": 0.894,
-          "groupBLower": 0.854
+          "groupA": 0.888,
+          "groupB": 0.894,
+          "groupAUpper": 0.908,
+          "groupALower": 0.868,
+          "groupBUpper": 0.914,
+          "groupBLower": 0.874
         },
         {
           "minute": 60,
-          "groupA": 0.89,
-          "groupB": 0.864,
-          "groupAUpper": 0.91,
-          "groupALower": 0.87,
-          "groupBUpper": 0.884,
-          "groupBLower": 0.844
+          "groupA": 0.877,
+          "groupB": 0.882,
+          "groupAUpper": 0.897,
+          "groupALower": 0.857,
+          "groupBUpper": 0.902,
+          "groupBLower": 0.862
         },
         {
           "minute": 65,
-          "groupA": 0.877,
-          "groupB": 0.853,
-          "groupAUpper": 0.897,
-          "groupALower": 0.857,
-          "groupBUpper": 0.873,
-          "groupBLower": 0.833
+          "groupA": 0.871,
+          "groupB": 0.875,
+          "groupAUpper": 0.891,
+          "groupALower": 0.851,
+          "groupBUpper": 0.895,
+          "groupBLower": 0.855
         },
         {
           "minute": 70,
-          "groupA": 0.863,
-          "groupB": 0.84,
-          "groupAUpper": 0.883,
-          "groupALower": 0.843,
-          "groupBUpper": 0.86,
-          "groupBLower": 0.82
+          "groupA": 0.856,
+          "groupB": 0.863,
+          "groupAUpper": 0.876,
+          "groupALower": 0.836,
+          "groupBUpper": 0.883,
+          "groupBLower": 0.843
         },
         {
           "minute": 75,
-          "groupA": 0.848,
-          "groupB": 0.829,
-          "groupAUpper": 0.868,
-          "groupALower": 0.828,
-          "groupBUpper": 0.849,
-          "groupBLower": 0.809
+          "groupA": 0.845,
+          "groupB": 0.851,
+          "groupAUpper": 0.865,
+          "groupALower": 0.825,
+          "groupBUpper": 0.871,
+          "groupBLower": 0.831
         },
         {
           "minute": 80,
-          "groupA": 0.842,
-          "groupB": 0.82,
-          "groupAUpper": 0.862,
-          "groupALower": 0.822,
-          "groupBUpper": 0.84,
-          "groupBLower": 0.8
+          "groupA": 0.835,
+          "groupB": 0.843,
+          "groupAUpper": 0.855,
+          "groupALower": 0.815,
+          "groupBUpper": 0.863,
+          "groupBLower": 0.823
         },
         {
           "minute": 85,
-          "groupA": 0.833,
-          "groupB": 0.814,
-          "groupAUpper": 0.853,
-          "groupALower": 0.813,
-          "groupBUpper": 0.834,
-          "groupBLower": 0.794
+          "groupA": 0.821,
+          "groupB": 0.834,
+          "groupAUpper": 0.841,
+          "groupALower": 0.801,
+          "groupBUpper": 0.854,
+          "groupBLower": 0.814
         },
         {
           "minute": 90,
-          "groupA": 0.824,
-          "groupB": 0.8,
-          "groupAUpper": 0.844,
-          "groupALower": 0.804,
-          "groupBUpper": 0.82,
-          "groupBLower": 0.78
+          "groupA": 0.814,
+          "groupB": 0.822,
+          "groupAUpper": 0.834,
+          "groupALower": 0.794,
+          "groupBUpper": 0.842,
+          "groupBLower": 0.802
         }
       ],
       "logRankP": 0.5112,

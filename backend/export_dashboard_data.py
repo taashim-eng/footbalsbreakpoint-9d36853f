@@ -15,11 +15,19 @@ from datetime import datetime
 from backend import config
 from backend.data.data_access import DataAccess
 
-FRONTEND_DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "src", "data")
+FRONTEND_DATA_DIR_SRC = os.path.join(os.path.dirname(os.path.dirname(__file__)), "src", "data")
+FRONTEND_DATA_DIR_PUBLIC = os.path.join(os.path.dirname(os.path.dirname(__file__)), "public", "data")
+
+def save_json(filename, data):
+    for dest_dir in [FRONTEND_DATA_DIR_SRC, FRONTEND_DATA_DIR_PUBLIC]:
+        path = os.path.join(dest_dir, filename)
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2)
 
 def export_all():
     print("=== EXPORTING ANALYSIS DATA TO FRONTEND DASHBOARD ===")
-    os.makedirs(FRONTEND_DATA_DIR, exist_ok=True)
+    os.makedirs(FRONTEND_DATA_DIR_SRC, exist_ok=True)
+    os.makedirs(FRONTEND_DATA_DIR_PUBLIC, exist_ok=True)
     
     db = DataAccess()
     
@@ -104,8 +112,7 @@ def export_all():
         ]
     }
     
-    with open(os.path.join(FRONTEND_DATA_DIR, "overview.json"), "w", encoding="utf-8") as f:
-        json.dump(overview_data, f, indent=2)
+    save_json("overview.json", overview_data)
         
     # ── 2. historical.json ─────────────────────────────────────────────────
     print("Exporting historical.json...")
@@ -218,8 +225,7 @@ def export_all():
         ]
     }
     
-    with open(os.path.join(FRONTEND_DATA_DIR, "historical.json"), "w", encoding="utf-8") as f:
-        json.dump(historical_data, f, indent=2)
+    save_json("historical.json", historical_data)
         
     # ── 3. matches2026.json ────────────────────────────────────────────────
     print("Exporting matches2026.json...")
@@ -328,8 +334,7 @@ def export_all():
             "squadValueAwayM": 240
         })
         
-    with open(os.path.join(FRONTEND_DATA_DIR, "matches2026.json"), "w", encoding="utf-8") as f:
-        json.dump(matches_list, f, indent=2)
+    save_json("matches2026.json", matches_list)
         
     # ── 4. betting.json ────────────────────────────────────────────────────
     print("Exporting betting.json...")
@@ -384,8 +389,7 @@ def export_all():
         "pValue": p_val_bet
     }
     
-    with open(os.path.join(FRONTEND_DATA_DIR, "betting.json"), "w", encoding="utf-8") as f:
-        json.dump(betting_data, f, indent=2)
+    save_json("betting.json", betting_data)
         
     # ── 5. methodology.json ────────────────────────────────────────────────
     print("Exporting methodology.json...")
@@ -404,8 +408,7 @@ def export_all():
         "seed": config.RANDOM_SEED
     }
     
-    with open(os.path.join(FRONTEND_DATA_DIR, "methodology.json"), "w", encoding="utf-8") as f:
-        json.dump(methodology_data, f, indent=2)
+    save_json("methodology.json", methodology_data)
         
     print("=== DASHBOARD DATA EXPORTED SUCCESSFULLY ===")
 

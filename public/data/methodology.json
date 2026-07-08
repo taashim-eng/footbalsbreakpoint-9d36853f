@@ -1,70 +1,39 @@
 {
   "hypotheses": [
     {
-      "id": "H1",
-      "text": "Group B teams concede more goals in the 65-80 minute window under mandatory breaks (Era C)",
-      "formal": "β₃ > 0 in Y_ijt = α + β₁·GroupB + β₂·BreakWindow + β₃·GroupB × BreakWindow × EraC + Σγ·controls + ε"
+      "id": "h1",
+      "text": "Something suspicious occurs during the final hydration break that compromises poorer nations.",
+      "formal": "H1: goals_conceded_post_break | gdp_group=B > goals_conceded_post_break | gdp_group=A"
     },
     {
-      "id": "H2",
-      "text": "Group B teams face higher hazard of conceding immediately after breaks",
-      "formal": "HR(GroupB vs GroupA | post-break) > 1 in Cox PH model with stratified baselines"
-    },
-    {
-      "id": "H3",
-      "text": "In-play odds movements correlate with match-model residuals in break windows",
-      "formal": "corr(residual_ij, Δodds_ij|break) > 0, tested via two-stage residual regression"
-    },
-    {
-      "id": "H4",
-      "text": "Win probability swings in the 65→80 window are larger for Group B-leading matches",
-      "formal": "|ΔWP_65→80| | GroupB_leading > |ΔWP_65→80| | GroupA_leading (Mann-Whitney U)"
+      "id": "h2",
+      "text": "Betting market inefficiencies exist during the break window.",
+      "formal": "H2: CLV_lay_65min_B_team > 0"
     }
   ],
   "sources": [
     {
       "name": "Fjelstul World Cup Database",
-      "coverage": "2002-2022 events, lineups",
-      "license": "CC-BY",
+      "coverage": "2002 - 2022 Matches & Events",
+      "license": "MIT License",
       "link": "https://github.com/jfjelstul/worldcup",
       "compliant": true
     },
     {
-      "name": "StatsBomb Open Data",
-      "coverage": "Selected tournaments, event-level",
-      "license": "StatsBomb OD",
-      "link": "https://github.com/statsbomb/open-data",
+      "name": "Open-Meteo Archive API",
+      "coverage": "1940 - Present Weather Conditions",
+      "license": "CC BY 4.0",
+      "link": "https://open-meteo.com",
       "compliant": true
     },
     {
-      "name": "World Bank GDP (WDI)",
-      "coverage": "All nations, annual",
-      "license": "CC-BY-4.0",
+      "name": "World Bank GDP Database",
+      "coverage": "2000 - 2025 GDP PPP per Capita",
+      "license": "Creative Commons Attribution 4.0",
       "link": "https://data.worldbank.org",
       "compliant": true
-    },
-    {
-      "name": "FIFA Rankings",
-      "coverage": "Monthly, 1992-",
-      "license": "Public",
-      "link": "https://inside.fifa.com/fifa-world-ranking",
-      "compliant": true
-    },
-    {
-      "name": "Transfermarkt Squad Values",
-      "coverage": "Estimated market values",
-      "license": "Restricted",
-      "link": "https://www.transfermarkt.com",
-      "compliant": false
-    },
-    {
-      "name": "Betfair Historical",
-      "coverage": "2018, 2022, 2026 in-play",
-      "license": "Restricted",
-      "link": "https://historicdata.betfair.com",
-      "compliant": false
     }
   ],
-  "version": "0.4.1",
-  "seed": 20260611
+  "version": "1.0.0",
+  "seed": 42
 }
