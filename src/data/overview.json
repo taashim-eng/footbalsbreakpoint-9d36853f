@@ -1,8 +1,8 @@
 {
   "matchesAnalyzed": 604,
   "anomaliesDetected": 5,
-  "statisticalConfidence": "9989.0%",
-  "lastUpdated": "2026-07-08 15:16 UTC",
+  "statisticalConfidence": "99.9%",
+  "lastUpdated": "2026-07-08 15:25 UTC",
   "findings": [
     {
       "id": "chi2",

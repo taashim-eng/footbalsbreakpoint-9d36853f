@@ -54,7 +54,7 @@ def export_all():
     if os.path.exists(chi_path):
         df_chi = pd.read_csv(chi_path)
         chi_p = df_chi["p_value"].iloc[0]
-        conf_pct = f"{((1.0 - chi_p) * 100):.1%}"
+        conf_pct = f"{(1.0 - chi_p):.1%}"
     else:
         conf_pct = "99.8%"
         
