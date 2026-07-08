@@ -11,8 +11,8 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Overview — The Break Point" },
       { name: "description", content: "Statistical anomaly detection across 2,800+ FIFA World Cup matches. Key findings at a glance." },
-      { property: "og:title", content: "The Break Point — Overview" },
-      { property: "og:description", content: "Following the data. Following the money." },
+      { property: "og:title", content: "Overview — The Break Point" },
+      { property: "og:description", content: "Statistical anomaly detection across 2,800+ FIFA World Cup matches. Key findings at a glance." },
     ],
   }),
   loader: ({ context }) => context.queryClient.ensureQueryData(dataQueryOptions("overview")),
