@@ -21,6 +21,7 @@ export const Route = createFileRoute("/")({
 
 const ERA_ICONS = { A: Clock, B: Thermometer, C: Zap };
 
+// Nudge: Force Vite to re-bundle page component and pull updated overview JSON
 function Index() {
   const { data } = useData("overview");
 
