@@ -49,7 +49,7 @@ function Page() {
 
   const leaderboard = useMemo(() => [...data].sort((a,b) => b.anomalyIndex - a.anomalyIndex).slice(0, 12), [data]);
 
-  const updateSearch = (patch: Partial<typeof search>) => navigate({ search: (prev) => ({ ...prev, ...patch }) });
+  const updateSearch = (patch: Partial<typeof search>) => navigate({ to: ".", search: (prev) => ({ ...prev, ...patch }) });
 
   return (
     <PageTransition>
