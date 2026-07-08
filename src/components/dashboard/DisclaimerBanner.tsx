@@ -5,7 +5,7 @@ export function DisclaimerBanner() {
   const [visible, setVisible] = useState(true);
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (sessionStorage.getItem("bp-disclaimer-dismissed") === "1") setVisible(false);
+    if (localStorage.getItem("bp-disclaimer-dismissed") === "1") setVisible(false);
   }, []);
   if (!visible) return null;
   return (
@@ -19,7 +19,7 @@ export function DisclaimerBanner() {
         </p>
         <button
           onClick={() => {
-            sessionStorage.setItem("bp-disclaimer-dismissed", "1");
+            localStorage.setItem("bp-disclaimer-dismissed", "1");
             setVisible(false);
           }}
           className="shrink-0 rounded p-1 text-amber-200 hover:text-white hover:bg-amber-500/20"
