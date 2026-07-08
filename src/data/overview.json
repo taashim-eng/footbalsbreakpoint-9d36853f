@@ -1,152 +1,104 @@
 {
-  "matchesAnalyzed": 2847,
-  "anomaliesDetected": 23,
-  "statisticalConfidence": "94.2%",
-  "lastUpdated": "2026-07-03",
+  "matchesAnalyzed": 604,
+  "anomaliesDetected": 5,
+  "statisticalConfidence": "9989.0%",
+  "lastUpdated": "2026-07-08 12:35 UTC",
   "findings": [
     {
-      "id": "h1",
-      "icon": "📊",
-      "title": "Hypothesis H1",
-      "stat": "Group B teams concede 0.18 more goals in the break window",
-      "interpretation": "Difference-in-differences estimate, 95% HDI excludes zero",
+      "id": "chi2",
+      "icon": "Activity",
+      "title": "Goal Timing Asymmetry",
+      "stat": "p = 0.0011",
+      "interpretation": "Chi-Squared contingency test shows a highly significant difference in goal Timing in the break window, with Group B conceding 12.4% more goals.",
       "significant": true
     },
     {
-      "id": "h2",
-      "icon": "⏱️",
-      "title": "Survival Analysis",
-      "stat": "1.42x higher hazard of conceding after break",
-      "interpretation": "Cox proportional hazards, log-rank p < 0.01",
+      "id": "betting_clv",
+      "icon": "TrendingUp",
+      "title": "Market CLV Edge",
+      "stat": "+4.48% CLV",
+      "interpretation": "Pre-break lay bets against Group B teams yield positive closing line value (t-stat = 3.42, p = 0.001), indicating the market underprices late-game concessions.",
       "significant": true
     },
     {
-      "id": "h3",
-      "icon": "💰",
-      "title": "Betting Correlation",
-      "stat": "r = 0.31 odds-residual correlation",
-      "interpretation": "Two-stage residual analysis, p = 0.003",
-      "significant": true
-    },
-    {
-      "id": "h4",
-      "icon": "📉",
-      "title": "Win Probability",
-      "stat": "8% larger swing for Group B teams",
-      "interpretation": "Mann-Whitney U, p = 0.018",
-      "significant": true
+      "id": "did",
+      "icon": "GitBranch",
+      "title": "Natural Experiment DiD",
+      "stat": "DiD = 0.058",
+      "interpretation": "Bayesian Difference-in-Differences analysis shows the Era C mandatory breaks overlap the Region of Practical Equivalence (ROPE), confirming no structural bias shift.",
+      "significant": false
     }
   ],
   "eras": [
     {
       "id": "A",
-      "years": "2002-2010",
-      "label": "No Breaks — Baseline",
-      "icon": "clock"
+      "years": "2002 - 2010",
+      "label": "Pre-Break Era",
+      "icon": "ShieldAlert"
     },
     {
       "id": "B",
-      "years": "2014-2022",
-      "label": "Conditional Breaks",
-      "icon": "thermometer"
+      "years": "2014 - 2022",
+      "label": "Conditional Break Era",
+      "icon": "Sun"
     },
     {
       "id": "C",
       "years": "2026",
-      "label": "Mandatory Breaks",
-      "icon": "zap"
+      "label": "Mandatory Break Era",
+      "icon": "AlertOctagon"
     }
   ],
   "groupA": [
     {
       "name": "USA",
-      "flag": "🇺🇸"
-    },
-    {
-      "name": "Germany",
-      "flag": "🇩🇪"
-    },
-    {
-      "name": "France",
-      "flag": "🇫🇷"
+      "flag": "\ud83c\uddfa\ud83c\uddf8"
     },
     {
       "name": "England",
-      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+      "flag": "\ud83c\uddec\ud83c\udde7"
     },
     {
-      "name": "Japan",
-      "flag": "🇯🇵"
+      "name": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7"
     },
     {
-      "name": "Canada",
-      "flag": "🇨🇦"
+      "name": "Germany",
+      "flag": "\ud83c\udde9\ud83c\uddea"
     },
     {
-      "name": "Netherlands",
-      "flag": "🇳🇱"
+      "name": "Brazil",
+      "flag": "\ud83c\udde7\ud83c\uddf7"
     },
     {
-      "name": "Australia",
-      "flag": "🇦🇺"
-    },
-    {
-      "name": "S. Korea",
-      "flag": "🇰🇷"
-    },
-    {
-      "name": "Belgium",
-      "flag": "🇧🇪"
-    },
-    {
-      "name": "Switzerland",
-      "flag": "🇨🇭"
-    },
-    {
-      "name": "Denmark",
-      "flag": "🇩🇰"
+      "name": "Argentina",
+      "flag": "\ud83c\udde6\ud83c\uddf7"
     }
   ],
   "groupB": [
     {
-      "name": "Haiti",
-      "flag": "🇭🇹"
+      "name": "Colombia",
+      "flag": "\ud83c\udde8\ud83c\uddf4"
+    },
+    {
+      "name": "Serbia",
+      "flag": "\ud83c\uddf7\ud83c\uddf8"
+    },
+    {
+      "name": "Morocco",
+      "flag": "\ud83c\uddf2\ud83c\udde6"
     },
     {
       "name": "Senegal",
-      "flag": "🇸🇳"
-    },
-    {
-      "name": "Honduras",
-      "flag": "🇭🇳"
-    },
-    {
-      "name": "Cape Verde",
-      "flag": "🇨🇻"
-    },
-    {
-      "name": "Uzbekistan",
-      "flag": "🇺🇿"
-    },
-    {
-      "name": "Ghana",
-      "flag": "🇬🇭"
+      "flag": "\ud83c\uddf8\ud83c\uddf3"
     },
     {
       "name": "Ecuador",
-      "flag": "🇪🇨"
+      "flag": "\ud83c\uddea\ud83c\udde8"
     },
     {
-      "name": "Jordan",
-      "flag": "🇯🇴"
-    },
-    {
-      "name": "Panama",
-      "flag": "🇵🇦"
-    },
-    {
-      "name": "Curaçao",
-      "flag": "🇨🇼"
+      "name": "South Korea",
+      "flag": "\ud83c\uddf0\ud83c\uddf7"
     }
   ]
 }

@@ -30,3 +30,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Python backend
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+backend/data/raw/cache/
+backend/data/raw/*.parquet
+backend/data/processed/*.db
+backend/data/processed/*.parquet
+backend/outputs/
+*.pkl

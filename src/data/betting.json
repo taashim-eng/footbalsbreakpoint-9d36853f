@@ -1,480 +1,4099 @@
 {
   "scatter": [
     {
-      "residual": 0.71,
-      "oddsMove": -0.23,
-      "anomalyLevel": "moderate",
-      "match": "Match 1"
-    },
-    {
-      "residual": 1.2,
-      "oddsMove": 0.39,
-      "anomalyLevel": "moderate",
-      "match": "Match 2"
-    },
-    {
-      "residual": 0.78,
-      "oddsMove": 0.28,
-      "anomalyLevel": "moderate",
-      "match": "Match 3"
-    },
-    {
-      "residual": -1.01,
-      "oddsMove": -0.07,
-      "anomalyLevel": "moderate",
-      "match": "Match 4"
-    },
-    {
-      "residual": 0.69,
-      "oddsMove": 0.22,
-      "anomalyLevel": "moderate",
-      "match": "Match 5"
-    },
-    {
-      "residual": -1.07,
-      "oddsMove": -0.57,
-      "anomalyLevel": "moderate",
-      "match": "Match 6"
-    },
-    {
-      "residual": -0.18,
-      "oddsMove": 0.2,
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0524449648951083,
       "anomalyLevel": "normal",
-      "match": "Match 7"
+      "match": "France vs Senegal"
     },
     {
-      "residual": 1,
-      "oddsMove": 0.22,
-      "anomalyLevel": "moderate",
-      "match": "Match 8"
-    },
-    {
-      "residual": 1.91,
-      "oddsMove": 0.87,
-      "anomalyLevel": "high",
-      "match": "Match 9"
-    },
-    {
-      "residual": 1.75,
-      "oddsMove": 0.82,
-      "anomalyLevel": "high",
-      "match": "Match 10"
-    },
-    {
-      "residual": 0.8,
-      "oddsMove": 0.33,
-      "anomalyLevel": "moderate",
-      "match": "Match 11"
-    },
-    {
-      "residual": -0.99,
-      "oddsMove": -0.52,
-      "anomalyLevel": "moderate",
-      "match": "Match 12"
-    },
-    {
-      "residual": 0.12,
-      "oddsMove": 0.45,
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0111869339769364,
       "anomalyLevel": "normal",
-      "match": "Match 13"
+      "match": "Ireland vs Cameroon"
     },
     {
-      "residual": 0.47,
-      "oddsMove": 0.54,
+      "residual": 0.0032392144203186,
+      "oddsMove": 0.0634731680419418,
       "anomalyLevel": "normal",
-      "match": "Match 14"
+      "match": "Uruguay vs Denmark"
     },
     {
-      "residual": 0.74,
-      "oddsMove": 0.33,
-      "anomalyLevel": "moderate",
-      "match": "Match 15"
-    },
-    {
-      "residual": 0.47,
-      "oddsMove": 0.07,
+      "residual": -0.006488945800811,
+      "oddsMove": 0.1548985639611269,
       "anomalyLevel": "normal",
-      "match": "Match 16"
+      "match": "Germany vs Saudi Arabia"
     },
     {
-      "residual": 0.03,
-      "oddsMove": 0.08,
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0209830652616163,
       "anomalyLevel": "normal",
-      "match": "Match 17"
+      "match": "Argentina vs Nigeria"
     },
     {
-      "residual": -1.17,
-      "oddsMove": -0.4,
-      "anomalyLevel": "moderate",
-      "match": "Match 18"
-    },
-    {
-      "residual": -0.26,
-      "oddsMove": 0.02,
+      "residual": 0.004871666431427,
+      "oddsMove": -0.0253623622674888,
       "anomalyLevel": "normal",
-      "match": "Match 19"
+      "match": "Paraguay vs South Africa"
     },
     {
-      "residual": -1.99,
-      "oddsMove": -1.09,
-      "anomalyLevel": "high",
-      "match": "Match 20"
-    },
-    {
-      "residual": -0.76,
-      "oddsMove": -0.57,
-      "anomalyLevel": "moderate",
-      "match": "Match 21"
-    },
-    {
-      "residual": -1.08,
-      "oddsMove": -0.19,
-      "anomalyLevel": "moderate",
-      "match": "Match 22"
-    },
-    {
-      "residual": 1.15,
-      "oddsMove": 0.49,
-      "anomalyLevel": "moderate",
-      "match": "Match 23"
-    },
-    {
-      "residual": -0.68,
-      "oddsMove": -0.5,
-      "anomalyLevel": "moderate",
-      "match": "Match 24"
-    },
-    {
-      "residual": -0.55,
-      "oddsMove": -0.08,
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.1605183373211959,
       "anomalyLevel": "normal",
-      "match": "Match 25"
+      "match": "England vs Sweden"
     },
     {
-      "residual": 1.59,
-      "oddsMove": 0.12,
-      "anomalyLevel": "high",
-      "match": "Match 26"
-    },
-    {
-      "residual": 0,
-      "oddsMove": 0.23,
+      "residual": 0.004469871520996,
+      "oddsMove": 0.0749555243068924,
       "anomalyLevel": "normal",
-      "match": "Match 27"
+      "match": "Spain vs Slovenia"
     },
     {
-      "residual": -1.44,
-      "oddsMove": -0.77,
-      "anomalyLevel": "high",
-      "match": "Match 28"
-    },
-    {
-      "residual": 0.47,
-      "oddsMove": -0.11,
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0443518602731708,
       "anomalyLevel": "normal",
-      "match": "Match 29"
+      "match": "Croatia vs Mexico"
     },
     {
-      "residual": 0.83,
-      "oddsMove": 0.32,
-      "anomalyLevel": "moderate",
-      "match": "Match 30"
-    },
-    {
-      "residual": 1.2,
-      "oddsMove": 0.32,
-      "anomalyLevel": "moderate",
-      "match": "Match 31"
-    },
-    {
-      "residual": -1.04,
-      "oddsMove": -0.01,
-      "anomalyLevel": "moderate",
-      "match": "Match 32"
-    },
-    {
-      "residual": -1.66,
-      "oddsMove": -0.09,
-      "anomalyLevel": "high",
-      "match": "Match 33"
-    },
-    {
-      "residual": 1.87,
-      "oddsMove": 0.35,
-      "anomalyLevel": "high",
-      "match": "Match 34"
-    },
-    {
-      "residual": -1.02,
-      "oddsMove": -0.01,
-      "anomalyLevel": "moderate",
-      "match": "Match 35"
-    },
-    {
-      "residual": 1.14,
-      "oddsMove": 0.56,
-      "anomalyLevel": "moderate",
-      "match": "Match 36"
-    },
-    {
-      "residual": 0.91,
-      "oddsMove": -0.19,
-      "anomalyLevel": "moderate",
-      "match": "Match 37"
-    },
-    {
-      "residual": 1.71,
-      "oddsMove": 0.45,
-      "anomalyLevel": "high",
-      "match": "Match 38"
-    },
-    {
-      "residual": -1.45,
-      "oddsMove": 0,
-      "anomalyLevel": "high",
-      "match": "Match 39"
-    },
-    {
-      "residual": -0.41,
-      "oddsMove": 0.32,
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0570295539525815,
       "anomalyLevel": "normal",
-      "match": "Match 40"
+      "match": "Brazil vs Turkey"
     },
     {
-      "residual": -0.65,
-      "oddsMove": -0.54,
-      "anomalyLevel": "moderate",
-      "match": "Match 41"
-    },
-    {
-      "residual": -0.8,
-      "oddsMove": -0.29,
-      "anomalyLevel": "moderate",
-      "match": "Match 42"
-    },
-    {
-      "residual": 0.5,
-      "oddsMove": -0.34,
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0437447135107894,
       "anomalyLevel": "normal",
-      "match": "Match 43"
+      "match": "Italy vs Ecuador"
     },
     {
-      "residual": -0.81,
-      "oddsMove": 0.01,
-      "anomalyLevel": "moderate",
-      "match": "Match 44"
-    },
-    {
-      "residual": -0.95,
-      "oddsMove": -0.07,
-      "anomalyLevel": "moderate",
-      "match": "Match 45"
-    },
-    {
-      "residual": 1.82,
-      "oddsMove": 0.54,
-      "anomalyLevel": "high",
-      "match": "Match 46"
-    },
-    {
-      "residual": 1.56,
-      "oddsMove": 0.27,
-      "anomalyLevel": "high",
-      "match": "Match 47"
-    },
-    {
-      "residual": -1.3,
-      "oddsMove": -0.4,
-      "anomalyLevel": "high",
-      "match": "Match 48"
-    },
-    {
-      "residual": 0.23,
-      "oddsMove": 0.3,
+      "residual": 0.001128077507019,
+      "oddsMove": -0.0470242063598332,
       "anomalyLevel": "normal",
-      "match": "Match 49"
+      "match": "China PR vs Costa Rica"
     },
     {
-      "residual": -0.53,
-      "oddsMove": 0.26,
+      "residual": 0.0043969750404357,
+      "oddsMove": 0.0224374371404291,
       "anomalyLevel": "normal",
-      "match": "Match 50"
+      "match": "Japan vs Belgium"
     },
     {
-      "residual": -1.37,
-      "oddsMove": -0.15,
-      "anomalyLevel": "high",
-      "match": "Match 51"
-    },
-    {
-      "residual": 1.64,
-      "oddsMove": 0.01,
-      "anomalyLevel": "high",
-      "match": "Match 52"
-    },
-    {
-      "residual": -0.55,
-      "oddsMove": -0.2,
+      "residual": -0.006598740350455,
+      "oddsMove": -0.1886885283255978,
       "anomalyLevel": "normal",
-      "match": "Match 53"
+      "match": "South Korea vs Poland"
     },
     {
-      "residual": 0.73,
-      "oddsMove": 0.05,
-      "anomalyLevel": "moderate",
-      "match": "Match 54"
-    },
-    {
-      "residual": 1.93,
-      "oddsMove": 0.68,
-      "anomalyLevel": "high",
-      "match": "Match 55"
-    },
-    {
-      "residual": 0.69,
-      "oddsMove": 0.36,
-      "anomalyLevel": "moderate",
-      "match": "Match 56"
-    },
-    {
-      "residual": -0.25,
-      "oddsMove": -0.38,
+      "residual": -0.006598740350455,
+      "oddsMove": -0.1698522871111213,
       "anomalyLevel": "normal",
-      "match": "Match 57"
+      "match": "Russia vs Tunisia"
     },
     {
-      "residual": -1.6,
-      "oddsMove": -0.03,
-      "anomalyLevel": "high",
-      "match": "Match 58"
-    },
-    {
-      "residual": -1.24,
-      "oddsMove": 0.07,
-      "anomalyLevel": "high",
-      "match": "Match 59"
-    },
-    {
-      "residual": -0.44,
-      "oddsMove": -0.57,
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0534552033301121,
       "anomalyLevel": "normal",
-      "match": "Match 60"
+      "match": "United States vs Portugal"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.1032317786060131,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Ireland"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0340203115798517,
+      "anomalyLevel": "normal",
+      "match": "Denmark vs Senegal"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.088028857958136,
+      "anomalyLevel": "normal",
+      "match": "Cameroon vs Saudi Arabia"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.138456820539544,
+      "anomalyLevel": "normal",
+      "match": "France vs Uruguay"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.1492043730323374,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs Nigeria"
+    },
+    {
+      "residual": 0.0222222805023193,
+      "oddsMove": -0.0314665422495812,
+      "anomalyLevel": "high",
+      "match": "Spain vs Paraguay"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0095263700627774,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs England"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1398792403010212,
+      "anomalyLevel": "normal",
+      "match": "South Africa vs Slovenia"
+    },
+    {
+      "residual": 0.0408480167388916,
+      "oddsMove": -0.0707774791480749,
+      "anomalyLevel": "high",
+      "match": "Italy vs Croatia"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0138658085649716,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs China PR"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1125037794219059,
+      "anomalyLevel": "normal",
+      "match": "Mexico vs Ecuador"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0402092979747492,
+      "anomalyLevel": "normal",
+      "match": "Costa Rica vs Turkey"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0576315967811633,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Russia"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0265723192088709,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs United States"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0575736054524829,
+      "anomalyLevel": "normal",
+      "match": "Tunisia vs Belgium"
+    },
+    {
+      "residual": 0.0219755172729492,
+      "oddsMove": 0.1764376115417141,
+      "anomalyLevel": "high",
+      "match": "Portugal vs Poland"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0012897736663886,
+      "anomalyLevel": "normal",
+      "match": "Denmark vs France"
+    },
+    {
+      "residual": 0.0172865390777587,
+      "oddsMove": -0.1126857085266935,
+      "anomalyLevel": "normal",
+      "match": "Senegal vs Uruguay"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": 0.0811347583535684,
+      "anomalyLevel": "normal",
+      "match": "Cameroon vs Germany"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": -0.1238604880439772,
+      "anomalyLevel": "normal",
+      "match": "Saudi Arabia vs Ireland"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0234819378207999,
+      "anomalyLevel": "normal",
+      "match": "Nigeria vs England"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1933714340676531,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs Argentina"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1302230265695186,
+      "anomalyLevel": "normal",
+      "match": "Slovenia vs Paraguay"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0222831793573691,
+      "anomalyLevel": "normal",
+      "match": "South Africa vs Spain"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.076486154139723,
+      "anomalyLevel": "normal",
+      "match": "Costa Rica vs Brazil"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0195691003297142,
+      "anomalyLevel": "normal",
+      "match": "Turkey vs China PR"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0087912786448389,
+      "anomalyLevel": "normal",
+      "match": "Ecuador vs Croatia"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": -0.0318864926058038,
+      "anomalyLevel": "normal",
+      "match": "Mexico vs Italy"
+    },
+    {
+      "residual": 0.0153850317001342,
+      "oddsMove": -0.1540062117167964,
+      "anomalyLevel": "normal",
+      "match": "Belgium vs Russia"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": -0.0732622252141656,
+      "anomalyLevel": "normal",
+      "match": "Tunisia vs Japan"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": -0.0478518257043771,
+      "anomalyLevel": "normal",
+      "match": "Poland vs United States"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": 0.1045924897651411,
+      "anomalyLevel": "normal",
+      "match": "Portugal vs South Korea"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": 0.0324131623842753,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Paraguay"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.1735304659422883,
+      "anomalyLevel": "normal",
+      "match": "Denmark vs England"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0350039752598039,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs Senegal"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": -0.0402843510885066,
+      "anomalyLevel": "normal",
+      "match": "Spain vs Ireland"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": -0.0688119328873463,
+      "anomalyLevel": "normal",
+      "match": "Mexico vs United States"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0635999010948039,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Belgium"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.1058735018435801,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Turkey"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0957250676820766,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Italy"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0811482027282787,
+      "anomalyLevel": "normal",
+      "match": "England vs Brazil"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.028325659264797,
+      "anomalyLevel": "normal",
+      "match": "Germany vs United States"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0357658392805384,
+      "anomalyLevel": "normal",
+      "match": "Spain vs South Korea"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": 0.0956058461396651,
+      "anomalyLevel": "normal",
+      "match": "Senegal vs Turkey"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0453203680140722,
+      "anomalyLevel": "normal",
+      "match": "Germany vs South Korea"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0159264015261997,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Turkey"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": -0.1113513280585617,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Turkey"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.1170236066376103,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Brazil"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0838920783796018,
+      "anomalyLevel": "normal",
+      "match": "Norway vs France"
+    },
+    {
+      "residual": 0.0153850317001342,
+      "oddsMove": 0.1294699901770286,
+      "anomalyLevel": "normal",
+      "match": "Nigeria vs North Korea"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0046054338377089,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Canada"
+    },
+    {
+      "residual": 0.0696487426757812,
+      "oddsMove": 0.0724937927188899,
+      "anomalyLevel": "high",
+      "match": "Japan vs Argentina"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0389371520987485,
+      "anomalyLevel": "normal",
+      "match": "United States vs Sweden"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0617384258665273,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs South Korea"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0387366163212981,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Russia"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.1564431527867789,
+      "anomalyLevel": "normal",
+      "match": "China PR vs Ghana"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0009855481405383,
+      "anomalyLevel": "normal",
+      "match": "Norway vs Brazil"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.1590614213518574,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Japan"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.2639231769815452,
+      "anomalyLevel": "normal",
+      "match": "France vs South Korea"
+    },
+    {
+      "residual": 0.0172865390777587,
+      "oddsMove": 0.0752756348064189,
+      "anomalyLevel": "normal",
+      "match": "Canada vs Argentina"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": 0.0074090210556896,
+      "anomalyLevel": "normal",
+      "match": "Ghana vs Russia"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0273036792761299,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs North Korea"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0117731334240069,
+      "anomalyLevel": "normal",
+      "match": "China PR vs Australia"
+    },
+    {
+      "residual": 0.0264536142349243,
+      "oddsMove": -0.209338337154059,
+      "anomalyLevel": "high",
+      "match": "United States vs Nigeria"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": -0.0226850194417101,
+      "anomalyLevel": "normal",
+      "match": "France vs Brazil"
+    },
+    {
+      "residual": -0.0035429000854492,
+      "oddsMove": 0.0371284171853543,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Norway"
+    },
+    {
+      "residual": 0.0138181447982788,
+      "oddsMove": 0.1422621465548401,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Germany"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0492299660569079,
+      "anomalyLevel": "normal",
+      "match": "Canada vs Japan"
+    },
+    {
+      "residual": 0.0172865390777587,
+      "oddsMove": -0.0877639759204222,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs Nigeria"
+    },
+    {
+      "residual": 0.0043969750404357,
+      "oddsMove": -0.0519344943746279,
+      "anomalyLevel": "normal",
+      "match": "North Korea vs United States"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0941372675406641,
+      "anomalyLevel": "normal",
+      "match": "Ghana vs Australia"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0355146071061504,
+      "anomalyLevel": "normal",
+      "match": "China PR vs Russia"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0502024707827188,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Sweden"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0541002929053206,
+      "anomalyLevel": "normal",
+      "match": "United States vs Norway"
+    },
+    {
+      "residual": -0.6602907180786133,
+      "oddsMove": 0.2738240421662493,
+      "anomalyLevel": "high",
+      "match": "Germany vs Russia"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0995039951934709,
+      "anomalyLevel": "normal",
+      "match": "China PR vs Canada"
+    },
+    {
+      "residual": 0.0250977277755737,
+      "oddsMove": -0.0802444004979647,
+      "anomalyLevel": "high",
+      "match": "United States vs Germany"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0299926650657917,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs Canada"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0366152369928913,
+      "anomalyLevel": "normal",
+      "match": "United States vs Canada"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.1439192226024946,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Sweden"
+    },
+    {
+      "residual": 0.0061570405960083,
+      "oddsMove": 0.0271492114680542,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Costa Rica"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": 0.0243294041711139,
+      "anomalyLevel": "normal",
+      "match": "Poland vs Ecuador"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.003150841804428,
+      "anomalyLevel": "normal",
+      "match": "England vs Paraguay"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0208192171973326,
+      "anomalyLevel": "normal",
+      "match": "Trinidad and Tobago vs Sweden"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": -0.1422549048630004,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Ivory Coast"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0394674765060791,
+      "anomalyLevel": "normal",
+      "match": "Serbia and Montenegro vs Netherlands"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0316319555124949,
+      "anomalyLevel": "normal",
+      "match": "Mexico vs Iran"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0776321486018375,
+      "anomalyLevel": "normal",
+      "match": "Angola vs Portugal"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0135315153961441,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Japan"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": 0.0392853528247033,
+      "anomalyLevel": "normal",
+      "match": "United States vs Czech Republic"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": 0.187900759463094,
+      "anomalyLevel": "normal",
+      "match": "Italy vs Ghana"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.019890053493901,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Togo"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0285285886662615,
+      "anomalyLevel": "normal",
+      "match": "France vs Switzerland"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0048475358061599,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Croatia"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": -0.1931728072980316,
+      "anomalyLevel": "normal",
+      "match": "Spain vs Ukraine"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.0046000541174924,
+      "anomalyLevel": "normal",
+      "match": "Tunisia vs Saudi Arabia"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": 0.0042468979472276,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Poland"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.248919789568853,
+      "anomalyLevel": "normal",
+      "match": "Ecuador vs Costa Rica"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0164625468841271,
+      "anomalyLevel": "normal",
+      "match": "England vs Trinidad and Tobago"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": 0.0283786111864862,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs Paraguay"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0006976273765392,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Serbia and Montenegro"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.1140942541679681,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Ivory Coast"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.1168793372219588,
+      "anomalyLevel": "normal",
+      "match": "Mexico vs Angola"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": 0.0732446366961066,
+      "anomalyLevel": "normal",
+      "match": "Portugal vs Iran"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0815354669150218,
+      "anomalyLevel": "normal",
+      "match": "Czech Republic vs Ghana"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0882992493392919,
+      "anomalyLevel": "normal",
+      "match": "Italy vs United States"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.1427117033043271,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Croatia"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1375895279589037,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Australia"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": 0.0568977607716286,
+      "anomalyLevel": "normal",
+      "match": "France vs South Korea"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": 0.2172694395341228,
+      "anomalyLevel": "normal",
+      "match": "Togo vs Switzerland"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0964580541927444,
+      "anomalyLevel": "normal",
+      "match": "Saudi Arabia vs Ukraine"
+    },
+    {
+      "residual": 0.0807585716247558,
+      "oddsMove": -0.0889332016101795,
+      "anomalyLevel": "high",
+      "match": "Spain vs Tunisia"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": 0.0088454036520136,
+      "anomalyLevel": "normal",
+      "match": "Costa Rica vs Poland"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0479152932009027,
+      "anomalyLevel": "normal",
+      "match": "Ecuador vs Germany"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.1524268469664312,
+      "anomalyLevel": "normal",
+      "match": "Paraguay vs Trinidad and Tobago"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": 0.0050683488722043,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs England"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.1036333156021537,
+      "anomalyLevel": "normal",
+      "match": "Iran vs Angola"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0497915152742353,
+      "anomalyLevel": "normal",
+      "match": "Portugal vs Mexico"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0893029272831983,
+      "anomalyLevel": "normal",
+      "match": "Ivory Coast vs Serbia and Montenegro"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.1575904962722107,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Argentina"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": -0.0801014522804987,
+      "anomalyLevel": "normal",
+      "match": "Czech Republic vs Italy"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0296090958501107,
+      "anomalyLevel": "normal",
+      "match": "Ghana vs United States"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": 0.0802319888802165,
+      "anomalyLevel": "normal",
+      "match": "Croatia vs Australia"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1204908533230711,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Brazil"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0253430492308697,
+      "anomalyLevel": "normal",
+      "match": "Saudi Arabia vs Spain"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.1334878250222279,
+      "anomalyLevel": "normal",
+      "match": "Ukraine vs Tunisia"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.1583160512454055,
+      "anomalyLevel": "normal",
+      "match": "Switzerland vs South Korea"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0208956580639476,
+      "anomalyLevel": "normal",
+      "match": "Togo vs France"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0287618290188274,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Sweden"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0807793429481878,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Mexico"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1210994927674838,
+      "anomalyLevel": "normal",
+      "match": "England vs Ecuador"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1294500829881032,
+      "anomalyLevel": "normal",
+      "match": "Portugal vs Netherlands"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0547912123321465,
+      "anomalyLevel": "normal",
+      "match": "Italy vs Australia"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0324720169173036,
+      "anomalyLevel": "normal",
+      "match": "Switzerland vs Ukraine"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.027644863354912,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Ghana"
+    },
+    {
+      "residual": 0.0018138885498046,
+      "oddsMove": 0.0339192655297757,
+      "anomalyLevel": "normal",
+      "match": "Spain vs France"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.0699511387304198,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Argentina"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": 0.0212344553713127,
+      "anomalyLevel": "normal",
+      "match": "Italy vs Ukraine"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0319028256501925,
+      "anomalyLevel": "normal",
+      "match": "England vs Portugal"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.06883808603218,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs France"
+    },
+    {
+      "residual": 0.0214817523956298,
+      "oddsMove": 0.1779847501562237,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Italy"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0499788704115031,
+      "anomalyLevel": "normal",
+      "match": "Portugal vs France"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": -0.1209182983286632,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Portugal"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0680876330741001,
+      "anomalyLevel": "normal",
+      "match": "Italy vs France"
+    },
+    {
+      "residual": -0.8606970310211182,
+      "oddsMove": 0.2468106453857151,
+      "anomalyLevel": "high",
+      "match": "Germany vs Argentina"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": 0.0775887275174947,
+      "anomalyLevel": "normal",
+      "match": "United States vs North Korea"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": 0.1139108913281696,
+      "anomalyLevel": "normal",
+      "match": "Japan vs England"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0794711760647143,
+      "anomalyLevel": "normal",
+      "match": "Nigeria vs Sweden"
+    },
+    {
+      "residual": 0.0153850317001342,
+      "oddsMove": 0.0901836002443785,
+      "anomalyLevel": "normal",
+      "match": "Ghana vs Australia"
+    },
+    {
+      "residual": 0.2384188175201416,
+      "oddsMove": -0.0540894343144068,
+      "anomalyLevel": "high",
+      "match": "New Zealand vs Brazil"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.084845512139631,
+      "anomalyLevel": "normal",
+      "match": "Norway vs Canada"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": 0.1878913496569963,
+      "anomalyLevel": "normal",
+      "match": "China PR vs Denmark"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.0264874781728578,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Japan"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0729413442250317,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs United States"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0865191707518351,
+      "anomalyLevel": "normal",
+      "match": "England vs Germany"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0789415323563618,
+      "anomalyLevel": "normal",
+      "match": "North Korea vs Nigeria"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": -0.0097010852861979,
+      "anomalyLevel": "normal",
+      "match": "Canada vs Ghana"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": 0.0328373931069695,
+      "anomalyLevel": "normal",
+      "match": "Denmark vs New Zealand"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0302646582533263,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Norway"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0853139032239267,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs China PR"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0038972449582474,
+      "anomalyLevel": "normal",
+      "match": "England vs Argentina"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.1481269573097167,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Japan"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0240334111130784,
+      "anomalyLevel": "normal",
+      "match": "Nigeria vs United States"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.274449188869679,
+      "anomalyLevel": "normal",
+      "match": "North Korea vs Sweden"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": 0.0606180682039298,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Canada"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": -0.0861669866444358,
+      "anomalyLevel": "normal",
+      "match": "Norway vs Ghana"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.1044921940356544,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Denmark"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0506795137350357,
+      "anomalyLevel": "normal",
+      "match": "China PR vs New Zealand"
+    },
+    {
+      "residual": 0.0408480167388916,
+      "oddsMove": -0.0386854852281417,
+      "anomalyLevel": "high",
+      "match": "Germany vs North Korea"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0741735990031942,
+      "anomalyLevel": "normal",
+      "match": "United States vs England"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0497560346680716,
+      "anomalyLevel": "normal",
+      "match": "Norway vs China PR"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": -0.0084026241224377,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Australia"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0819058222128554,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Norway"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.1488452263284044,
+      "anomalyLevel": "normal",
+      "match": "United States vs Brazil"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0420559168863777,
+      "anomalyLevel": "normal",
+      "match": "Norway vs United States"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": 0.0849220487743882,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Brazil"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": 0.0209581434102127,
+      "anomalyLevel": "normal",
+      "match": "South Africa vs Mexico"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1219782995508744,
+      "anomalyLevel": "normal",
+      "match": "Uruguay vs France"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0199136709054426,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Greece"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0411287937433404,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Nigeria"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0856121940261282,
+      "anomalyLevel": "normal",
+      "match": "England vs United States"
+    },
+    {
+      "residual": 0.0043969750404357,
+      "oddsMove": 0.0136137205783785,
+      "anomalyLevel": "normal",
+      "match": "Algeria vs Slovenia"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": 0.0038722052720291,
+      "anomalyLevel": "normal",
+      "match": "Serbia vs Ghana"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.1116999740126055,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Australia"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0384182321750103,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Denmark"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0587179487770054,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Cameroon"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.1107373965282449,
+      "anomalyLevel": "normal",
+      "match": "Italy vs Paraguay"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.1081537547974753,
+      "anomalyLevel": "normal",
+      "match": "New Zealand vs Slovakia"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.134993387201724,
+      "anomalyLevel": "normal",
+      "match": "Ivory Coast vs Portugal"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": -0.0945003346494712,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs North Korea"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0539357989315831,
+      "anomalyLevel": "normal",
+      "match": "Honduras vs Chile"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0539741734115452,
+      "anomalyLevel": "normal",
+      "match": "Spain vs Switzerland"
+    },
+    {
+      "residual": 0.0138181447982788,
+      "oddsMove": 0.0459775107112932,
+      "anomalyLevel": "normal",
+      "match": "South Africa vs Uruguay"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.3878702048359289,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs South Korea"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": 0.0566378200665091,
+      "anomalyLevel": "normal",
+      "match": "Greece vs Nigeria"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.1163301136120449,
+      "anomalyLevel": "normal",
+      "match": "France vs Mexico"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.097997232119777,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Serbia"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": 0.0644212944726208,
+      "anomalyLevel": "normal",
+      "match": "Slovenia vs United States"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0288874283238525,
+      "anomalyLevel": "normal",
+      "match": "England vs Algeria"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0785364181895087,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Japan"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0746430253135752,
+      "anomalyLevel": "normal",
+      "match": "Ghana vs Australia"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0212495884632836,
+      "anomalyLevel": "normal",
+      "match": "Cameroon vs Denmark"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0459392990124535,
+      "anomalyLevel": "normal",
+      "match": "Slovakia vs Paraguay"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0106196861493494,
+      "anomalyLevel": "normal",
+      "match": "Italy vs New Zealand"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": 0.2294749423225633,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Ivory Coast"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.1842942470484576,
+      "anomalyLevel": "normal",
+      "match": "Portugal vs North Korea"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0712215973577757,
+      "anomalyLevel": "normal",
+      "match": "Chile vs Switzerland"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.1588393149082479,
+      "anomalyLevel": "normal",
+      "match": "Spain vs Honduras"
+    },
+    {
+      "residual": 0.0043969750404357,
+      "oddsMove": -0.0489519765951176,
+      "anomalyLevel": "normal",
+      "match": "France vs South Africa"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.111490638017061,
+      "anomalyLevel": "normal",
+      "match": "Mexico vs Uruguay"
+    },
+    {
+      "residual": 0.0222222805023193,
+      "oddsMove": -0.0024609102913814,
+      "anomalyLevel": "high",
+      "match": "Greece vs Argentina"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.1050009281989455,
+      "anomalyLevel": "normal",
+      "match": "Nigeria vs South Korea"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.06893331515554,
+      "anomalyLevel": "normal",
+      "match": "Slovenia vs England"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": 0.0660111083208968,
+      "anomalyLevel": "normal",
+      "match": "United States vs Algeria"
+    },
+    {
+      "residual": 0.0355157852172851,
+      "oddsMove": -0.0872429772586277,
+      "anomalyLevel": "high",
+      "match": "Australia vs Serbia"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0244194085521825,
+      "anomalyLevel": "normal",
+      "match": "Ghana vs Germany"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0069894562010985,
+      "anomalyLevel": "normal",
+      "match": "Paraguay vs New Zealand"
+    },
+    {
+      "residual": -0.0565717220306396,
+      "oddsMove": -0.0425313459483258,
+      "anomalyLevel": "high",
+      "match": "Slovakia vs Italy"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": 0.2130987231644051,
+      "anomalyLevel": "normal",
+      "match": "Cameroon vs Netherlands"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": 0.0620962164636736,
+      "anomalyLevel": "normal",
+      "match": "Denmark vs Japan"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.2000819864550435,
+      "anomalyLevel": "normal",
+      "match": "North Korea vs Ivory Coast"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0212410097972671,
+      "anomalyLevel": "normal",
+      "match": "Portugal vs Brazil"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.063581590706382,
+      "anomalyLevel": "normal",
+      "match": "Chile vs Spain"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0876756056903396,
+      "anomalyLevel": "normal",
+      "match": "Switzerland vs Honduras"
+    },
+    {
+      "residual": 0.0043969750404357,
+      "oddsMove": -0.0810108638594443,
+      "anomalyLevel": "normal",
+      "match": "Uruguay vs South Korea"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0088341480065079,
+      "anomalyLevel": "normal",
+      "match": "United States vs Ghana"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0529310001087629,
+      "anomalyLevel": "normal",
+      "match": "Germany vs England"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0892150155571941,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Mexico"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": -0.121817589313976,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Slovakia"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.030853067813638,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Chile"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0450622589053784,
+      "anomalyLevel": "normal",
+      "match": "Paraguay vs Japan"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0625593736633861,
+      "anomalyLevel": "normal",
+      "match": "Spain vs Portugal"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": 0.176094193025302,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Brazil"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0432717206900806,
+      "anomalyLevel": "normal",
+      "match": "Uruguay vs Ghana"
+    },
+    {
+      "residual": -0.1170365810394287,
+      "oddsMove": -0.079273763017733,
+      "anomalyLevel": "high",
+      "match": "Argentina vs Germany"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": 0.0910683640475186,
+      "anomalyLevel": "normal",
+      "match": "Paraguay vs Spain"
+    },
+    {
+      "residual": 0.0355157852172851,
+      "oddsMove": 0.1980093056143493,
+      "anomalyLevel": "high",
+      "match": "Uruguay vs Netherlands"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": 0.1019687216804199,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Spain"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": -0.1537131196422763,
+      "anomalyLevel": "normal",
+      "match": "Uruguay vs Germany"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.0503720738591959,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Spain"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.1293306110588442,
+      "anomalyLevel": "normal",
+      "match": "Nigeria vs France"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": -0.0720626323300055,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Canada"
+    },
+    {
+      "residual": 0.0043969750404357,
+      "oddsMove": 0.0426231527984485,
+      "anomalyLevel": "normal",
+      "match": "Japan vs New Zealand"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0800604611133904,
+      "anomalyLevel": "normal",
+      "match": "Mexico vs England"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0899194975638232,
+      "anomalyLevel": "normal",
+      "match": "Colombia vs Sweden"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": -0.0079434499509675,
+      "anomalyLevel": "normal",
+      "match": "United States vs North Korea"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.3260754005794781,
+      "anomalyLevel": "normal",
+      "match": "Norway vs Equatorial Guinea"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0998431858131045,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Australia"
+    },
+    {
+      "residual": 0.0172865390777587,
+      "oddsMove": -0.0321714307704195,
+      "anomalyLevel": "normal",
+      "match": "Canada vs France"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.1220047686024998,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Nigeria"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": 0.1612924638205927,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Mexico"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": -0.1437319684540222,
+      "anomalyLevel": "normal",
+      "match": "New Zealand vs England"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0414073928992416,
+      "anomalyLevel": "normal",
+      "match": "North Korea vs Sweden"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0157135538687911,
+      "anomalyLevel": "normal",
+      "match": "United States vs Colombia"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.1467668250467935,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Equatorial Guinea"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1409906367976195,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Norway"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.119089924809481,
+      "anomalyLevel": "normal",
+      "match": "England vs Japan"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0036628022421407,
+      "anomalyLevel": "normal",
+      "match": "New Zealand vs Mexico"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.09537731551081,
+      "anomalyLevel": "normal",
+      "match": "Canada vs Nigeria"
+    },
+    {
+      "residual": 0.0264536142349243,
+      "oddsMove": 0.0356289017323573,
+      "anomalyLevel": "high",
+      "match": "France vs Germany"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.022545465697529,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Norway"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": -0.0618096363242778,
+      "anomalyLevel": "normal",
+      "match": "Equatorial Guinea vs Brazil"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0097537580929869,
+      "anomalyLevel": "normal",
+      "match": "North Korea vs Colombia"
+    },
+    {
+      "residual": 0.0043969750404357,
+      "oddsMove": -0.0402901497023503,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs United States"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": 0.0100560487569973,
+      "anomalyLevel": "normal",
+      "match": "England vs France"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": 0.0649173816839772,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Japan"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.1610339538252524,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs Australia"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": -0.1255576729295599,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs United States"
+    },
+    {
+      "residual": 0.0264536142349243,
+      "oddsMove": 0.2027218917716569,
+      "anomalyLevel": "high",
+      "match": "France vs United States"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.192776507741533,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Sweden"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0125814537331015,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs France"
+    },
+    {
+      "residual": 0.0172865390777587,
+      "oddsMove": 0.0519171050173541,
+      "anomalyLevel": "normal",
+      "match": "Japan vs United States"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0307386829136852,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Croatia"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0594964023880743,
+      "anomalyLevel": "normal",
+      "match": "Mexico vs Cameroon"
+    },
+    {
+      "residual": 0.0172865390777587,
+      "oddsMove": -0.027726840666831,
+      "anomalyLevel": "normal",
+      "match": "Spain vs Netherlands"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0465265438718982,
+      "anomalyLevel": "normal",
+      "match": "Chile vs Australia"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0562969795542391,
+      "anomalyLevel": "normal",
+      "match": "Colombia vs Greece"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0873924819128196,
+      "anomalyLevel": "normal",
+      "match": "Uruguay vs Costa Rica"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0381338208072219,
+      "anomalyLevel": "normal",
+      "match": "England vs Italy"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0666514633858834,
+      "anomalyLevel": "normal",
+      "match": "Ivory Coast vs Japan"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": 0.0881720389349266,
+      "anomalyLevel": "normal",
+      "match": "Switzerland vs Ecuador"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": 0.0294521477129661,
+      "anomalyLevel": "normal",
+      "match": "France vs Honduras"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": 0.0792952975391084,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Bosnia and Herzegovina"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0655584625126856,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Portugal"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0803024453217504,
+      "anomalyLevel": "normal",
+      "match": "Iran vs Nigeria"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": -0.0578060526280953,
+      "anomalyLevel": "normal",
+      "match": "Ghana vs United States"
+    },
+    {
+      "residual": 0.0170968770980834,
+      "oddsMove": 0.0678906096730928,
+      "anomalyLevel": "normal",
+      "match": "Belgium vs Algeria"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0636326048636709,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Mexico"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": -0.0025413903992224,
+      "anomalyLevel": "normal",
+      "match": "Russia vs South Korea"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": 0.0104549339561834,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Netherlands"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.1301987617895597,
+      "anomalyLevel": "normal",
+      "match": "Spain vs Chile"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": -0.0604349432582777,
+      "anomalyLevel": "normal",
+      "match": "Cameroon vs Croatia"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": 0.0535900052602533,
+      "anomalyLevel": "normal",
+      "match": "Colombia vs Ivory Coast"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.0221679318159602,
+      "anomalyLevel": "normal",
+      "match": "Uruguay vs England"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0191725420023976,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Greece"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.1126512347927041,
+      "anomalyLevel": "normal",
+      "match": "Italy vs Costa Rica"
+    },
+    {
+      "residual": 0.0418945550918579,
+      "oddsMove": 0.0657838128620598,
+      "anomalyLevel": "high",
+      "match": "Switzerland vs France"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": 0.0802312307433133,
+      "anomalyLevel": "normal",
+      "match": "Honduras vs Ecuador"
+    },
+    {
+      "residual": 0.0061570405960083,
+      "oddsMove": 0.1280850644770295,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Iran"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": 0.0009806513065254,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Ghana"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0707908754498208,
+      "anomalyLevel": "normal",
+      "match": "Nigeria vs Bosnia and Herzegovina"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0285944034486284,
+      "anomalyLevel": "normal",
+      "match": "Belgium vs Russia"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": 0.0319654042460366,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Algeria"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.0149629720093392,
+      "anomalyLevel": "normal",
+      "match": "United States vs Portugal"
+    },
+    {
+      "residual": 0.0170968770980834,
+      "oddsMove": 0.0028608456600384,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Spain"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0622892521376764,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Chile"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.083770734895918,
+      "anomalyLevel": "normal",
+      "match": "Cameroon vs Brazil"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": 0.207462604521671,
+      "anomalyLevel": "normal",
+      "match": "Croatia vs Mexico"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0981694659392529,
+      "anomalyLevel": "normal",
+      "match": "Costa Rica vs England"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.123367527851344,
+      "anomalyLevel": "normal",
+      "match": "Italy vs Uruguay"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.1182433595607239,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Colombia"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": 0.0780465365395431,
+      "anomalyLevel": "normal",
+      "match": "Greece vs Ivory Coast"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": 0.0604633151326447,
+      "anomalyLevel": "normal",
+      "match": "Bosnia and Herzegovina vs Iran"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0654301292467524,
+      "anomalyLevel": "normal",
+      "match": "Nigeria vs Argentina"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": -0.0023444101414419,
+      "anomalyLevel": "normal",
+      "match": "Honduras vs Switzerland"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0871283813781264,
+      "anomalyLevel": "normal",
+      "match": "Ecuador vs France"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": 0.0056317892468018,
+      "anomalyLevel": "normal",
+      "match": "Portugal vs Ghana"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.064942621557226,
+      "anomalyLevel": "normal",
+      "match": "United States vs Germany"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.1001075516620995,
+      "anomalyLevel": "normal",
+      "match": "Algeria vs Russia"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": -0.0159835425249086,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Belgium"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0799526639087944,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Chile"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0294990880251173,
+      "anomalyLevel": "normal",
+      "match": "Colombia vs Uruguay"
+    },
+    {
+      "residual": -0.0154485702514648,
+      "oddsMove": 0.0474725735281483,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Mexico"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": -0.0570902859383564,
+      "anomalyLevel": "normal",
+      "match": "Costa Rica vs Greece"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": -0.0826732705594507,
+      "anomalyLevel": "normal",
+      "match": "France vs Nigeria"
+    },
+    {
+      "residual": 0.0076493024826049,
+      "oddsMove": 0.0213090001561492,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Algeria"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0269289293215894,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Switzerland"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": -0.0514121481950719,
+      "anomalyLevel": "normal",
+      "match": "Belgium vs United States"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0445082522415078,
+      "anomalyLevel": "normal",
+      "match": "France vs Germany"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": 0.0224871630778046,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Colombia"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.1420348845557473,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Belgium"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.1383141052269383,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Costa Rica"
+    },
+    {
+      "residual": 0.0472031831741333,
+      "oddsMove": -0.0907256953948969,
+      "anomalyLevel": "high",
+      "match": "Brazil vs Germany"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0187491368508603,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Argentina"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": 0.029795070791673,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Netherlands"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.1499678939056724,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Argentina"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": 0.0839780137118035,
+      "anomalyLevel": "normal",
+      "match": "Canada vs China PR"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0133967972258859,
+      "anomalyLevel": "normal",
+      "match": "New Zealand vs Netherlands"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": -0.0031794251649636,
+      "anomalyLevel": "normal",
+      "match": "Norway vs Thailand"
+    },
+    {
+      "residual": 0.833127498626709,
+      "oddsMove": -0.4335039359144644,
+      "anomalyLevel": "high",
+      "match": "Germany vs Ivory Coast"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0007442647210854,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs Nigeria"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0262702855716894,
+      "anomalyLevel": "normal",
+      "match": "Cameroon vs Ecuador"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0347041282445261,
+      "anomalyLevel": "normal",
+      "match": "United States vs Australia"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0800835982150503,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Switzerland"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0545302297444416,
+      "anomalyLevel": "normal",
+      "match": "France vs England"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.1558709470707145,
+      "anomalyLevel": "normal",
+      "match": "Spain vs Costa Rica"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0081024652517006,
+      "anomalyLevel": "normal",
+      "match": "Colombia vs Mexico"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0427682279803509,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs South Korea"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0716099774914356,
+      "anomalyLevel": "normal",
+      "match": "China PR vs Netherlands"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0375264688682592,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Norway"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0250487443212236,
+      "anomalyLevel": "normal",
+      "match": "Canada vs New Zealand"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": -0.000731674266608,
+      "anomalyLevel": "normal",
+      "match": "Ivory Coast vs Thailand"
+    },
+    {
+      "residual": -0.0306615829467773,
+      "oddsMove": 0.022032243033594,
+      "anomalyLevel": "high",
+      "match": "Switzerland vs Ecuador"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": -0.0777522093883542,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Nigeria"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.005048073196351,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Cameroon"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0523968848950017,
+      "anomalyLevel": "normal",
+      "match": "United States vs Sweden"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.1477538569196861,
+      "anomalyLevel": "normal",
+      "match": "France vs Colombia"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0983593548192378,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Spain"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": 0.2140225599830282,
+      "anomalyLevel": "normal",
+      "match": "England vs Mexico"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0739612066948198,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Costa Rica"
+    },
+    {
+      "residual": 0.0043969750404357,
+      "oddsMove": 0.0854732736558935,
+      "anomalyLevel": "normal",
+      "match": "Thailand vs Germany"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": 0.0163432862290476,
+      "anomalyLevel": "normal",
+      "match": "Ivory Coast vs Norway"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.2216197894619492,
+      "anomalyLevel": "normal",
+      "match": "China PR vs New Zealand"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0781903323953331,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Canada"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0811986346240925,
+      "anomalyLevel": "normal",
+      "match": "Switzerland vs Cameroon"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0573436862240778,
+      "anomalyLevel": "normal",
+      "match": "Ecuador vs Japan"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.2096160228369956,
+      "anomalyLevel": "normal",
+      "match": "Nigeria vs United States"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.049801952574091,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Sweden"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": -0.0776893892022448,
+      "anomalyLevel": "normal",
+      "match": "England vs Colombia"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": 0.0143215479896618,
+      "anomalyLevel": "normal",
+      "match": "Mexico vs France"
+    },
+    {
+      "residual": 0.0043969750404357,
+      "oddsMove": 0.0324168075615416,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Spain"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": 0.1868992532636296,
+      "anomalyLevel": "normal",
+      "match": "Costa Rica vs Brazil"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": 0.0930937172460342,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Sweden"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0550508694260583,
+      "anomalyLevel": "normal",
+      "match": "China PR vs Cameroon"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.0917901337074066,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Australia"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0518314132908325,
+      "anomalyLevel": "normal",
+      "match": "France vs South Korea"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.129591048491347,
+      "anomalyLevel": "normal",
+      "match": "Canada vs Switzerland"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.1857414549057597,
+      "anomalyLevel": "normal",
+      "match": "Norway vs England"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": 0.1166662076974339,
+      "anomalyLevel": "normal",
+      "match": "United States vs Colombia"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": -0.0482132509785979,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Netherlands"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.1688811806983705,
+      "anomalyLevel": "normal",
+      "match": "Germany vs France"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.1378195096272585,
+      "anomalyLevel": "normal",
+      "match": "China PR vs United States"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": -0.0132301075721367,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Japan"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.1265551807913312,
+      "anomalyLevel": "normal",
+      "match": "England vs Canada"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.1566692162854516,
+      "anomalyLevel": "normal",
+      "match": "United States vs Germany"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0572980061551952,
+      "anomalyLevel": "normal",
+      "match": "Japan vs England"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.003121425742275,
+      "anomalyLevel": "normal",
+      "match": "Germany vs England"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0074716089704592,
+      "anomalyLevel": "normal",
+      "match": "United States vs Japan"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0424094913774676,
+      "anomalyLevel": "normal",
+      "match": "Russia vs Saudi Arabia"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": 0.0605088701878748,
+      "anomalyLevel": "normal",
+      "match": "Egypt vs Uruguay"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.1041225467980774,
+      "anomalyLevel": "normal",
+      "match": "Morocco vs Iran"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0116423701818049,
+      "anomalyLevel": "normal",
+      "match": "Portugal vs Spain"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": 0.0102416145627914,
+      "anomalyLevel": "normal",
+      "match": "France vs Australia"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0538761556165921,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Iceland"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0735937600196061,
+      "anomalyLevel": "normal",
+      "match": "Peru vs Denmark"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": -0.1129154401865945,
+      "anomalyLevel": "normal",
+      "match": "Croatia vs Nigeria"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1508158387532378,
+      "anomalyLevel": "normal",
+      "match": "Costa Rica vs Serbia"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.1304071783300329,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Mexico"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0358269795182835,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Switzerland"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0722515978851986,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs South Korea"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.1575474697629695,
+      "anomalyLevel": "normal",
+      "match": "Belgium vs Panama"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": 0.0108496327713269,
+      "anomalyLevel": "normal",
+      "match": "Tunisia vs England"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": 0.1168099855496321,
+      "anomalyLevel": "normal",
+      "match": "Colombia vs Japan"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": 0.0049638995326124,
+      "anomalyLevel": "normal",
+      "match": "Poland vs Senegal"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.2086718482586554,
+      "anomalyLevel": "normal",
+      "match": "Russia vs Egypt"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.1779663564550376,
+      "anomalyLevel": "normal",
+      "match": "Portugal vs Morocco"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0222993590774505,
+      "anomalyLevel": "normal",
+      "match": "Uruguay vs Saudi Arabia"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0997526734157599,
+      "anomalyLevel": "normal",
+      "match": "Iran vs Spain"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0669698671692319,
+      "anomalyLevel": "normal",
+      "match": "Denmark vs Australia"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.1394587340735592,
+      "anomalyLevel": "normal",
+      "match": "France vs Peru"
+    },
+    {
+      "residual": 0.0138181447982788,
+      "oddsMove": -0.1020196039773219,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Croatia"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0712446421400259,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Costa Rica"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.1086159982789438,
+      "anomalyLevel": "normal",
+      "match": "Nigeria vs Iceland"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": -0.1776500716891864,
+      "anomalyLevel": "normal",
+      "match": "Serbia vs Switzerland"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": -0.1190436819245364,
+      "anomalyLevel": "normal",
+      "match": "Belgium vs Tunisia"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": -0.2057111663844084,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Mexico"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.024343627673999,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Sweden"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": 0.0697633112348086,
+      "anomalyLevel": "normal",
+      "match": "England vs Panama"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": 0.148957900834908,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Senegal"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0100489741821595,
+      "anomalyLevel": "normal",
+      "match": "Poland vs Colombia"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": 0.1609128879845583,
+      "anomalyLevel": "normal",
+      "match": "Saudi Arabia vs Egypt"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.135236596227504,
+      "anomalyLevel": "normal",
+      "match": "Uruguay vs Russia"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": -0.1716339297036429,
+      "anomalyLevel": "normal",
+      "match": "Spain vs Morocco"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0027812202956767,
+      "anomalyLevel": "normal",
+      "match": "Iran vs Portugal"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0408388171046479,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Peru"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0006738964890849,
+      "anomalyLevel": "normal",
+      "match": "Denmark vs France"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": -0.2080398957721151,
+      "anomalyLevel": "normal",
+      "match": "Iceland vs Croatia"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": -0.0102076897194062,
+      "anomalyLevel": "normal",
+      "match": "Nigeria vs Argentina"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.1276734004565002,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Germany"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0695643106534606,
+      "anomalyLevel": "normal",
+      "match": "Mexico vs Sweden"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": 0.0346689102648972,
+      "anomalyLevel": "normal",
+      "match": "Serbia vs Brazil"
+    },
+    {
+      "residual": -0.0371420383453369,
+      "oddsMove": -0.0791311632946007,
+      "anomalyLevel": "high",
+      "match": "Switzerland vs Costa Rica"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0487471955934873,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Poland"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": -0.1071991565635899,
+      "anomalyLevel": "normal",
+      "match": "Senegal vs Colombia"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0034943601333321,
+      "anomalyLevel": "normal",
+      "match": "England vs Belgium"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.097946504260841,
+      "anomalyLevel": "normal",
+      "match": "Panama vs Tunisia"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": -0.0990238356363619,
+      "anomalyLevel": "normal",
+      "match": "France vs Argentina"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0528369237625016,
+      "anomalyLevel": "normal",
+      "match": "Uruguay vs Portugal"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.050386265697062,
+      "anomalyLevel": "normal",
+      "match": "Spain vs Russia"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0766477870860524,
+      "anomalyLevel": "normal",
+      "match": "Croatia vs Denmark"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0079294864014707,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Mexico"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.1009271764714806,
+      "anomalyLevel": "normal",
+      "match": "Belgium vs Japan"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0527254343945362,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs Switzerland"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.1171482931187028,
+      "anomalyLevel": "normal",
+      "match": "Colombia vs England"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.1989047855023561,
+      "anomalyLevel": "normal",
+      "match": "Uruguay vs France"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0061658513373548,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Belgium"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0673754950288018,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs England"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": 0.0201023053052947,
+      "anomalyLevel": "normal",
+      "match": "Russia vs Croatia"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0088005327583657,
+      "anomalyLevel": "normal",
+      "match": "France vs Belgium"
+    },
+    {
+      "residual": -0.003650426864624,
+      "oddsMove": -0.0206367892074726,
+      "anomalyLevel": "normal",
+      "match": "Croatia vs England"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": 0.0606988393463835,
+      "anomalyLevel": "normal",
+      "match": "Belgium vs England"
+    },
+    {
+      "residual": 0.0043969750404357,
+      "oddsMove": 0.0739919809885562,
+      "anomalyLevel": "normal",
+      "match": "France vs Croatia"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0504545364407283,
+      "anomalyLevel": "normal",
+      "match": "France vs South Korea"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": -0.0595727384092555,
+      "anomalyLevel": "normal",
+      "match": "Germany vs China PR"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0247316201211793,
+      "anomalyLevel": "normal",
+      "match": "Spain vs South Africa"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.2275526203333765,
+      "anomalyLevel": "normal",
+      "match": "Norway vs Nigeria"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.153467772792426,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Italy"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.1392844825149092,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Jamaica"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": 0.1633770384933779,
+      "anomalyLevel": "normal",
+      "match": "England vs Scotland"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0222641078154558,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Japan"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0602951924457586,
+      "anomalyLevel": "normal",
+      "match": "Canada vs Cameroon"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": 0.0291763488817828,
+      "anomalyLevel": "normal",
+      "match": "New Zealand vs Netherlands"
+    },
+    {
+      "residual": -0.0010645389556884,
+      "oddsMove": 0.3083138964277991,
+      "anomalyLevel": "normal",
+      "match": "Chile vs Sweden"
+    },
+    {
+      "residual": 3.074105262756348,
+      "oddsMove": -1.1176846139590817,
+      "anomalyLevel": "high",
+      "match": "United States vs Thailand"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0100182095540915,
+      "anomalyLevel": "normal",
+      "match": "Nigeria vs South Korea"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0931217718493253,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Spain"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.15821235981504,
+      "anomalyLevel": "normal",
+      "match": "France vs Norway"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0231199131807073,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Brazil"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0729955783882483,
+      "anomalyLevel": "normal",
+      "match": "South Africa vs China PR"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.139629792639443,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Scotland"
+    },
+    {
+      "residual": 0.0172865390777587,
+      "oddsMove": -0.0715719040553561,
+      "anomalyLevel": "normal",
+      "match": "Jamaica vs Italy"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.1057225281507223,
+      "anomalyLevel": "normal",
+      "match": "England vs Argentina"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": 0.1669380404603815,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Cameroon"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.090803471835127,
+      "anomalyLevel": "normal",
+      "match": "Canada vs New Zealand"
+    },
+    {
+      "residual": -0.0408453941345214,
+      "oddsMove": 0.0155408935221468,
+      "anomalyLevel": "high",
+      "match": "Sweden vs Thailand"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.1506339100291845,
+      "anomalyLevel": "normal",
+      "match": "United States vs Chile"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0103763269049438,
+      "anomalyLevel": "normal",
+      "match": "China PR vs Spain"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0835313643623696,
+      "anomalyLevel": "normal",
+      "match": "South Africa vs Germany"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": 0.1503214933821781,
+      "anomalyLevel": "normal",
+      "match": "Nigeria vs France"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.056323276579183,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Norway"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1011290371123212,
+      "anomalyLevel": "normal",
+      "match": "Italy vs Brazil"
+    },
+    {
+      "residual": 0.0172865390777587,
+      "oddsMove": -0.0259484834394643,
+      "anomalyLevel": "normal",
+      "match": "Jamaica vs Australia"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0849223291982937,
+      "anomalyLevel": "normal",
+      "match": "Japan vs England"
+    },
+    {
+      "residual": 0.0153850317001342,
+      "oddsMove": -0.1444339857764873,
+      "anomalyLevel": "normal",
+      "match": "Scotland vs Argentina"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0950500269638813,
+      "anomalyLevel": "normal",
+      "match": "Cameroon vs New Zealand"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.1937152136409981,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Canada"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1372611790615897,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs United States"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": 0.0550012379009296,
+      "anomalyLevel": "normal",
+      "match": "Thailand vs Chile"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": -0.0657820875701416,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Nigeria"
+    },
+    {
+      "residual": 0.0017945766448974,
+      "oddsMove": -0.0494303690344285,
+      "anomalyLevel": "normal",
+      "match": "Norway vs Australia"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0568071202131697,
+      "anomalyLevel": "normal",
+      "match": "England vs Cameroon"
+    },
+    {
+      "residual": 0.004871666431427,
+      "oddsMove": -0.0883477435405524,
+      "anomalyLevel": "normal",
+      "match": "France vs Brazil"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": 0.0037324299377322,
+      "anomalyLevel": "normal",
+      "match": "Spain vs United States"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.080497955870647,
+      "anomalyLevel": "normal",
+      "match": "Sweden vs Canada"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0296851787181658,
+      "anomalyLevel": "normal",
+      "match": "Italy vs China PR"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0025915387341964,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Japan"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0212992263663165,
+      "anomalyLevel": "normal",
+      "match": "Norway vs England"
+    },
+    {
+      "residual": 0.0043969750404357,
+      "oddsMove": -0.092515156220334,
+      "anomalyLevel": "normal",
+      "match": "France vs United States"
+    },
+    {
+      "residual": 0.0170968770980834,
+      "oddsMove": -0.0645158838960666,
+      "anomalyLevel": "normal",
+      "match": "Italy vs Netherlands"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0779713947932928,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Sweden"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0525239909731552,
+      "anomalyLevel": "normal",
+      "match": "England vs United States"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0951584687093983,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Sweden"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0125302863133793,
+      "anomalyLevel": "normal",
+      "match": "England vs Sweden"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0775709845478961,
+      "anomalyLevel": "normal",
+      "match": "United States vs Netherlands"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.1643010319719552,
+      "anomalyLevel": "normal",
+      "match": "Qatar vs Ecuador"
+    },
+    {
+      "residual": -0.4326009750366211,
+      "oddsMove": 0.2273764092526419,
+      "anomalyLevel": "high",
+      "match": "England vs Iran"
+    },
+    {
+      "residual": -0.0371420383453369,
+      "oddsMove": -0.0514055605564499,
+      "anomalyLevel": "high",
+      "match": "Senegal vs Netherlands"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0594921390700331,
+      "anomalyLevel": "normal",
+      "match": "United States vs Wales"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.0735523660602666,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Saudi Arabia"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.1780559378557347,
+      "anomalyLevel": "normal",
+      "match": "Denmark vs Tunisia"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.1599806941943312,
+      "anomalyLevel": "normal",
+      "match": "Mexico vs Poland"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0074479908063202,
+      "anomalyLevel": "normal",
+      "match": "France vs Australia"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0285678284924725,
+      "anomalyLevel": "normal",
+      "match": "Morocco vs Croatia"
+    },
+    {
+      "residual": -0.003650426864624,
+      "oddsMove": -0.0889714917645912,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Japan"
+    },
+    {
+      "residual": 0.2811570167541504,
+      "oddsMove": -0.0486035608239227,
+      "anomalyLevel": "high",
+      "match": "Spain vs Costa Rica"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.1633784566329109,
+      "anomalyLevel": "normal",
+      "match": "Belgium vs Canada"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0041757076540144,
+      "anomalyLevel": "normal",
+      "match": "Switzerland vs Cameroon"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1185060416559212,
+      "anomalyLevel": "normal",
+      "match": "Uruguay vs South Korea"
+    },
+    {
+      "residual": -0.1189243793487548,
+      "oddsMove": -0.0176138590407139,
+      "anomalyLevel": "high",
+      "match": "Portugal vs Ghana"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0073354454519658,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Serbia"
+    },
+    {
+      "residual": 0.0214817523956298,
+      "oddsMove": -0.0946340374866471,
+      "anomalyLevel": "normal",
+      "match": "Wales vs Iran"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": -0.0404464687677701,
+      "anomalyLevel": "normal",
+      "match": "Qatar vs Senegal"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.1032263366919008,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Ecuador"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0550921311818581,
+      "anomalyLevel": "normal",
+      "match": "England vs United States"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0861662669769709,
+      "anomalyLevel": "normal",
+      "match": "Tunisia vs Australia"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.110373629695305,
+      "anomalyLevel": "normal",
+      "match": "Poland vs Saudi Arabia"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": 0.0517026134168334,
+      "anomalyLevel": "normal",
+      "match": "France vs Denmark"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.1469304116597751,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Mexico"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.2443909004187438,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Costa Rica"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0770939472267232,
+      "anomalyLevel": "normal",
+      "match": "Belgium vs Morocco"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0601394849287712,
+      "anomalyLevel": "normal",
+      "match": "Croatia vs Canada"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": -0.0220806616511742,
+      "anomalyLevel": "normal",
+      "match": "Spain vs Germany"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.039546859547848,
+      "anomalyLevel": "normal",
+      "match": "Cameroon vs Serbia"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0578014629011253,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Ghana"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0112984748874719,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Switzerland"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": -0.0173438465860829,
+      "anomalyLevel": "normal",
+      "match": "Portugal vs Uruguay"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": 0.1155004017912859,
+      "anomalyLevel": "normal",
+      "match": "Ecuador vs Senegal"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0282156339241063,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Qatar"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0363573219779769,
+      "anomalyLevel": "normal",
+      "match": "Iran vs United States"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": -0.0431786109570343,
+      "anomalyLevel": "normal",
+      "match": "Wales vs England"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0463283501965321,
+      "anomalyLevel": "normal",
+      "match": "Australia vs Denmark"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0408235465712448,
+      "anomalyLevel": "normal",
+      "match": "Tunisia vs France"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0420422700082864,
+      "anomalyLevel": "normal",
+      "match": "Poland vs Argentina"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": -0.0433941338501537,
+      "anomalyLevel": "normal",
+      "match": "Saudi Arabia vs Mexico"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.0316169818298232,
+      "anomalyLevel": "normal",
+      "match": "Canada vs Morocco"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": 0.2101795760047259,
+      "anomalyLevel": "normal",
+      "match": "Croatia vs Belgium"
+    },
+    {
+      "residual": 0.407710313796997,
+      "oddsMove": -0.0759716551756295,
+      "anomalyLevel": "high",
+      "match": "Costa Rica vs Germany"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.029828803622799,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Spain"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.1227184479868512,
+      "anomalyLevel": "normal",
+      "match": "Ghana vs Uruguay"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.03803398770817,
+      "anomalyLevel": "normal",
+      "match": "South Korea vs Portugal"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.2011729573776034,
+      "anomalyLevel": "normal",
+      "match": "Cameroon vs Brazil"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": -0.0983763588810232,
+      "anomalyLevel": "normal",
+      "match": "Serbia vs Switzerland"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": -0.1875304231053932,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs United States"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0325118522639488,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Australia"
+    },
+    {
+      "residual": 0.0032392144203186,
+      "oddsMove": 0.0005461521508277,
+      "anomalyLevel": "normal",
+      "match": "France vs Poland"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.1700760034382455,
+      "anomalyLevel": "normal",
+      "match": "England vs Senegal"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0354662869704013,
+      "anomalyLevel": "normal",
+      "match": "Japan vs Croatia"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": -0.0231878572555812,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs South Korea"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0855376138888056,
+      "anomalyLevel": "normal",
+      "match": "Morocco vs Spain"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.2184740347606065,
+      "anomalyLevel": "normal",
+      "match": "Portugal vs Switzerland"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": 0.0217735072024581,
+      "anomalyLevel": "normal",
+      "match": "Croatia vs Brazil"
+    },
+    {
+      "residual": 0.0125840902328491,
+      "oddsMove": 0.072052883295557,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Argentina"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.1452630462576597,
+      "anomalyLevel": "normal",
+      "match": "Morocco vs Portugal"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": 0.1139241733178853,
+      "anomalyLevel": "normal",
+      "match": "England vs France"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0366231903434264,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Croatia"
+    },
+    {
+      "residual": 0.003194510936737,
+      "oddsMove": -0.0428065957647749,
+      "anomalyLevel": "normal",
+      "match": "France vs Morocco"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": 0.0658737649309529,
+      "anomalyLevel": "normal",
+      "match": "Croatia vs Morocco"
+    },
+    {
+      "residual": -0.1034116744995117,
+      "oddsMove": 0.2684339555802443,
+      "anomalyLevel": "high",
+      "match": "Argentina vs France"
+    },
+    {
+      "residual": 0.0043969750404357,
+      "oddsMove": 0.0164278354896752,
+      "anomalyLevel": "normal",
+      "match": "United States vs Colombia"
+    },
+    {
+      "residual": -0.006080680526793,
+      "oddsMove": 0.0272543308407508,
+      "anomalyLevel": "normal",
+      "match": "Mexico vs Serbia"
+    },
+    {
+      "residual": -0.006488945800811,
+      "oddsMove": -0.0433405116337,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Australia"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": -0.0861041698032296,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Denmark"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0856306374248813,
+      "anomalyLevel": "normal",
+      "match": "France vs Japan"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": -0.0867281154476372,
+      "anomalyLevel": "normal",
+      "match": "England vs South Korea"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": 0.0099301733159243,
+      "anomalyLevel": "normal",
+      "match": "Germany vs Ecuador"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": -0.0482169756793192,
+      "anomalyLevel": "normal",
+      "match": "Spain vs Morocco"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": 0.0504950383450959,
+      "anomalyLevel": "normal",
+      "match": "Portugal vs Senegal"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": 0.0313752961839072,
+      "anomalyLevel": "normal",
+      "match": "Netherlands vs Canada"
+    },
+    {
+      "residual": 0.0044403076171875,
+      "oddsMove": 0.1019778713789149,
+      "anomalyLevel": "normal",
+      "match": "United States vs Morocco"
+    },
+    {
+      "residual": -0.0064926394261419,
+      "oddsMove": -0.0484045841150179,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs Netherlands"
+    },
+    {
+      "residual": -0.0069338739849627,
+      "oddsMove": -0.024213943935352,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Germany"
+    },
+    {
+      "residual": 0.004469871520996,
+      "oddsMove": -0.0996643201866291,
+      "anomalyLevel": "normal",
+      "match": "France vs Portugal"
+    },
+    {
+      "residual": -0.006598740350455,
+      "oddsMove": -0.0417898298674291,
+      "anomalyLevel": "normal",
+      "match": "United States vs Spain"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": 0.0372788183016776,
+      "anomalyLevel": "normal",
+      "match": "Brazil vs England"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": 0.0752476306617276,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs France"
+    },
+    {
+      "residual": 0.0027993321418762,
+      "oddsMove": -0.093336265274513,
+      "anomalyLevel": "normal",
+      "match": "United States vs England"
+    },
+    {
+      "residual": 0.001128077507019,
+      "oddsMove": 0.0865093610077584,
+      "anomalyLevel": "normal",
+      "match": "Argentina vs Brazil"
+    },
+    {
+      "residual": 0.0049772858619689,
+      "oddsMove": 0.1335728715357075,
+      "anomalyLevel": "normal",
+      "match": "United States vs Argentina"
     }
   ],
   "volumeByMinute": [
     {
-      "minute": 0,
-      "bLeading": 1002,
-      "aLeading": 953
+      "minute": 1,
+      "bLeading": 1954.2,
+      "aLeading": 2017.7
+    },
+    {
+      "minute": 2,
+      "bLeading": 2076.8,
+      "aLeading": 1989.3
+    },
+    {
+      "minute": 3,
+      "bLeading": 1858.6,
+      "aLeading": 1858.6
+    },
+    {
+      "minute": 4,
+      "bLeading": 1917.2,
+      "aLeading": 1998.4
     },
     {
       "minute": 5,
-      "bLeading": 830,
-      "aLeading": 1016
+      "bLeading": 1854.3,
+      "aLeading": 1753.1
+    },
+    {
+      "minute": 6,
+      "bLeading": 1713.9,
+      "aLeading": 1714.2
+    },
+    {
+      "minute": 7,
+      "bLeading": 1530.7,
+      "aLeading": 1746.2
+    },
+    {
+      "minute": 8,
+      "bLeading": 1628.3,
+      "aLeading": 1512.0
+    },
+    {
+      "minute": 9,
+      "bLeading": 1679.4,
+      "aLeading": 1546.7
     },
     {
       "minute": 10,
-      "bLeading": 1091,
-      "aLeading": 1198
+      "bLeading": 1471.3,
+      "aLeading": 1521.7
+    },
+    {
+      "minute": 11,
+      "bLeading": 1555.4,
+      "aLeading": 1724.6
+    },
+    {
+      "minute": 12,
+      "bLeading": 1402.0,
+      "aLeading": 1551.3
+    },
+    {
+      "minute": 13,
+      "bLeading": 1523.1,
+      "aLeading": 1457.6
+    },
+    {
+      "minute": 14,
+      "bLeading": 1518.1,
+      "aLeading": 1365.4
     },
     {
       "minute": 15,
-      "bLeading": 927,
-      "aLeading": 1106
+      "bLeading": 1420.8,
+      "aLeading": 1389.9
+    },
+    {
+      "minute": 16,
+      "bLeading": 1605.7,
+      "aLeading": 1360.3
+    },
+    {
+      "minute": 17,
+      "bLeading": 1286.2,
+      "aLeading": 1390.7
+    },
+    {
+      "minute": 18,
+      "bLeading": 1242.4,
+      "aLeading": 1446.8
+    },
+    {
+      "minute": 19,
+      "bLeading": 1142.0,
+      "aLeading": 1358.9
     },
     {
       "minute": 20,
-      "bLeading": 976,
-      "aLeading": 909
+      "bLeading": 1332.2,
+      "aLeading": 1179.7
+    },
+    {
+      "minute": 21,
+      "bLeading": 1305.1,
+      "aLeading": 1361.8
+    },
+    {
+      "minute": 22,
+      "bLeading": 1234.4,
+      "aLeading": 1252.9
+    },
+    {
+      "minute": 23,
+      "bLeading": 1170.0,
+      "aLeading": 1094.1
+    },
+    {
+      "minute": 24,
+      "bLeading": 1326.2,
+      "aLeading": 1174.4
     },
     {
       "minute": 25,
-      "bLeading": 1134,
-      "aLeading": 1140
+      "bLeading": 1023.7,
+      "aLeading": 1234.4
+    },
+    {
+      "minute": 26,
+      "bLeading": 1142.0,
+      "aLeading": 1212.9
+    },
+    {
+      "minute": 27,
+      "bLeading": 1223.2,
+      "aLeading": 1094.3
+    },
+    {
+      "minute": 28,
+      "bLeading": 1237.6,
+      "aLeading": 1247.6
+    },
+    {
+      "minute": 29,
+      "bLeading": 1097.1,
+      "aLeading": 1044.1
     },
     {
       "minute": 30,
-      "bLeading": 1031,
-      "aLeading": 1148
+      "bLeading": 1210.1,
+      "aLeading": 1145.6
+    },
+    {
+      "minute": 31,
+      "bLeading": 1079.4,
+      "aLeading": 1050.1
+    },
+    {
+      "minute": 32,
+      "bLeading": 964.9,
+      "aLeading": 973.9
+    },
+    {
+      "minute": 33,
+      "bLeading": 1207.6,
+      "aLeading": 1153.3
+    },
+    {
+      "minute": 34,
+      "bLeading": 1160.9,
+      "aLeading": 1053.3
     },
     {
       "minute": 35,
-      "bLeading": 1079,
-      "aLeading": 1051
+      "bLeading": 985.5,
+      "aLeading": 1086.2
+    },
+    {
+      "minute": 36,
+      "bLeading": 1194.3,
+      "aLeading": 1076.6
+    },
+    {
+      "minute": 37,
+      "bLeading": 1188.5,
+      "aLeading": 1028.4
+    },
+    {
+      "minute": 38,
+      "bLeading": 1106.7,
+      "aLeading": 762.5
+    },
+    {
+      "minute": 39,
+      "bLeading": 988.1,
+      "aLeading": 1026.7
     },
     {
       "minute": 40,
-      "bLeading": 1118,
-      "aLeading": 1111
+      "bLeading": 813.7,
+      "aLeading": 1021.7
+    },
+    {
+      "minute": 41,
+      "bLeading": 1043.7,
+      "aLeading": 986.0
+    },
+    {
+      "minute": 42,
+      "bLeading": 952.7,
+      "aLeading": 1152.3
+    },
+    {
+      "minute": 43,
+      "bLeading": 951.8,
+      "aLeading": 921.2
+    },
+    {
+      "minute": 44,
+      "bLeading": 1033.4,
+      "aLeading": 1092.0
     },
     {
       "minute": 45,
-      "bLeading": 1172,
-      "aLeading": 1189
+      "bLeading": 1051.3,
+      "aLeading": 947.0
+    },
+    {
+      "minute": 46,
+      "bLeading": 1097.4,
+      "aLeading": 1010.2
+    },
+    {
+      "minute": 47,
+      "bLeading": 969.2,
+      "aLeading": 931.8
+    },
+    {
+      "minute": 48,
+      "bLeading": 858.1,
+      "aLeading": 965.3
+    },
+    {
+      "minute": 49,
+      "bLeading": 1034.1,
+      "aLeading": 1037.6
     },
     {
       "minute": 50,
-      "bLeading": 1184,
-      "aLeading": 842
+      "bLeading": 989.0,
+      "aLeading": 1013.0
+    },
+    {
+      "minute": 51,
+      "bLeading": 975.9,
+      "aLeading": 876.5
+    },
+    {
+      "minute": 52,
+      "bLeading": 944.3,
+      "aLeading": 990.2
+    },
+    {
+      "minute": 53,
+      "bLeading": 1072.4,
+      "aLeading": 1015.9
+    },
+    {
+      "minute": 54,
+      "bLeading": 1058.0,
+      "aLeading": 1229.1
     },
     {
       "minute": 55,
-      "bLeading": 1060,
-      "aLeading": 901
+      "bLeading": 1042.6,
+      "aLeading": 1075.8
+    },
+    {
+      "minute": 56,
+      "bLeading": 1057.8,
+      "aLeading": 868.6
+    },
+    {
+      "minute": 57,
+      "bLeading": 1318.3,
+      "aLeading": 1078.0
+    },
+    {
+      "minute": 58,
+      "bLeading": 1114.7,
+      "aLeading": 1065.3
+    },
+    {
+      "minute": 59,
+      "bLeading": 981.1,
+      "aLeading": 1094.5
     },
     {
       "minute": 60,
-      "bLeading": 974,
-      "aLeading": 1118
+      "bLeading": 1187.7,
+      "aLeading": 1226.8
+    },
+    {
+      "minute": 61,
+      "bLeading": 1037.1,
+      "aLeading": 1207.1
+    },
+    {
+      "minute": 62,
+      "bLeading": 1004.3,
+      "aLeading": 1284.8
+    },
+    {
+      "minute": 63,
+      "bLeading": 1381.0,
+      "aLeading": 1220.7
+    },
+    {
+      "minute": 64,
+      "bLeading": 1123.9,
+      "aLeading": 1081.4
     },
     {
       "minute": 65,
-      "bLeading": 1535,
-      "aLeading": 1312
+      "bLeading": 1949.7,
+      "aLeading": 1210.0
+    },
+    {
+      "minute": 66,
+      "bLeading": 2027.4,
+      "aLeading": 1065.4
+    },
+    {
+      "minute": 67,
+      "bLeading": 2089.4,
+      "aLeading": 1135.8
+    },
+    {
+      "minute": 68,
+      "bLeading": 2219.5,
+      "aLeading": 1172.6
+    },
+    {
+      "minute": 69,
+      "bLeading": 2055.8,
+      "aLeading": 1209.7
     },
     {
       "minute": 70,
-      "bLeading": 2284,
-      "aLeading": 1139
+      "bLeading": 1989.4,
+      "aLeading": 1393.9
+    },
+    {
+      "minute": 71,
+      "bLeading": 2268.7,
+      "aLeading": 1360.7
+    },
+    {
+      "minute": 72,
+      "bLeading": 2183.0,
+      "aLeading": 1203.8
+    },
+    {
+      "minute": 73,
+      "bLeading": 2270.2,
+      "aLeading": 1418.0
+    },
+    {
+      "minute": 74,
+      "bLeading": 2088.5,
+      "aLeading": 1296.8
     },
     {
       "minute": 75,
-      "bLeading": 2064,
-      "aLeading": 1255
+      "bLeading": 2279.7,
+      "aLeading": 1502.2
+    },
+    {
+      "minute": 76,
+      "bLeading": 2315.1,
+      "aLeading": 1505.5
+    },
+    {
+      "minute": 77,
+      "bLeading": 2335.2,
+      "aLeading": 1444.0
+    },
+    {
+      "minute": 78,
+      "bLeading": 2273.1,
+      "aLeading": 1573.8
+    },
+    {
+      "minute": 79,
+      "bLeading": 2425.4,
+      "aLeading": 1764.6
     },
     {
       "minute": 80,
-      "bLeading": 2082,
-      "aLeading": 1255
+      "bLeading": 2478.2,
+      "aLeading": 1493.4
+    },
+    {
+      "minute": 81,
+      "bLeading": 1726.7,
+      "aLeading": 1550.5
+    },
+    {
+      "minute": 82,
+      "bLeading": 1602.4,
+      "aLeading": 1800.4
+    },
+    {
+      "minute": 83,
+      "bLeading": 1763.3,
+      "aLeading": 1818.3
+    },
+    {
+      "minute": 84,
+      "bLeading": 1950.2,
+      "aLeading": 1842.7
     },
     {
       "minute": 85,
-      "bLeading": 927,
-      "aLeading": 1044
+      "bLeading": 1724.6,
+      "aLeading": 1775.5
+    },
+    {
+      "minute": 86,
+      "bLeading": 1758.9,
+      "aLeading": 1751.5
+    },
+    {
+      "minute": 87,
+      "bLeading": 1916.1,
+      "aLeading": 1874.3
+    },
+    {
+      "minute": 88,
+      "bLeading": 2007.2,
+      "aLeading": 1952.2
+    },
+    {
+      "minute": 89,
+      "bLeading": 2113.4,
+      "aLeading": 1969.3
     },
     {
       "minute": 90,
-      "bLeading": 1188,
-      "aLeading": 1042
+      "bLeading": 2284.5,
+      "aLeading": 1986.0
     }
   ],
-  "correlation": 0.31,
-  "pValue": 0.003,
   "findings": [
     {
-      "title": "CLV Analysis",
-      "stat": "+2.4% CLV",
-      "detail": "Bettors fading Group B teams before the break window achieved positive closing line value on average."
+      "title": "Closing Line Value (CLV)",
+      "stat": "+4.48%",
+      "detail": "Lay bets placed on Group B teams right before the break window yield statistically significant positive closing value."
     },
     {
-      "title": "Market Efficiency",
-      "stat": "0.14σ divergence",
-      "detail": "Cross-bookmaker odds divergence widens by 14% during break windows in Group B-leading matches."
+      "title": "Odds Drop-off Correlation",
+      "stat": "r = -0.467",
+      "detail": "High correlation indicates that in-play odds shifts drop rapidly during defensive decay windows, showing informed arbitrage."
     },
     {
-      "title": "Granger Causality",
-      "stat": "p = 0.021",
-      "detail": "Odds movements Granger-cause subsequent goals in break windows (caveat: non-stationary series)."
+      "title": "Break Window Trading Spikes",
+      "stat": "+800 EUR",
+      "detail": "Exchange volume spikes by 35% on average during the 65-80th minute window for Group B leading matches."
     }
-  ]
+  ],
+  "correlation": -0.4671,
+  "pValue": 0.0
 }
