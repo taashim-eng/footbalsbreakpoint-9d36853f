@@ -1,0 +1,480 @@
+{
+  "scatter": [
+    {
+      "residual": 0.71,
+      "oddsMove": -0.23,
+      "anomalyLevel": "moderate",
+      "match": "Match 1"
+    },
+    {
+      "residual": 1.2,
+      "oddsMove": 0.39,
+      "anomalyLevel": "moderate",
+      "match": "Match 2"
+    },
+    {
+      "residual": 0.78,
+      "oddsMove": 0.28,
+      "anomalyLevel": "moderate",
+      "match": "Match 3"
+    },
+    {
+      "residual": -1.01,
+      "oddsMove": -0.07,
+      "anomalyLevel": "moderate",
+      "match": "Match 4"
+    },
+    {
+      "residual": 0.69,
+      "oddsMove": 0.22,
+      "anomalyLevel": "moderate",
+      "match": "Match 5"
+    },
+    {
+      "residual": -1.07,
+      "oddsMove": -0.57,
+      "anomalyLevel": "moderate",
+      "match": "Match 6"
+    },
+    {
+      "residual": -0.18,
+      "oddsMove": 0.2,
+      "anomalyLevel": "normal",
+      "match": "Match 7"
+    },
+    {
+      "residual": 1,
+      "oddsMove": 0.22,
+      "anomalyLevel": "moderate",
+      "match": "Match 8"
+    },
+    {
+      "residual": 1.91,
+      "oddsMove": 0.87,
+      "anomalyLevel": "high",
+      "match": "Match 9"
+    },
+    {
+      "residual": 1.75,
+      "oddsMove": 0.82,
+      "anomalyLevel": "high",
+      "match": "Match 10"
+    },
+    {
+      "residual": 0.8,
+      "oddsMove": 0.33,
+      "anomalyLevel": "moderate",
+      "match": "Match 11"
+    },
+    {
+      "residual": -0.99,
+      "oddsMove": -0.52,
+      "anomalyLevel": "moderate",
+      "match": "Match 12"
+    },
+    {
+      "residual": 0.12,
+      "oddsMove": 0.45,
+      "anomalyLevel": "normal",
+      "match": "Match 13"
+    },
+    {
+      "residual": 0.47,
+      "oddsMove": 0.54,
+      "anomalyLevel": "normal",
+      "match": "Match 14"
+    },
+    {
+      "residual": 0.74,
+      "oddsMove": 0.33,
+      "anomalyLevel": "moderate",
+      "match": "Match 15"
+    },
+    {
+      "residual": 0.47,
+      "oddsMove": 0.07,
+      "anomalyLevel": "normal",
+      "match": "Match 16"
+    },
+    {
+      "residual": 0.03,
+      "oddsMove": 0.08,
+      "anomalyLevel": "normal",
+      "match": "Match 17"
+    },
+    {
+      "residual": -1.17,
+      "oddsMove": -0.4,
+      "anomalyLevel": "moderate",
+      "match": "Match 18"
+    },
+    {
+      "residual": -0.26,
+      "oddsMove": 0.02,
+      "anomalyLevel": "normal",
+      "match": "Match 19"
+    },
+    {
+      "residual": -1.99,
+      "oddsMove": -1.09,
+      "anomalyLevel": "high",
+      "match": "Match 20"
+    },
+    {
+      "residual": -0.76,
+      "oddsMove": -0.57,
+      "anomalyLevel": "moderate",
+      "match": "Match 21"
+    },
+    {
+      "residual": -1.08,
+      "oddsMove": -0.19,
+      "anomalyLevel": "moderate",
+      "match": "Match 22"
+    },
+    {
+      "residual": 1.15,
+      "oddsMove": 0.49,
+      "anomalyLevel": "moderate",
+      "match": "Match 23"
+    },
+    {
+      "residual": -0.68,
+      "oddsMove": -0.5,
+      "anomalyLevel": "moderate",
+      "match": "Match 24"
+    },
+    {
+      "residual": -0.55,
+      "oddsMove": -0.08,
+      "anomalyLevel": "normal",
+      "match": "Match 25"
+    },
+    {
+      "residual": 1.59,
+      "oddsMove": 0.12,
+      "anomalyLevel": "high",
+      "match": "Match 26"
+    },
+    {
+      "residual": 0,
+      "oddsMove": 0.23,
+      "anomalyLevel": "normal",
+      "match": "Match 27"
+    },
+    {
+      "residual": -1.44,
+      "oddsMove": -0.77,
+      "anomalyLevel": "high",
+      "match": "Match 28"
+    },
+    {
+      "residual": 0.47,
+      "oddsMove": -0.11,
+      "anomalyLevel": "normal",
+      "match": "Match 29"
+    },
+    {
+      "residual": 0.83,
+      "oddsMove": 0.32,
+      "anomalyLevel": "moderate",
+      "match": "Match 30"
+    },
+    {
+      "residual": 1.2,
+      "oddsMove": 0.32,
+      "anomalyLevel": "moderate",
+      "match": "Match 31"
+    },
+    {
+      "residual": -1.04,
+      "oddsMove": -0.01,
+      "anomalyLevel": "moderate",
+      "match": "Match 32"
+    },
+    {
+      "residual": -1.66,
+      "oddsMove": -0.09,
+      "anomalyLevel": "high",
+      "match": "Match 33"
+    },
+    {
+      "residual": 1.87,
+      "oddsMove": 0.35,
+      "anomalyLevel": "high",
+      "match": "Match 34"
+    },
+    {
+      "residual": -1.02,
+      "oddsMove": -0.01,
+      "anomalyLevel": "moderate",
+      "match": "Match 35"
+    },
+    {
+      "residual": 1.14,
+      "oddsMove": 0.56,
+      "anomalyLevel": "moderate",
+      "match": "Match 36"
+    },
+    {
+      "residual": 0.91,
+      "oddsMove": -0.19,
+      "anomalyLevel": "moderate",
+      "match": "Match 37"
+    },
+    {
+      "residual": 1.71,
+      "oddsMove": 0.45,
+      "anomalyLevel": "high",
+      "match": "Match 38"
+    },
+    {
+      "residual": -1.45,
+      "oddsMove": 0,
+      "anomalyLevel": "high",
+      "match": "Match 39"
+    },
+    {
+      "residual": -0.41,
+      "oddsMove": 0.32,
+      "anomalyLevel": "normal",
+      "match": "Match 40"
+    },
+    {
+      "residual": -0.65,
+      "oddsMove": -0.54,
+      "anomalyLevel": "moderate",
+      "match": "Match 41"
+    },
+    {
+      "residual": -0.8,
+      "oddsMove": -0.29,
+      "anomalyLevel": "moderate",
+      "match": "Match 42"
+    },
+    {
+      "residual": 0.5,
+      "oddsMove": -0.34,
+      "anomalyLevel": "normal",
+      "match": "Match 43"
+    },
+    {
+      "residual": -0.81,
+      "oddsMove": 0.01,
+      "anomalyLevel": "moderate",
+      "match": "Match 44"
+    },
+    {
+      "residual": -0.95,
+      "oddsMove": -0.07,
+      "anomalyLevel": "moderate",
+      "match": "Match 45"
+    },
+    {
+      "residual": 1.82,
+      "oddsMove": 0.54,
+      "anomalyLevel": "high",
+      "match": "Match 46"
+    },
+    {
+      "residual": 1.56,
+      "oddsMove": 0.27,
+      "anomalyLevel": "high",
+      "match": "Match 47"
+    },
+    {
+      "residual": -1.3,
+      "oddsMove": -0.4,
+      "anomalyLevel": "high",
+      "match": "Match 48"
+    },
+    {
+      "residual": 0.23,
+      "oddsMove": 0.3,
+      "anomalyLevel": "normal",
+      "match": "Match 49"
+    },
+    {
+      "residual": -0.53,
+      "oddsMove": 0.26,
+      "anomalyLevel": "normal",
+      "match": "Match 50"
+    },
+    {
+      "residual": -1.37,
+      "oddsMove": -0.15,
+      "anomalyLevel": "high",
+      "match": "Match 51"
+    },
+    {
+      "residual": 1.64,
+      "oddsMove": 0.01,
+      "anomalyLevel": "high",
+      "match": "Match 52"
+    },
+    {
+      "residual": -0.55,
+      "oddsMove": -0.2,
+      "anomalyLevel": "normal",
+      "match": "Match 53"
+    },
+    {
+      "residual": 0.73,
+      "oddsMove": 0.05,
+      "anomalyLevel": "moderate",
+      "match": "Match 54"
+    },
+    {
+      "residual": 1.93,
+      "oddsMove": 0.68,
+      "anomalyLevel": "high",
+      "match": "Match 55"
+    },
+    {
+      "residual": 0.69,
+      "oddsMove": 0.36,
+      "anomalyLevel": "moderate",
+      "match": "Match 56"
+    },
+    {
+      "residual": -0.25,
+      "oddsMove": -0.38,
+      "anomalyLevel": "normal",
+      "match": "Match 57"
+    },
+    {
+      "residual": -1.6,
+      "oddsMove": -0.03,
+      "anomalyLevel": "high",
+      "match": "Match 58"
+    },
+    {
+      "residual": -1.24,
+      "oddsMove": 0.07,
+      "anomalyLevel": "high",
+      "match": "Match 59"
+    },
+    {
+      "residual": -0.44,
+      "oddsMove": -0.57,
+      "anomalyLevel": "normal",
+      "match": "Match 60"
+    }
+  ],
+  "volumeByMinute": [
+    {
+      "minute": 0,
+      "bLeading": 1002,
+      "aLeading": 953
+    },
+    {
+      "minute": 5,
+      "bLeading": 830,
+      "aLeading": 1016
+    },
+    {
+      "minute": 10,
+      "bLeading": 1091,
+      "aLeading": 1198
+    },
+    {
+      "minute": 15,
+      "bLeading": 927,
+      "aLeading": 1106
+    },
+    {
+      "minute": 20,
+      "bLeading": 976,
+      "aLeading": 909
+    },
+    {
+      "minute": 25,
+      "bLeading": 1134,
+      "aLeading": 1140
+    },
+    {
+      "minute": 30,
+      "bLeading": 1031,
+      "aLeading": 1148
+    },
+    {
+      "minute": 35,
+      "bLeading": 1079,
+      "aLeading": 1051
+    },
+    {
+      "minute": 40,
+      "bLeading": 1118,
+      "aLeading": 1111
+    },
+    {
+      "minute": 45,
+      "bLeading": 1172,
+      "aLeading": 1189
+    },
+    {
+      "minute": 50,
+      "bLeading": 1184,
+      "aLeading": 842
+    },
+    {
+      "minute": 55,
+      "bLeading": 1060,
+      "aLeading": 901
+    },
+    {
+      "minute": 60,
+      "bLeading": 974,
+      "aLeading": 1118
+    },
+    {
+      "minute": 65,
+      "bLeading": 1535,
+      "aLeading": 1312
+    },
+    {
+      "minute": 70,
+      "bLeading": 2284,
+      "aLeading": 1139
+    },
+    {
+      "minute": 75,
+      "bLeading": 2064,
+      "aLeading": 1255
+    },
+    {
+      "minute": 80,
+      "bLeading": 2082,
+      "aLeading": 1255
+    },
+    {
+      "minute": 85,
+      "bLeading": 927,
+      "aLeading": 1044
+    },
+    {
+      "minute": 90,
+      "bLeading": 1188,
+      "aLeading": 1042
+    }
+  ],
+  "correlation": 0.31,
+  "pValue": 0.003,
+  "findings": [
+    {
+      "title": "CLV Analysis",
+      "stat": "+2.4% CLV",
+      "detail": "Bettors fading Group B teams before the break window achieved positive closing line value on average."
+    },
+    {
+      "title": "Market Efficiency",
+      "stat": "0.14σ divergence",
+      "detail": "Cross-bookmaker odds divergence widens by 14% during break windows in Group B-leading matches."
+    },
+    {
+      "title": "Granger Causality",
+      "stat": "p = 0.021",
+      "detail": "Odds movements Granger-cause subsequent goals in break windows (caveat: non-stationary series)."
+    }
+  ]
+}
