@@ -9,8 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as MonitorRouteImport } from './routes/monitor'
+import { Route as MethodologyRouteImport } from './routes/methodology'
+import { Route as HistoricalRouteImport } from './routes/historical'
+import { Route as ExplorerRouteImport } from './routes/explorer'
+import { Route as BettingRouteImport } from './routes/betting'
 import { Route as IndexRouteImport } from './routes/index'
 
+const MonitorRoute = MonitorRouteImport.update({
+  id: '/monitor',
+  path: '/monitor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MethodologyRoute = MethodologyRouteImport.update({
+  id: '/methodology',
+  path: '/methodology',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HistoricalRoute = HistoricalRouteImport.update({
+  id: '/historical',
+  path: '/historical',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExplorerRoute = ExplorerRouteImport.update({
+  id: '/explorer',
+  path: '/explorer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BettingRoute = BettingRouteImport.update({
+  id: '/betting',
+  path: '/betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +49,102 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/betting': typeof BettingRoute
+  '/explorer': typeof ExplorerRoute
+  '/historical': typeof HistoricalRoute
+  '/methodology': typeof MethodologyRoute
+  '/monitor': typeof MonitorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/betting': typeof BettingRoute
+  '/explorer': typeof ExplorerRoute
+  '/historical': typeof HistoricalRoute
+  '/methodology': typeof MethodologyRoute
+  '/monitor': typeof MonitorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/betting': typeof BettingRoute
+  '/explorer': typeof ExplorerRoute
+  '/historical': typeof HistoricalRoute
+  '/methodology': typeof MethodologyRoute
+  '/monitor': typeof MonitorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/betting'
+    | '/explorer'
+    | '/historical'
+    | '/methodology'
+    | '/monitor'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/betting'
+    | '/explorer'
+    | '/historical'
+    | '/methodology'
+    | '/monitor'
+  id:
+    | '__root__'
+    | '/'
+    | '/betting'
+    | '/explorer'
+    | '/historical'
+    | '/methodology'
+    | '/monitor'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BettingRoute: typeof BettingRoute
+  ExplorerRoute: typeof ExplorerRoute
+  HistoricalRoute: typeof HistoricalRoute
+  MethodologyRoute: typeof MethodologyRoute
+  MonitorRoute: typeof MonitorRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/monitor': {
+      id: '/monitor'
+      path: '/monitor'
+      fullPath: '/monitor'
+      preLoaderRoute: typeof MonitorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/methodology': {
+      id: '/methodology'
+      path: '/methodology'
+      fullPath: '/methodology'
+      preLoaderRoute: typeof MethodologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/historical': {
+      id: '/historical'
+      path: '/historical'
+      fullPath: '/historical'
+      preLoaderRoute: typeof HistoricalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explorer': {
+      id: '/explorer'
+      path: '/explorer'
+      fullPath: '/explorer'
+      preLoaderRoute: typeof ExplorerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/betting': {
+      id: '/betting'
+      path: '/betting'
+      fullPath: '/betting'
+      preLoaderRoute: typeof BettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +157,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BettingRoute: BettingRoute,
+  ExplorerRoute: ExplorerRoute,
+  HistoricalRoute: HistoricalRoute,
+  MethodologyRoute: MethodologyRoute,
+  MonitorRoute: MonitorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

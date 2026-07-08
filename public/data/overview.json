@@ -1,0 +1,152 @@
+{
+  "matchesAnalyzed": 2847,
+  "anomaliesDetected": 23,
+  "statisticalConfidence": "94.2%",
+  "lastUpdated": "2026-07-03",
+  "findings": [
+    {
+      "id": "h1",
+      "icon": "📊",
+      "title": "Hypothesis H1",
+      "stat": "Group B teams concede 0.18 more goals in the break window",
+      "interpretation": "Difference-in-differences estimate, 95% HDI excludes zero",
+      "significant": true
+    },
+    {
+      "id": "h2",
+      "icon": "⏱️",
+      "title": "Survival Analysis",
+      "stat": "1.42x higher hazard of conceding after break",
+      "interpretation": "Cox proportional hazards, log-rank p < 0.01",
+      "significant": true
+    },
+    {
+      "id": "h3",
+      "icon": "💰",
+      "title": "Betting Correlation",
+      "stat": "r = 0.31 odds-residual correlation",
+      "interpretation": "Two-stage residual analysis, p = 0.003",
+      "significant": true
+    },
+    {
+      "id": "h4",
+      "icon": "📉",
+      "title": "Win Probability",
+      "stat": "8% larger swing for Group B teams",
+      "interpretation": "Mann-Whitney U, p = 0.018",
+      "significant": true
+    }
+  ],
+  "eras": [
+    {
+      "id": "A",
+      "years": "2002-2010",
+      "label": "No Breaks — Baseline",
+      "icon": "clock"
+    },
+    {
+      "id": "B",
+      "years": "2014-2022",
+      "label": "Conditional Breaks",
+      "icon": "thermometer"
+    },
+    {
+      "id": "C",
+      "years": "2026",
+      "label": "Mandatory Breaks",
+      "icon": "zap"
+    }
+  ],
+  "groupA": [
+    {
+      "name": "USA",
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Germany",
+      "flag": "🇩🇪"
+    },
+    {
+      "name": "France",
+      "flag": "🇫🇷"
+    },
+    {
+      "name": "England",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+    },
+    {
+      "name": "Japan",
+      "flag": "🇯🇵"
+    },
+    {
+      "name": "Canada",
+      "flag": "🇨🇦"
+    },
+    {
+      "name": "Netherlands",
+      "flag": "🇳🇱"
+    },
+    {
+      "name": "Australia",
+      "flag": "🇦🇺"
+    },
+    {
+      "name": "S. Korea",
+      "flag": "🇰🇷"
+    },
+    {
+      "name": "Belgium",
+      "flag": "🇧🇪"
+    },
+    {
+      "name": "Switzerland",
+      "flag": "🇨🇭"
+    },
+    {
+      "name": "Denmark",
+      "flag": "🇩🇰"
+    }
+  ],
+  "groupB": [
+    {
+      "name": "Haiti",
+      "flag": "🇭🇹"
+    },
+    {
+      "name": "Senegal",
+      "flag": "🇸🇳"
+    },
+    {
+      "name": "Honduras",
+      "flag": "🇭🇳"
+    },
+    {
+      "name": "Cape Verde",
+      "flag": "🇨🇻"
+    },
+    {
+      "name": "Uzbekistan",
+      "flag": "🇺🇿"
+    },
+    {
+      "name": "Ghana",
+      "flag": "🇬🇭"
+    },
+    {
+      "name": "Ecuador",
+      "flag": "🇪🇨"
+    },
+    {
+      "name": "Jordan",
+      "flag": "🇯🇴"
+    },
+    {
+      "name": "Panama",
+      "flag": "🇵🇦"
+    },
+    {
+      "name": "Curaçao",
+      "flag": "🇨🇼"
+    }
+  ]
+}
