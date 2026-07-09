@@ -32,8 +32,8 @@ function Index() {
         <Particles />
         <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28 text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono-num text-primary">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            LIVE · 2026 FIFA WORLD CUP
+            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+            MODEL OUTPUT · 2026 FIFA WORLD CUP
           </div>
           <h1 className="mt-6 font-display text-5xl md:text-7xl font-extrabold tracking-tight">
             THE BREAK <span className="text-gradient">POINT</span>
@@ -45,7 +45,7 @@ function Index() {
             Following the data. Following the money.
           </p>
           <p className="mt-6 text-xs text-slate-500 max-w-xl mx-auto">
-            Analyzing 2,800+ international matches across 7 World Cups and 5 continental tournaments (2002–2026).
+            Analyzing 604 historical match records with pre-computed statistical and betting-market signals.
           </p>
 
           <div className="mt-12 grid gap-4 md:grid-cols-3 max-w-4xl mx-auto">
