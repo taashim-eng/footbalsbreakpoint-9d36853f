@@ -48,43 +48,6 @@ export interface HistoricalData {
   eras: EraData[];
 }
 
-export interface MatchEvent {
-  minute: number;
-  type: "goal" | "card" | "sub";
-  team: "home" | "away";
-  label: string;
-}
-
-export interface OddsPoint {
-  minute: number;
-  groupBProb: number;
-  volume: number;
-}
-
-export interface Match2026 {
-  id: string;
-  date: string;
-  stage: Stage;
-  group?: string;
-  home: { name: string; flag: string; gdp: GdpGroup; score: number };
-  away: { name: string; flag: string; gdp: GdpGroup; score: number };
-  breakScore: string;
-  anomalyIndex: number;
-  anomalyLevel: AnomalyLevel;
-  winProbSwing: number;
-  venue: string;
-  temperatureC: number;
-  events: MatchEvent[];
-  scoreTrajectory: { minute: number; diff: number }[];
-  radar: { metric: string; pre: number; post: number }[];
-  componentBreakdown: { label: string; weight: number; score: number | null }[];
-  shap: { feature: string; value: number }[];
-  odds: OddsPoint[] | null;
-  fifaRankHome: number;
-  fifaRankAway: number;
-  squadValueHomeM: number;
-  squadValueAwayM: number;
-}
 
 export interface BettingData {
   scatter: { residual: number; oddsMove: number; anomalyLevel: AnomalyLevel; match: string }[];

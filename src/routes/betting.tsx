@@ -1,28 +1,25 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useMemo } from "react";
 import { useData, dataQueryOptions } from "@/hooks/useData";
 import { GlassCard } from "@/components/dashboard/GlassCard";
 import { PageTransition } from "@/components/dashboard/PageTransition";
+import { LevelDot } from "@/components/dashboard/StatBadge";
 import { AlertTriangle } from "lucide-react";
+import { cn } from "@/lib/utils";
 import {
-  ResponsiveContainer, ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceArea, ReferenceLine, LineChart, Line, BarChart, Bar, Legend,
+  ResponsiveContainer, ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceArea, ReferenceLine, BarChart, Bar, Legend,
 } from "recharts";
 
 export const Route = createFileRoute("/betting")({
   head: () => ({
     meta: [
       { title: "Betting Intelligence — The Break Point" },
-      { name: "description", content: "Two-stage residual analysis of in-play odds movements during hydration break windows." },
+      { name: "description", content: "Two-stage residual analysis of in-play odds movements during hydration break windows across 604 real matches." },
       { property: "og:title", content: "Betting Intelligence — The Break Point" },
       { property: "og:description", content: "Do markets anticipate match anomalies?" },
     ],
   }),
-  loader: async ({ context }) => {
-    await Promise.all([
-      context.queryClient.ensureQueryData(dataQueryOptions("betting")),
-      context.queryClient.ensureQueryData(dataQueryOptions("matches2026")),
-    ]);
-  },
+  loader: ({ context }) => context.queryClient.ensureQueryData(dataQueryOptions("betting")),
   component: Page,
 });
 
@@ -30,14 +27,20 @@ const darkTooltip = { background: "#0f172a", border: "1px solid rgba(148,163,184
 
 function Page() {
   const { data } = useData("betting");
-  const { data: matches } = useData("matches2026");
-  const matchesWithOdds = matches.filter((m) => m.odds);
-  const [selectedId, setSelectedId] = useState(matchesWithOdds[0]?.id ?? "");
-  const selected = matchesWithOdds.find((m) => m.id === selectedId);
 
-  const scatterHigh = data.scatter.filter((s) => s.anomalyLevel === "high");
-  const scatterMod = data.scatter.filter((s) => s.anomalyLevel === "moderate");
-  const scatterNormal = data.scatter.filter((s) => s.anomalyLevel === "normal");
+  const records = useMemo(
+    () => data.scatter.map((s, i) => ({
+      ...s,
+      id: `${i}-${s.match.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`,
+      composite: Math.abs(s.residual) * 100 + Math.abs(s.oddsMove),
+    })),
+    [data.scatter],
+  );
+
+  const scatterHigh = records.filter((s) => s.anomalyLevel === "high");
+  const scatterMod = records.filter((s) => s.anomalyLevel === "moderate");
+  const scatterNormal = records.filter((s) => s.anomalyLevel === "normal");
+  const topMovers = useMemo(() => [...records].sort((a, b) => b.composite - a.composite).slice(0, 10), [records]);
 
   return (
     <PageTransition>
@@ -48,17 +51,17 @@ function Page() {
         <div className="mt-4 flex items-start gap-3 rounded-xl border border-amber-500/40 bg-amber-500/10 p-4 text-sm">
           <AlertTriangle className="h-4 w-4 text-amber-400 mt-0.5" />
           <p className="text-amber-100">
-            Betting analysis based on publicly available data. In-play data available for 2018, 2022, and 2026 tournaments only.
+            Betting analysis derived from the 604 historical matches in the model output — residuals and closing-line movements only. No forward-looking projections.
           </p>
         </div>
 
-        {/* Scatter */}
         <GlassCard className="mt-6">
           <div className="flex items-baseline justify-between flex-wrap gap-2">
             <h3 className="font-display text-lg font-bold">Odds movement vs match-model residual</h3>
             <div className="flex gap-6 text-sm">
               <span><span className="text-muted-foreground">r =</span> <span className="font-mono-num font-semibold text-primary">{data.correlation}</span></span>
               <span><span className="text-muted-foreground">p =</span> <span className="font-mono-num font-semibold">{data.pValue}</span></span>
+              <span><span className="text-muted-foreground">N =</span> <span className="font-mono-num font-semibold">{records.length}</span></span>
             </div>
           </div>
           <div className="h-80 mt-4">
@@ -79,48 +82,32 @@ function Page() {
           </div>
         </GlassCard>
 
-        {/* Odds trajectory */}
         <GlassCard className="mt-6">
-          <div className="flex items-center justify-between gap-4 flex-wrap">
-            <h3 className="font-display text-lg font-bold">In-play odds trajectory</h3>
-            <select value={selectedId} onChange={(e) => setSelectedId(e.target.value)}
-              className="rounded-lg border border-border bg-background/60 px-3 py-2 text-sm focus:border-primary focus:outline-none">
-              {matchesWithOdds.map((m) => (
-                <option key={m.id} value={m.id}>{m.date} · {m.home.name} v {m.away.name}</option>
-              ))}
-            </select>
+          <h3 className="font-display text-lg font-bold">Top 10 signal matches</h3>
+          <p className="mt-1 text-xs text-muted-foreground">Ranked by |residual| × 100 + |odds move|. Click through for the full explorer view.</p>
+          <div className="mt-4 divide-y divide-border">
+            {topMovers.map((m, i) => (
+              <Link
+                key={m.id}
+                to="/explorer"
+                search={{ matchId: m.id }}
+                className="flex items-center gap-4 py-2 text-sm hover:bg-primary/5 transition-colors rounded-md px-2"
+              >
+                <span className="font-mono-num text-xs text-muted-foreground w-6">{i + 1}</span>
+                <LevelDot level={m.anomalyLevel} />
+                <span className="flex-1 truncate">{m.match}</span>
+                <span className={cn("font-mono-num text-xs w-24 text-right", m.residual >= 0 ? "text-red-300" : "text-emerald-300")}>
+                  {m.residual >= 0 ? "+" : ""}{m.residual.toFixed(4)}
+                </span>
+                <span className={cn("font-mono-num text-xs w-20 text-right", m.oddsMove >= 0 ? "text-amber-300" : "text-blue-300")}>
+                  {m.oddsMove >= 0 ? "+" : ""}{(m.oddsMove * 100).toFixed(1)}%
+                </span>
+                <span className="font-mono-num text-xs w-16 text-right font-semibold text-primary">{m.composite.toFixed(1)}</span>
+              </Link>
+            ))}
           </div>
-          {selected?.odds && (
-            <>
-              <div className="h-64 mt-4">
-                <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={selected.odds}>
-                    <CartesianGrid stroke="rgba(148,163,184,0.1)" />
-                    <XAxis dataKey="minute" stroke="#94a3b8" fontSize={11} label={{ value: "Match minute", position: "insideBottom", offset: -4, fill: "#64748b", fontSize: 11 }} />
-                    <YAxis stroke="#94a3b8" fontSize={11} domain={[0, 1]} tickFormatter={(v) => `${(v*100).toFixed(0)}%`} />
-                    <Tooltip contentStyle={darkTooltip} formatter={(v) => `${(Number(v)*100).toFixed(1)}%`} />
-                    <ReferenceArea x1={65} x2={80} fill="#3b82f6" fillOpacity={0.1} label={{ value: "Break window", fill: "#94a3b8", fontSize: 10 }} />
-                    <Line type="monotone" dataKey="groupBProb" stroke="#f59e0b" strokeWidth={2} dot={false} name="Group B implied win prob" />
-                  </LineChart>
-                </ResponsiveContainer>
-              </div>
-              <div className="h-32 mt-2">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={selected.odds}>
-                    <CartesianGrid stroke="rgba(148,163,184,0.1)" />
-                    <XAxis dataKey="minute" stroke="#94a3b8" fontSize={11} />
-                    <YAxis stroke="#94a3b8" fontSize={11} />
-                    <Tooltip contentStyle={darkTooltip} />
-                    <ReferenceArea x1={65} x2={80} fill="#3b82f6" fillOpacity={0.1} />
-                    <Bar dataKey="volume" fill="#3b82f6" opacity={0.6} name="Volume" />
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </>
-          )}
         </GlassCard>
 
-        {/* Volume */}
         <GlassCard className="mt-6">
           <h3 className="font-display text-lg font-bold">Average volume by minute · leading-group split</h3>
           <div className="h-64 mt-4">
@@ -142,7 +129,6 @@ function Page() {
           </p>
         </GlassCard>
 
-        {/* Findings */}
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {data.findings.map((f) => (
             <GlassCard key={f.title}>
