@@ -20,7 +20,6 @@ type DataMap = {
   methodology: MethodologyData;
 };
 
-// Nudge: Force Vite to invalidate module cache and re-bundle updated static JSON data
 const DATA: DataMap = {
   overview: overviewJson as unknown as OverviewData,
   historical: historicalJson as unknown as HistoricalData,

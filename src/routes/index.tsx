@@ -21,7 +21,6 @@ export const Route = createFileRoute("/")({
 
 const ERA_ICONS = { A: Clock, B: Thermometer, C: Zap };
 
-// Nudge: Force Vite to re-bundle page component and pull updated overview JSON
 function Index() {
   const { data } = useData("overview");
 
@@ -52,7 +51,7 @@ function Index() {
           <div className="mt-12 grid gap-4 md:grid-cols-3 max-w-4xl mx-auto">
             <CounterCard label="Matches Analyzed" value={data.matchesAnalyzed} tone="primary" />
             <CounterCard label="Anomalies Detected" value={data.anomaliesDetected} tone="warning" />
-            <CounterCard label="Statistical Confidence" value={94.2} decimals={1} suffix="%" tone="primary" />
+            <CounterCard label="Statistical Confidence" value={parseFloat(data.statisticalConfidence)} decimals={1} suffix="%" tone="primary" />
           </div>
         </div>
       </section>
