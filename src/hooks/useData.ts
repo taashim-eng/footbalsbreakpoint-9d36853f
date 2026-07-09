@@ -1,13 +1,11 @@
 import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 import overviewJson from "@/data/overview.json";
 import historicalJson from "@/data/historical.json";
-import matches2026Json from "@/data/matches2026.json";
 import bettingJson from "@/data/betting.json";
 import methodologyJson from "@/data/methodology.json";
 import type {
   OverviewData,
   HistoricalData,
-  Match2026,
   BettingData,
   MethodologyData,
 } from "@/types";
@@ -15,7 +13,6 @@ import type {
 type DataMap = {
   overview: OverviewData;
   historical: HistoricalData;
-  matches2026: Match2026[];
   betting: BettingData;
   methodology: MethodologyData;
 };
@@ -23,7 +20,6 @@ type DataMap = {
 const DATA: DataMap = {
   overview: overviewJson as unknown as OverviewData,
   historical: historicalJson as unknown as HistoricalData,
-  matches2026: matches2026Json as unknown as Match2026[],
   betting: bettingJson as unknown as BettingData,
   methodology: methodologyJson as unknown as MethodologyData,
 };

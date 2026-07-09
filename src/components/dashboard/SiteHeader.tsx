@@ -6,7 +6,7 @@ import { Moon, Sun } from "lucide-react";
 const NAV = [
   { to: "/", label: "Overview" },
   { to: "/historical", label: "Historical Analysis" },
-  { to: "/monitor", label: "2026 Monitor" },
+  { to: "/monitor", label: "Anomaly Monitor" },
   { to: "/betting", label: "Betting Intelligence" },
   { to: "/explorer", label: "Match Explorer" },
   { to: "/methodology", label: "Methodology" },
