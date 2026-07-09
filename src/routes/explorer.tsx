@@ -1,14 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { zodValidator, fallback } from "@tanstack/zod-adapter";
 import { z } from "zod";
-import { useState } from "react";
+import { useMemo } from "react";
 import { useData, dataQueryOptions } from "@/hooks/useData";
 import { GlassCard } from "@/components/dashboard/GlassCard";
 import { PageTransition } from "@/components/dashboard/PageTransition";
-import { AnomalyGauge } from "@/components/dashboard/AnomalyGauge";
 import { cn } from "@/lib/utils";
 import {
-  ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceArea, RadarChart, PolarGrid, PolarAngleAxis, Radar, PolarRadiusAxis, BarChart, Bar, Cell,
+  ResponsiveContainer,
+  ScatterChart,
+  Scatter,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ReferenceArea,
+  ReferenceLine,
+  BarChart,
+  Bar,
+  Cell,
 } from "recharts";
 
 const searchSchema = z.object({
@@ -19,227 +29,224 @@ export const Route = createFileRoute("/explorer")({
   head: () => ({
     meta: [
       { title: "Match Explorer — The Break Point" },
-      { name: "description", content: "Deep dive into individual match anomalies with timeline, radar comparison, and SHAP feature attribution." },
+      { name: "description", content: "Explore the 604 real historical match records used by the anomaly and betting-signal models." },
       { property: "og:title", content: "Match Explorer — The Break Point" },
-      { property: "og:description", content: "Per-match anomaly deep dive." },
+      { property: "og:description", content: "604-match residual and odds-movement explorer." },
     ],
   }),
   validateSearch: zodValidator(searchSchema),
-  loader: ({ context }) => context.queryClient.ensureQueryData(dataQueryOptions("matches2026")),
+  loader: ({ context }) => context.queryClient.ensureQueryData(dataQueryOptions("betting")),
   component: Page,
 });
 
 const darkTooltip = { background: "#0f172a", border: "1px solid rgba(148,163,184,0.2)", borderRadius: 8, fontSize: 12 };
 
 function Page() {
-  const { data } = useData("matches2026");
+  const { data } = useData("betting");
   const { matchId } = Route.useSearch();
   const navigate = Route.useNavigate();
-  const [oddsOpen, setOddsOpen] = useState(true);
 
-  const defaultMatch = [...data].sort((a,b) => b.anomalyIndex - a.anomalyIndex)[0];
-  const match = data.find((m) => m.id === matchId) ?? defaultMatch;
+  const records = useMemo(() => {
+    return data.scatter.map((point, index) => {
+      const [home = point.match, away = "Opponent"] = point.match.split(" vs ");
+
+      return {
+        ...point,
+        id: `${index}-${point.match.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`,
+        index,
+        home,
+        away,
+        absResidual: Math.abs(point.residual),
+        absOddsMove: Math.abs(point.oddsMove),
+        composite: Math.abs(point.residual) * 100 + Math.abs(point.oddsMove),
+      };
+    });
+  }, [data.scatter]);
+
+  const ranked = useMemo(() => [...records].sort((a, b) => b.composite - a.composite), [records]);
+  const record = records.find((m) => m.id === matchId) ?? ranked[0];
+
+  if (!record) {
+    return (
+      <PageTransition>
+        <div className="mx-auto max-w-7xl px-4 py-10 md:px-6">
+          <div className="text-xs uppercase tracking-[0.3em] text-primary">Match Explorer</div>
+          <h1 className="mt-2 font-display text-3xl md:text-4xl font-bold">No match records available</h1>
+        </div>
+      </PageTransition>
+    );
+  }
+
+  const selectedRank = ranked.findIndex((m) => m.id === record.id) + 1;
+  const normalRecords = records.filter((s) => s.anomalyLevel === "normal");
+  const moderateRecords = records.filter((s) => s.anomalyLevel === "moderate");
+  const highRecords = records.filter((s) => s.anomalyLevel === "high");
+  const signalBars = [
+    { signal: "Residual", value: record.residual, fill: record.residual >= 0 ? "#ef4444" : "#10b981" },
+    { signal: "Odds move", value: record.oddsMove, fill: record.oddsMove >= 0 ? "#f59e0b" : "#3b82f6" },
+  ];
 
   return (
     <PageTransition>
       <div className="mx-auto max-w-7xl px-4 py-10 md:px-6">
         <div className="text-xs uppercase tracking-[0.3em] text-primary">Match Explorer</div>
-        <h1 className="mt-2 font-display text-3xl md:text-4xl font-bold">Deep dive</h1>
+        <h1 className="mt-2 font-display text-3xl md:text-4xl font-bold">604-match model output</h1>
 
         <div className="mt-4">
           <select
-            value={match.id}
+            value={record.id}
             onChange={(e) => navigate({ search: { matchId: e.target.value } })}
-            className="w-full max-w-md rounded-lg border border-border bg-background/60 px-3 py-2 text-sm focus:border-primary focus:outline-none"
+            className="w-full max-w-2xl rounded-lg border border-border bg-background/60 px-3 py-2 text-sm focus:border-primary focus:outline-none"
           >
-            {data.map((m) => (
+            {records.map((m) => (
               <option key={m.id} value={m.id}>
-                {m.date} · {m.home.name} {m.home.score}-{m.away.score} {m.away.name} (idx {m.anomalyIndex})
+                #{m.index + 1} · {m.match} · {m.anomalyLevel} · residual {m.residual.toFixed(4)}
               </option>
             ))}
           </select>
         </div>
 
-        {/* Header banner */}
         <GlassCard className="mt-6">
           <div className="flex flex-wrap items-center justify-between gap-6">
-            <div className="flex items-center gap-4 text-center">
-              <div>
-                <div className="text-4xl">{match.home.flag}</div>
-                <div className="mt-1 font-semibold">{match.home.name}</div>
-                <div className="text-[10px] text-muted-foreground">Group {match.home.gdp}</div>
-              </div>
-              <div className="font-display font-extrabold text-5xl font-mono-num">
-                {match.home.score} <span className="text-muted-foreground">-</span> {match.away.score}
-              </div>
-              <div>
-                <div className="text-4xl">{match.away.flag}</div>
-                <div className="mt-1 font-semibold">{match.away.name}</div>
-                <div className="text-[10px] text-muted-foreground">Group {match.away.gdp}</div>
+            <div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">Selected historical record</div>
+              <div className="mt-2 flex flex-wrap items-center gap-3 font-display text-3xl font-bold">
+                <span>{record.home}</span>
+                <span className="font-mono-num text-muted-foreground">vs</span>
+                <span>{record.away}</span>
               </div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-              <Meta label="Date" value={match.date} />
-              <Meta label="Stage" value={match.stage} />
-              <Meta label="Venue" value={match.venue} />
-              <Meta label="Temp" value={`${match.temperatureC}°C`} />
+            <div className="grid grid-cols-2 gap-4 text-sm md:grid-cols-4">
+              <Meta label="Observation" value={`#${record.index + 1}`} />
+              <Meta label="Signal rank" value={`#${selectedRank}`} />
+              <Meta label="Residual" value={record.residual.toFixed(4)} />
+              <Meta label="Odds move" value={`${(record.oddsMove * 100).toFixed(1)}%`} />
             </div>
           </div>
         </GlassCard>
 
-        <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_400px]">
+        <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_360px]">
           <div className="space-y-6">
-            {/* Timeline */}
             <GlassCard>
-              <h3 className="font-display text-lg font-bold">Match Timeline</h3>
-              <div className="relative mt-6 h-16">
-                <div className="absolute inset-y-1/2 -translate-y-1/2 h-px w-full bg-border" />
-                <div className="absolute inset-y-0 bg-primary/10 border-x border-dashed border-primary/40" style={{ left: `${65/95*100}%`, width: `${15/95*100}%` }}>
-                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-widest text-primary">Break</div>
-                </div>
-                {match.events.map((e, i) => {
-                  const emoji = e.type === "goal" ? "⚽" : e.type === "card" ? "🟨" : "🔄";
-                  const above = e.team === "home";
-                  return (
-                    <div key={i} className="absolute text-sm" style={{ left: `${Math.min(97, e.minute/95*100)}%`, top: above ? "0%" : "60%" }}>
-                      <span title={`${e.minute}' ${e.label}`}>{emoji}</span>
-                    </div>
-                  );
-                })}
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 className="font-display text-lg font-bold">Residual vs odds movement</h3>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">N = {records.length}</div>
               </div>
-              <div className="mt-4 flex justify-between text-[10px] font-mono-num text-muted-foreground">
-                <span>0'</span><span>15'</span><span>30'</span><span>45'</span><span>60'</span><span>75'</span><span>90'</span>
-              </div>
-            </GlassCard>
-
-            {/* Score trajectory */}
-            <GlassCard>
-              <h3 className="font-display text-lg font-bold">Score trajectory · Group B perspective</h3>
-              <div className="h-56 mt-4">
+              <div className="mt-4 h-96">
                 <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={match.scoreTrajectory}>
+                  <ScatterChart>
                     <CartesianGrid stroke="rgba(148,163,184,0.1)" />
-                    <XAxis dataKey="minute" stroke="#94a3b8" fontSize={11} />
-                    <YAxis stroke="#94a3b8" fontSize={11} />
-                    <Tooltip contentStyle={darkTooltip} />
-                    <ReferenceArea x1={65} x2={80} fill="#3b82f6" fillOpacity={0.1} />
-                    <Line type="stepAfter" dataKey="diff" stroke="#f59e0b" strokeWidth={2} dot={false} />
-                  </LineChart>
+                    <XAxis type="number" dataKey="residual" name="Residual" stroke="#94a3b8" fontSize={11} />
+                    <YAxis type="number" dataKey="oddsMove" name="Odds move" stroke="#94a3b8" fontSize={11} tickFormatter={(v) => `${(Number(v) * 100).toFixed(0)}%`} />
+                    <Tooltip contentStyle={darkTooltip} formatter={(v) => typeof v === "number" ? v.toFixed(4) : v} cursor={{ strokeDasharray: "3 3" }} />
+                    <ReferenceArea x1={-0.01} x2={0.01} fill="#3b82f6" fillOpacity={0.05} />
+                    <ReferenceLine y={0} stroke="#475569" />
+                    <ReferenceLine x={0} stroke="#475569" />
+                    <ReferenceLine x={record.residual} stroke="#eab308" strokeDasharray="4 4" />
+                    <ReferenceLine y={record.oddsMove} stroke="#eab308" strokeDasharray="4 4" />
+                    <Scatter data={normalRecords} fill="#10b981" name="Normal" opacity={0.35} />
+                    <Scatter data={moderateRecords} fill="#f59e0b" name="Moderate" opacity={0.55} />
+                    <Scatter data={highRecords} fill="#ef4444" name="High" opacity={0.7} />
+                    <Scatter data={[record]} fill="#eab308" name="Selected" />
+                  </ScatterChart>
                 </ResponsiveContainer>
               </div>
             </GlassCard>
 
-            {/* Radar */}
             <GlassCard>
-              <h3 className="font-display text-lg font-bold">Pre vs Post Break</h3>
-              <div className="h-72 mt-4">
+              <h3 className="font-display text-lg font-bold">Selected match signals</h3>
+              <div className="mt-4 h-64">
                 <ResponsiveContainer width="100%" height="100%">
-                  <RadarChart data={match.radar}>
-                    <PolarGrid stroke="rgba(148,163,184,0.2)" />
-                    <PolarAngleAxis dataKey="metric" tick={{ fill: "#94a3b8", fontSize: 11 }} />
-                    <PolarRadiusAxis stroke="#475569" fontSize={10} />
-                    <Radar name="Pre-break" dataKey="pre" stroke="#3b82f6" fill="#3b82f6" fillOpacity={0.25} />
-                    <Radar name="Post-break" dataKey="post" stroke="#f59e0b" fill="#f59e0b" fillOpacity={0.25} />
-                    <Tooltip contentStyle={darkTooltip} />
-                  </RadarChart>
-                </ResponsiveContainer>
-              </div>
-            </GlassCard>
-          </div>
-
-          <div className="space-y-6">
-            <GlassCard className="text-center">
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">Anomaly Index</div>
-              <div className="mt-2 flex justify-center">
-                <AnomalyGauge score={match.anomalyIndex} size={180} />
-              </div>
-            </GlassCard>
-
-            <GlassCard>
-              <h3 className="text-xs uppercase tracking-widest text-muted-foreground">Component Breakdown</h3>
-              <div className="mt-4 space-y-3">
-                {match.componentBreakdown.map((c) => (
-                  <div key={c.label}>
-                    <div className="flex items-baseline justify-between text-xs">
-                      <span>{c.label}</span>
-                      <span className="font-mono-num text-muted-foreground">w={c.weight}</span>
-                    </div>
-                    <div className="mt-1 h-2 rounded-full bg-muted overflow-hidden">
-                      {c.score === null ? (
-                        <div className="h-full bg-muted-foreground/20 grid place-items-center text-[10px] text-muted-foreground">No data</div>
-                      ) : (
-                        <div
-                          className="h-full rounded-full"
-                          style={{
-                            width: `${c.score}%`,
-                            background: c.score > 70 ? "#ef4444" : c.score > 45 ? "#f59e0b" : "#10b981",
-                          }}
-                        />
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </GlassCard>
-
-            <GlassCard>
-              <h3 className="text-xs uppercase tracking-widest text-muted-foreground">Match Context</h3>
-              <div className="mt-3 grid grid-cols-2 gap-3 text-xs">
-                <Meta label="Home FIFA rank" value={`#${match.fifaRankHome}`} />
-                <Meta label="Away FIFA rank" value={`#${match.fifaRankAway}`} />
-                <Meta label="Squad value (H)" value={`€${match.squadValueHomeM}M`} />
-                <Meta label="Squad value (A)" value={`€${match.squadValueAwayM}M`} />
-              </div>
-            </GlassCard>
-
-            <GlassCard>
-              <h3 className="text-xs uppercase tracking-widest text-muted-foreground">SHAP Feature Attribution</h3>
-              <div className="h-56 mt-3">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={match.shap} layout="vertical">
+                  <BarChart data={signalBars} layout="vertical">
                     <CartesianGrid stroke="rgba(148,163,184,0.1)" />
-                    <XAxis type="number" stroke="#94a3b8" fontSize={10} />
-                    <YAxis type="category" dataKey="feature" stroke="#94a3b8" fontSize={10} width={110} />
-                    <Tooltip contentStyle={darkTooltip} />
+                    <XAxis type="number" stroke="#94a3b8" fontSize={11} />
+                    <YAxis type="category" dataKey="signal" stroke="#94a3b8" fontSize={11} width={90} />
+                    <Tooltip contentStyle={darkTooltip} formatter={(v) => Number(v).toFixed(4)} />
+                    <ReferenceLine x={0} stroke="#475569" />
                     <Bar dataKey="value">
-                      {match.shap.map((s, i) => (
-                        <Cell key={i} fill={s.value >= 0 ? "#ef4444" : "#10b981"} />
+                      {signalBars.map((signal) => (
+                        <Cell key={signal.signal} fill={signal.fill} />
                       ))}
                     </Bar>
                   </BarChart>
                 </ResponsiveContainer>
               </div>
             </GlassCard>
-          </div>
-        </div>
 
-        {/* Odds panel */}
-        <GlassCard className="mt-6">
-          <button className="flex w-full items-center justify-between" onClick={() => setOddsOpen(!oddsOpen)}>
-            <h3 className="font-display text-lg font-bold">Odds Trajectory</h3>
-            <span className="text-xs text-muted-foreground">{oddsOpen ? "Collapse" : "Expand"}</span>
-          </button>
-          {oddsOpen && (
-            match.odds ? (
-              <div className="h-64 mt-4">
+            <GlassCard>
+              <h3 className="font-display text-lg font-bold">Break-window exchange volume</h3>
+              <div className="mt-4 h-64">
                 <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={match.odds}>
+                  <BarChart data={data.volumeByMinute}>
                     <CartesianGrid stroke="rgba(148,163,184,0.1)" />
                     <XAxis dataKey="minute" stroke="#94a3b8" fontSize={11} />
-                    <YAxis stroke="#94a3b8" fontSize={11} domain={[0, 1]} tickFormatter={(v) => `${(v*100).toFixed(0)}%`} />
-                    <Tooltip contentStyle={darkTooltip} formatter={(v) => `${(Number(v)*100).toFixed(1)}%`} />
+                    <YAxis stroke="#94a3b8" fontSize={11} />
+                    <Tooltip contentStyle={darkTooltip} />
                     <ReferenceArea x1={65} x2={80} fill="#3b82f6" fillOpacity={0.1} />
-                    <Line type="monotone" dataKey="groupBProb" stroke="#f59e0b" strokeWidth={2} dot={false} />
-                  </LineChart>
+                    <Bar dataKey="bLeading" fill="#f59e0b" name="B-leading" opacity={0.8} />
+                    <Bar dataKey="aLeading" fill="#3b82f6" name="A-leading" opacity={0.6} />
+                  </BarChart>
                 </ResponsiveContainer>
               </div>
-            ) : (
-              <div className="mt-6 rounded-lg border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
-                No in-play data available for this match.
+            </GlassCard>
+          </div>
+
+          <div className="space-y-6">
+            <GlassCard>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">Classification</div>
+              <div
+                className={cn(
+                  "mt-3 inline-flex items-center rounded-full border px-3 py-1 text-sm font-semibold uppercase",
+                  record.anomalyLevel === "high" && "border-red-500/40 bg-red-500/10 text-red-300",
+                  record.anomalyLevel === "moderate" && "border-amber-500/40 bg-amber-500/10 text-amber-200",
+                  record.anomalyLevel === "normal" && "border-emerald-500/40 bg-emerald-500/10 text-emerald-300",
+                )}
+              >
+                {record.anomalyLevel}
               </div>
-            )
-          )}
-        </GlassCard>
+              <div className="mt-6 grid grid-cols-2 gap-3 text-xs">
+                <Meta label="Abs residual" value={record.absResidual.toFixed(4)} />
+                <Meta label="Abs odds move" value={`${(record.absOddsMove * 100).toFixed(1)}%`} />
+                <Meta label="Correlation" value={data.correlation.toFixed(4)} />
+                <Meta label="p-value" value={data.pValue.toFixed(4)} />
+              </div>
+            </GlassCard>
+
+            <GlassCard>
+              <h3 className="text-xs uppercase tracking-widest text-muted-foreground">Top ranked signals</h3>
+              <div className="mt-4 space-y-1">
+                {ranked.slice(0, 12).map((m, i) => (
+                  <button
+                    key={m.id}
+                    type="button"
+                    onClick={() => navigate({ search: { matchId: m.id } })}
+                    className={cn(
+                      "flex w-full items-center gap-3 rounded-lg p-2 text-left text-xs transition-colors hover:bg-primary/10",
+                      m.id === record.id && "bg-primary/10",
+                    )}
+                  >
+                    <span className="w-5 font-mono-num text-muted-foreground">{i + 1}</span>
+                    <span className="flex-1 truncate">{m.match}</span>
+                    <span className="font-mono-num text-muted-foreground">{m.residual.toFixed(3)}</span>
+                  </button>
+                ))}
+              </div>
+            </GlassCard>
+
+            <GlassCard>
+              <h3 className="text-xs uppercase tracking-widest text-muted-foreground">Model findings</h3>
+              <div className="mt-4 space-y-4">
+                {data.findings.map((finding) => (
+                  <div key={finding.title} className="border-b border-border pb-4 last:border-0 last:pb-0">
+                    <div className="font-display font-mono-num text-xl font-bold text-primary">{finding.stat}</div>
+                    <div className="mt-1 text-sm font-semibold">{finding.title}</div>
+                    <div className="mt-1 text-xs text-muted-foreground">{finding.detail}</div>
+                  </div>
+                ))}
+              </div>
+            </GlassCard>
+          </div>
+        </div>
       </div>
     </PageTransition>
   );

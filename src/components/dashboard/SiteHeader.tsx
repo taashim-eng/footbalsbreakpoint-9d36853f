@@ -56,7 +56,7 @@ export function SiteHeader() {
         </nav>
         <div className="flex items-center gap-3">
           <span className="hidden lg:inline-flex items-center rounded-full border border-border/60 bg-card/60 px-3 py-1 text-xs text-muted-foreground font-mono-num">
-            Last updated: 2026-07-03
+            Last updated: 2026-07-08
           </span>
           <button
             aria-label="Toggle theme"
