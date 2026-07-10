@@ -318,6 +318,13 @@ def export_all():
     else:
         art, raw_matches = {}, []
 
+    # Per-match shock-index metrics from the enrichment step (real Poisson model).
+    enrich_path = os.path.join(str(config.OUTPUT_DIR), "enrichment", "enrichment_results.json")
+    shock_by_id = {}
+    if os.path.exists(enrich_path):
+        with open(enrich_path, encoding="utf-8") as f:
+            shock_by_id = {e["matchId"]: e for e in json.load(f).get("shock2026", {}).get("matches", [])}
+
     matches_out = []
     for mm in raw_matches:
         rec = {
@@ -331,6 +338,12 @@ def export_all():
         }
         if "penalties" in mm:
             rec["penalties"] = mm["penalties"]
+        sk = shock_by_id.get(mm["matchId"])
+        if sk:
+            rec["expectedGoals"] = sk["expectedGoals"]
+            rec["shockIndex"] = sk["shockIndex"]
+            rec["shockPercentile"] = sk["shockPercentile"]
+            rec["winnerPreMatchProb"] = sk["winnerPreMatchProb"]
         matches_out.append(rec)
 
     matches2026 = {
@@ -340,6 +353,14 @@ def export_all():
         "note": art.get("note",
                         f"No 2026 fixtures completed as of {now_utc}.") if matches_out
         else f"No 2026 fixtures completed as of {now_utc}.",
+        "metricsNote": (
+            "shockIndex = scoreline surprisal: -ln P(exact final score) under a "
+            "Poisson model of each team's observed attack/defense rates (shrunk toward "
+            "the tournament mean). Higher = less expected. shockPercentile ranks it "
+            "0-100 among 2026 matches. winnerPreMatchProb = the model's pre-match "
+            "probability of the side that actually won (low = upset). Computed by "
+            "backend/analysis/17_anomaly_enrichment.py from observed scores only."
+        ),
         "matches": matches_out,
     }
     save_json("matches2026.json", matches2026)

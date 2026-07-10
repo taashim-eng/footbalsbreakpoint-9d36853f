@@ -1,8 +1,9 @@
 {
   "competition": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-09 15:15 UTC",
+  "lastUpdated": "2026-07-10 06:07 UTC",
   "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
   "note": "Observed completed matches only (group stage through Round of 16). Quarter-finals onward had not been played at scrape time and are omitted.",
+  "metricsNote": "shockIndex = scoreline surprisal: -ln P(exact final score) under a Poisson model of each team's observed attack/defense rates (shrunk toward the tournament mean). Higher = less expected. shockPercentile ranks it 0-100 among 2026 matches. winnerPreMatchProb = the model's pre-match probability of the side that actually won (low = upset). Computed by backend/analysis/17_anomaly_enrichment.py from observed scores only.",
   "matches": [
     {
       "matchId": "WC2026-MEX-RSA",
@@ -19,7 +20,14 @@
         "home": 2,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.5,
+        "away": 0.92
+      },
+      "shockIndex": 2.3,
+      "shockPercentile": 27,
+      "winnerPreMatchProb": 0.508
     },
     {
       "matchId": "WC2026-KOR-CZE",
@@ -36,7 +44,14 @@
         "home": 2,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.4,
+        "away": 1.15
+      },
+      "shockIndex": 2.43,
+      "shockPercentile": 41,
+      "winnerPreMatchProb": 0.427
     },
     {
       "matchId": "WC2026-CAN-BIH",
@@ -53,7 +68,14 @@
         "home": 1,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.72,
+        "away": 1.32
+      },
+      "shockIndex": 2.22,
+      "shockPercentile": 21,
+      "winnerPreMatchProb": 0.236
     },
     {
       "matchId": "WC2026-USA-PAR",
@@ -70,7 +92,14 @@
         "home": 4,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.61,
+        "away": 1.23
+      },
+      "shockIndex": 3.91,
+      "shockPercentile": 90,
+      "winnerPreMatchProb": 0.461
     },
     {
       "matchId": "WC2026-QAT-SUI",
@@ -87,7 +116,14 @@
         "home": 1,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 0.99,
+        "away": 2.03
+      },
+      "shockIndex": 2.32,
+      "shockPercentile": 30,
+      "winnerPreMatchProb": 0.208
     },
     {
       "matchId": "WC2026-BRA-MAR",
@@ -104,7 +140,14 @@
         "home": 1,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.42,
+        "away": 1.42
+      },
+      "shockIndex": 2.14,
+      "shockPercentile": 16,
+      "winnerPreMatchProb": 0.251
     },
     {
       "matchId": "WC2026-HAI-SCO",
@@ -121,7 +164,14 @@
         "home": 0,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.23,
+        "away": 1.48
+      },
+      "shockIndex": 2.32,
+      "shockPercentile": 30,
+      "winnerPreMatchProb": 0.43
     },
     {
       "matchId": "WC2026-AUS-TUR",
@@ -138,7 +188,14 @@
         "home": 2,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.31,
+        "away": 1.14
+      },
+      "shockIndex": 2.61,
+      "shockPercentile": 51,
+      "winnerPreMatchProb": 0.404
     },
     {
       "matchId": "WC2026-GER-CUW",
@@ -155,7 +212,14 @@
         "home": 7,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 2.21,
+        "away": 1.12
+      },
+      "shockIndex": 6.18,
+      "shockPercentile": 99,
+      "winnerPreMatchProb": 0.622
     },
     {
       "matchId": "WC2026-NED-JPN",
@@ -172,7 +236,14 @@
         "home": 2,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.77,
+        "away": 1.55
+      },
+      "shockIndex": 2.69,
+      "shockPercentile": 55,
+      "winnerPreMatchProb": 0.228
     },
     {
       "matchId": "WC2026-CIV-ECU",
@@ -189,7 +260,14 @@
         "home": 1,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.27,
+        "away": 1.05
+      },
+      "shockIndex": 2.08,
+      "shockPercentile": 8,
+      "winnerPreMatchProb": 0.413
     },
     {
       "matchId": "WC2026-SWE-TUN",
@@ -206,7 +284,14 @@
         "home": 5,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 2.18,
+        "away": 1.56
+      },
+      "shockIndex": 4.19,
+      "shockPercentile": 94,
+      "winnerPreMatchProb": 0.519
     },
     {
       "matchId": "WC2026-ESP-CPV",
@@ -223,7 +308,14 @@
         "home": 0,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.51,
+        "away": 0.87
+      },
+      "shockIndex": 2.38,
+      "shockPercentile": 36,
+      "winnerPreMatchProb": 0.261
     },
     {
       "matchId": "WC2026-BEL-EGY",
@@ -240,7 +332,14 @@
         "home": 1,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.8,
+        "away": 1.36
+      },
+      "shockIndex": 2.26,
+      "shockPercentile": 23,
+      "winnerPreMatchProb": 0.23
     },
     {
       "matchId": "WC2026-URU-KSA",
@@ -257,7 +356,14 @@
         "home": 1,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.4,
+        "away": 1.15
+      },
+      "shockIndex": 2.07,
+      "shockPercentile": 6,
+      "winnerPreMatchProb": 0.265
     },
     {
       "matchId": "WC2026-IRN-NZL",
@@ -274,7 +380,14 @@
         "home": 2,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.81,
+        "away": 1.31
+      },
+      "shockIndex": 2.78,
+      "shockPercentile": 59,
+      "winnerPreMatchProb": 0.23
     },
     {
       "matchId": "WC2026-FRA-SEN",
@@ -291,7 +404,14 @@
         "home": 3,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 2.46,
+        "away": 1.07
+      },
+      "shockIndex": 2.55,
+      "shockPercentile": 48,
+      "winnerPreMatchProb": 0.679
     },
     {
       "matchId": "WC2026-NOR-IRQ",
@@ -308,7 +428,14 @@
         "home": 4,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.97,
+        "away": 1.7
+      },
+      "shockIndex": 3.6,
+      "shockPercentile": 85,
+      "winnerPreMatchProb": 0.447
     },
     {
       "matchId": "WC2026-ARG-ALG",
@@ -325,7 +452,14 @@
         "home": 3,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 2.1,
+        "away": 1.26
+      },
+      "shockIndex": 2.92,
+      "shockPercentile": 69,
+      "winnerPreMatchProb": 0.569
     },
     {
       "matchId": "WC2026-AUT-JOR",
@@ -342,7 +476,14 @@
         "home": 3,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.77,
+        "away": 1.57
+      },
+      "shockIndex": 2.97,
+      "shockPercentile": 74,
+      "winnerPreMatchProb": 0.429
     },
     {
       "matchId": "WC2026-POR-COD",
@@ -359,7 +500,14 @@
         "home": 1,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.59,
+        "away": 0.99
+      },
+      "shockIndex": 2.12,
+      "shockPercentile": 14,
+      "winnerPreMatchProb": 0.251
     },
     {
       "matchId": "WC2026-ENG-CRO",
@@ -376,7 +524,14 @@
         "home": 4,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.84,
+        "away": 1.26
+      },
+      "shockIndex": 4.07,
+      "shockPercentile": 92,
+      "winnerPreMatchProb": 0.512
     },
     {
       "matchId": "WC2026-GHA-PAN",
@@ -393,7 +548,14 @@
         "home": 1,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.22,
+        "away": 0.82
+      },
+      "shockIndex": 1.84,
+      "shockPercentile": 0,
+      "winnerPreMatchProb": 0.456
     },
     {
       "matchId": "WC2026-COL-UZB",
@@ -410,7 +572,14 @@
         "home": 3,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 1.03
+      },
+      "shockIndex": 2.9,
+      "shockPercentile": 67,
+      "winnerPreMatchProb": 0.53
     },
     {
       "matchId": "WC2026-CZE-RSA",
@@ -427,7 +596,14 @@
         "home": 1,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.13,
+        "away": 1.32
+      },
+      "shockIndex": 2.05,
+      "shockPercentile": 4,
+      "winnerPreMatchProb": 0.272
     },
     {
       "matchId": "WC2026-SUI-BIH",
@@ -444,7 +620,14 @@
         "home": 4,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.72,
+        "away": 1.13
+      },
+      "shockIndex": 3.74,
+      "shockPercentile": 88,
+      "winnerPreMatchProb": 0.512
     },
     {
       "matchId": "WC2026-CAN-QAT",
@@ -461,7 +644,14 @@
         "home": 6,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 2.03,
+        "away": 1.18
+      },
+      "shockIndex": 5.53,
+      "shockPercentile": 98,
+      "winnerPreMatchProb": 0.571
     },
     {
       "matchId": "WC2026-MEX-KOR",
@@ -478,7 +668,14 @@
         "home": 1,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.51,
+        "away": 0.99
+      },
+      "shockIndex": 2.09,
+      "shockPercentile": 10,
+      "winnerPreMatchProb": 0.493
     },
     {
       "matchId": "WC2026-USA-AUS",
@@ -495,7 +692,14 @@
         "home": 2,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.49,
+        "away": 1.3
+      },
+      "shockIndex": 2.69,
+      "shockPercentile": 55,
+      "winnerPreMatchProb": 0.416
     },
     {
       "matchId": "WC2026-SCO-MAR",
@@ -512,7 +716,14 @@
         "home": 0,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 0.97,
+        "away": 1.6
+      },
+      "shockIndex": 2.1,
+      "shockPercentile": 11,
+      "winnerPreMatchProb": 0.52
     },
     {
       "matchId": "WC2026-BRA-HAI",
@@ -529,7 +740,14 @@
         "home": 3,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.93,
+        "away": 1.05
+      },
+      "shockIndex": 2.8,
+      "shockPercentile": 61,
+      "winnerPreMatchProb": 0.578
     },
     {
       "matchId": "WC2026-TUR-PAR",
@@ -546,7 +764,14 @@
         "home": 0,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.26,
+        "away": 1.24
+      },
+      "shockIndex": 2.29,
+      "shockPercentile": 25,
+      "winnerPreMatchProb": 0.36
     },
     {
       "matchId": "WC2026-NED-SWE",
@@ -563,7 +788,14 @@
         "home": 5,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 2.12,
+        "away": 1.48
+      },
+      "shockIndex": 4.23,
+      "shockPercentile": 95,
+      "winnerPreMatchProb": 0.524
     },
     {
       "matchId": "WC2026-GER-CIV",
@@ -580,7 +812,14 @@
         "home": 2,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 1.34
+      },
+      "shockIndex": 2.38,
+      "shockPercentile": 36,
+      "winnerPreMatchProb": 0.459
     },
     {
       "matchId": "WC2026-ECU-CUW",
@@ -597,7 +836,14 @@
         "home": 0,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.57,
+        "away": 1.05
+      },
+      "shockIndex": 2.62,
+      "shockPercentile": 52,
+      "winnerPreMatchProb": 0.252
     },
     {
       "matchId": "WC2026-JPN-TUN",
@@ -614,7 +860,14 @@
         "home": 4,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 2.25,
+        "away": 1.2
+      },
+      "shockIndex": 3.39,
+      "shockPercentile": 79,
+      "winnerPreMatchProb": 0.61
     },
     {
       "matchId": "WC2026-ESP-KSA",
@@ -631,7 +884,14 @@
         "home": 4,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.62,
+        "away": 0.72
+      },
+      "shockIndex": 3.59,
+      "shockPercentile": 84,
+      "winnerPreMatchProb": 0.589
     },
     {
       "matchId": "WC2026-BEL-IRN",
@@ -648,7 +908,14 @@
         "home": 0,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 1.2
+      },
+      "shockIndex": 2.9,
+      "shockPercentile": 67,
+      "winnerPreMatchProb": 0.239
     },
     {
       "matchId": "WC2026-URU-CPV",
@@ -665,7 +932,14 @@
         "home": 2,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.28,
+        "away": 1.3
+      },
+      "shockIndex": 2.95,
+      "shockPercentile": 71,
+      "winnerPreMatchProb": 0.265
     },
     {
       "matchId": "WC2026-EGY-NZL",
@@ -682,7 +956,14 @@
         "home": 3,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.97,
+        "away": 1.41
+      },
+      "shockIndex": 2.79,
+      "shockPercentile": 60,
+      "winnerPreMatchProb": 0.507
     },
     {
       "matchId": "WC2026-ARG-AUT",
@@ -699,7 +980,14 @@
         "home": 2,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 2.1,
+        "away": 1.33
+      },
+      "shockIndex": 2.64,
+      "shockPercentile": 53,
+      "winnerPreMatchProb": 0.553
     },
     {
       "matchId": "WC2026-FRA-IRQ",
@@ -716,7 +1004,14 @@
         "home": 3,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 2.1,
+        "away": 1.26
+      },
+      "shockIndex": 2.93,
+      "shockPercentile": 70,
+      "winnerPreMatchProb": 0.565
     },
     {
       "matchId": "WC2026-NOR-SEN",
@@ -733,7 +1028,14 @@
         "home": 3,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 2.34,
+        "away": 1.51
+      },
+      "shockIndex": 2.96,
+      "shockPercentile": 72,
+      "winnerPreMatchProb": 0.562
     },
     {
       "matchId": "WC2026-ALG-JOR",
@@ -750,7 +1052,14 @@
         "home": 2,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 1.57
+      },
+      "shockIndex": 2.45,
+      "shockPercentile": 44,
+      "winnerPreMatchProb": 0.412
     },
     {
       "matchId": "WC2026-POR-UZB",
@@ -767,7 +1076,14 @@
         "home": 5,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.89,
+        "away": 1.16
+      },
+      "shockIndex": 4.66,
+      "shockPercentile": 96,
+      "winnerPreMatchProb": 0.544
     },
     {
       "matchId": "WC2026-ENG-GHA",
@@ -784,7 +1100,14 @@
         "home": 0,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.42,
+        "away": 1.11
+      },
+      "shockIndex": 2.53,
+      "shockPercentile": 47,
+      "winnerPreMatchProb": 0.264
     },
     {
       "matchId": "WC2026-CRO-PAN",
@@ -801,7 +1124,14 @@
         "home": 1,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.37,
+        "away": 1.25
+      },
+      "shockIndex": 2.3,
+      "shockPercentile": 27,
+      "winnerPreMatchProb": 0.397
     },
     {
       "matchId": "WC2026-COL-COD",
@@ -818,7 +1148,14 @@
         "home": 1,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.4,
+        "away": 0.86
+      },
+      "shockIndex": 1.93,
+      "shockPercentile": 2,
+      "winnerPreMatchProb": 0.495
     },
     {
       "matchId": "WC2026-BIH-QAT",
@@ -835,7 +1172,14 @@
         "home": 3,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.87,
+        "away": 1.42
+      },
+      "shockIndex": 2.85,
+      "shockPercentile": 62,
+      "winnerPreMatchProb": 0.482
     },
     {
       "matchId": "WC2026-SUI-CAN",
@@ -852,7 +1196,14 @@
         "home": 2,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.48,
+        "away": 1.3
+      },
+      "shockIndex": 2.42,
+      "shockPercentile": 39,
+      "winnerPreMatchProb": 0.416
     },
     {
       "matchId": "WC2026-MAR-HAI",
@@ -869,7 +1220,14 @@
         "home": 4,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.93,
+        "away": 1.05
+      },
+      "shockIndex": 4.12,
+      "shockPercentile": 93,
+      "winnerPreMatchProb": 0.578
     },
     {
       "matchId": "WC2026-BRA-SCO",
@@ -886,7 +1244,14 @@
         "home": 3,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.6,
+        "away": 0.97
+      },
+      "shockIndex": 2.96,
+      "shockPercentile": 72,
+      "winnerPreMatchProb": 0.52
     },
     {
       "matchId": "WC2026-MEX-CZE",
@@ -903,7 +1268,14 @@
         "home": 3,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.76,
+        "away": 0.99
+      },
+      "shockIndex": 2.85,
+      "shockPercentile": 62,
+      "winnerPreMatchProb": 0.555
     },
     {
       "matchId": "WC2026-RSA-KOR",
@@ -920,7 +1292,14 @@
         "home": 1,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.07,
+        "away": 1.13
+      },
+      "shockIndex": 2.13,
+      "shockPercentile": 15,
+      "winnerPreMatchProb": 0.339
     },
     {
       "matchId": "WC2026-CUW-CIV",
@@ -937,7 +1316,14 @@
         "home": 0,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.05,
+        "away": 1.78
+      },
+      "shockIndex": 2.37,
+      "shockPercentile": 35,
+      "winnerPreMatchProb": 0.547
     },
     {
       "matchId": "WC2026-ECU-GER",
@@ -954,7 +1340,14 @@
         "home": 2,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.12,
+        "away": 1.7
+      },
+      "shockIndex": 2.75,
+      "shockPercentile": 57,
+      "winnerPreMatchProb": 0.252
     },
     {
       "matchId": "WC2026-JPN-SWE",
@@ -971,7 +1364,14 @@
         "home": 1,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.91,
+        "away": 1.48
+      },
+      "shockIndex": 2.35,
+      "shockPercentile": 33,
+      "winnerPreMatchProb": 0.222
     },
     {
       "matchId": "WC2026-TUN-NED",
@@ -988,7 +1388,14 @@
         "home": 1,
         "away": 3
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.2,
+        "away": 2.46
+      },
+      "shockIndex": 2.57,
+      "shockPercentile": 50,
+      "winnerPreMatchProb": 0.65
     },
     {
       "matchId": "WC2026-PAR-AUS",
@@ -1005,7 +1412,14 @@
         "home": 0,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 0.99,
+        "away": 1.18
+      },
+      "shockIndex": 2.16,
+      "shockPercentile": 17,
+      "winnerPreMatchProb": 0.293
     },
     {
       "matchId": "WC2026-TUR-USA",
@@ -1022,7 +1436,14 @@
         "home": 3,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.39,
+        "away": 1.74
+      },
+      "shockIndex": 3.52,
+      "shockPercentile": 82,
+      "winnerPreMatchProb": 0.307
     },
     {
       "matchId": "WC2026-NOR-FRA",
@@ -1039,7 +1460,14 @@
         "home": 1,
         "away": 4
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.42,
+        "away": 1.98
+      },
+      "shockIndex": 3.49,
+      "shockPercentile": 81,
+      "winnerPreMatchProb": 0.507
     },
     {
       "matchId": "WC2026-IRQ-SEN",
@@ -1056,7 +1484,14 @@
         "home": 5,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 2.18,
+        "away": 1.62
+      },
+      "shockIndex": 4.69,
+      "shockPercentile": 97,
+      "winnerPreMatchProb": 0.507
     },
     {
       "matchId": "WC2026-CPV-KSA",
@@ -1073,7 +1508,14 @@
         "home": 0,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.38,
+        "away": 1.12
+      },
+      "shockIndex": 2.5,
+      "shockPercentile": 46,
+      "winnerPreMatchProb": 0.267
     },
     {
       "matchId": "WC2026-URU-ESP",
@@ -1090,7 +1532,14 @@
         "home": 0,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 0.89,
+        "away": 1.53
+      },
+      "shockIndex": 1.99,
+      "shockPercentile": 3,
+      "winnerPreMatchProb": 0.524
     },
     {
       "matchId": "WC2026-IRN-EGY",
@@ -1107,7 +1556,14 @@
         "home": 1,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.33,
+        "away": 1.39
+      },
+      "shockIndex": 2.1,
+      "shockPercentile": 11,
+      "winnerPreMatchProb": 0.257
     },
     {
       "matchId": "WC2026-NZL-BEL",
@@ -1124,7 +1580,14 @@
         "home": 1,
         "away": 5
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.28,
+        "away": 2.28
+      },
+      "shockIndex": 3.98,
+      "shockPercentile": 91,
+      "winnerPreMatchProb": 0.599
     },
     {
       "matchId": "WC2026-GHA-CRO",
@@ -1141,7 +1604,14 @@
         "home": 2,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.41,
+        "away": 1.12
+      },
+      "shockIndex": 2.42,
+      "shockPercentile": 39,
+      "winnerPreMatchProb": 0.435
     },
     {
       "matchId": "WC2026-PAN-ENG",
@@ -1158,7 +1628,14 @@
         "home": 0,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 0.95,
+        "away": 1.66
+      },
+      "shockIndex": 2.29,
+      "shockPercentile": 25,
+      "winnerPreMatchProb": 0.54
     },
     {
       "matchId": "WC2026-POR-COL",
@@ -1175,7 +1652,14 @@
         "home": 0,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.11,
+        "away": 1.05
+      },
+      "shockIndex": 2.16,
+      "shockPercentile": 17,
+      "winnerPreMatchProb": 0.295
     },
     {
       "matchId": "WC2026-UZB-COD",
@@ -1192,7 +1676,14 @@
         "home": 3,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.51,
+        "away": 1.64
+      },
+      "shockIndex": 3.21,
+      "shockPercentile": 76,
+      "winnerPreMatchProb": 0.354
     },
     {
       "matchId": "WC2026-AUT-ALG",
@@ -1209,7 +1700,14 @@
         "home": 3,
         "away": 3
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 1.62
+      },
+      "shockIndex": 3.86,
+      "shockPercentile": 89,
+      "winnerPreMatchProb": 0.229
     },
     {
       "matchId": "WC2026-ARG-JOR",
@@ -1226,7 +1724,14 @@
         "home": 3,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 2.18,
+        "away": 1.2
+      },
+      "shockIndex": 2.65,
+      "shockPercentile": 54,
+      "winnerPreMatchProb": 0.596
     },
     {
       "matchId": "WC2026-RSA-CAN",
@@ -1243,7 +1748,14 @@
         "home": 0,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.1,
+        "away": 1.43
+      },
+      "shockIndex": 2.18,
+      "shockPercentile": 19,
+      "winnerPreMatchProb": 0.446
     },
     {
       "matchId": "WC2026-JPN-BRA",
@@ -1260,7 +1772,14 @@
         "home": 1,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.41,
+        "away": 1.57
+      },
+      "shockIndex": 2.43,
+      "shockPercentile": 41,
+      "winnerPreMatchProb": 0.414
     },
     {
       "matchId": "WC2026-PAR-GER",
@@ -1281,7 +1800,14 @@
       "penalties": {
         "home": 4,
         "away": 3
-      }
+      },
+      "expectedGoals": {
+        "home": 1.13,
+        "away": 1.75
+      },
+      "shockIndex": 2.2,
+      "shockPercentile": 20,
+      "winnerPreMatchProb": 0.236
     },
     {
       "matchId": "WC2026-MAR-NED",
@@ -1302,7 +1828,14 @@
       "penalties": {
         "home": 3,
         "away": 2
-      }
+      },
+      "expectedGoals": {
+        "home": 1.57,
+        "away": 1.62
+      },
+      "shockIndex": 2.26,
+      "shockPercentile": 23,
+      "winnerPreMatchProb": 0.235
     },
     {
       "matchId": "WC2026-CIV-NOR",
@@ -1319,7 +1852,14 @@
         "home": 1,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.51,
+        "away": 1.62
+      },
+      "shockIndex": 2.44,
+      "shockPercentile": 43,
+      "winnerPreMatchProb": 0.407
     },
     {
       "matchId": "WC2026-SWE-FRA",
@@ -1336,7 +1876,14 @@
         "home": 0,
         "away": 3
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.21,
+        "away": 2.18
+      },
+      "shockIndex": 2.85,
+      "shockPercentile": 62,
+      "winnerPreMatchProb": 0.593
     },
     {
       "matchId": "WC2026-ECU-MEX",
@@ -1353,7 +1900,14 @@
         "home": 0,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 0.92,
+        "away": 1.5
+      },
+      "shockIndex": 2.3,
+      "shockPercentile": 27,
+      "winnerPreMatchProb": 0.508
     },
     {
       "matchId": "WC2026-COD-ENG",
@@ -1370,7 +1924,14 @@
         "home": 1,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.11,
+        "away": 1.77
+      },
+      "shockIndex": 2.33,
+      "shockPercentile": 32,
+      "winnerPreMatchProb": 0.528
     },
     {
       "matchId": "WC2026-SEN-BEL",
@@ -1387,7 +1948,14 @@
         "home": 2,
         "away": 3
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.26,
+        "away": 2.4
+      },
+      "shockIndex": 3.06,
+      "shockPercentile": 75,
+      "winnerPreMatchProb": 0.627
     },
     {
       "matchId": "WC2026-BIH-USA",
@@ -1404,7 +1972,14 @@
         "home": 0,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.44,
+        "away": 1.84
+      },
+      "shockIndex": 2.76,
+      "shockPercentile": 58,
+      "winnerPreMatchProb": 0.471
     },
     {
       "matchId": "WC2026-AUT-ESP",
@@ -1421,7 +1996,14 @@
         "home": 0,
         "away": 3
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.01,
+        "away": 1.79
+      },
+      "shockIndex": 2.85,
+      "shockPercentile": 62,
+      "winnerPreMatchProb": 0.556
     },
     {
       "matchId": "WC2026-CRO-POR",
@@ -1438,7 +2020,14 @@
         "home": 1,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.13,
+        "away": 1.66
+      },
+      "shockIndex": 2.35,
+      "shockPercentile": 33,
+      "winnerPreMatchProb": 0.497
     },
     {
       "matchId": "WC2026-ALG-SUI",
@@ -1455,7 +2044,14 @@
         "home": 0,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.13,
+        "away": 1.79
+      },
+      "shockIndex": 2.45,
+      "shockPercentile": 44,
+      "winnerPreMatchProb": 0.528
     },
     {
       "matchId": "WC2026-EGY-AUS",
@@ -1476,7 +2072,14 @@
       "penalties": {
         "home": 4,
         "away": 2
-      }
+      },
+      "expectedGoals": {
+        "home": 1.3,
+        "away": 1.24
+      },
+      "shockIndex": 2.06,
+      "shockPercentile": 5,
+      "winnerPreMatchProb": 0.268
     },
     {
       "matchId": "WC2026-CPV-ARG",
@@ -1493,7 +2096,14 @@
         "home": 2,
         "away": 3
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.18,
+        "away": 1.82
+      },
+      "shockIndex": 3.36,
+      "shockPercentile": 78,
+      "winnerPreMatchProb": 0.522
     },
     {
       "matchId": "WC2026-GHA-COL",
@@ -1510,7 +2120,14 @@
         "home": 0,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 0.86,
+        "away": 1.04
+      },
+      "shockIndex": 1.86,
+      "shockPercentile": 1,
+      "winnerPreMatchProb": 0.39
     },
     {
       "matchId": "WC2026-MAR-CAN",
@@ -1527,7 +2144,14 @@
         "home": 3,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.55,
+        "away": 1.36
+      },
+      "shockIndex": 3.39,
+      "shockPercentile": 79,
+      "winnerPreMatchProb": 0.419
     },
     {
       "matchId": "WC2026-FRA-PAR",
@@ -1544,7 +2168,14 @@
         "home": 1,
         "away": 0
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.8,
+        "away": 0.86
+      },
+      "shockIndex": 2.07,
+      "shockPercentile": 6,
+      "winnerPreMatchProb": 0.596
     },
     {
       "matchId": "WC2026-BRA-NOR",
@@ -1561,7 +2192,14 @@
         "home": 1,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.73,
+        "away": 1.55
+      },
+      "shockIndex": 2.55,
+      "shockPercentile": 48,
+      "winnerPreMatchProb": 0.345
     },
     {
       "matchId": "WC2026-MEX-ENG",
@@ -1578,7 +2216,14 @@
         "home": 2,
         "away": 3
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.48,
+        "away": 1.42
+      },
+      "shockIndex": 3.55,
+      "shockPercentile": 83,
+      "winnerPreMatchProb": 0.362
     },
     {
       "matchId": "WC2026-POR-ESP",
@@ -1595,7 +2240,14 @@
         "home": 0,
         "away": 1
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.05,
+        "away": 1.3
+      },
+      "shockIndex": 2.08,
+      "shockPercentile": 8,
+      "winnerPreMatchProb": 0.422
     },
     {
       "matchId": "WC2026-USA-BEL",
@@ -1612,7 +2264,14 @@
         "home": 1,
         "away": 4
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.55,
+        "away": 1.86
+      },
+      "shockIndex": 3.67,
+      "shockPercentile": 86,
+      "winnerPreMatchProb": 0.453
     },
     {
       "matchId": "WC2026-ARG-EGY",
@@ -1629,7 +2288,14 @@
         "home": 3,
         "away": 2
       },
-      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "expectedGoals": {
+        "home": 1.86,
+        "away": 1.36
+      },
+      "shockIndex": 3.23,
+      "shockPercentile": 77,
+      "winnerPreMatchProb": 0.492
     },
     {
       "matchId": "WC2026-SUI-COL",
@@ -1650,7 +2316,14 @@
       "penalties": {
         "home": 4,
         "away": 3
-      }
+      },
+      "expectedGoals": {
+        "home": 1.17,
+        "away": 1.05
+      },
+      "shockIndex": 2.22,
+      "shockPercentile": 21,
+      "winnerPreMatchProb": 0.289
     }
   ]
 }

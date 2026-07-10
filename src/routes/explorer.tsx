@@ -111,6 +111,31 @@ function Page() {
                 Source: {record.source}. Only observed final results are shown — no per-minute trajectory, odds, or radar data is synthesised for 2026 matches.
               </p>
             </GlassCard>
+
+            {record.shockIndex != null && record.expectedGoals && (
+              <GlassCard>
+                <div className="flex items-baseline justify-between gap-2">
+                  <h3 className="font-display text-lg font-bold">Shock index</h3>
+                  <span className="font-mono-num text-2xl font-bold text-primary">
+                    {record.shockIndex.toFixed(2)}
+                    <span className="ml-2 text-xs text-muted-foreground">pctl {record.shockPercentile}</span>
+                  </span>
+                </div>
+                <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                  <Meta label="Model xG (home)" value={record.expectedGoals.home.toFixed(2)} />
+                  <Meta label="Model xG (away)" value={record.expectedGoals.away.toFixed(2)} />
+                  <Meta label="Actual" value={`${record.finalScore.home}–${record.finalScore.away}`} />
+                  <Meta label="Winner's pre-match prob" value={record.winnerPreMatchProb != null ? `${(record.winnerPreMatchProb * 100).toFixed(0)}%` : "—"} />
+                </div>
+                <div className="mt-4 rounded-lg border border-primary/20 bg-primary/5 p-3 text-xs text-muted-foreground">
+                  <span className="font-semibold text-primary">ELI5:</span> A Poisson model guesses each team's goals
+                  from how they've scored so far this tournament. The <span className="font-semibold">shock index</span> is
+                  how <em>surprised</em> the model is by the real scoreline — big blowouts and out-of-nowhere results score
+                  high, routine 1–0s score low. It measures a surprising <em>scoreline</em>, not necessarily an upset:
+                  a tight draw that a favourite lost on penalties won't rank high, because 1–1 itself isn't surprising.
+                </div>
+              </GlassCard>
+            )}
           </div>
 
           <div className="space-y-6">

@@ -86,6 +86,11 @@ export interface Match2026 {
   finalScore: { home: number; away: number };
   penalties?: { home: number; away: number };
   source: string;
+  // Real per-match metrics from the Poisson shock model (17_anomaly_enrichment.py)
+  expectedGoals?: { home: number; away: number };
+  shockIndex?: number;
+  shockPercentile?: number;
+  winnerPreMatchProb?: number;
 }
 
 export interface Matches2026Data {
@@ -93,6 +98,7 @@ export interface Matches2026Data {
   lastUpdated: string;
   source: string;
   note: string;
+  metricsNote?: string;
   matches: Match2026[];
 }
 

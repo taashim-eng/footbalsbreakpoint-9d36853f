@@ -25,7 +25,8 @@ def run_all():
         ("backend.analysis.13_betting_stage2_volume", "run_volume_analysis"),
         ("backend.analysis.14_betting_stage2_efficiency", "run_efficiency_analysis"),
         ("backend.analysis.15_anomaly_index", "calculate_anomaly_index"),
-        ("backend.analysis.16_2026_detector", "run_2026_detector")
+        ("backend.analysis.16_2026_detector", "run_2026_detector"),
+        ("backend.analysis.17_anomaly_enrichment", "run_anomaly_enrichment")
     ]
     
     for mod_path, func_name in modules:

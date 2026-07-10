@@ -55,6 +55,8 @@ function Page() {
     const sorted = [...out];
     if (search.sort === "goals") {
       sorted.sort((a, b) => (b.finalScore.home + b.finalScore.away) - (a.finalScore.home + a.finalScore.away));
+    } else if (search.sort === "shock") {
+      sorted.sort((a, b) => (b.shockIndex ?? 0) - (a.shockIndex ?? 0));
     } else {
       sorted.sort((a, b) => b.date.localeCompare(a.date));
     }
@@ -119,7 +121,7 @@ function Page() {
             label="Sort"
             value={search.sort}
             onChange={(v) => updateSearch({ sort: v })}
-            options={[["date", "Most recent"], ["goals", "Most goals"]]}
+            options={[["date", "Most recent"], ["goals", "Most goals"], ["shock", "Biggest shock"]]}
           />
         </div>
 
@@ -154,7 +156,15 @@ function Page() {
                     <div className="text-[10px] uppercase tracking-widest text-amber-300/80 mt-0.5">{decided}</div>
                   )}
                 </div>
-                <div className="hidden md:block text-right w-40 shrink-0">
+                {m.shockIndex != null && (
+                  <div className="hidden sm:block text-right w-16 shrink-0" title={`Scoreline surprisal (percentile ${m.shockPercentile})`}>
+                    <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Shock</div>
+                    <div className={cn("font-mono-num text-sm font-semibold", (m.shockPercentile ?? 0) >= 90 ? "text-amber-300" : "text-muted-foreground")}>
+                      {m.shockIndex.toFixed(1)}
+                    </div>
+                  </div>
+                )}
+                <div className="hidden md:block text-right w-36 shrink-0">
                   <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Venue</div>
                   <div className="text-xs truncate">{m.venue}</div>
                 </div>
