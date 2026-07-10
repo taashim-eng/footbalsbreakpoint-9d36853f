@@ -2,7 +2,7 @@
   "matchesAnalyzed": 604,
   "anomaliesDetected": 5,
   "statisticalConfidence": "99.9%",
-  "lastUpdated": "2026-07-08 15:25 UTC",
+  "lastUpdated": "2026-07-09 15:15 UTC",
   "findings": [
     {
       "id": "chi2",
@@ -34,71 +34,77 @@
       "id": "A",
       "years": "2002 - 2010",
       "label": "Pre-Break Era",
-      "icon": "ShieldAlert"
+      "icon": "ShieldAlert",
+      "startDate": "2002-05-31",
+      "endDate": "2011-07-24"
     },
     {
       "id": "B",
       "years": "2014 - 2022",
       "label": "Conditional Break Era",
-      "icon": "Sun"
+      "icon": "Sun",
+      "startDate": "2014-06-12",
+      "endDate": "2022-12-18"
     },
     {
       "id": "C",
       "years": "2026",
       "label": "Mandatory Break Era",
-      "icon": "AlertOctagon"
+      "icon": "AlertOctagon",
+      "startDate": "2015-06-03",
+      "endDate": "2026-07-19"
     }
   ],
   "groupA": [
     {
       "name": "USA",
-      "flag": "\ud83c\uddfa\ud83c\uddf8"
+      "flag": "🇺🇸"
     },
     {
       "name": "England",
-      "flag": "\ud83c\uddec\ud83c\udde7"
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
     },
     {
       "name": "France",
-      "flag": "\ud83c\uddeb\ud83c\uddf7"
+      "flag": "🇫🇷"
     },
     {
       "name": "Germany",
-      "flag": "\ud83c\udde9\ud83c\uddea"
+      "flag": "🇩🇪"
     },
     {
       "name": "Brazil",
-      "flag": "\ud83c\udde7\ud83c\uddf7"
+      "flag": "🇧🇷"
     },
     {
       "name": "Argentina",
-      "flag": "\ud83c\udde6\ud83c\uddf7"
+      "flag": "🇦🇷"
     }
   ],
   "groupB": [
     {
       "name": "Colombia",
-      "flag": "\ud83c\udde8\ud83c\uddf4"
-    },
-    {
-      "name": "Serbia",
-      "flag": "\ud83c\uddf7\ud83c\uddf8"
+      "flag": "🇨🇴"
     },
     {
       "name": "Morocco",
-      "flag": "\ud83c\uddf2\ud83c\udde6"
+      "flag": "🇲🇦"
     },
     {
       "name": "Senegal",
-      "flag": "\ud83c\uddf8\ud83c\uddf3"
+      "flag": "🇸🇳"
     },
     {
       "name": "Ecuador",
-      "flag": "\ud83c\uddea\ud83c\udde8"
+      "flag": "🇪🇨"
     },
     {
       "name": "South Korea",
-      "flag": "\ud83c\uddf0\ud83c\uddf7"
+      "flag": "🇰🇷"
+    },
+    {
+      "name": "Ivory Coast",
+      "flag": "🇨🇮"
     }
   ]
 }

@@ -1,0 +1,1464 @@
+{
+  "competition": "FIFA World Cup 2026",
+  "scrapeDate": "2026-07-08",
+  "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+  "note": "Observed completed matches only (group stage through Round of 16). Quarter-finals onward had not been played at scrape time and are omitted.",
+  "matches": [
+    {
+      "matchId": "WC2026-MEX-RSA",
+      "date": "2026-06-11",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group A",
+      "homeTeam": "Mexico",
+      "awayTeam": "South Africa",
+      "venue": "Estadio Banorte",
+      "city": "Mexico City",
+      "finalScore": {
+        "home": 2,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-KOR-CZE",
+      "date": "2026-06-11",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group A",
+      "homeTeam": "South Korea",
+      "awayTeam": "Czechia",
+      "venue": "Estadio Akron",
+      "city": "Guadalajara",
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-CAN-BIH",
+      "date": "2026-06-12",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group B",
+      "homeTeam": "Canada",
+      "awayTeam": "Bosnia-Herzegovina",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-USA-PAR",
+      "date": "2026-06-12",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group D",
+      "homeTeam": "United States",
+      "awayTeam": "Paraguay",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "finalScore": {
+        "home": 4,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-QAT-SUI",
+      "date": "2026-06-13",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group B",
+      "homeTeam": "Qatar",
+      "awayTeam": "Switzerland",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-BRA-MAR",
+      "date": "2026-06-13",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group C",
+      "homeTeam": "Brazil",
+      "awayTeam": "Morocco",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-HAI-SCO",
+      "date": "2026-06-13",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group C",
+      "homeTeam": "Haiti",
+      "awayTeam": "Scotland",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-AUS-TUR",
+      "date": "2026-06-13",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group D",
+      "homeTeam": "Australia",
+      "awayTeam": "Türkiye",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "finalScore": {
+        "home": 2,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-GER-CUW",
+      "date": "2026-06-14",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group E",
+      "homeTeam": "Germany",
+      "awayTeam": "Curaçao",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "finalScore": {
+        "home": 7,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-NED-JPN",
+      "date": "2026-06-14",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group F",
+      "homeTeam": "Netherlands",
+      "awayTeam": "Japan",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "finalScore": {
+        "home": 2,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-CIV-ECU",
+      "date": "2026-06-14",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group E",
+      "homeTeam": "Ivory Coast",
+      "awayTeam": "Ecuador",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-SWE-TUN",
+      "date": "2026-06-14",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group F",
+      "homeTeam": "Sweden",
+      "awayTeam": "Tunisia",
+      "venue": "Estadio BBVA",
+      "city": "Guadalupe",
+      "finalScore": {
+        "home": 5,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-ESP-CPV",
+      "date": "2026-06-15",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group H",
+      "homeTeam": "Spain",
+      "awayTeam": "Cape Verde",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-BEL-EGY",
+      "date": "2026-06-15",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group G",
+      "homeTeam": "Belgium",
+      "awayTeam": "Egypt",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-URU-KSA",
+      "date": "2026-06-15",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group H",
+      "homeTeam": "Uruguay",
+      "awayTeam": "Saudi Arabia",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-IRN-NZL",
+      "date": "2026-06-15",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group G",
+      "homeTeam": "Iran",
+      "awayTeam": "New Zealand",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "finalScore": {
+        "home": 2,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-FRA-SEN",
+      "date": "2026-06-16",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group I",
+      "homeTeam": "France",
+      "awayTeam": "Senegal",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-NOR-IRQ",
+      "date": "2026-06-16",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group I",
+      "homeTeam": "Norway",
+      "awayTeam": "Iraq",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "finalScore": {
+        "home": 4,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-ARG-ALG",
+      "date": "2026-06-16",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group J",
+      "homeTeam": "Argentina",
+      "awayTeam": "Algeria",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "city": "Kansas City",
+      "finalScore": {
+        "home": 3,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-AUT-JOR",
+      "date": "2026-06-17",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group J",
+      "homeTeam": "Austria",
+      "awayTeam": "Jordan",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-POR-COD",
+      "date": "2026-06-17",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group K",
+      "homeTeam": "Portugal",
+      "awayTeam": "Congo DR",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-ENG-CRO",
+      "date": "2026-06-17",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group L",
+      "homeTeam": "England",
+      "awayTeam": "Croatia",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "finalScore": {
+        "home": 4,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-GHA-PAN",
+      "date": "2026-06-17",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group L",
+      "homeTeam": "Ghana",
+      "awayTeam": "Panama",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-COL-UZB",
+      "date": "2026-06-17",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group K",
+      "homeTeam": "Colombia",
+      "awayTeam": "Uzbekistan",
+      "venue": "Estadio Banorte",
+      "city": "Mexico City",
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-CZE-RSA",
+      "date": "2026-06-18",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group A",
+      "homeTeam": "Czechia",
+      "awayTeam": "South Africa",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-SUI-BIH",
+      "date": "2026-06-18",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group B",
+      "homeTeam": "Switzerland",
+      "awayTeam": "Bosnia-Herzegovina",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "finalScore": {
+        "home": 4,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-CAN-QAT",
+      "date": "2026-06-18",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group B",
+      "homeTeam": "Canada",
+      "awayTeam": "Qatar",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "finalScore": {
+        "home": 6,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-MEX-KOR",
+      "date": "2026-06-18",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group A",
+      "homeTeam": "Mexico",
+      "awayTeam": "South Korea",
+      "venue": "Estadio Akron",
+      "city": "Guadalajara",
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-USA-AUS",
+      "date": "2026-06-19",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group D",
+      "homeTeam": "United States",
+      "awayTeam": "Australia",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "finalScore": {
+        "home": 2,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-SCO-MAR",
+      "date": "2026-06-19",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group C",
+      "homeTeam": "Scotland",
+      "awayTeam": "Morocco",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-BRA-HAI",
+      "date": "2026-06-19",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group C",
+      "homeTeam": "Brazil",
+      "awayTeam": "Haiti",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "finalScore": {
+        "home": 3,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-TUR-PAR",
+      "date": "2026-06-19",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group D",
+      "homeTeam": "Türkiye",
+      "awayTeam": "Paraguay",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-NED-SWE",
+      "date": "2026-06-20",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group F",
+      "homeTeam": "Netherlands",
+      "awayTeam": "Sweden",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "finalScore": {
+        "home": 5,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-GER-CIV",
+      "date": "2026-06-20",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group E",
+      "homeTeam": "Germany",
+      "awayTeam": "Ivory Coast",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-ECU-CUW",
+      "date": "2026-06-20",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group E",
+      "homeTeam": "Ecuador",
+      "awayTeam": "Curaçao",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "city": "Kansas City",
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-JPN-TUN",
+      "date": "2026-06-21",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group F",
+      "homeTeam": "Japan",
+      "awayTeam": "Tunisia",
+      "venue": "Estadio BBVA",
+      "city": "Guadalupe",
+      "finalScore": {
+        "home": 4,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-ESP-KSA",
+      "date": "2026-06-21",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group H",
+      "homeTeam": "Spain",
+      "awayTeam": "Saudi Arabia",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "finalScore": {
+        "home": 4,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-BEL-IRN",
+      "date": "2026-06-21",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group G",
+      "homeTeam": "Belgium",
+      "awayTeam": "Iran",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-URU-CPV",
+      "date": "2026-06-21",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group H",
+      "homeTeam": "Uruguay",
+      "awayTeam": "Cape Verde",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "finalScore": {
+        "home": 2,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-EGY-NZL",
+      "date": "2026-06-21",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group G",
+      "homeTeam": "Egypt",
+      "awayTeam": "New Zealand",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-ARG-AUT",
+      "date": "2026-06-22",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group J",
+      "homeTeam": "Argentina",
+      "awayTeam": "Austria",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "finalScore": {
+        "home": 2,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-FRA-IRQ",
+      "date": "2026-06-22",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group I",
+      "homeTeam": "France",
+      "awayTeam": "Iraq",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "finalScore": {
+        "home": 3,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-NOR-SEN",
+      "date": "2026-06-22",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group I",
+      "homeTeam": "Norway",
+      "awayTeam": "Senegal",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "finalScore": {
+        "home": 3,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-ALG-JOR",
+      "date": "2026-06-22",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group J",
+      "homeTeam": "Algeria",
+      "awayTeam": "Jordan",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-POR-UZB",
+      "date": "2026-06-23",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group K",
+      "homeTeam": "Portugal",
+      "awayTeam": "Uzbekistan",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "finalScore": {
+        "home": 5,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-ENG-GHA",
+      "date": "2026-06-23",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group L",
+      "homeTeam": "England",
+      "awayTeam": "Ghana",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-CRO-PAN",
+      "date": "2026-06-23",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group L",
+      "homeTeam": "Croatia",
+      "awayTeam": "Panama",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-COL-COD",
+      "date": "2026-06-23",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group K",
+      "homeTeam": "Colombia",
+      "awayTeam": "Congo DR",
+      "venue": "Estadio Akron",
+      "city": "Guadalajara",
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-BIH-QAT",
+      "date": "2026-06-24",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group B",
+      "homeTeam": "Bosnia-Herzegovina",
+      "awayTeam": "Qatar",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-SUI-CAN",
+      "date": "2026-06-24",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group B",
+      "homeTeam": "Switzerland",
+      "awayTeam": "Canada",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-MAR-HAI",
+      "date": "2026-06-24",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group C",
+      "homeTeam": "Morocco",
+      "awayTeam": "Haiti",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "finalScore": {
+        "home": 4,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-BRA-SCO",
+      "date": "2026-06-24",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group C",
+      "homeTeam": "Brazil",
+      "awayTeam": "Scotland",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "finalScore": {
+        "home": 3,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-MEX-CZE",
+      "date": "2026-06-24",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group A",
+      "homeTeam": "Mexico",
+      "awayTeam": "Czechia",
+      "venue": "Estadio Banorte",
+      "city": "Mexico City",
+      "finalScore": {
+        "home": 3,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-RSA-KOR",
+      "date": "2026-06-24",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group A",
+      "homeTeam": "South Africa",
+      "awayTeam": "South Korea",
+      "venue": "Estadio BBVA",
+      "city": "Guadalupe",
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-CUW-CIV",
+      "date": "2026-06-25",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group E",
+      "homeTeam": "Curaçao",
+      "awayTeam": "Ivory Coast",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-ECU-GER",
+      "date": "2026-06-25",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group E",
+      "homeTeam": "Ecuador",
+      "awayTeam": "Germany",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-JPN-SWE",
+      "date": "2026-06-25",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group F",
+      "homeTeam": "Japan",
+      "awayTeam": "Sweden",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-TUN-NED",
+      "date": "2026-06-25",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group F",
+      "homeTeam": "Tunisia",
+      "awayTeam": "Netherlands",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "city": "Kansas City",
+      "finalScore": {
+        "home": 1,
+        "away": 3
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-PAR-AUS",
+      "date": "2026-06-25",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group D",
+      "homeTeam": "Paraguay",
+      "awayTeam": "Australia",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-TUR-USA",
+      "date": "2026-06-25",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group D",
+      "homeTeam": "Türkiye",
+      "awayTeam": "United States",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "finalScore": {
+        "home": 3,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-NOR-FRA",
+      "date": "2026-06-26",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group I",
+      "homeTeam": "Norway",
+      "awayTeam": "France",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "finalScore": {
+        "home": 1,
+        "away": 4
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-IRQ-SEN",
+      "date": "2026-06-26",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group I",
+      "homeTeam": "Iraq",
+      "awayTeam": "Senegal",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "finalScore": {
+        "home": 5,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-CPV-KSA",
+      "date": "2026-06-26",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group H",
+      "homeTeam": "Cape Verde",
+      "awayTeam": "Saudi Arabia",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-URU-ESP",
+      "date": "2026-06-26",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group H",
+      "homeTeam": "Uruguay",
+      "awayTeam": "Spain",
+      "venue": "Estadio Akron",
+      "city": "Guadalajara",
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-IRN-EGY",
+      "date": "2026-06-26",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group G",
+      "homeTeam": "Iran",
+      "awayTeam": "Egypt",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-NZL-BEL",
+      "date": "2026-06-26",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group G",
+      "homeTeam": "New Zealand",
+      "awayTeam": "Belgium",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "finalScore": {
+        "home": 1,
+        "away": 5
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-GHA-CRO",
+      "date": "2026-06-27",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group L",
+      "homeTeam": "Ghana",
+      "awayTeam": "Croatia",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-PAN-ENG",
+      "date": "2026-06-27",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group L",
+      "homeTeam": "Panama",
+      "awayTeam": "England",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-POR-COL",
+      "date": "2026-06-27",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group K",
+      "homeTeam": "Portugal",
+      "awayTeam": "Colombia",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-UZB-COD",
+      "date": "2026-06-27",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group K",
+      "homeTeam": "Uzbekistan",
+      "awayTeam": "Congo DR",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-AUT-ALG",
+      "date": "2026-06-27",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group J",
+      "homeTeam": "Austria",
+      "awayTeam": "Algeria",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "city": "Kansas City",
+      "finalScore": {
+        "home": 3,
+        "away": 3
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-ARG-JOR",
+      "date": "2026-06-27",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Group J",
+      "homeTeam": "Argentina",
+      "awayTeam": "Jordan",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-RSA-CAN",
+      "date": "2026-06-28",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "South Africa",
+      "awayTeam": "Canada",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-JPN-BRA",
+      "date": "2026-06-29",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Japan",
+      "awayTeam": "Brazil",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-PAR-GER",
+      "date": "2026-06-29",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Paraguay",
+      "awayTeam": "Germany",
+      "venue": "Gillette Stadium",
+      "city": "Foxborough",
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "penalties": {
+        "home": 4,
+        "away": 3
+      }
+    },
+    {
+      "matchId": "WC2026-MAR-NED",
+      "date": "2026-06-29",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Morocco",
+      "awayTeam": "Netherlands",
+      "venue": "Estadio BBVA",
+      "city": "Guadalupe",
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "penalties": {
+        "home": 3,
+        "away": 2
+      }
+    },
+    {
+      "matchId": "WC2026-CIV-NOR",
+      "date": "2026-06-30",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Ivory Coast",
+      "awayTeam": "Norway",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-SWE-FRA",
+      "date": "2026-06-30",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Sweden",
+      "awayTeam": "France",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "finalScore": {
+        "home": 0,
+        "away": 3
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-ECU-MEX",
+      "date": "2026-06-30",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Ecuador",
+      "awayTeam": "Mexico",
+      "venue": "Estadio Banorte",
+      "city": "Mexico City",
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-COD-ENG",
+      "date": "2026-07-01",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Congo DR",
+      "awayTeam": "England",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-SEN-BEL",
+      "date": "2026-07-01",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Senegal",
+      "awayTeam": "Belgium",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "finalScore": {
+        "home": 2,
+        "away": 3
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-BIH-USA",
+      "date": "2026-07-01",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Bosnia-Herzegovina",
+      "awayTeam": "United States",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara",
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-AUT-ESP",
+      "date": "2026-07-02",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Austria",
+      "awayTeam": "Spain",
+      "venue": "SoFi Stadium",
+      "city": "Inglewood",
+      "finalScore": {
+        "home": 0,
+        "away": 3
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-CRO-POR",
+      "date": "2026-07-02",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Croatia",
+      "awayTeam": "Portugal",
+      "venue": "BMO Field",
+      "city": "Toronto",
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-ALG-SUI",
+      "date": "2026-07-02",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Algeria",
+      "awayTeam": "Switzerland",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-EGY-AUS",
+      "date": "2026-07-03",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Egypt",
+      "awayTeam": "Australia",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "penalties": {
+        "home": 4,
+        "away": 2
+      }
+    },
+    {
+      "matchId": "WC2026-CPV-ARG",
+      "date": "2026-07-03",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Cape Verde",
+      "awayTeam": "Argentina",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "finalScore": {
+        "home": 2,
+        "away": 3
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-GHA-COL",
+      "date": "2026-07-03",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 32",
+      "homeTeam": "Ghana",
+      "awayTeam": "Colombia",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "city": "Kansas City",
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-MAR-CAN",
+      "date": "2026-07-04",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 16",
+      "homeTeam": "Morocco",
+      "awayTeam": "Canada",
+      "venue": "NRG Stadium",
+      "city": "Houston",
+      "finalScore": {
+        "home": 3,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-FRA-PAR",
+      "date": "2026-07-04",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 16",
+      "homeTeam": "France",
+      "awayTeam": "Paraguay",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia",
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-BRA-NOR",
+      "date": "2026-07-05",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 16",
+      "homeTeam": "Brazil",
+      "awayTeam": "Norway",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-MEX-ENG",
+      "date": "2026-07-05",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 16",
+      "homeTeam": "Mexico",
+      "awayTeam": "England",
+      "venue": "Estadio Banorte",
+      "city": "Mexico City",
+      "finalScore": {
+        "home": 2,
+        "away": 3
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-POR-ESP",
+      "date": "2026-07-06",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 16",
+      "homeTeam": "Portugal",
+      "awayTeam": "Spain",
+      "venue": "AT&T Stadium",
+      "city": "Arlington",
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-USA-BEL",
+      "date": "2026-07-06",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 16",
+      "homeTeam": "United States",
+      "awayTeam": "Belgium",
+      "venue": "Lumen Field",
+      "city": "Seattle",
+      "finalScore": {
+        "home": 1,
+        "away": 4
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-ARG-EGY",
+      "date": "2026-07-07",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 16",
+      "homeTeam": "Argentina",
+      "awayTeam": "Egypt",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "finalScore": {
+        "home": 3,
+        "away": 2
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08"
+    },
+    {
+      "matchId": "WC2026-SUI-COL",
+      "date": "2026-07-07",
+      "competition": "FIFA World Cup 2026",
+      "stage": "Round of 16",
+      "homeTeam": "Switzerland",
+      "awayTeam": "Colombia",
+      "venue": "BC Place",
+      "city": "Vancouver",
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
+      "penalties": {
+        "home": 4,
+        "away": 3
+      }
+    }
+  ]
+}

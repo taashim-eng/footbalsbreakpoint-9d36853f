@@ -2,54 +2,222 @@
 export_dashboard_data.py - Bridges Python Analysis to React Frontend.
 
 Loads results from backend/outputs/ and the SQLite database, and exports them
-as JSON files in src/data/ (overview.json, historical.json, matches2026.json,
-betting.json, methodology.json) conforming to the TypeScript interfaces.
+as JSON files in src/data/ and public/data/ (overview.json, historical.json,
+matches2026.json, betting.json, methodology.json) conforming to the
+TypeScript interfaces.
+
+Data-integrity rules enforced here (see task spec):
+  * Every match-level record carries date / competition / stage / source.
+  * matches2026.json is built ONLY from observed, completed 2026 matches
+    (the scraped artifact backend/data/raw/wc2026_results.json). No synthetic
+    per-minute trajectories, odds paths, or radar values are emitted.
+  * Historical per-minute / per-bin visual series (survival, heatmap,
+    win-probability distribution) are computed from REAL event data in the
+    database, excluding the legacy synthetic 2026 rows. No np.random.
+  * Simulated betting-volume series are NOT exported (no observed source).
+  * Existing statistical result numbers (residuals, p-values, correlations,
+    DiD, hazard ratio) are preserved unchanged; this script only reads them.
+
+The export is deterministic: it contains no random number generation.
 """
 
 import os
 import json
 import sqlite3
+import math
 import pandas as pd
-import numpy as np
-from datetime import datetime
+from datetime import datetime, timezone
+
 from backend import config
 from backend.data.data_access import DataAccess
 
 FRONTEND_DATA_DIR_SRC = os.path.join(os.path.dirname(os.path.dirname(__file__)), "src", "data")
 FRONTEND_DATA_DIR_PUBLIC = os.path.join(os.path.dirname(os.path.dirname(__file__)), "public", "data")
 
+WC2026_ARTIFACT = os.path.join(str(config.RAW_DIR), "wc2026_results.json")
+
+# Era calendar ranges (ISO dates) for the natural-experiment framing.
+ERA_DATES = {
+    "A": {"startDate": "2002-05-31", "endDate": "2011-07-24"},
+    "B": {"startDate": "2014-06-12", "endDate": "2022-12-18"},
+    "C": {"startDate": "2015-06-03", "endDate": "2026-07-19"},
+}
+
+# Provenance labels.
+SRC_HISTORICAL = "jfjelstul/worldcup match database (2002-2022) + continental cups"
+SRC_ODDS_MODEL = "modeled from Stage-1 residual (beta*residual), not observed market data"
+SRC_2026 = "ESPN / FIFA.com fixtures, scraped 2026-07-08"
+
+# Flag emoji for the 48 participating 2026 nations (display only).
+TEAM_FLAGS = {
+    "Mexico": "🇲🇽", "South Africa": "🇿🇦", "South Korea": "🇰🇷", "Czechia": "🇨🇿",
+    "Canada": "🇨🇦", "Bosnia-Herzegovina": "🇧🇦", "Qatar": "🇶🇦", "Switzerland": "🇨🇭",
+    "Brazil": "🇧🇷", "Morocco": "🇲🇦", "Haiti": "🇭🇹", "Scotland": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    "United States": "🇺🇸", "Paraguay": "🇵🇾", "Australia": "🇦🇺", "Türkiye": "🇹🇷",
+    "Germany": "🇩🇪", "Curaçao": "🇨🇼", "Ivory Coast": "🇨🇮", "Ecuador": "🇪🇨",
+    "Netherlands": "🇳🇱", "Japan": "🇯🇵", "Sweden": "🇸🇪", "Tunisia": "🇹🇳",
+    "Belgium": "🇧🇪", "Egypt": "🇪🇬", "Iran": "🇮🇷", "New Zealand": "🇳🇿",
+    "Spain": "🇪🇸", "Cape Verde": "🇨🇻", "Saudi Arabia": "🇸🇦", "Uruguay": "🇺🇾",
+    "France": "🇫🇷", "Senegal": "🇸🇳", "Iraq": "🇮🇶", "Norway": "🇳🇴",
+    "Argentina": "🇦🇷", "Algeria": "🇩🇿", "Austria": "🇦🇹", "Jordan": "🇯🇴",
+    "Portugal": "🇵🇹", "Congo DR": "🇨🇩", "Uzbekistan": "🇺🇿", "Colombia": "🇨🇴",
+    "England": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "Croatia": "🇭🇷", "Ghana": "🇬🇭", "Panama": "🇵🇦",
+}
+
+GRID = list(range(0, 91, 5))  # survival sample minutes
+BINS = [(0, 15, "0 - 15'"), (15, 30, "15 - 30'"), (30, 45, "30 - 45'"),
+        (45, 60, "45 - 60'"), (60, 75, "60 - 75'"), (75, 200, "75 - 90+'")]
+WINPROB_BUCKETS = [(-99, -0.3, "[-0.5, -0.3)"), (-0.3, -0.1, "[-0.3, -0.1)"),
+                   (-0.1, 0.1, "[-0.1, 0.1)"), (0.1, 0.3, "[0.1, 0.3)"),
+                   (0.3, 99, "[0.3, 0.5]")]
+
+
 def save_json(filename, data):
     for dest_dir in [FRONTEND_DATA_DIR_SRC, FRONTEND_DATA_DIR_PUBLIC]:
         path = os.path.join(dest_dir, filename)
         with open(path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
+            json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+# ── Real per-era visual series computed from observed event data ─────────────
+
+def _km_curve(observations):
+    """Kaplan-Meier survival with Greenwood CI, sampled at GRID minutes.
+
+    observations: list of (time, event) where event=1 means the goal was
+    conceded at `time`, event=0 means censored (no goal conceded by minute 90).
+    Returns dict minute -> (S, upper, lower).
+    """
+    n = len(observations)
+    if n == 0:
+        return {m: (1.0, 1.0, 1.0) for m in GRID}
+    event_times = sorted({t for t, e in observations if e == 1})
+    surv, var_sum, out, ti = 1.0, 0.0, {}, 0
+    # Precompute step function of S and Greenwood variance at each event time.
+    steps = []  # (time, S, var_component_running)
+    for t in event_times:
+        at_risk = sum(1 for tt, _ in observations if tt >= t)
+        d = sum(1 for tt, e in observations if e == 1 and tt == t)
+        if at_risk > 0:
+            surv *= (1 - d / at_risk)
+            if at_risk - d > 0:
+                var_sum += d / (at_risk * (at_risk - d))
+        steps.append((t, surv, var_sum))
+    for m in GRID:
+        s, vs = 1.0, 0.0
+        for t, sv, vc in steps:
+            if t <= m:
+                s, vs = sv, vc
+            else:
+                break
+        se = s * math.sqrt(vs) if vs > 0 else 0.0
+        out[m] = (round(s, 4), round(min(1.0, s + 1.96 * se), 4),
+                  round(max(0.0, s - 1.96 * se), 4))
+    return out
+
+
+def _first_concession(minutes):
+    return min(minutes) if minutes else None
+
+
+def _compute_real_series(conn):
+    """Return {era: {'survival':[...], 'heatmap':[...], 'winProb':[...],
+    'sampleSize': int}} computed from real events, excluding 2026."""
+    ad = pd.read_sql_query(
+        "SELECT match_id, era, tournament_year, gdp_group_home, gdp_group_away, "
+        "team_home, team_away, trajectory_shift FROM analysis_dataset "
+        "WHERE tournament_year != 2026", conn)
+    ev = pd.read_sql_query(
+        "SELECT match_id, minute, event_type, team FROM events", conn)
+    ev = ev[ev["event_type"].isin(["goal", "penalty", "own_goal"])]
+    ev_by_match = {mid: g for mid, g in ev.groupby("match_id")}
+
+    result = {}
+    for era in ["A", "B", "C"]:
+        sub = ad[ad["era"] == era]
+        surv_obs = {"A": [], "B": []}
+        heat = {b[2]: {"A": 0, "B": 0} for b in BINS}
+        for _, r in sub.iterrows():
+            gh, ga = r["gdp_group_home"], r["gdp_group_away"]
+            g = ev_by_match.get(r["match_id"])
+            home_goal_min, away_goal_min = [], []
+            if g is not None:
+                for _, e in g.iterrows():
+                    m = int(e["minute"])
+                    if e["team"] == r["team_home"]:
+                        home_goal_min.append(m)
+                    elif e["team"] == r["team_away"]:
+                        away_goal_min.append(m)
+            # Concessions: home concedes on away goals, away on home goals.
+            for conceding_group, conceded_min in [(gh, away_goal_min), (ga, home_goal_min)]:
+                if conceding_group not in ("A", "B"):
+                    continue
+                first = _first_concession(conceded_min)
+                surv_obs[conceding_group].append((first if first is not None else 90,
+                                                   1 if first is not None else 0))
+                for m in conceded_min:
+                    for lo, hi, label in BINS:
+                        if lo <= m < hi:
+                            heat[label][conceding_group] += 1
+                            break
+        km_a, km_b = _km_curve(surv_obs["A"]), _km_curve(surv_obs["B"])
+        survival = [{
+            "minute": m,
+            "groupA": km_a[m][0], "groupAUpper": km_a[m][1], "groupALower": km_a[m][2],
+            "groupB": km_b[m][0], "groupBUpper": km_b[m][1], "groupBLower": km_b[m][2],
+        } for m in GRID]
+        heatmap = [{"bin": label, "groupA": heat[label]["A"], "groupB": heat[label]["B"],
+                    **({"highlight": True} if label == "60 - 75'" else {})}
+                   for _, _, label in BINS]
+        # Real win-probability-proxy distribution: trajectory_shift bucketed,
+        # split by home-team GDP group.
+        wp = {b[2]: {"A": 0, "B": 0} for b in WINPROB_BUCKETS}
+        for _, r in sub.iterrows():
+            ts = r["trajectory_shift"]
+            grp = r["gdp_group_home"]
+            if pd.isna(ts) or grp not in ("A", "B"):
+                continue
+            for lo, hi, label in WINPROB_BUCKETS:
+                if lo <= ts < hi:
+                    wp[label][grp] += 1
+                    break
+        win_prob = [{"bucket": label, "groupA": wp[label]["A"], "groupB": wp[label]["B"]}
+                    for _, _, label in WINPROB_BUCKETS]
+        result[era] = {"survival": survival, "heatmap": heatmap,
+                       "winProb": win_prob, "sampleSize": int(len(sub))}
+    return result
+
+
+# ── Export ───────────────────────────────────────────────────────────────────
 
 def export_all():
     print("=== EXPORTING ANALYSIS DATA TO FRONTEND DASHBOARD ===")
     os.makedirs(FRONTEND_DATA_DIR_SRC, exist_ok=True)
     os.makedirs(FRONTEND_DATA_DIR_PUBLIC, exist_ok=True)
-    
+
     db = DataAccess()
-    
-    # Check if DB exists
     if not os.path.exists(db.db_path):
         print(f"Database not found at {db.db_path}. Please run pipeline first.")
         return
-        
+
+    now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    conn = sqlite3.connect(db.db_path)
+    matches_meta = pd.read_sql_query(
+        "SELECT match_id, date, competition, stage, tournament_year FROM matches", conn)
+    meta_by_id = matches_meta.set_index("match_id").to_dict("index")
+
     # ── 1. overview.json ───────────────────────────────────────────────────
     print("Exporting overview.json...")
     df_analysis = db.get_analysis_dataset()
     total_matches = len(df_analysis)
-    
-    # Load anomaly index to get count
+
     idx_path = os.path.join(str(config.OUTPUT_DIR), "anomaly_index", "anomaly_index.csv")
     if os.path.exists(idx_path):
         df_idx = pd.read_csv(idx_path)
         anomalies_count = len(df_idx[df_idx["anomaly_level"].isin(["moderate", "high"])])
     else:
         anomalies_count = 5
-        
-    # Load Chi-Squared p-value
+
     chi_path = os.path.join(str(config.OUTPUT_DIR), "chi_squared", "chi_squared_results.csv")
     if os.path.exists(chi_path):
         df_chi = pd.read_csv(chi_path)
@@ -57,360 +225,199 @@ def export_all():
         conf_pct = f"{(1.0 - chi_p):.1%}"
     else:
         conf_pct = "99.8%"
-        
+
     overview_data = {
         "matchesAnalyzed": total_matches,
         "anomaliesDetected": anomalies_count,
         "statisticalConfidence": conf_pct,
-        "lastUpdated": datetime.now().strftime("%Y-%m-%d %H:%M UTC"),
+        "lastUpdated": now_utc,
         "findings": [
-            {
-                "id": "chi2",
-                "icon": "Activity",
-                "title": "Goal Timing Asymmetry",
-                "stat": "p = 0.0011",
-                "interpretation": "Chi-Squared contingency test shows a highly significant difference in goal Timing in the break window, with Group B conceding 12.4% more goals.",
-                "significant": True
-            },
-            {
-                "id": "betting_clv",
-                "icon": "TrendingUp",
-                "title": "Market CLV Edge",
-                "stat": "+4.48% CLV",
-                "interpretation": "Pre-break lay bets against Group B teams yield positive closing line value (t-stat = 3.42, p = 0.001), indicating the market underprices late-game concessions.",
-                "significant": True
-            },
-            {
-                "id": "did",
-                "icon": "GitBranch",
-                "title": "Natural Experiment DiD",
-                "stat": "DiD = 0.058",
-                "interpretation": "Bayesian Difference-in-Differences analysis shows the Era C mandatory breaks overlap the Region of Practical Equivalence (ROPE), confirming no structural bias shift.",
-                "significant": False
-            }
+            {"id": "chi2", "icon": "Activity", "title": "Goal Timing Asymmetry",
+             "stat": "p = 0.0011",
+             "interpretation": "Chi-Squared contingency test shows a highly significant difference in goal Timing in the break window, with Group B conceding 12.4% more goals.",
+             "significant": True},
+            {"id": "betting_clv", "icon": "TrendingUp", "title": "Market CLV Edge",
+             "stat": "+4.48% CLV",
+             "interpretation": "Pre-break lay bets against Group B teams yield positive closing line value (t-stat = 3.42, p = 0.001), indicating the market underprices late-game concessions.",
+             "significant": True},
+            {"id": "did", "icon": "GitBranch", "title": "Natural Experiment DiD",
+             "stat": "DiD = 0.058",
+             "interpretation": "Bayesian Difference-in-Differences analysis shows the Era C mandatory breaks overlap the Region of Practical Equivalence (ROPE), confirming no structural bias shift.",
+             "significant": False},
         ],
         "eras": [
-            {"id": "A", "years": "2002 - 2010", "label": "Pre-Break Era", "icon": "ShieldAlert"},
-            {"id": "B", "years": "2014 - 2022", "label": "Conditional Break Era", "icon": "Sun"},
-            {"id": "C", "years": "2026", "label": "Mandatory Break Era", "icon": "AlertOctagon"}
+            {"id": "A", "years": "2002 - 2010", "label": "Pre-Break Era", "icon": "ShieldAlert", **ERA_DATES["A"]},
+            {"id": "B", "years": "2014 - 2022", "label": "Conditional Break Era", "icon": "Sun", **ERA_DATES["B"]},
+            {"id": "C", "years": "2026", "label": "Mandatory Break Era", "icon": "AlertOctagon", **ERA_DATES["C"]},
         ],
         "groupA": [
-            {"name": "USA", "flag": "🇺🇸"},
-            {"name": "England", "flag": "🇬🇧"},
-            {"name": "France", "flag": "🇫🇷"},
-            {"name": "Germany", "flag": "🇩🇪"},
-            {"name": "Brazil", "flag": "🇧🇷"},
-            {"name": "Argentina", "flag": "🇦🇷"}
+            {"name": "USA", "flag": "🇺🇸"}, {"name": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"},
+            {"name": "France", "flag": "🇫🇷"}, {"name": "Germany", "flag": "🇩🇪"},
+            {"name": "Brazil", "flag": "🇧🇷"}, {"name": "Argentina", "flag": "🇦🇷"},
         ],
         "groupB": [
-            {"name": "Colombia", "flag": "🇨🇴"},
-            {"name": "Serbia", "flag": "🇷🇸"},
-            {"name": "Morocco", "flag": "🇲🇦"},
-            {"name": "Senegal", "flag": "🇸🇳"},
-            {"name": "Ecuador", "flag": "🇪🇨"},
-            {"name": "South Korea", "flag": "🇰🇷"}
-        ]
+            {"name": "Colombia", "flag": "🇨🇴"}, {"name": "Morocco", "flag": "🇲🇦"},
+            {"name": "Senegal", "flag": "🇸🇳"}, {"name": "Ecuador", "flag": "🇪🇨"},
+            {"name": "South Korea", "flag": "🇰🇷"}, {"name": "Ivory Coast", "flag": "🇨🇮"},
+        ],
     }
-    
     save_json("overview.json", overview_data)
-        
-    # ── 2. historical.json ─────────────────────────────────────────────────
+
+    # ── 2. historical.json (real per-era series) ───────────────────────────
     print("Exporting historical.json...")
-    
-    # Load DiD
+    real = _compute_real_series(conn)
+
     did_path = os.path.join(str(config.OUTPUT_DIR), "era_c", "did_results.csv")
     if os.path.exists(did_path):
         df_did = pd.read_csv(did_path)
-        did_res = {
-            "estimate": float(df_did["coefficient"].iloc[0]),
-            "lower": float(df_did["hdi_lower"].iloc[0]),
-            "upper": float(df_did["hdi_upper"].iloc[0]),
-            "ropeLow": -0.10,
-            "ropeHigh": 0.10
-        }
+        did_res = {"estimate": float(df_did["coefficient"].iloc[0]),
+                   "lower": float(df_did["hdi_lower"].iloc[0]),
+                   "upper": float(df_did["hdi_upper"].iloc[0]),
+                   "ropeLow": -0.10, "ropeHigh": 0.10}
     else:
         did_res = {"estimate": 0.058, "lower": -0.774, "upper": 0.890, "ropeLow": -0.10, "ropeHigh": 0.10}
-        
-    # Load Survival
+
     surv_path = os.path.join(str(config.OUTPUT_DIR), "survival", "survival_results.csv")
-    if os.path.exists(surv_path):
-        df_surv = pd.read_csv(surv_path)
-        hr = float(df_surv["hazard_ratio"].iloc[0])
-        p_val_surv = float(df_surv["p_value"].iloc[0])
-    else:
-        hr = 1.063
-        p_val_surv = 0.511
-        
-    # Build bins heatmap
-    # 15-minute intervals: 0-15, 15-30, 30-45, 45-60, 60-75, 75-90+
-    heatmap_bins = [
-        {"bin": "0 - 15'", "groupA": 42, "groupB": 28},
-        {"bin": "15 - 30'", "groupA": 54, "groupB": 36},
-        {"bin": "30 - 45'", "groupA": 68, "groupB": 44},
-        {"bin": "45 - 60'", "groupA": 62, "groupB": 40},
-        {"bin": "60 - 75'", "groupA": 75, "groupB": 58, "highlight": True}, # Break Window
-        {"bin": "75 - 90+'", "groupA": 98, "groupB": 64}
-    ]
-    
-    # Kaplan-Meier survival curves mock points conforming to HR 1.063
-    survival_curve = []
-    curr_a = 1.0
-    curr_b = 1.0
-    for m in range(0, 91, 5):
-        if m > 0:
-            # Group B hazards slightly faster
-            curr_a -= np.random.uniform(0.005, 0.015)
-            curr_b -= np.random.uniform(0.005, 0.015) * hr
-        survival_curve.append({
-            "minute": m,
-            "groupA": round(curr_a, 3),
-            "groupB": round(curr_b, 3),
-            "groupAUpper": round(curr_a + 0.02, 3),
-            "groupALower": round(curr_a - 0.02, 3),
-            "groupBUpper": round(curr_b + 0.02, 3),
-            "groupBLower": round(curr_b - 0.02, 3)
-        })
-        
-    # Win Prob distribution
-    win_prob_dist = [
-        {"bucket": "[-0.5, -0.3)", "groupA": 5, "groupB": 8},
-        {"bucket": "[-0.3, -0.1)", "groupA": 12, "groupB": 24},
-        {"bucket": "[-0.1, 0.1)", "groupA": 85, "groupB": 94},
-        {"bucket": "[0.1, 0.3)", "groupA": 22, "groupB": 15},
-        {"bucket": "[0.3, 0.5]", "groupA": 8, "groupB": 4}
-    ]
-    
-    historical_data = {
-        "eras": [
-            {
-                "id": "A",
-                "label": "Pre-Break Era (2002-2010)",
-                "years": "2002 - 2010",
-                "sampleSize": 192,
-                "heatmap": heatmap_bins,
-                "survival": survival_curve,
-                "logRankP": p_val_surv,
-                "winProb": win_prob_dist,
-                "mannWhitneyP": 0.803,
-                "power": {"n": 192, "detectableEffect": 0.22},
-                "caption": "Era A baseline showing normal goals conceded rate and symmetrical late game distribution."
-            },
-            {
-                "id": "B",
-                "label": "Conditional Break Era (2014-2022)",
-                "years": "2014 - 2022",
-                "sampleSize": 192,
-                "heatmap": heatmap_bins,
-                "survival": survival_curve,
-                "logRankP": p_val_surv,
-                "winProb": win_prob_dist,
-                "mannWhitneyP": 1.0,
-                "power": {"n": 192, "detectableEffect": 0.22},
-                "caption": "Era B showing goals timing under conditional hydration breaks based on temperature."
-            },
-            {
-                "id": "C",
-                "label": "Mandatory Break Era (2026)",
-                "years": "2026",
-                "sampleSize": 20,
-                "heatmap": heatmap_bins,
-                "survival": survival_curve,
-                "logRankP": p_val_surv,
-                "did": did_res,
-                "winProb": win_prob_dist,
-                "mannWhitneyP": 0.999,
-                "power": {"n": 20, "detectableEffect": 0.65},
-                "caption": "Era C mandatory breaks showing overlapping ROPE bounds and stabilized goals swing."
-            }
-        ]
+    p_val_surv = float(pd.read_csv(surv_path)["p_value"].iloc[0]) if os.path.exists(surv_path) else 0.5112
+
+    era_meta = {
+        "A": {"label": "Pre-Break Era (2002-2010)", "years": "2002 - 2010", "mannWhitneyP": 0.803,
+              "detectableEffect": 0.22,
+              "caption": "Era A baseline: real goal-timing and time-to-concession from 2002-2010 World Cup events."},
+        "B": {"label": "Conditional Break Era (2014-2022)", "years": "2014 - 2022", "mannWhitneyP": 1.0,
+              "detectableEffect": 0.22,
+              "caption": "Era B: real goal-timing under conditional (temperature-based) hydration breaks, 2014-2022 World Cups."},
+        "C": {"label": "Mandatory Break Era (comparison + 2026)", "years": "2026", "mannWhitneyP": 0.999,
+              "detectableEffect": 0.65,
+              "caption": "Era C comparison cohort from real continental-tournament events (2003-2019). Live 2026 event-level data is tracked separately on the 2026 monitor."},
     }
-    
-    save_json("historical.json", historical_data)
-        
-    # ── 3. matches2026.json ────────────────────────────────────────────────
+    eras_out = []
+    for era in ["A", "B", "C"]:
+        r, m = real[era], era_meta[era]
+        entry = {
+            "id": era, "label": m["label"], "years": m["years"],
+            "startDate": ERA_DATES[era]["startDate"], "endDate": ERA_DATES[era]["endDate"],
+            "sampleSize": r["sampleSize"], "heatmap": r["heatmap"],
+            "survival": r["survival"], "logRankP": p_val_surv, "winProb": r["winProb"],
+            "mannWhitneyP": m["mannWhitneyP"],
+            "power": {"n": r["sampleSize"], "detectableEffect": m["detectableEffect"]},
+            "caption": m["caption"],
+            "source": SRC_HISTORICAL,
+        }
+        if era == "C":
+            entry["did"] = did_res
+        eras_out.append(entry)
+    save_json("historical.json", {"eras": eras_out})
+
+    # ── 3. matches2026.json (observed only) ────────────────────────────────
     print("Exporting matches2026.json...")
-    
-    # Load 2026 monitor results
-    monitor_path = os.path.join(str(config.OUTPUT_DIR), "2026_monitor", "monitor_results.csv")
-    if os.path.exists(monitor_path):
-        df_monitor = pd.read_csv(monitor_path)
+    if os.path.exists(WC2026_ARTIFACT):
+        with open(WC2026_ARTIFACT, encoding="utf-8") as f:
+            art = json.load(f)
+        raw_matches = art.get("matches", [])
     else:
-        df_monitor = pd.DataFrame()
-        
-    flags = {
-        "USA": "🇺🇸", "Colombia": "🇨🇴", "Mexico": "🇲🇽", "Serbia": "🇷🇸",
-        "Argentina": "🇦🇷", "Australia": "🇦🇺", "Brazil": "🇧🇷", "Denmark": "🇩🇰",
-        "France": "🇫🇷", "Japan": "🇯🇵", "England": "🇬🇧", "South Korea": "🇰🇷",
-        "Germany": "🇩🇪", "Ecuador": "🇪🇨", "Spain": "🇪🇸", "Morocco": "🇲🇦",
-        "Portugal": "🇵🇹", "Senegal": "🇸🇳", "Netherlands": "🇳🇱", "Canada": "🇨🇦"
+        art, raw_matches = {}, []
+
+    matches_out = []
+    for mm in raw_matches:
+        rec = {
+            "matchId": mm["matchId"], "date": mm["date"],
+            "competition": mm["competition"], "stage": mm["stage"],
+            "homeTeam": mm["homeTeam"], "awayTeam": mm["awayTeam"],
+            "homeFlag": TEAM_FLAGS.get(mm["homeTeam"], "🏳️"),
+            "awayFlag": TEAM_FLAGS.get(mm["awayTeam"], "🏳️"),
+            "venue": mm["venue"], "city": mm.get("city", "Unknown"),
+            "finalScore": mm["finalScore"], "source": mm.get("source", SRC_2026),
+        }
+        if "penalties" in mm:
+            rec["penalties"] = mm["penalties"]
+        matches_out.append(rec)
+
+    matches2026 = {
+        "competition": "FIFA World Cup 2026",
+        "lastUpdated": now_utc,
+        "source": art.get("source", SRC_2026),
+        "note": art.get("note",
+                        f"No 2026 fixtures completed as of {now_utc}.") if matches_out
+        else f"No 2026 fixtures completed as of {now_utc}.",
+        "matches": matches_out,
     }
-    
-    matches_list = []
-    
-    for _, row in df_monitor.iterrows():
-        match_id = row["match_id"]
-        
-        # Load events for this match
-        with sqlite3.connect(db.db_path) as conn:
-            df_evs = pd.read_sql_query(f"SELECT * FROM events WHERE match_id = '{match_id}'", conn)
-            
-        m_events = []
-        for _, ev in df_evs.iterrows():
-            etype = "goal"
-            if "card" in ev["event_type"]:
-                etype = "card"
-            elif "sub" in ev["event_type"]:
-                etype = "sub"
-                
-            m_events.append({
-                "minute": int(ev["minute"]),
-                "type": etype,
-                "team": "home" if ev["team"] == row["team_home"] else "away",
-                "label": f"{ev['player']} ({ev['event_type']})"
-            })
-            
-        # Mock trajectory
-        score_traj = [{"minute": 0, "diff": 0}, {"minute": 45, "diff": 0}, {"minute": 90, "diff": int(row["score_home"] - row["score_away"])}]
-        
-        # Component breakdown
-        comp = [
-            {"label": "Outcome Deviation", "weight": 30, "score": float(row["component_outcome"])},
-            {"label": "Odds Movement", "weight": 20, "score": float(row["component_odds"])},
-            {"label": "Volume Anomaly", "weight": 20, "score": float(row["component_volume"]) if pd.notna(row["component_volume"]) else None},
-            {"label": "GDP Asymmetry", "weight": 15, "score": float(row["component_gdp"])},
-            {"label": "Timing Anomaly", "weight": 15, "score": float(row["component_timing"])}
-        ]
-        
-        # Odds points
-        odds_pts = []
-        p_home = 0.5
-        for min_val in range(0, 91, 10):
-            odds_pts.append({
-                "minute": min_val,
-                "groupBProb": round(p_home, 2),
-                "volume": int(12000 + min_val * 400)
-            })
-            
-        matches_list.append({
-            "id": match_id,
-            "date": str(row["date"]),
-            "stage": "Group" if "Group" in str(row["stage"]) else ("R16" if "Round of 16" in str(row["stage"]) else ("QF" if "Quarter-finals" in str(row["stage"]) else "SF")),
-            "home": {
-                "name": str(row["team_home"]),
-                "flag": flags.get(row["team_home"], "🏳️"),
-                "gdp": str(row["gdp_group_home"]),
-                "score": int(row["score_home"])
-            },
-            "away": {
-                "name": str(row["team_away"]),
-                "flag": flags.get(row["team_away"], "🏳️"),
-                "gdp": str(row["gdp_group_away"]),
-                "score": int(row["score_away"])
-            },
-            "breakScore": "1 - 0" if row["group_b_leading_65"] == 1 else "0 - 0",
-            "anomalyIndex": float(row["anomaly_index"]),
-            "anomalyLevel": str(row["anomaly_level"]),
-            "winProbSwing": 0.12 if row["anomaly_level"] == "moderate" else 0.04,
-            "venue": str(row["venue"]),
-            "temperatureC": 25.0, # weather temp
-            "events": m_events,
-            "scoreTrajectory": score_traj,
-            "radar": [
-                {"metric": "Shots", "pre": 6, "post": 4},
-                {"metric": "Pass Accuracy", "pre": 82, "post": 78},
-                {"metric": "Possession", "pre": 52, "post": 48},
-                {"metric": "Interceptions", "pre": 8, "post": 5}
-            ],
-            "componentBreakdown": comp,
-            "shap": [
-                {"feature": "gdp_ratio", "value": 0.04},
-                {"feature": "fifa_rank_diff", "value": -0.02},
-                {"feature": "temperature", "value": 0.01}
-            ],
-            "odds": odds_pts,
-            "fifaRankHome": 12,
-            "fifaRankAway": 28,
-            "squadValueHomeM": 850,
-            "squadValueAwayM": 240
-        })
-        
-    save_json("matches2026.json", matches_list)
-        
-    # ── 4. betting.json ────────────────────────────────────────────────────
+    save_json("matches2026.json", matches2026)
+
+    # ── 4. betting.json (add provenance fields; drop simulated volume) ─────
     print("Exporting betting.json...")
-    
-    # Load betting scatter
     df_scatter = pd.read_csv(os.path.join(str(config.OUTPUT_DIR), "betting", "betting_scatter_data.csv"))
     scatter_pts = []
     for _, row in df_scatter.iterrows():
+        mid = str(row["match_id"])
+        meta = meta_by_id.get(mid, {})
+        year = meta.get("tournament_year")
+        is_synth_2026 = year == 2026
         scatter_pts.append({
+            "matchId": mid,
+            "date": str(meta.get("date")) if meta.get("date") is not None else None,
+            "competition": str(meta.get("competition", "World Cup")),
+            "stage": str(meta.get("stage", "unknown")),
+            "match": str(row["match_label"]),
             "residual": float(row["residual"]),
             "oddsMove": float(row["odds_move"]),
             "anomalyLevel": str(row["anomaly_level"]),
-            "match": str(row["match_label"])
+            "source": ("legacy synthetic 2026 fixture (not an observed match)"
+                       if is_synth_2026 else SRC_HISTORICAL),
         })
-        
-    # Load betting volume profile
-    df_vol = pd.read_csv(os.path.join(str(config.OUTPUT_DIR), "betting", "volume_profile_by_minute.csv"))
-    vol_pts = []
-    for _, row in df_vol.iterrows():
-        vol_pts.append({
-            "minute": int(row["minute"]),
-            "bLeading": float(row["b_leading_volume"]),
-            "aLeading": float(row["a_leading_volume"])
-        })
-        
-    # Load correlation and p-value
+
     df_bet_res = pd.read_csv(os.path.join(str(config.OUTPUT_DIR), "betting", "betting_odds_results.csv"))
     corr = float(df_bet_res["odds_residual_correlation"].iloc[0])
     p_val_bet = float(df_bet_res["p_value"].iloc[0])
-    
+
     betting_data = {
         "scatter": scatter_pts,
-        "volumeByMinute": vol_pts,
+        "oddsMoveSource": SRC_ODDS_MODEL,
         "findings": [
-            {
-                "title": "Closing Line Value (CLV)",
-                "stat": "+4.48%",
-                "detail": "Lay bets placed on Group B teams right before the break window yield statistically significant positive closing value."
-            },
-            {
-                "title": "Odds Drop-off Correlation",
-                "stat": "r = -0.467",
-                "detail": "High correlation indicates that in-play odds shifts drop rapidly during defensive decay windows, showing informed arbitrage."
-            },
-            {
-                "title": "Break Window Trading Spikes",
-                "stat": "+800 EUR",
-                "detail": "Exchange volume spikes by 35% on average during the 65-80th minute window for Group B leading matches."
-            }
+            {"title": "Closing Line Value (CLV)", "stat": "+4.48%",
+             "detail": "Lay bets placed on Group B teams right before the break window yield statistically significant positive closing value."},
+            {"title": "Odds Drop-off Correlation", "stat": "r = -0.467",
+             "detail": "High correlation indicates that in-play odds shifts drop rapidly during defensive decay windows, showing informed arbitrage."},
+            {"title": "Residual Signal Strength", "stat": f"r = {corr}",
+             "detail": "Correlation between Stage-1 goal-concession residuals and modeled odds movement across the historical match set."},
         ],
         "correlation": corr,
-        "pValue": p_val_bet
+        "pValue": p_val_bet,
     }
-    
     save_json("betting.json", betting_data)
-        
+
     # ── 5. methodology.json ────────────────────────────────────────────────
     print("Exporting methodology.json...")
-    
     methodology_data = {
         "hypotheses": [
-            {"id": "h1", "text": "Something suspicious occurs during the final hydration break that compromises poorer nations.", "formal": "H1: goals_conceded_post_break | gdp_group=B > goals_conceded_post_break | gdp_group=A"},
-            {"id": "h2", "text": "Betting market inefficiencies exist during the break window.", "formal": "H2: CLV_lay_65min_B_team > 0"}
+            {"id": "h1", "text": "Something suspicious occurs during the final hydration break that compromises poorer nations.",
+             "formal": "H1: goals_conceded_post_break | gdp_group=B > goals_conceded_post_break | gdp_group=A"},
+            {"id": "h2", "text": "Betting market inefficiencies exist during the break window.",
+             "formal": "H2: CLV_lay_65min_B_team > 0"},
         ],
         "sources": [
-            {"name": "Fjelstul World Cup Database", "coverage": "2002 - 2022 Matches & Events", "license": "MIT License", "link": "https://github.com/jfjelstul/worldcup", "compliant": True},
-            {"name": "Open-Meteo Archive API", "coverage": "1940 - Present Weather Conditions", "license": "CC BY 4.0", "link": "https://open-meteo.com", "compliant": True},
-            {"name": "World Bank GDP Database", "coverage": "2000 - 2025 GDP PPP per Capita", "license": "Creative Commons Attribution 4.0", "link": "https://data.worldbank.org", "compliant": True}
+            {"name": "Fjelstul World Cup Database", "coverage": "2002 - 2022 Matches & Events",
+             "startDate": "2002-05-31", "endDate": "2022-12-18",
+             "license": "MIT License", "link": "https://github.com/jfjelstul/worldcup", "compliant": True},
+            {"name": "ESPN / FIFA.com 2026 fixtures", "coverage": "2026 World Cup completed matches (through Round of 16)",
+             "startDate": "2026-06-11", "endDate": "2026-07-07",
+             "license": "Public results, scraped once (2026-07-08)", "link": "https://www.fifa.com", "compliant": True},
+            {"name": "Open-Meteo Archive API", "coverage": "1940 - Present Weather Conditions",
+             "startDate": "1940-01-01", "endDate": "2026-07-08",
+             "license": "CC BY 4.0", "link": "https://open-meteo.com", "compliant": True},
+            {"name": "World Bank GDP Database", "coverage": "2000 - 2025 GDP PPP per Capita",
+             "startDate": "2000-01-01", "endDate": "2025-12-31",
+             "license": "Creative Commons Attribution 4.0", "link": "https://data.worldbank.org", "compliant": True},
         ],
-        "version": "1.0.0",
-        "seed": config.RANDOM_SEED
+        "version": "1.1.0",
+        "seed": config.RANDOM_SEED,
+        "lastUpdated": now_utc,
     }
-    
     save_json("methodology.json", methodology_data)
-        
+
+    conn.close()
     print("=== DASHBOARD DATA EXPORTED SUCCESSFULLY ===")
+
 
 if __name__ == "__main__":
     export_all()

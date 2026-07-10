@@ -7,14 +7,14 @@ import { LevelDot } from "@/components/dashboard/StatBadge";
 import { AlertTriangle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
-  ResponsiveContainer, ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceArea, ReferenceLine, BarChart, Bar, Legend,
+  ResponsiveContainer, ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine, Legend,
 } from "recharts";
 
 export const Route = createFileRoute("/betting")({
   head: () => ({
     meta: [
       { title: "Betting Intelligence — The Break Point" },
-      { name: "description", content: "Two-stage residual analysis of in-play odds movements during hydration break windows across 604 real matches." },
+      { name: "description", content: "Two-stage residual analysis with modeled odds movements during hydration break windows across the historical match set." },
       { property: "og:title", content: "Betting Intelligence — The Break Point" },
       { property: "og:description", content: "Do markets anticipate match anomalies?" },
     ],
@@ -51,7 +51,7 @@ function Page() {
         <div className="mt-4 flex items-start gap-3 rounded-xl border border-amber-500/40 bg-amber-500/10 p-4 text-sm">
           <AlertTriangle className="h-4 w-4 text-amber-400 mt-0.5" />
           <p className="text-amber-100">
-            Betting analysis derived from the 604 historical matches in the model output — residuals and closing-line movements only. No forward-looking projections.
+            Residuals are computed from real match events. Odds movement is <span className="font-semibold">modeled</span> from those residuals — {data.oddsMoveSource} — not observed exchange data. No licensed in-play betting feed is used.
           </p>
         </div>
 
@@ -109,24 +109,15 @@ function Page() {
         </GlassCard>
 
         <GlassCard className="mt-6">
-          <h3 className="font-display text-lg font-bold">Average volume by minute · leading-group split</h3>
-          <div className="h-64 mt-4">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={data.volumeByMinute}>
-                <CartesianGrid stroke="rgba(148,163,184,0.1)" />
-                <XAxis dataKey="minute" stroke="#94a3b8" fontSize={11} />
-                <YAxis stroke="#94a3b8" fontSize={11} />
-                <Tooltip contentStyle={darkTooltip} />
-                <ReferenceArea x1={65} x2={80} fill="#3b82f6" fillOpacity={0.1} />
-                <Legend wrapperStyle={{ fontSize: 11, color: "#94a3b8" }} />
-                <Bar dataKey="bLeading" stackId="a" fill="#f59e0b" name="B-leading" opacity={0.8} />
-                <Bar dataKey="aLeading" stackId="a" fill="#3b82f6" name="A-leading" opacity={0.8} />
-              </BarChart>
-            </ResponsiveContainer>
+          <h3 className="font-display text-lg font-bold">Exchange volume profile</h3>
+          <div className="mt-4 flex items-start gap-3 rounded-lg border border-border bg-background/40 p-4">
+            <AlertTriangle className="h-4 w-4 text-muted-foreground mt-0.5 shrink-0" />
+            <p className="text-sm text-muted-foreground">
+              Minute-by-minute traded-volume analysis requires a licensed betting-exchange feed (e.g. Betfair),
+              which is not part of this open dataset. Rather than display a synthesised volume curve, this panel
+              is intentionally left empty — only observed data is charted.
+            </p>
           </div>
-          <p className="mt-3 text-xs text-muted-foreground">
-            Volume systematically spikes in the 65-80 window for Group B-leading matches, roughly 3× the baseline.
-          </p>
         </GlassCard>
 
         <div className="mt-6 grid gap-4 md:grid-cols-3">

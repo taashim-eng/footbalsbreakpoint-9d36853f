@@ -4,239 +4,241 @@
       "id": "A",
       "label": "Pre-Break Era (2002-2010)",
       "years": "2002 - 2010",
+      "startDate": "2002-05-31",
+      "endDate": "2011-07-24",
       "sampleSize": 192,
       "heatmap": [
         {
           "bin": "0 - 15'",
-          "groupA": 42,
-          "groupB": 28
+          "groupA": 35,
+          "groupB": 26
         },
         {
           "bin": "15 - 30'",
-          "groupA": 54,
-          "groupB": 36
+          "groupA": 41,
+          "groupB": 24
         },
         {
           "bin": "30 - 45'",
-          "groupA": 68,
-          "groupB": 44
+          "groupA": 38,
+          "groupB": 22
         },
         {
           "bin": "45 - 60'",
-          "groupA": 62,
-          "groupB": 40
+          "groupA": 37,
+          "groupB": 38
         },
         {
           "bin": "60 - 75'",
-          "groupA": 75,
-          "groupB": 58,
+          "groupA": 36,
+          "groupB": 33,
           "highlight": true
         },
         {
           "bin": "75 - 90+'",
-          "groupA": 98,
-          "groupB": 64
+          "groupA": 77,
+          "groupB": 46
         }
       ],
       "survival": [
         {
           "minute": 0,
           "groupA": 1.0,
+          "groupAUpper": 1.0,
+          "groupALower": 1.0,
           "groupB": 1.0,
-          "groupAUpper": 1.02,
-          "groupALower": 0.98,
-          "groupBUpper": 1.02,
-          "groupBLower": 0.98
+          "groupBUpper": 1.0,
+          "groupBLower": 1.0
         },
         {
           "minute": 5,
-          "groupA": 0.994,
-          "groupB": 0.988,
-          "groupAUpper": 1.014,
-          "groupALower": 0.974,
-          "groupBUpper": 1.008,
-          "groupBLower": 0.968
+          "groupA": 0.9397,
+          "groupAUpper": 0.9703,
+          "groupALower": 0.909,
+          "groupB": 0.9671,
+          "groupBUpper": 0.9955,
+          "groupBLower": 0.9387
         },
         {
           "minute": 10,
-          "groupA": 0.983,
-          "groupB": 0.973,
-          "groupAUpper": 1.003,
-          "groupALower": 0.963,
-          "groupBUpper": 0.993,
-          "groupBLower": 0.953
+          "groupA": 0.8836,
+          "groupAUpper": 0.9249,
+          "groupALower": 0.8424,
+          "groupB": 0.875,
+          "groupBUpper": 0.9276,
+          "groupBLower": 0.8224
         },
         {
           "minute": 15,
-          "groupA": 0.976,
-          "groupB": 0.962,
-          "groupAUpper": 0.996,
-          "groupALower": 0.956,
-          "groupBUpper": 0.982,
-          "groupBLower": 0.942
+          "groupA": 0.8621,
+          "groupAUpper": 0.9064,
+          "groupALower": 0.8177,
+          "groupB": 0.8355,
+          "groupBUpper": 0.8945,
+          "groupBLower": 0.7766
         },
         {
           "minute": 20,
-          "groupA": 0.969,
-          "groupB": 0.953,
-          "groupAUpper": 0.989,
-          "groupALower": 0.949,
-          "groupBUpper": 0.973,
-          "groupBLower": 0.933
+          "groupA": 0.806,
+          "groupAUpper": 0.8569,
+          "groupALower": 0.7552,
+          "groupB": 0.8026,
+          "groupBUpper": 0.8659,
+          "groupBLower": 0.7394
         },
         {
           "minute": 25,
-          "groupA": 0.962,
-          "groupB": 0.941,
-          "groupAUpper": 0.982,
-          "groupALower": 0.942,
-          "groupBUpper": 0.961,
-          "groupBLower": 0.921
+          "groupA": 0.75,
+          "groupAUpper": 0.8057,
+          "groupALower": 0.6943,
+          "groupB": 0.7566,
+          "groupBUpper": 0.8248,
+          "groupBLower": 0.6884
         },
         {
           "minute": 30,
-          "groupA": 0.95,
-          "groupB": 0.935,
-          "groupAUpper": 0.97,
-          "groupALower": 0.93,
-          "groupBUpper": 0.955,
-          "groupBLower": 0.915
+          "groupA": 0.7026,
+          "groupAUpper": 0.7614,
+          "groupALower": 0.6438,
+          "groupB": 0.7303,
+          "groupBUpper": 0.8008,
+          "groupBLower": 0.6597
         },
         {
           "minute": 35,
-          "groupA": 0.937,
-          "groupB": 0.93,
-          "groupAUpper": 0.957,
-          "groupALower": 0.917,
-          "groupBUpper": 0.95,
-          "groupBLower": 0.91
+          "groupA": 0.6767,
+          "groupAUpper": 0.7369,
+          "groupALower": 0.6165,
+          "groupB": 0.6974,
+          "groupBUpper": 0.7704,
+          "groupBLower": 0.6243
         },
         {
           "minute": 40,
-          "groupA": 0.926,
-          "groupB": 0.915,
-          "groupAUpper": 0.946,
-          "groupALower": 0.906,
-          "groupBUpper": 0.935,
-          "groupBLower": 0.895
+          "groupA": 0.625,
+          "groupAUpper": 0.6873,
+          "groupALower": 0.5627,
+          "groupB": 0.6513,
+          "groupBUpper": 0.7271,
+          "groupBLower": 0.5756
         },
         {
           "minute": 45,
-          "groupA": 0.915,
-          "groupB": 0.904,
-          "groupAUpper": 0.935,
-          "groupALower": 0.895,
-          "groupBUpper": 0.924,
-          "groupBLower": 0.884
+          "groupA": 0.5948,
+          "groupAUpper": 0.658,
+          "groupALower": 0.5317,
+          "groupB": 0.5987,
+          "groupBUpper": 0.6766,
+          "groupBLower": 0.5208
         },
         {
           "minute": 50,
-          "groupA": 0.904,
-          "groupB": 0.894,
-          "groupAUpper": 0.924,
-          "groupALower": 0.884,
-          "groupBUpper": 0.914,
-          "groupBLower": 0.874
+          "groupA": 0.5603,
+          "groupAUpper": 0.6242,
+          "groupALower": 0.4965,
+          "groupB": 0.5658,
+          "groupBUpper": 0.6446,
+          "groupBLower": 0.487
         },
         {
           "minute": 55,
-          "groupA": 0.897,
-          "groupB": 0.882,
-          "groupAUpper": 0.917,
-          "groupALower": 0.877,
-          "groupBUpper": 0.902,
-          "groupBLower": 0.862
+          "groupA": 0.5216,
+          "groupAUpper": 0.5858,
+          "groupALower": 0.4573,
+          "groupB": 0.5263,
+          "groupBUpper": 0.6057,
+          "groupBLower": 0.4469
         },
         {
           "minute": 60,
-          "groupA": 0.885,
-          "groupB": 0.87,
-          "groupAUpper": 0.905,
-          "groupALower": 0.865,
-          "groupBUpper": 0.89,
-          "groupBLower": 0.85
+          "groupA": 0.5,
+          "groupAUpper": 0.5643,
+          "groupALower": 0.4357,
+          "groupB": 0.4737,
+          "groupBUpper": 0.5531,
+          "groupBLower": 0.3943
         },
         {
           "minute": 65,
-          "groupA": 0.876,
-          "groupB": 0.857,
-          "groupAUpper": 0.896,
-          "groupALower": 0.856,
-          "groupBUpper": 0.877,
-          "groupBLower": 0.837
+          "groupA": 0.4828,
+          "groupAUpper": 0.5471,
+          "groupALower": 0.4185,
+          "groupB": 0.4342,
+          "groupBUpper": 0.513,
+          "groupBLower": 0.3554
         },
         {
           "minute": 70,
-          "groupA": 0.866,
-          "groupB": 0.85,
-          "groupAUpper": 0.886,
-          "groupALower": 0.846,
-          "groupBUpper": 0.87,
-          "groupBLower": 0.83
+          "groupA": 0.4655,
+          "groupAUpper": 0.5297,
+          "groupALower": 0.4013,
+          "groupB": 0.4079,
+          "groupBUpper": 0.486,
+          "groupBLower": 0.3298
         },
         {
           "minute": 75,
-          "groupA": 0.858,
-          "groupB": 0.836,
-          "groupAUpper": 0.878,
-          "groupALower": 0.838,
-          "groupBUpper": 0.856,
-          "groupBLower": 0.816
+          "groupA": 0.4397,
+          "groupAUpper": 0.5035,
+          "groupALower": 0.3758,
+          "groupB": 0.4013,
+          "groupBUpper": 0.4792,
+          "groupBLower": 0.3234
         },
         {
           "minute": 80,
-          "groupA": 0.85,
-          "groupB": 0.821,
-          "groupAUpper": 0.87,
-          "groupALower": 0.83,
-          "groupBUpper": 0.841,
-          "groupBLower": 0.801
+          "groupA": 0.431,
+          "groupAUpper": 0.4948,
+          "groupALower": 0.3673,
+          "groupB": 0.375,
+          "groupBUpper": 0.452,
+          "groupBLower": 0.298
         },
         {
           "minute": 85,
-          "groupA": 0.838,
-          "groupB": 0.806,
-          "groupAUpper": 0.858,
-          "groupALower": 0.818,
-          "groupBUpper": 0.826,
-          "groupBLower": 0.786
+          "groupA": 0.4009,
+          "groupAUpper": 0.4639,
+          "groupALower": 0.3378,
+          "groupB": 0.3421,
+          "groupBUpper": 0.4175,
+          "groupBLower": 0.2667
         },
         {
           "minute": 90,
-          "groupA": 0.827,
-          "groupB": 0.797,
-          "groupAUpper": 0.847,
-          "groupALower": 0.807,
-          "groupBUpper": 0.817,
-          "groupBLower": 0.777
+          "groupA": 0.3664,
+          "groupAUpper": 0.4284,
+          "groupALower": 0.3044,
+          "groupB": 0.3026,
+          "groupBUpper": 0.3757,
+          "groupBLower": 0.2296
         }
       ],
       "logRankP": 0.5112,
       "winProb": [
         {
           "bucket": "[-0.5, -0.3)",
-          "groupA": 5,
-          "groupB": 8
-        },
-        {
-          "bucket": "[-0.3, -0.1)",
-          "groupA": 12,
-          "groupB": 24
-        },
-        {
-          "bucket": "[-0.1, 0.1)",
-          "groupA": 85,
-          "groupB": 94
-        },
-        {
-          "bucket": "[0.1, 0.3)",
-          "groupA": 22,
+          "groupA": 23,
           "groupB": 15
         },
         {
+          "bucket": "[-0.3, -0.1)",
+          "groupA": 0,
+          "groupB": 0
+        },
+        {
+          "bucket": "[-0.1, 0.1)",
+          "groupA": 87,
+          "groupB": 47
+        },
+        {
+          "bucket": "[0.1, 0.3)",
+          "groupA": 0,
+          "groupB": 0
+        },
+        {
           "bucket": "[0.3, 0.5]",
-          "groupA": 8,
-          "groupB": 4
+          "groupA": 13,
+          "groupB": 7
         }
       ],
       "mannWhitneyP": 0.803,
@@ -244,245 +246,248 @@
         "n": 192,
         "detectableEffect": 0.22
       },
-      "caption": "Era A baseline showing normal goals conceded rate and symmetrical late game distribution."
+      "caption": "Era A baseline: real goal-timing and time-to-concession from 2002-2010 World Cup events.",
+      "source": "jfjelstul/worldcup match database (2002-2022) + continental cups"
     },
     {
       "id": "B",
       "label": "Conditional Break Era (2014-2022)",
       "years": "2014 - 2022",
+      "startDate": "2014-06-12",
+      "endDate": "2022-12-18",
       "sampleSize": 192,
       "heatmap": [
         {
           "bin": "0 - 15'",
-          "groupA": 42,
-          "groupB": 28
+          "groupA": 28,
+          "groupB": 26
         },
         {
           "bin": "15 - 30'",
-          "groupA": 54,
-          "groupB": 36
+          "groupA": 35,
+          "groupB": 21
         },
         {
           "bin": "30 - 45'",
-          "groupA": 68,
-          "groupB": 44
+          "groupA": 42,
+          "groupB": 32
         },
         {
           "bin": "45 - 60'",
-          "groupA": 62,
-          "groupB": 40
+          "groupA": 46,
+          "groupB": 50
         },
         {
           "bin": "60 - 75'",
-          "groupA": 75,
-          "groupB": 58,
+          "groupA": 48,
+          "groupB": 43,
           "highlight": true
         },
         {
           "bin": "75 - 90+'",
-          "groupA": 98,
-          "groupB": 64
+          "groupA": 68,
+          "groupB": 73
         }
       ],
       "survival": [
         {
           "minute": 0,
           "groupA": 1.0,
+          "groupAUpper": 1.0,
+          "groupALower": 1.0,
           "groupB": 1.0,
-          "groupAUpper": 1.02,
-          "groupALower": 0.98,
-          "groupBUpper": 1.02,
-          "groupBLower": 0.98
+          "groupBUpper": 1.0,
+          "groupBLower": 1.0
         },
         {
           "minute": 5,
-          "groupA": 0.994,
-          "groupB": 0.988,
-          "groupAUpper": 1.014,
-          "groupALower": 0.974,
-          "groupBUpper": 1.008,
-          "groupBLower": 0.968
+          "groupA": 0.9557,
+          "groupAUpper": 0.984,
+          "groupALower": 0.9273,
+          "groupB": 0.9503,
+          "groupBUpper": 0.9819,
+          "groupBLower": 0.9186
         },
         {
           "minute": 10,
-          "groupA": 0.983,
-          "groupB": 0.973,
-          "groupAUpper": 1.003,
-          "groupALower": 0.963,
-          "groupBUpper": 0.993,
-          "groupBLower": 0.953
+          "groupA": 0.9113,
+          "groupAUpper": 0.9504,
+          "groupALower": 0.8722,
+          "groupB": 0.9006,
+          "groupBUpper": 0.9442,
+          "groupBLower": 0.857
         },
         {
           "minute": 15,
-          "groupA": 0.976,
-          "groupB": 0.962,
-          "groupAUpper": 0.996,
-          "groupALower": 0.956,
-          "groupBUpper": 0.982,
-          "groupBLower": 0.942
+          "groupA": 0.8719,
+          "groupAUpper": 0.9179,
+          "groupALower": 0.826,
+          "groupB": 0.8564,
+          "groupBUpper": 0.9075,
+          "groupBLower": 0.8053
         },
         {
           "minute": 20,
-          "groupA": 0.969,
-          "groupB": 0.953,
-          "groupAUpper": 0.989,
-          "groupALower": 0.949,
-          "groupBUpper": 0.973,
-          "groupBLower": 0.933
+          "groupA": 0.8177,
+          "groupAUpper": 0.8708,
+          "groupALower": 0.7646,
+          "groupB": 0.8232,
+          "groupBUpper": 0.8788,
+          "groupBLower": 0.7676
         },
         {
           "minute": 25,
-          "groupA": 0.962,
-          "groupB": 0.941,
-          "groupAUpper": 0.982,
-          "groupALower": 0.942,
-          "groupBUpper": 0.961,
-          "groupBLower": 0.921
+          "groupA": 0.7783,
+          "groupAUpper": 0.8355,
+          "groupALower": 0.7212,
+          "groupB": 0.8011,
+          "groupBUpper": 0.8593,
+          "groupBLower": 0.743
         },
         {
           "minute": 30,
-          "groupA": 0.95,
-          "groupB": 0.935,
-          "groupAUpper": 0.97,
-          "groupALower": 0.93,
-          "groupBUpper": 0.955,
-          "groupBLower": 0.915
+          "groupA": 0.7241,
+          "groupAUpper": 0.7856,
+          "groupALower": 0.6627,
+          "groupB": 0.779,
+          "groupBUpper": 0.8395,
+          "groupBLower": 0.7186
         },
         {
           "minute": 35,
-          "groupA": 0.937,
-          "groupB": 0.93,
-          "groupAUpper": 0.957,
-          "groupALower": 0.917,
-          "groupBUpper": 0.95,
-          "groupBLower": 0.91
+          "groupA": 0.6897,
+          "groupAUpper": 0.7533,
+          "groupALower": 0.626,
+          "groupB": 0.7072,
+          "groupBUpper": 0.7735,
+          "groupBLower": 0.6409
         },
         {
           "minute": 40,
-          "groupA": 0.926,
-          "groupB": 0.915,
-          "groupAUpper": 0.946,
-          "groupALower": 0.906,
-          "groupBUpper": 0.935,
-          "groupBLower": 0.895
+          "groupA": 0.6453,
+          "groupAUpper": 0.7111,
+          "groupALower": 0.5795,
+          "groupB": 0.6685,
+          "groupBUpper": 0.7371,
+          "groupBLower": 0.5999
         },
         {
           "minute": 45,
-          "groupA": 0.915,
-          "groupB": 0.904,
-          "groupAUpper": 0.935,
-          "groupALower": 0.895,
-          "groupBUpper": 0.924,
-          "groupBLower": 0.884
+          "groupA": 0.6059,
+          "groupAUpper": 0.6731,
+          "groupALower": 0.5387,
+          "groupB": 0.6243,
+          "groupBUpper": 0.6949,
+          "groupBLower": 0.5538
         },
         {
           "minute": 50,
-          "groupA": 0.904,
-          "groupB": 0.894,
-          "groupAUpper": 0.924,
-          "groupALower": 0.884,
-          "groupBUpper": 0.914,
-          "groupBLower": 0.874
+          "groupA": 0.5665,
+          "groupAUpper": 0.6347,
+          "groupALower": 0.4983,
+          "groupB": 0.5746,
+          "groupBUpper": 0.6466,
+          "groupBLower": 0.5026
         },
         {
           "minute": 55,
-          "groupA": 0.897,
-          "groupB": 0.882,
-          "groupAUpper": 0.917,
-          "groupALower": 0.877,
-          "groupBUpper": 0.902,
-          "groupBLower": 0.862
+          "groupA": 0.532,
+          "groupAUpper": 0.6007,
+          "groupALower": 0.4634,
+          "groupB": 0.5138,
+          "groupBUpper": 0.5866,
+          "groupBLower": 0.441
         },
         {
           "minute": 60,
-          "groupA": 0.885,
-          "groupB": 0.87,
-          "groupAUpper": 0.905,
-          "groupALower": 0.865,
-          "groupBUpper": 0.89,
-          "groupBLower": 0.85
+          "groupA": 0.4877,
+          "groupAUpper": 0.5564,
+          "groupALower": 0.4189,
+          "groupB": 0.4917,
+          "groupBUpper": 0.5645,
+          "groupBLower": 0.4189
         },
         {
           "minute": 65,
-          "groupA": 0.876,
-          "groupB": 0.857,
-          "groupAUpper": 0.896,
-          "groupALower": 0.856,
-          "groupBUpper": 0.877,
-          "groupBLower": 0.837
+          "groupA": 0.4581,
+          "groupAUpper": 0.5267,
+          "groupALower": 0.3896,
+          "groupB": 0.4586,
+          "groupBUpper": 0.5312,
+          "groupBLower": 0.386
         },
         {
           "minute": 70,
-          "groupA": 0.866,
-          "groupB": 0.85,
-          "groupAUpper": 0.886,
-          "groupALower": 0.846,
-          "groupBUpper": 0.87,
-          "groupBLower": 0.83
+          "groupA": 0.4384,
+          "groupAUpper": 0.5067,
+          "groupALower": 0.3702,
+          "groupB": 0.442,
+          "groupBUpper": 0.5143,
+          "groupBLower": 0.3696
         },
         {
           "minute": 75,
-          "groupA": 0.858,
-          "groupB": 0.836,
-          "groupAUpper": 0.878,
-          "groupALower": 0.838,
-          "groupBUpper": 0.856,
-          "groupBLower": 0.816
+          "groupA": 0.4039,
+          "groupAUpper": 0.4714,
+          "groupALower": 0.3364,
+          "groupB": 0.4254,
+          "groupBUpper": 0.4974,
+          "groupBLower": 0.3534
         },
         {
           "minute": 80,
-          "groupA": 0.85,
-          "groupB": 0.821,
-          "groupAUpper": 0.87,
-          "groupALower": 0.83,
-          "groupBUpper": 0.841,
-          "groupBLower": 0.801
+          "groupA": 0.3793,
+          "groupAUpper": 0.4461,
+          "groupALower": 0.3126,
+          "groupB": 0.3867,
+          "groupBUpper": 0.4577,
+          "groupBLower": 0.3158
         },
         {
           "minute": 85,
-          "groupA": 0.838,
-          "groupB": 0.806,
-          "groupAUpper": 0.858,
-          "groupALower": 0.818,
-          "groupBUpper": 0.826,
-          "groupBLower": 0.786
+          "groupA": 0.3399,
+          "groupAUpper": 0.4051,
+          "groupALower": 0.2747,
+          "groupB": 0.3702,
+          "groupBUpper": 0.4405,
+          "groupBLower": 0.2998
         },
         {
           "minute": 90,
-          "groupA": 0.827,
-          "groupB": 0.797,
-          "groupAUpper": 0.847,
-          "groupALower": 0.807,
-          "groupBUpper": 0.817,
-          "groupBLower": 0.777
+          "groupA": 0.3153,
+          "groupAUpper": 0.3792,
+          "groupALower": 0.2514,
+          "groupB": 0.2983,
+          "groupBUpper": 0.365,
+          "groupBLower": 0.2317
         }
       ],
       "logRankP": 0.5112,
       "winProb": [
         {
           "bucket": "[-0.5, -0.3)",
-          "groupA": 5,
-          "groupB": 8
+          "groupA": 16,
+          "groupB": 21
         },
         {
           "bucket": "[-0.3, -0.1)",
-          "groupA": 12,
-          "groupB": 24
+          "groupA": 0,
+          "groupB": 0
         },
         {
           "bucket": "[-0.1, 0.1)",
-          "groupA": 85,
-          "groupB": 94
+          "groupA": 72,
+          "groupB": 52
         },
         {
           "bucket": "[0.1, 0.3)",
-          "groupA": 22,
-          "groupB": 15
+          "groupA": 0,
+          "groupB": 0
         },
         {
           "bucket": "[0.3, 0.5]",
-          "groupA": 8,
-          "groupB": 4
+          "groupA": 17,
+          "groupB": 14
         }
       ],
       "mannWhitneyP": 1.0,
@@ -490,260 +495,264 @@
         "n": 192,
         "detectableEffect": 0.22
       },
-      "caption": "Era B showing goals timing under conditional hydration breaks based on temperature."
+      "caption": "Era B: real goal-timing under conditional (temperature-based) hydration breaks, 2014-2022 World Cups.",
+      "source": "jfjelstul/worldcup match database (2002-2022) + continental cups"
     },
     {
       "id": "C",
-      "label": "Mandatory Break Era (2026)",
+      "label": "Mandatory Break Era (comparison + 2026)",
       "years": "2026",
-      "sampleSize": 20,
+      "startDate": "2015-06-03",
+      "endDate": "2026-07-19",
+      "sampleSize": 200,
       "heatmap": [
         {
           "bin": "0 - 15'",
-          "groupA": 42,
-          "groupB": 28
+          "groupA": 28,
+          "groupB": 45
         },
         {
           "bin": "15 - 30'",
-          "groupA": 54,
-          "groupB": 36
+          "groupA": 37,
+          "groupB": 49
         },
         {
           "bin": "30 - 45'",
-          "groupA": 68,
-          "groupB": 44
-        },
-        {
-          "bin": "45 - 60'",
-          "groupA": 62,
+          "groupA": 32,
           "groupB": 40
         },
         {
+          "bin": "45 - 60'",
+          "groupA": 49,
+          "groupB": 70
+        },
+        {
           "bin": "60 - 75'",
-          "groupA": 75,
-          "groupB": 58,
+          "groupA": 40,
+          "groupB": 53,
           "highlight": true
         },
         {
           "bin": "75 - 90+'",
-          "groupA": 98,
-          "groupB": 64
+          "groupA": 71,
+          "groupB": 82
         }
       ],
       "survival": [
         {
           "minute": 0,
           "groupA": 1.0,
+          "groupAUpper": 1.0,
+          "groupALower": 1.0,
           "groupB": 1.0,
-          "groupAUpper": 1.02,
-          "groupALower": 0.98,
-          "groupBUpper": 1.02,
-          "groupBLower": 0.98
+          "groupBUpper": 1.0,
+          "groupBLower": 1.0
         },
         {
           "minute": 5,
-          "groupA": 0.994,
-          "groupB": 0.988,
-          "groupAUpper": 1.014,
-          "groupALower": 0.974,
-          "groupBUpper": 1.008,
-          "groupBLower": 0.968
+          "groupA": 0.9515,
+          "groupAUpper": 0.9795,
+          "groupALower": 0.9236,
+          "groupB": 0.9364,
+          "groupBUpper": 0.9728,
+          "groupBLower": 0.9001
         },
         {
           "minute": 10,
-          "groupA": 0.983,
-          "groupB": 0.973,
-          "groupAUpper": 1.003,
-          "groupALower": 0.963,
-          "groupBUpper": 0.993,
-          "groupBLower": 0.953
+          "groupA": 0.9163,
+          "groupAUpper": 0.9523,
+          "groupALower": 0.8803,
+          "groupB": 0.8671,
+          "groupBUpper": 0.9176,
+          "groupBLower": 0.8165
         },
         {
           "minute": 15,
-          "groupA": 0.976,
-          "groupB": 0.962,
-          "groupAUpper": 0.996,
-          "groupALower": 0.956,
-          "groupBUpper": 0.982,
-          "groupBLower": 0.942
+          "groupA": 0.8811,
+          "groupAUpper": 0.9232,
+          "groupALower": 0.8389,
+          "groupB": 0.7399,
+          "groupBUpper": 0.8053,
+          "groupBLower": 0.6745
         },
         {
           "minute": 20,
-          "groupA": 0.969,
-          "groupB": 0.953,
-          "groupAUpper": 0.989,
-          "groupALower": 0.949,
-          "groupBUpper": 0.973,
-          "groupBLower": 0.933
+          "groupA": 0.8414,
+          "groupAUpper": 0.8889,
+          "groupALower": 0.7939,
+          "groupB": 0.6879,
+          "groupBUpper": 0.7569,
+          "groupBLower": 0.6188
         },
         {
           "minute": 25,
-          "groupA": 0.962,
-          "groupB": 0.941,
-          "groupAUpper": 0.982,
-          "groupALower": 0.942,
-          "groupBUpper": 0.961,
-          "groupBLower": 0.921
+          "groupA": 0.7885,
+          "groupAUpper": 0.8417,
+          "groupALower": 0.7354,
+          "groupB": 0.6301,
+          "groupBUpper": 0.702,
+          "groupBLower": 0.5581
         },
         {
           "minute": 30,
-          "groupA": 0.95,
-          "groupB": 0.935,
-          "groupAUpper": 0.97,
-          "groupALower": 0.93,
-          "groupBUpper": 0.955,
-          "groupBLower": 0.915
+          "groupA": 0.7445,
+          "groupAUpper": 0.8012,
+          "groupALower": 0.6878,
+          "groupB": 0.5954,
+          "groupBUpper": 0.6685,
+          "groupBLower": 0.5222
         },
         {
           "minute": 35,
-          "groupA": 0.937,
-          "groupB": 0.93,
-          "groupAUpper": 0.957,
-          "groupALower": 0.917,
-          "groupBUpper": 0.95,
-          "groupBLower": 0.91
+          "groupA": 0.7093,
+          "groupAUpper": 0.7683,
+          "groupALower": 0.6502,
+          "groupB": 0.5723,
+          "groupBUpper": 0.646,
+          "groupBLower": 0.4985
         },
         {
           "minute": 40,
-          "groupA": 0.926,
-          "groupB": 0.915,
-          "groupAUpper": 0.946,
-          "groupALower": 0.906,
-          "groupBUpper": 0.935,
-          "groupBLower": 0.895
+          "groupA": 0.6828,
+          "groupAUpper": 0.7434,
+          "groupALower": 0.6223,
+          "groupB": 0.5434,
+          "groupBUpper": 0.6176,
+          "groupBLower": 0.4691
         },
         {
           "minute": 45,
-          "groupA": 0.915,
-          "groupB": 0.904,
-          "groupAUpper": 0.935,
-          "groupALower": 0.895,
-          "groupBUpper": 0.924,
-          "groupBLower": 0.884
+          "groupA": 0.6564,
+          "groupAUpper": 0.7182,
+          "groupALower": 0.5946,
+          "groupB": 0.4855,
+          "groupBUpper": 0.56,
+          "groupBLower": 0.4111
         },
         {
           "minute": 50,
-          "groupA": 0.904,
-          "groupB": 0.894,
-          "groupAUpper": 0.924,
-          "groupALower": 0.884,
-          "groupBUpper": 0.914,
-          "groupBLower": 0.874
+          "groupA": 0.6211,
+          "groupAUpper": 0.6843,
+          "groupALower": 0.558,
+          "groupB": 0.4566,
+          "groupBUpper": 0.5309,
+          "groupBLower": 0.3824
         },
         {
           "minute": 55,
-          "groupA": 0.897,
-          "groupB": 0.882,
-          "groupAUpper": 0.917,
-          "groupALower": 0.877,
-          "groupBUpper": 0.902,
-          "groupBLower": 0.862
+          "groupA": 0.5859,
+          "groupAUpper": 0.65,
+          "groupALower": 0.5218,
+          "groupB": 0.3988,
+          "groupBUpper": 0.4718,
+          "groupBLower": 0.3259
         },
         {
           "minute": 60,
-          "groupA": 0.885,
-          "groupB": 0.87,
-          "groupAUpper": 0.905,
-          "groupALower": 0.865,
-          "groupBUpper": 0.89,
-          "groupBLower": 0.85
+          "groupA": 0.5374,
+          "groupAUpper": 0.6023,
+          "groupALower": 0.4726,
+          "groupB": 0.3699,
+          "groupBUpper": 0.4419,
+          "groupBLower": 0.298
         },
         {
           "minute": 65,
-          "groupA": 0.876,
-          "groupB": 0.857,
-          "groupAUpper": 0.896,
-          "groupALower": 0.856,
-          "groupBUpper": 0.877,
-          "groupBLower": 0.837
+          "groupA": 0.5022,
+          "groupAUpper": 0.5672,
+          "groupALower": 0.4372,
+          "groupB": 0.341,
+          "groupBUpper": 0.4117,
+          "groupBLower": 0.2704
         },
         {
           "minute": 70,
-          "groupA": 0.866,
-          "groupB": 0.85,
-          "groupAUpper": 0.886,
-          "groupALower": 0.846,
-          "groupBUpper": 0.87,
-          "groupBLower": 0.83
+          "groupA": 0.4714,
+          "groupAUpper": 0.5363,
+          "groupALower": 0.4064,
+          "groupB": 0.3295,
+          "groupBUpper": 0.3995,
+          "groupBLower": 0.2594
         },
         {
           "minute": 75,
-          "groupA": 0.858,
-          "groupB": 0.836,
-          "groupAUpper": 0.878,
-          "groupALower": 0.838,
-          "groupBUpper": 0.856,
-          "groupBLower": 0.816
+          "groupA": 0.4449,
+          "groupAUpper": 0.5096,
+          "groupALower": 0.3803,
+          "groupB": 0.3179,
+          "groupBUpper": 0.3873,
+          "groupBLower": 0.2485
         },
         {
           "minute": 80,
-          "groupA": 0.85,
-          "groupB": 0.821,
-          "groupAUpper": 0.87,
-          "groupALower": 0.83,
-          "groupBUpper": 0.841,
-          "groupBLower": 0.801
+          "groupA": 0.4361,
+          "groupAUpper": 0.5006,
+          "groupALower": 0.3716,
+          "groupB": 0.2948,
+          "groupBUpper": 0.3627,
+          "groupBLower": 0.2269
         },
         {
           "minute": 85,
-          "groupA": 0.838,
-          "groupB": 0.806,
-          "groupAUpper": 0.858,
-          "groupALower": 0.818,
-          "groupBUpper": 0.826,
-          "groupBLower": 0.786
+          "groupA": 0.3965,
+          "groupAUpper": 0.4601,
+          "groupALower": 0.3328,
+          "groupB": 0.2659,
+          "groupBUpper": 0.3317,
+          "groupBLower": 0.2001
         },
         {
           "minute": 90,
-          "groupA": 0.827,
-          "groupB": 0.797,
-          "groupAUpper": 0.847,
-          "groupALower": 0.807,
-          "groupBUpper": 0.817,
-          "groupBLower": 0.777
+          "groupA": 0.3568,
+          "groupAUpper": 0.4191,
+          "groupALower": 0.2945,
+          "groupB": 0.2254,
+          "groupBUpper": 0.2877,
+          "groupBLower": 0.1632
         }
       ],
       "logRankP": 0.5112,
+      "winProb": [
+        {
+          "bucket": "[-0.5, -0.3)",
+          "groupA": 32,
+          "groupB": 18
+        },
+        {
+          "bucket": "[-0.3, -0.1)",
+          "groupA": 0,
+          "groupB": 0
+        },
+        {
+          "bucket": "[-0.1, 0.1)",
+          "groupA": 75,
+          "groupB": 54
+        },
+        {
+          "bucket": "[0.1, 0.3)",
+          "groupA": 0,
+          "groupB": 0
+        },
+        {
+          "bucket": "[0.3, 0.5]",
+          "groupA": 14,
+          "groupB": 7
+        }
+      ],
+      "mannWhitneyP": 0.999,
+      "power": {
+        "n": 200,
+        "detectableEffect": 0.65
+      },
+      "caption": "Era C comparison cohort from real continental-tournament events (2003-2019). Live 2026 event-level data is tracked separately on the 2026 monitor.",
+      "source": "jfjelstul/worldcup match database (2002-2022) + continental cups",
       "did": {
         "estimate": 0.0579,
         "lower": -0.7742,
         "upper": 0.8899,
         "ropeLow": -0.1,
         "ropeHigh": 0.1
-      },
-      "winProb": [
-        {
-          "bucket": "[-0.5, -0.3)",
-          "groupA": 5,
-          "groupB": 8
-        },
-        {
-          "bucket": "[-0.3, -0.1)",
-          "groupA": 12,
-          "groupB": 24
-        },
-        {
-          "bucket": "[-0.1, 0.1)",
-          "groupA": 85,
-          "groupB": 94
-        },
-        {
-          "bucket": "[0.1, 0.3)",
-          "groupA": 22,
-          "groupB": 15
-        },
-        {
-          "bucket": "[0.3, 0.5]",
-          "groupA": 8,
-          "groupB": 4
-        }
-      ],
-      "mannWhitneyP": 0.999,
-      "power": {
-        "n": 20,
-        "detectableEffect": 0.65
-      },
-      "caption": "Era C mandatory breaks showing overlapping ROPE bounds and stabilized goals swing."
+      }
     }
   ]
 }

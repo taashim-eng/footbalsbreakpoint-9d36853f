@@ -15,13 +15,26 @@
     {
       "name": "Fjelstul World Cup Database",
       "coverage": "2002 - 2022 Matches & Events",
+      "startDate": "2002-05-31",
+      "endDate": "2022-12-18",
       "license": "MIT License",
       "link": "https://github.com/jfjelstul/worldcup",
       "compliant": true
     },
     {
+      "name": "ESPN / FIFA.com 2026 fixtures",
+      "coverage": "2026 World Cup completed matches (through Round of 16)",
+      "startDate": "2026-06-11",
+      "endDate": "2026-07-07",
+      "license": "Public results, scraped once (2026-07-08)",
+      "link": "https://www.fifa.com",
+      "compliant": true
+    },
+    {
       "name": "Open-Meteo Archive API",
       "coverage": "1940 - Present Weather Conditions",
+      "startDate": "1940-01-01",
+      "endDate": "2026-07-08",
       "license": "CC BY 4.0",
       "link": "https://open-meteo.com",
       "compliant": true
@@ -29,11 +42,14 @@
     {
       "name": "World Bank GDP Database",
       "coverage": "2000 - 2025 GDP PPP per Capita",
+      "startDate": "2000-01-01",
+      "endDate": "2025-12-31",
       "license": "Creative Commons Attribution 4.0",
       "link": "https://data.worldbank.org",
       "compliant": true
     }
   ],
-  "version": "1.0.0",
-  "seed": 42
+  "version": "1.1.0",
+  "seed": 42,
+  "lastUpdated": "2026-07-09 15:15 UTC"
 }
