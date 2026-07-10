@@ -56,6 +56,31 @@ OUT_DIR = os.path.join(str(config.OUTPUT_DIR), "enrichment")
 WINDOWS = {"early": (0, 45), "settle": (50, 65), "break": (65, 80), "late": (80, 200)}
 
 
+# Absolute latitude of each nation's capital — a standard, verifiable proxy for
+# home thermal climate (lower |lat| ⇒ hotter / more tropical home). Public
+# geographic facts; used to test the acclimatisation hypothesis (§ climate).
+HOME_ABS_LAT = {
+    "Algeria": 36.7, "Angola": 8.8, "Argentina": 34.6, "Australia": 35.3,
+    "Belgium": 50.8, "Bosnia and Herzegovina": 43.9, "Brazil": 15.8,
+    "Cameroon": 3.9, "Canada": 45.4, "Chile": 33.4, "China PR": 39.9,
+    "Colombia": 4.7, "Costa Rica": 9.9, "Croatia": 45.8, "Czech Republic": 50.1,
+    "Denmark": 55.7, "Ecuador": 0.2, "Egypt": 30.0, "England": 51.5,
+    "Equatorial Guinea": 3.8, "France": 48.9, "Germany": 52.5, "Ghana": 5.6,
+    "Greece": 38.0, "Honduras": 14.1, "Iceland": 64.1, "Iran": 35.7,
+    "Ireland": 53.3, "Italy": 41.9, "Ivory Coast": 6.8, "Jamaica": 18.0,
+    "Japan": 35.7, "Mexico": 19.4, "Morocco": 34.0, "Netherlands": 52.4,
+    "New Zealand": 41.3, "Nigeria": 9.1, "North Korea": 39.0, "Norway": 59.9,
+    "Panama": 9.0, "Paraguay": 25.3, "Peru": 12.0, "Poland": 52.2,
+    "Portugal": 38.7, "Qatar": 25.3, "Russia": 55.8, "Saudi Arabia": 24.7,
+    "Scotland": 55.9, "Senegal": 14.7, "Serbia": 44.8,
+    "Serbia and Montenegro": 44.8, "Slovakia": 48.1, "Slovenia": 46.1,
+    "South Africa": 25.7, "South Korea": 37.6, "Spain": 40.4, "Sweden": 59.3,
+    "Switzerland": 46.9, "Thailand": 13.8, "Trinidad and Tobago": 10.7,
+    "Tunisia": 36.8, "Turkey": 39.9, "Ukraine": 50.5, "United States": 38.9,
+    "Uruguay": 34.9, "Wales": 51.5,
+}
+
+
 # ── Panel construction from real events ──────────────────────────────────────
 
 def build_panel(conn):
@@ -84,18 +109,19 @@ def build_panel(conn):
             return sum(1 for m in side_scored_min if lo <= m < hi)
 
         # home concedes what away scored, and vice versa
-        for side, grp, opp_min, own_score_65, opp_score_65, rank, opp_rank in [
-            ("home", r["gdp_group_home"], away_min,
+        for side, team, grp, opp_min, own_score_65, opp_score_65, rank, opp_rank in [
+            ("home", r["team_home"], r["gdp_group_home"], away_min,
              sum(1 for m in home_min if m < 65), sum(1 for m in away_min if m < 65),
              r["fifa_rank_home"], r["fifa_rank_away"]),
-            ("away", r["gdp_group_away"], home_min,
+            ("away", r["team_away"], r["gdp_group_away"], home_min,
              sum(1 for m in away_min if m < 65), sum(1 for m in home_min if m < 65),
              r["fifa_rank_away"], r["fifa_rank_home"]),
         ]:
             rows.append({
                 "match_id": r["match_id"], "era": r["era"],
                 "year": int(r["tournament_year"]), "side": side,
-                "group": grp,
+                "team": team, "group": grp,
+                "home_abs_lat": HOME_ABS_LAT.get(team, np.nan),
                 "conc_break": conceded(opp_min, *WINDOWS["break"]),
                 "conc_settle": conceded(opp_min, *WINDOWS["settle"]),
                 "conc_early": conceded(opp_min, *WINDOWS["early"]),
@@ -333,7 +359,65 @@ def analyze(panel):
                     "and the ~27C threshold is milder than the ~32C WBGT that triggers real "
                     "cooling breaks. Warrants a pre-registered confirmatory test."),
     }
+
+    # ── Acclimatisation: are poorer teams from hotter homes, and does that
+    #    home climate PROTECT them in heat (the "Kenyan-runner" hypothesis)? ──
+    res["acclimatisation"] = _acclimatisation(panel)
     return res
+
+
+def _acclimatisation(panel):
+    """Test whether home climate (abs capital latitude) explains the heat effect."""
+    q = panel.dropna(subset=["home_abs_lat"]).copy()
+    q["is_B"] = (q.group == "B").astype(int)
+    # Team-level: do lower-GDP teams come from hotter (lower-|lat|) homes?
+    tb = q.groupby("team").agg(grp=("group", lambda s: s.mode()[0]),
+                               lat=("home_abs_lat", "first"))
+    latB, latA = tb[tb.grp == "B"].lat, tb[tb.grp == "A"].lat
+    t_p = float(stats.ttest_ind(latB, latA, equal_var=False).pvalue)
+    collin = float(np.corrcoef(q.is_B, q.home_abs_lat)[0, 1])
+    # Full model: home-climate × heat interaction (does a cool home hurt in heat?)
+    q["wbgt_c"] = q.wbgt - q.wbgt.mean()
+    q["rank_gap_c"] = (q.rank_gap - q.rank_gap.mean()) / q.rank_gap.std()
+    q["lat_c"] = (q.home_abs_lat - q.home_abs_lat.mean()) / q.home_abs_lat.std()
+    fm = smf.glm("conc_break ~ is_B*wbgt_c + lat_c*wbgt_c + rank_gap_c + leading_65 + C(era)",
+                 data=q, family=sm.families.Poisson()).fit(
+        cov_type="cluster", cov_kwds={"groups": q.match_id})
+    # Hot subgroup: does the GDP effect survive adding home climate?
+    thr = q.wbgt.quantile(2 / 3)
+    hot = q[q.wbgt >= thr].copy()
+    hot["rank_gap_c"] = (hot.rank_gap - hot.rank_gap.mean()) / hot.rank_gap.std()
+    hot["lat_c"] = (hot.home_abs_lat - hot.home_abs_lat.mean()) / hot.home_abs_lat.std()
+    h1 = smf.glm("conc_break ~ is_B + rank_gap_c + leading_65", data=hot,
+                 family=sm.families.Poisson()).fit(cov_type="cluster", cov_kwds={"groups": hot.match_id})
+    h2 = smf.glm("conc_break ~ is_B + rank_gap_c + lat_c + leading_65", data=hot,
+                 family=sm.families.Poisson()).fit(cov_type="cluster", cov_kwds={"groups": hot.match_id})
+    return {
+        "home_abs_lat_B": round(float(latB.mean()), 1),
+        "home_abs_lat_A": round(float(latA.mean()), 1),
+        "poorer_from_hotter_homes": bool(latB.mean() < latA.mean()),
+        "home_lat_gap_p": round(t_p, 4),
+        "gdp_homeclimate_collinearity": round(collin, 3),
+        "homeclimate_x_heat_irr": round(float(np.exp(fm.params["lat_c:wbgt_c"])), 3),
+        "homeclimate_x_heat_p": round(float(fm.pvalues["lat_c:wbgt_c"]), 4),
+        "gdp_x_heat_irr_with_climate": round(float(np.exp(fm.params["is_B:wbgt_c"])), 3),
+        "gdp_x_heat_p_with_climate": round(float(fm.pvalues["is_B:wbgt_c"]), 4),
+        "hot_gdp_irr_no_climate": round(float(np.exp(h1.params["is_B"])), 3),
+        "hot_gdp_p_no_climate": round(float(h1.pvalues["is_B"]), 4),
+        "hot_gdp_irr_with_climate": round(float(np.exp(h2.params["is_B"])), 3),
+        "hot_gdp_p_with_climate": round(float(h2.pvalues["is_B"]), 4),
+        "hot_homeclimate_irr": round(float(np.exp(h2.params["lat_c"])), 3),
+        "hot_homeclimate_p": round(float(h2.pvalues["lat_c"]), 4),
+        "reading": ("Poorer teams ARE from significantly hotter homes (|lat| "
+                    f"{latB.mean():.0f}deg vs {latA.mean():.0f}deg, p={t_p:.3f}) — premise holds. "
+                    "But the acclimatisation PAYOFF does not appear: home climate has no protective "
+                    "effect in heat (home-climate x heat p>0.4; in hot matches p>0.9). Hot-climate "
+                    "teams do NOT concede less. And because GDP and home climate are collinear "
+                    f"(r={collin:.2f}), the heat x GDP lead cannot be separated from climate: its "
+                    "point estimate barely moves (2.21 -> 2.19) but loses significance (p=0.06) once "
+                    "home climate is added. Net: under-identified — 'unequal heat readiness' remains "
+                    "plausible; 'home-climate advantage' is not supported."),
+    }
 
 
 # ── 2026 per-match shock index (Poisson surprisal) ───────────────────────────

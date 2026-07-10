@@ -1,6 +1,6 @@
 {
   "competition": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-10 06:36 UTC",
+  "lastUpdated": "2026-07-10 07:14 UTC",
   "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
   "note": "Observed completed matches only (group stage through Round of 16). Quarter-finals onward had not been played at scrape time and are omitted.",
   "metricsNote": "shockIndex = scoreline surprisal: -ln P(exact final score) under a Poisson model of each team's observed attack/defense rates (shrunk toward the tournament mean). Higher = less expected. shockPercentile ranks it 0-100 among 2026 matches. winnerPreMatchProb = the model's pre-match probability of the side that actually won (low = upset). Computed by backend/analysis/17_anomaly_enrichment.py from observed scores only.",

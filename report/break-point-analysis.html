@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Break Point — Forensic Statistics Dossier</title>
+<style>
+  :root {
+    --ground: #0b0e17; --surface: #131826; --surface-2: #1a2032;
+    --ink: #e9edf6; --muted: #8b93a7; --hair: rgba(255,255,255,.09);
+    --accent: #5b8cff; --accent-soft: rgba(91,140,255,.14);
+    --alarm: #e0603a; --caution: #d9a441; --clean: #3fb08c;
+    --alarm-soft: rgba(224,96,58,.13); --clean-soft: rgba(63,176,140,.14); --caution-soft: rgba(217,164,65,.13);
+    --font-display: "Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+    --font-body: system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --font-mono: ui-monospace,"SF Mono","JetBrains Mono","Cascadia Code",Menlo,Consolas,monospace;
+    --measure: 42rem;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --ground: #f5f6fb; --surface: #ffffff; --surface-2: #eef1f8;
+      --ink: #111726; --muted: #5a6478; --hair: rgba(16,23,37,.11);
+      --accent: #3457c8; --accent-soft: rgba(52,87,200,.10);
+      --alarm: #c1492a; --caution: #a9761a; --clean: #1f8b68;
+      --alarm-soft: rgba(193,73,42,.10); --clean-soft: rgba(31,139,104,.11); --caution-soft: rgba(169,118,26,.11);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0b0e17; --surface: #131826; --surface-2: #1a2032;
+    --ink: #e9edf6; --muted: #8b93a7; --hair: rgba(255,255,255,.09);
+    --accent: #5b8cff; --accent-soft: rgba(91,140,255,.14);
+    --alarm: #e0603a; --caution: #d9a441; --clean: #3fb08c;
+    --alarm-soft: rgba(224,96,58,.13); --clean-soft: rgba(63,176,140,.14); --caution-soft: rgba(217,164,65,.13);
+  }
+  :root[data-theme="light"] {
+    --ground: #f5f6fb; --surface: #ffffff; --surface-2: #eef1f8;
+    --ink: #111726; --muted: #5a6478; --hair: rgba(16,23,37,.11);
+    --accent: #3457c8; --accent-soft: rgba(52,87,200,.10);
+    --alarm: #c1492a; --caution: #a9761a; --clean: #1f8b68;
+    --alarm-soft: rgba(193,73,42,.10); --clean-soft: rgba(31,139,104,.11); --caution-soft: rgba(169,118,26,.11);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink);
+    font-family: var(--font-body); line-height: 1.65;
+    -webkit-font-smoothing: antialiased; font-size: 17px;
+  }
+  .wrap { max-width: var(--measure); margin: 0 auto; padding: 0 1.4rem; }
+  .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+  /* header */
+  header {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in oklab, var(--ground) 88%, transparent);
+    backdrop-filter: blur(10px); border-bottom: 1px solid var(--hair);
+  }
+  .bar { max-width: var(--measure); margin: 0 auto; padding: .7rem 1.4rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .brand { display: flex; align-items: center; gap: .55rem; font-family: var(--font-mono);
+    font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .brand b { color: var(--ink); font-weight: 600; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--alarm);
+    box-shadow: 0 0 0 4px var(--alarm-soft); }
+  .toggle { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .04em;
+    background: var(--surface); color: var(--muted); border: 1px solid var(--hair);
+    border-radius: 999px; padding: .34rem .7rem; cursor: pointer; }
+  .toggle:hover { color: var(--ink); border-color: var(--accent); }
+  .toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* hero */
+  .hero { padding: 4.2rem 0 2.4rem; }
+  .eyebrow { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--accent); margin: 0 0 1.1rem; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(2.1rem, 6vw, 3.3rem);
+    line-height: 1.08; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+  h1 em { font-style: italic; color: var(--accent); }
+  .lede { font-size: 1.16rem; color: var(--muted); margin: 1.3rem 0 0; max-width: 36rem; text-wrap: pretty; }
+  .verdict-strip { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: .55rem; align-items: center;
+    padding: 1rem 1.1rem; border: 1px solid var(--hair); border-radius: 12px;
+    background: linear-gradient(100deg, var(--clean-soft), transparent 70%); }
+  .verdict-strip .k { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--muted); }
+  .verdict-strip .v { font-family: var(--font-display); font-size: 1.05rem; color: var(--ink); }
+
+  section { padding: 2.6rem 0; border-top: 1px solid var(--hair); }
+  h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.7rem; letter-spacing: -.01em;
+    margin: 0 0 .3rem; text-wrap: balance; }
+  .kicker { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--accent); margin: 0 0 .9rem; }
+  p { margin: 1rem 0; }
+  p, li { max-width: var(--measure); }
+  strong { color: var(--ink); font-weight: 650; }
+  a { color: var(--accent); }
+
+  /* stat callouts inline */
+  .stat { font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+    color: var(--ink); font-weight: 600; }
+
+  /* the alarming number */
+  .figure-lead { display: flex; gap: 1.3rem; align-items: baseline; flex-wrap: wrap;
+    margin: 1.6rem 0; padding: 1.3rem 1.4rem; border-radius: 14px;
+    background: var(--caution-soft); border: 1px solid color-mix(in oklab, var(--caution) 35%, transparent); }
+  .figure-lead .big { font-family: var(--font-mono); font-size: 2.7rem; font-weight: 700;
+    color: var(--caution); line-height: 1; }
+  .figure-lead .cap { color: var(--muted); font-size: .95rem; }
+  .figure-lead .cap b { color: var(--ink); }
+
+  /* evidence ladder */
+  .ladder { display: grid; gap: .8rem; margin: 1.6rem 0 .4rem; }
+  .rung { display: grid; grid-template-columns: 2rem 1fr auto; gap: .9rem 1rem; align-items: start;
+    padding: 1.05rem 1.15rem; background: var(--surface); border: 1px solid var(--hair); border-radius: 12px; }
+  .rung .lvl { font-family: var(--font-mono); font-size: .85rem; color: var(--muted);
+    padding-top: .1rem; }
+  .rung h3 { margin: 0 0 .25rem; font-size: 1.02rem; font-family: var(--font-body); font-weight: 650; letter-spacing: 0; }
+  .rung p { margin: 0; font-size: .92rem; color: var(--muted); max-width: none; }
+  .rung .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+    font-size: .82rem; color: var(--ink); margin-top: .45rem; display: block; }
+  .chip { grid-column: 3; align-self: center; font-family: var(--font-mono); font-size: .68rem;
+    letter-spacing: .07em; text-transform: uppercase; padding: .3rem .6rem; border-radius: 999px;
+    white-space: nowrap; }
+  .chip.warn { background: var(--caution-soft); color: var(--caution);
+    border: 1px solid color-mix(in oklab, var(--caution) 40%, transparent); }
+  .chip.null { background: var(--clean-soft); color: var(--clean);
+    border: 1px solid color-mix(in oklab, var(--clean) 40%, transparent); }
+
+  /* figure cards */
+  figure { margin: 1.6rem 0; padding: 1.3rem 1.2rem 1rem; background: var(--surface);
+    border: 1px solid var(--hair); border-radius: 14px; }
+  figure .ftitle { font-family: var(--font-body); font-weight: 650; font-size: 1rem; margin: 0 0 .2rem; }
+  figure figcaption { font-size: .85rem; color: var(--muted); margin-top: .7rem; }
+  .chart { width: 100%; overflow-x: auto; }
+  svg { display: block; max-width: 100%; }
+  .axis-lab { font-family: var(--font-mono); font-size: 10px; fill: var(--muted); }
+  .row-lab { font-family: var(--font-mono); font-size: 12px; fill: var(--ink); }
+  .row-sub { font-family: var(--font-mono); font-size: 10px; fill: var(--muted); }
+
+  /* ELI5 aside */
+  .eli5 { margin: 1.4rem 0; padding: 1.05rem 1.2rem; border-radius: 12px;
+    background: var(--accent-soft); border: 1px solid color-mix(in oklab, var(--accent) 30%, transparent); }
+  .eli5 .tag { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .eli5 p { margin: .45rem 0 0; font-size: .96rem; color: var(--ink); max-width: none; }
+  .eli5 p + p { margin-top: .6rem; }
+
+  /* data table */
+  .tablecard { margin: 1.5rem 0; border: 1px solid var(--hair); border-radius: 14px; overflow: hidden; }
+  .tablecard .cap { padding: .8rem 1.1rem; font-family: var(--font-body); font-weight: 650; font-size: 1rem;
+    background: var(--surface); border-bottom: 1px solid var(--hair); }
+  .tscroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+  th, td { text-align: right; padding: .6rem .8rem; border-bottom: 1px solid var(--hair); white-space: nowrap; }
+  th { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); font-weight: 500; background: var(--surface); position: sticky; top: 0; }
+  td.l, th.l { text-align: left; }
+  td .mono, td.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  tbody tr:hover { background: var(--surface); }
+  .barcell { position: relative; }
+  .mbar { height: 6px; border-radius: 3px; background: var(--accent); display: inline-block; vertical-align: middle; }
+  .flag { font-size: 1rem; }
+  .hi { color: var(--caution); font-weight: 650; }
+
+  /* glossary */
+  .gloss { display: grid; gap: .7rem; margin-top: 1.2rem; }
+  .gloss details { background: var(--surface); border: 1px solid var(--hair); border-radius: 10px; padding: .2rem .2rem; }
+  .gloss summary { cursor: pointer; padding: .75rem .95rem; font-weight: 650; font-size: .98rem; list-style: none;
+    display: flex; justify-content: space-between; align-items: center; }
+  .gloss summary::-webkit-details-marker { display: none; }
+  .gloss summary::after { content: "+"; font-family: var(--font-mono); color: var(--accent); font-size: 1.2rem; }
+  .gloss details[open] summary::after { content: "\2013"; }
+  .gloss summary .term { font-family: var(--font-mono); font-size: .82rem; color: var(--muted); font-weight: 500; }
+  .gloss .body { padding: 0 .95rem .9rem; font-size: .94rem; color: var(--muted); }
+  .gloss .body b { color: var(--ink); }
+
+  .callout-final { margin: 1.6rem 0; padding: 1.5rem 1.4rem; border-radius: 14px;
+    background: var(--clean-soft); border: 1px solid color-mix(in oklab, var(--clean) 40%, transparent); }
+  .callout-final .tag { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--clean); font-weight: 700; }
+  .callout-final p { margin: .5rem 0 0; font-size: 1.05rem; color: var(--ink); max-width: none; }
+
+  footer { border-top: 1px solid var(--hair); padding: 2rem 0 3rem; color: var(--muted); font-size: .82rem; }
+  footer .mono { color: var(--muted); }
+
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="bar">
+    <span class="brand"><span class="dot"></span> The Break Point · <b>Forensic Statistics Dossier</b></span>
+    <button class="toggle" id="themeBtn" aria-label="Toggle colour theme">◐ theme</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <p class="eyebrow">Statistical review v2 · adversarially re-examined · 2002–2026</p>
+    <h1>The obvious story is wrong. The <em>real</em> one is about heat and inequality — not a fix.</h1>
+    <p class="lede">The dashboard's founding claim — lower-GDP nations collapse during the 65′–80′ hydration break — is, pooled across all matches, a confounded and <strong>underpowered</strong> non-finding. But a five-persona adversarial review pulled a genuine thread loose: in the <strong>hottest matches</strong>, poorer teams concede far more even after adjusting for how good they are. That points to a resource and physiology story, not manipulation — and it sits in a blind spot our goal-based data can't see clearly.</p>
+    <div class="verdict-strip">
+      <span class="k">Bottom line</span>
+      <span class="v">No evidence of a break-specific fix. A real <strong>heat × economics</strong> signal survives as an exploratory lead — read it as unequal preparation for the heat, not a conspiracy. The documented integrity risk lives elsewhere entirely.</span>
+    </div>
+  </div>
+
+  <section class="reveal">
+    <p class="kicker">01 · The claim</p>
+    <h2>Poorer nations seem to leak goals in the break</h2>
+    <p>We restricted to <strong>308 genuine cross-group matches</strong> — exactly one higher-GDP ("Group A") team against one lower-GDP ("Group B") team — and counted, from real minute-by-minute event data, who conceded during the 65′–80′ window. The raw contrast is the kind of number that launches an investigation:</p>
+    <div class="figure-lead">
+      <span class="big">+29%</span>
+      <span class="cap">Lower-GDP teams conceded in the break window in <b>21.4%</b> of matches, versus <b>16.6%</b> for higher-GDP teams — a rate ratio of <b>1.29</b>. Suggestive. But "suggestive" is where the work begins, not ends.</span>
+    </div>
+    <p>A responsible analyst treats that first number as a <em>hypothesis</em>, then asks it to survive progressively harder tests. Each rung below removes one innocent explanation for the gap.</p>
+  </section>
+
+  <section class="reveal">
+    <p class="kicker">02 · The evidence ladder</p>
+    <h2>Four controls, each tougher than the last</h2>
+    <div class="ladder">
+      <div class="rung">
+        <span class="lvl">L1</span>
+        <div>
+          <h3>Unpaired comparison</h3>
+          <p>Is the raw gap even distinguishable from noise? A chi-square test on the 2×2 of group × conceded-in-break.</p>
+          <span class="num">χ² = 2.37 · p = 0.123 · Cramér's V = 0.06</span>
+        </div>
+        <span class="chip warn">Not significant</span>
+      </div>
+      <div class="rung">
+        <span class="lvl">L2</span>
+        <div>
+          <h3>Paired, within the same match</h3>
+          <p>Compare the two teams <em>in the same game</em>, so heat, altitude, referee and stakes cancel out. McNemar's test on discordant matches.</p>
+          <span class="num">58 vs 43 discordant · OR = 1.35 · p = 0.164</span>
+        </div>
+        <span class="chip warn">Not significant</span>
+      </div>
+      <div class="rung">
+        <span class="lvl">L3</span>
+        <div>
+          <h3>Is it <em>break-specific</em>? — difference-in-differences</h3>
+          <p>Subtract each team's own pre-break baseline (equal-width 50′–65′). If the break is special, Group B should decay <em>extra</em> there.</p>
+          <span class="num">DiD = −0.09 goals · 95% CI [−0.20, +0.01] · spans 0</span>
+        </div>
+        <span class="chip null">No break effect</span>
+      </div>
+      <div class="rung">
+        <span class="lvl">L4</span>
+        <div>
+          <h3>Adjust for team strength &amp; heat — Poisson regression</h3>
+          <p>Hold FIFA-ranking gap, heat (WBGT), lead state and era constant, then read the GDP effect alone.</p>
+          <span class="num">GDP IRR = 1.32 · 95% CI [0.92, 1.89] · p = 0.135</span>
+        </div>
+        <span class="chip warn">Not established</span>
+      </div>
+    </div>
+    <p>Pooled across every match, the signal <strong>erodes</strong>: weakly present when nothing is controlled, and not statistically distinguishable from zero once you compare like-with-like. The first version of this report stopped here and called it "debunked." That was too quick — as the next two sections show.</p>
+  </section>
+
+  <section class="reveal">
+    <p class="kicker">03 · The pooled picture in one chart</p>
+    <h2>The GDP estimates hug the line — but heat splits the room</h2>
+    <figure>
+      <p class="ftitle">Effect sizes with 95% confidence intervals (ratio scale, log axis)</p>
+      <div class="chart" id="forest"></div>
+      <figcaption>Right of <span class="mono">1.0</span> = "more break-window concessions." Pooled, the three GDP estimates <strong>straddle 1.0</strong> (grey — no clear effect); <strong>FIFA ranking</strong> clears it (green — team strength is a real, all-game driver). But restrict to the <strong>hottest third of matches</strong> and the strength-adjusted GDP effect jumps clear of the line (amber — the exploratory lead of §05).</figcaption>
+    </figure>
+    <div class="eli5">
+      <span class="tag">ELI5 · confidence interval</span>
+      <p>A confidence interval is the honest version of a single number: the range the true value plausibly sits in, given how much data we have. If it <b>includes 1.0</b> (for a ratio), we can't rule out "nothing is happening." Like guessing a height as "5′2″ to 6′4″" — honest, but too wide to call. The pooled GDP bars are exactly that; the amber hot-match bar is the one that finally stands apart from the fence.</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <p class="kicker">04 · The honest limit of a null</p>
+    <h2>"Not significant" is not the same as "nothing there"</h2>
+    <p>Before celebrating a null, ask what it could even have detected. With 308 matches and a ~17% base rate, this study can only reliably catch a rate ratio above <span class="stat">1.55</span> — and the observed effect is <span class="stat">1.29</span>, <em>below that floor</em>. A formal equivalence test (TOST) confirms the asymmetry: we can statistically rule out a <strong>doubling</strong> of the concession rate <span class="mono">(IRR 2.0, p = 0.011)</span>, but we <strong>cannot</strong> rule out a 50% increase <span class="mono">(IRR 1.5, p = 0.24)</span>.</p>
+    <p>So the pooled result is precisely: <strong>no evidence of a break-window GDP effect — not proof there is none.</strong> The original report's "explained away" over-reached. This is an underpowered null with room for a moderate real effect.</p>
+    <div class="eli5">
+      <span class="tag">ELI5 · statistical power &amp; equivalence</span>
+      <p>Absence of evidence isn't evidence of absence. If you search a dark room with a dim torch and find nothing, you haven't proven the room is empty — your torch was just too weak to see a small object. "Power" is how bright your torch is; a small sample is a dim one. An <b>equivalence test</b> is the honest flashlight check: it can only declare "nothing meaningful here" if the beam was actually strong enough to have seen it. Ours could see an elephant (a doubling) but not a large dog (a 50% rise).</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <p class="kicker">05 · The heat turn</p>
+    <h2>Where the review changed the answer</h2>
+    <p>The sports scientist on the panel made the sharpest point: cooling breaks are <em>heat-triggered</em>. If they matter, the effect should live in <strong>hot</strong> matches, not the average one. Testing that flipped the story:</p>
+    <ul>
+      <li>The GDP effect <strong>grows with temperature</strong> — a significant heat × GDP interaction <span class="mono">(IRR 1.13 per °C, p = 0.024)</span>.</li>
+      <li>In the <strong>hottest third of matches</strong>, a lower-GDP team concedes in the break window at <span class="stat">2.1×</span> the higher-GDP rate — and, crucially, this <strong>survives adjustment for FIFA ranking</strong> <span class="mono">(IRR 2.21, 95% CI [1.18, 4.15], p = 0.014)</span>. It is <em>not</em> merely team strength this time.</li>
+      <li>But within those hot matches the difference-in-differences <span class="mono">(+0.03, CI [−0.17, +0.21])</span> spans zero — so it is <strong>not shown to be break-specific</strong>. It reads as general heat vulnerability, not a cooling-break collapse.</li>
+    </ul>
+    <p>Read plainly: in the heat, poorer-nation sides concede more even accounting for how good they are — but we can't pin it to the break itself, and our "hot" cut (WBGT ≈ 27°C) is milder than the ~32°C that actually triggers a cooling break. This is a real, pre-registerable <strong>lead</strong>, not a confirmed finding. It is one uncorrected subgroup, reported as exploratory.</p>
+    <div class="eli5">
+      <span class="tag">ELI5 · interaction &amp; the forking-paths trap</span>
+      <p>An <b>interaction</b> is "it depends." Sunscreen's benefit depends on sun; here, GDP's effect depends on heat. That's a real, testable idea. The danger: if you slice data enough ways, one slice will look exciting by luck — the "garden of forking paths." That's why we label this <b>exploratory</b> and say it needs a fresh, pre-committed test before anyone believes it. Confirmatory conclusions and interesting leads are different currencies; we don't spend one as the other. And it invites an obvious objection — answered next.</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <p class="kicker">06 · The acclimatisation objection</p>
+    <h2>"But poorer nations are hot-climate nations — shouldn't heat <em>help</em> them?"</h2>
+    <p>A fair challenge: distance runners from the Kenyan highlands carry an altitude edge everywhere they race. If poorer footballing nations come from hotter homes, heat should be their <em>advantage</em>, not their undoing — which would turn §05 on its head. So we tested it directly, adding each nation's home climate (absolute latitude of its capital — lower means more tropical) to the models.</p>
+    <div class="tablecard">
+      <div class="tscroll"><table><thead>
+        <tr><th class="l">Question</th><th class="l">Test</th><th>Result</th><th class="l">Verdict</th></tr>
+      </thead><tbody>
+        <tr><td class="l">Are poorer teams from hotter homes?</td><td class="l">Home |latitude| by group</td><td class="mono">28° vs 41°, p = 0.002</td><td class="l"><span style="color:var(--clean)">Yes — premise holds</span></td></tr>
+        <tr><td class="l">Does a hot home protect you in heat?</td><td class="l">Home-climate × heat interaction</td><td class="mono">IRR 0.98, p = 0.43</td><td class="l"><span style="color:var(--muted)">No effect</span></td></tr>
+        <tr><td class="l">…in the hottest matches specifically?</td><td class="l">Home climate in hot subgroup</td><td class="mono">IRR 0.99, p = 0.96</td><td class="l"><span style="color:var(--muted)">No effect</span></td></tr>
+        <tr><td class="l">Can we even separate GDP from climate?</td><td class="l">Their correlation</td><td class="mono">r = −0.59</td><td class="l"><span style="color:var(--caution)">Entangled</span></td></tr>
+        <tr><td class="l">Does the heat lead survive home climate?</td><td class="l">Hot-match GDP effect, ± climate</td><td class="mono">2.21 → 2.19, p 0.014 → 0.056</td><td class="l"><span style="color:var(--caution)">Now borderline</span></td></tr>
+      </tbody></table></div>
+    </div>
+    <p>So the premise is right — poorer sides here <em>are</em> from significantly hotter climates — but the predicted payoff never materialises: home climate has <strong>no protective effect in the heat</strong>, and hot-climate teams do not concede less. The acclimatisation edge that helps Kenyan runners simply doesn't show up for these footballers.</p>
+    <p>Why the analogy breaks: elite footballers aren't continuously acclimatised to their <em>national</em> climate — they play club seasons across the globe (a Senegalese star spends winters in Europe), so "home latitude" is a weak stand-in for a squad's real heat readiness, unlike a runner who trains at altitude every day. World-Cup venues are neutral and rarely reach the ~32°C that makes acclimatisation decisive; our "hot" cut is only ~27°C. And any edge is plausibly swamped by the very resource gaps §05 points to. Crucially, because GDP and home climate are <strong>collinear (r = −0.59)</strong>, they compete for the same variance: the hot-match GDP effect barely moves when climate is added <span class="mono">(2.21 → 2.19)</span> yet slips just past significance <span class="mono">(p = 0.056)</span>. Home climate doesn't <em>explain it away</em> — but it does mean we can't cleanly credit "poverty" versus "climate." The honest label for the §05 lead tightens from "exploratory" to <strong>exploratory and under-identified</strong>.</p>
+    <div class="eli5">
+      <span class="tag">ELI5 · acclimatisation &amp; collinearity</span>
+      <p><b>Acclimatisation</b> is your body adapting to conditions it lives in — mountain air, or relentless heat. The intuition that hot-country teams should shrug off hot games is reasonable; it just isn't visible here, because footballers live and play all over the world, not at home.</p>
+      <p><b>Collinearity</b> is two clues that always travel together, so you can't tell which one is talking. "Poorer" and "from a hotter country" are nearly the same teams (they move together with correlation −0.59). Ask a model to split their credit for the heat effect and it throws up its hands — not because there's nothing there, but because the two are too tangled to separate with this much data.</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <p class="kicker">07 · What "GDP" is really measuring</p>
+    <h2>A crude label with a humane explanation</h2>
+    <p>The sociologist's warning matters: splitting nations at the median GDP is a blunt instrument. It conflates <em>economic development</em> with <em>footballing strength</em> — Brazil and Argentina are football-rich without being GDP-rich; strong African sides land in "Group B." That is why <strong>FIFA ranking</strong>, a football-specific measure, behaves so much more cleanly in every model, and why the pooled "GDP effect" is mostly ranking wearing a disguise.</p>
+    <p>But the hot-match signal that <em>survives</em> ranking asks for a different reading. The plausible, benign mechanism is <strong>resource inequality</strong>: heat acclimatisation camps, sports-science and recovery budgets, squad depth and substitution quality all track national wealth, and all blunt late-game defensive fatigue in extreme heat. That is a story about <em>preparation gaps</em>, not fixed matches — and it is exactly the kind of structural inequality a responsible analysis should name rather than dress up as an "anomaly."</p>
+    <div class="eli5">
+      <span class="tag">ELI5 · construct validity</span>
+      <p>A ruler should measure the thing you care about. If you want "how good at football," national GDP is a bent ruler — rich ≠ good at this sport. FIFA ranking is the straighter one. When a bent-ruler result (GDP) survives only after you've also held the straight ruler (ranking) fixed, whatever's left is telling you about something GDP captures that ranking doesn't — here, most likely money spent preparing bodies for heat.</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <p class="kicker">08 · Keeping ourselves honest</p>
+    <h2>Many tests, one strict bar</h2>
+    <p>Run enough tests and one will look "significant" by luck. Across the pre-specified confirmatory family — the unpaired, paired and adjusted GDP tests, <em>plus</em> the three per-era subgroup tests the review insisted we include — a Benjamini-Hochberg correction leaves the smallest q-value at <span class="stat">0.245</span>. Nothing in the confirmatory set survives. The lone era subgroup that looked significant on its own <span class="mono">(Era C, p = 0.046)</span> does not clear the corrected bar. The heat lead of §05 is deliberately kept <em>outside</em> this family, as exploratory.</p>
+    <div class="eli5">
+      <span class="tag">ELI5 · multiple comparisons</span>
+      <p>Flip twenty coins and one will probably show a streak — luck, because you gave it twenty tries. Testing many hypotheses is the same. The correction is a stricter bar that scales with how many peeks you took, so a fluke among many doesn't get crowned a discovery.</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <p class="kicker">09 · By era</p>
+    <h2>No tournament-wide trend</h2>
+    <figure>
+      <p class="ftitle">Break-window concession gap (Group&nbsp;B − Group&nbsp;A), by era, with 95% CI</p>
+      <div class="chart" id="eraChart"></div>
+      <figcaption>Two of three intervals span zero; the continental-cup cohort's does not, but it fails multiplicity control (§07). A possible signal in one heterogeneous cohort — not a phenomenon that marches across eras.</figcaption>
+    </figure>
+  </section>
+
+  <section class="reveal">
+    <p class="kicker">10 · The overlay you asked for</p>
+    <h2>Where the real integrity risk actually lives</h2>
+    <p>We were asked to weigh proven corruption, gambling and broadcast money against the on-pitch numbers. The honest map separates <strong>motive</strong> from <strong>evidence</strong>, and shows our analysis is pointed at the wrong surface to catch what has actually been caught.</p>
+    <div class="ladder">
+      <div class="rung">
+        <span class="lvl">$</span>
+        <div>
+          <h3>The motive is enormous — and real</h3>
+          <p>FIFA booked <span class="mono">$7.57 bn</span> for the 2019–22 cycle (45% from broadcast rights) and projects <span class="mono">$11–13 bn</span> for 2026. Global World-Cup wagering runs from tens of billions (regulated) to a UNODC-estimated <span class="mono">$1.7 tn</span> illegal market. Big-market and host teams advancing lifts all of it.</p>
+        </div>
+        <span class="chip warn">Motive ≠ evidence</span>
+      </div>
+      <div class="rung">
+        <span class="lvl">§</span>
+        <div>
+          <h3>Proven FIFA corruption is administrative</h3>
+          <p>The 2015 US DOJ case (~$150 m in bribes) was about <em>media &amp; marketing rights</em>, bids and elections — not rigging match results. Blatter and Platini were later acquitted of criminal fraud. The money is stolen in boardrooms, not on the pitch.</p>
+        </div>
+        <span class="chip null">Off-pitch</span>
+      </div>
+      <div class="rung">
+        <span class="lvl">⚑</span>
+        <div>
+          <h3>Proven match-fixing sits in the lower tiers</h3>
+          <p>Documented cases target qualifiers, friendlies and officials — Nepal's 2011 qualifiers; life bans for referees (Chaibou) and coaches (Siasia). Not the World-Cup-finals matches in our 2002–2022 sample.</p>
+        </div>
+        <span class="chip null">Out of sample</span>
+      </div>
+      <div class="rung">
+        <span class="lvl">◉</span>
+        <div>
+          <h3>Modern risk is invisible to us</h3>
+          <p>2026's integrity flags are <strong>spot-fixing</strong> (cards, corners, throw-ins — e.g. the Wahi referral) and <strong>refereeing</strong> disputes (Egypt's complaint over Argentina's Round of 16). A final-score / goals analysis like ours <em>cannot see</em> either. Allegations are unproven and unadjudicable from scorelines.</p>
+        </div>
+        <span class="chip warn">Blind spot</span>
+      </div>
+    </div>
+    <p>So the strongest incentives and the actually-documented failures both concentrate in places our numbers don't reach: administrative money, prop markets, and officiating. That is a reason for humility about scope — not an inference of guilt. Sources are catalogued in <span class="mono">backend/analysis/EXTERNAL_FACTS.md</span>.</p>
+  </section>
+
+  <div class="callout-final reveal">
+    <span class="tag">Verdict</span>
+    <p>An anomaly is a <strong>deviation from expectation</strong>, not evidence of wrongdoing. Pooled, the break-window GDP pattern is confounded by team strength and too underpowered to call either way. Conditioned on heat, a <strong>disadvantage for poorer nations appears</strong> — but it is entangled with those nations' hot home climates and so <strong>under-identified</strong>: we can say hot-climate teams get no protective edge (the acclimatisation objection fails), yet we cannot cleanly credit poverty versus climate for what remains. The most defensible reading is unequal readiness for heat, not a fix, and not clearly tied to the break itself. And the corruption that <em>is</em> documented lives in boardrooms, prop bets and officiating — surfaces a scoreline model cannot inspect. The correct report is the careful one: name the plausible inequality, keep the promising lead labelled as a lead, and refuse to let a striking chart imply a story the data won't support.</p>
+  </div>
+
+  <section class="reveal">
+    <p class="kicker">11 · The live tournament</p>
+    <h2>2026 has no event data — so we measure surprise instead</h2>
+    <p>The 2026 World Cup is in progress and we hold only <strong>observed final scores</strong> for the 96 completed matches — no minute-level events, no market data. Rather than fabricate a trajectory, we attach one honest, self-contained metric to every game: a <strong>shock index</strong>. A Poisson model (with a Dixon-Coles low-score correction) learns each team's scoring and conceding <em>rate</em> so far — shrunk toward the tournament average of <span class="mono">2.92</span> goals/match — predicts the fixture, and measures how <em>surprised</em> it is by the real result. "Model xG" here is that rate-based expectation, <em>not</em> shot-based expected goals.</p>
+    <div class="tablecard">
+      <div class="cap">Most surprising scorelines · 2026</div>
+      <div class="tscroll"><table id="shockTable"><thead>
+        <tr><th class="l">Match</th><th>Result</th><th>Model xG</th><th>Shock</th><th>Pctl</th></tr>
+      </thead><tbody></tbody></table></div>
+    </div>
+    <div class="eli5">
+      <span class="tag">ELI5 · shock index (surprisal)</span>
+      <p>Imagine betting on the exact score with a well-informed friend. If the game ends as expected, you shrug. If it ends <b>7–1</b>, you gasp. The shock index is a number for that gasp — the "surprise" (negative log-probability) the model assigns to the real score. Blowouts and out-of-nowhere results score high; routine 1–0s score low.</p>
+      <p><b>Shock ≠ upset.</b> Paraguay knocking out Germany was the headline — but on the pitch it finished <b>1–1</b>, an unremarkable scoreline; the drama was the penalty shootout, which a goals model can't see. For "David beat Goliath," read the <em>upset</em> table.</p>
+    </div>
+    <div class="tablecard">
+      <div class="cap">Biggest upsets · lowest pre-match win probability for the side that won</div>
+      <div class="tscroll"><table id="upsetTable"><thead>
+        <tr><th class="l">Match</th><th>Result</th><th>Winner's pre-match prob</th><th>Stage</th></tr>
+      </thead><tbody></tbody></table></div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <p class="kicker">12 · Adversarial review</p>
+    <h2>What five reviewers changed</h2>
+    <p>This version exists because a Data Scientist, Actuary, Mathematician, Sociologist and Sports Scientist tried to break the first one. The material changes:</p>
+    <div class="tablecard">
+      <div class="tscroll"><table><thead>
+        <tr><th class="l">Reviewer</th><th class="l">Finding</th><th class="l">Fix</th></tr>
+      </thead><tbody>
+        <tr><td class="l">Data Scientist</td><td class="l">"Explained away" was an underpowered null</td><td class="l">Added power + TOST; reframed (§04)</td></tr>
+        <tr><td class="l">Sports Scientist</td><td class="l">Break is heat-triggered; test hot matches</td><td class="l">Heat interaction + hot-subgroup (§05)</td></tr>
+        <tr><td class="l">Sociologist</td><td class="l">GDP is a bent ruler for football</td><td class="l">Ranking foregrounded; inequality framing (§06)</td></tr>
+        <tr><td class="l">Actuary</td><td class="l">Independent Poisson mis-prices draws</td><td class="l">Dixon-Coles correction on the shock model</td></tr>
+        <tr><td class="l">Mathematician</td><td class="l">Subgroups sold as confirmatory; thin FDR family</td><td class="l">Confirmatory/exploratory split; era tests in FDR (§07)</td></tr>
+      </tbody></table></div>
+    </div>
+    <p>A sixth challenge — "poorer nations are hot-climate nations, so heat should help them" (§06) — was tested and further tightened the heat lead to <em>under-identified</em>. Full log with severities: <span class="mono">backend/analysis/ADVERSARIAL_REVIEW.md</span>.</p>
+  </section>
+
+  <section class="reveal">
+    <p class="kicker">13 · Methods &amp; limitations</p>
+    <h2>What this analysis is — and isn't</h2>
+    <ul>
+      <li><strong>Real data only.</strong> Historical figures come from observed goal events (jfjelstul World Cup database, 2002–2022, plus continental cups 2003–2019). 2026 is a one-time scrape of completed matches. No values are simulated.</li>
+      <li><strong>Break occurrence is unobserved.</strong> The 65′–80′ window is a fixed proxy; real cooling breaks are heat-triggered (~32°C WBGT) and taken ~30′ and ~75′. We cannot verify which historical matches actually had a break — a core limitation behind the "not break-specific" caveat.</li>
+      <li><strong>Home climate is a coarse proxy.</strong> Acclimatisation is approximated by absolute capital latitude, which ignores altitude, humidity and coastal effects, and cannot capture where a squad's players actually live and train year-round. It is a first-order test of the objection, not the last word.</li>
+      <li><strong>Blind to spot-fixing &amp; officiating.</strong> Our unit is goals/scorelines; the documented modern risks (props, referees) leave no scoreline signature. "No anomaly" speaks only to result manipulation via goals.</li>
+      <li><strong>Betting signals excluded.</strong> The project's earlier odds/volume series were synthetic (no licensed feed) and are not used; any remaining modeled odds in the dashboard are labelled as such.</li>
+      <li><strong>Observational, not causal;</strong> even the ranking and heat effects are associations with residual-confounding risk. External corruption/revenue/gambling figures are context only — never joined to matches.</li>
+      <li><strong>Deterministic &amp; reproducible.</strong> Fixed seed (42); cluster-robust SEs by match; 5,000-sample match-level bootstrap; Dixon-Coles ρ = −0.10 fixed (not fitted at this n).</li>
+    </ul>
+  </section>
+
+  <section class="reveal">
+    <p class="kicker">14 · Plain-English glossary</p>
+    <h2>Every concept and metric, in one line</h2>
+    <div class="gloss">
+      <details><summary>p-value <span class="term">"could this be luck?"</span></summary><div class="body">The probability of seeing a gap <b>this big or bigger</b> if nothing were really going on. Small (&lt;0.05) means "hard to explain by chance."</div></details>
+      <details><summary>Statistical power <span class="term">"how bright is the torch?"</span></summary><div class="body">The chance your study could detect a real effect of a given size. Low power (small samples) means a "null" might just be a dim torch missing a real thing. Ours could detect a doubling, but not a 50% rise.</div></details>
+      <details><summary>Equivalence test (TOST) <span class="term">"is it truly negligible?"</span></summary><div class="body">Flips the usual question: instead of "is there an effect?", it asks "can we rule out an effect bigger than X?". Only then may you claim "nothing meaningful here."</div></details>
+      <details><summary>Effect size / Cramér's V <span class="term">"how big, not just is-it-there"</span></summary><div class="body">Significance asks <b>whether</b>; effect size asks <b>how much</b>. Cramér's V runs 0–1. Ours is 0.06 — trivially small.</div></details>
+      <details><summary>Rate ratio / IRR <span class="term">"how many times more often"</span></summary><div class="body">1.0 = identical. Ranking IRR 1.30 = a standard-deviation-weaker team concedes ~30% more. The hot-match GDP IRR of 2.21 clears 1.0; the pooled 1.32 does not.</div></details>
+      <details><summary>Confidence interval <span class="term">"the honest range"</span></summary><div class="body">The band of plausible true values. Crossing the no-effect line (1.0 for ratios, 0 for differences) = consistent with nothing.</div></details>
+      <details><summary>Interaction <span class="term">"it depends"</span></summary><div class="body">When one factor's effect changes with another. Here GDP's effect on concessions grows with heat — a significant interaction and the crux of the surviving lead.</div></details>
+      <details><summary>Difference-in-differences <span class="term">"is the break special?"</span></summary><div class="body">Each team's change from its own pre-break baseline, then compared. Isolates a break-<i>specific</i> effect from simply being weaker. Ours spans zero.</div></details>
+      <details><summary>Confounding &amp; construct validity <span class="term">"the hidden cause; the bent ruler"</span></summary><div class="body">Confounding: a third variable (team strength) fakes a link. Construct validity: whether GDP even measures "football strength" — it doesn't, cleanly; ranking does.</div></details>
+      <details><summary>FDR correction <span class="term">"don't reward luck"</span></summary><div class="body">A stricter bar for running many tests (Benjamini-Hochberg), so a chance hit among many isn't crowned a discovery.</div></details>
+      <details><summary>Dixon-Coles / Poisson shock index <span class="term">"the size of the gasp"</span></summary><div class="body">Poisson models goal counts; Dixon-Coles corrects its known mispricing of low, correlated scores (0–0, 1–1). Surprisal = −log P(actual score): rare results score high. A surprising <i>scoreline</i>, not necessarily an <i>upset</i>.</div></details>
+      <details><summary>Acclimatisation &amp; collinearity <span class="term">"adapted to conditions; clues that travel together"</span></summary><div class="body">Acclimatisation: bodies adapting to their usual environment (heat, altitude). Collinearity: two variables so correlated (here poverty &amp; hot home, r = −0.59) that a model can't tell which is driving an effect — the reason the heat lead is "under-identified."</div></details>
+      <details><summary>Spot-fixing <span class="term">"rigging the small stuff"</span></summary><div class="body">Manipulating in-game events (a card, a corner, a throw-in) for prop bets, without changing who wins. Invisible to a final-score analysis — and where current World-Cup integrity flags actually sit.</div></details>
+    </div>
+  </section>
+
+  <footer>
+    <p class="mono">Reproducible: backend/analysis/17_anomaly_enrichment.py · seed 42 · n = 308 cross-group matches · 96 completed 2026 fixtures. Review: ADVERSARIAL_REVIEW.md · external context: EXTERNAL_FACTS.md.<br>
+    Anomaly indicators measure statistical deviation from expected patterns and are not evidence of wrongdoing. Unusual patterns may have legitimate explanations.</p>
+  </footer>
+</main>
+
+<script>
+  // ---- theme toggle -------------------------------------------------------
+  (function () {
+    const root = document.documentElement, btn = document.getElementById('themeBtn');
+    btn.addEventListener('click', function () {
+      const cur = root.getAttribute('data-theme')
+        || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      root.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
+    });
+  })();
+
+  // ---- palette accessor (reads live CSS vars so charts follow the theme) --
+  function cv(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+
+  // ---- forest plot --------------------------------------------------------
+  // kind: 'null' (grey, straddles 1) · 'real' (green, strength) · 'lead' (amber, exploratory heat)
+  const forestData = [
+    { label: "Rate ratio (unpaired)",       sub: "L1 · raw",         est: 1.294, lo: 0.931, hi: 1.799, kind: "null" },
+    { label: "Odds ratio (paired McNemar)", sub: "L2 · same match",  est: 1.349, lo: 0.909, hi: 2.001, kind: "null" },
+    { label: "GDP effect (adjusted)",       sub: "L4 · pooled IRR",  est: 1.315, lo: 0.918, hi: 1.885, kind: "null" },
+    { label: "FIFA-ranking gap",            sub: "the real driver",  est: 1.300, lo: 1.112, hi: 1.519, kind: "real" },
+    { label: "GDP effect · hot matches",    sub: "§05 · rank-adjusted", est: 2.210, lo: 1.176, hi: 4.151, kind: "lead" },
+  ];
+  function drawForest(){
+    const box = document.getElementById('forest');
+    const W = Math.min(620, box.clientWidth || 620), rowH = 54, padT = 26, padB = 34,
+          left = 196, right = 30, H = padT + forestData.length*rowH + padB;
+    const xmin = Math.log(0.7), xmax = Math.log(4.6);
+    const X = v => left + (Math.log(v)-xmin)/(xmax-xmin) * (W-left-right);
+    const alarm = cv('--muted'), clean = cv('--clean'), caution = cv('--caution'),
+          ink = cv('--ink'), muted = cv('--muted');
+    const colOf = k => k === "real" ? clean : (k === "lead" ? caution : alarm);
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Forest plot of effect sizes">`;
+    // null line at 1.0
+    s += `<line x1="${X(1)}" y1="${padT-6}" x2="${X(1)}" y2="${H-padB+6}" stroke="${muted}" stroke-dasharray="3 3" stroke-width="1"/>`;
+    s += `<text x="${X(1)}" y="${H-padB+22}" text-anchor="middle" class="axis-lab">1.0 · no effect</text>`;
+    [0.8,1.5,2.5,4.0].forEach(t=>{ s += `<text x="${X(t)}" y="${H-padB+22}" text-anchor="middle" class="axis-lab">${t.toFixed(1)}</text>`; });
+    forestData.forEach((d,i)=>{
+      const y = padT + i*rowH + rowH/2, col = colOf(d.kind);
+      s += `<text x="0" y="${y-3}" class="row-lab">${d.label}</text>`;
+      s += `<text x="0" y="${y+12}" class="row-sub">${d.sub}</text>`;
+      s += `<line x1="${X(d.lo)}" y1="${y}" x2="${X(d.hi)}" y2="${y}" stroke="${col}" stroke-width="2"/>`;
+      s += `<line x1="${X(d.lo)}" y1="${y-5}" x2="${X(d.lo)}" y2="${y+5}" stroke="${col}" stroke-width="2"/>`;
+      s += `<line x1="${X(d.hi)}" y1="${y-5}" x2="${X(d.hi)}" y2="${y+5}" stroke="${col}" stroke-width="2"/>`;
+      s += `<circle cx="${X(d.est)}" cy="${y}" r="5.5" fill="${col}"/>`;
+      s += `<text x="${X(d.hi)+8}" y="${y+4}" class="row-sub" fill="${ink}">${d.est.toFixed(2)}</text>`;
+    });
+    s += `</svg>`;
+    box.innerHTML = s;
+  }
+
+  // ---- era chart ----------------------------------------------------------
+  const eraData = [
+    { era: "Era A · WC 2002–2010", gap: 0.031, lo: -0.098, hi: 0.159 },
+    { era: "Era B · WC 2014–2022", gap: 0.019, lo: -0.107, hi: 0.146 },
+    { era: "Era C · continental",  gap: 0.168, lo: 0.036,  hi: 0.301 },
+  ];
+  function drawEra(){
+    const box = document.getElementById('eraChart');
+    const W = Math.min(620, box.clientWidth || 620), rowH = 56, padT = 20, padB = 34,
+          left = 176, right = 30, H = padT + eraData.length*rowH + padB;
+    const xmin = -0.25, xmax = 0.40;
+    const X = v => left + (v-xmin)/(xmax-xmin) * (W-left-right);
+    const clean = cv('--clean'), caution = cv('--caution'), muted = cv('--muted'), ink = cv('--ink');
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Break-window gap by era">`;
+    s += `<line x1="${X(0)}" y1="${padT-4}" x2="${X(0)}" y2="${H-padB+6}" stroke="${muted}" stroke-dasharray="3 3"/>`;
+    s += `<text x="${X(0)}" y="${H-padB+22}" text-anchor="middle" class="axis-lab">0 · no gap</text>`;
+    [-0.2,0.2,0.4].forEach(t=>{ s += `<text x="${X(t)}" y="${H-padB+22}" text-anchor="middle" class="axis-lab">${t>0?'+':''}${t.toFixed(1)}</text>`; });
+    eraData.forEach((d,i)=>{
+      const y = padT + i*rowH + rowH/2, spans0 = d.lo <= 0, col = spans0 ? muted : caution;
+      s += `<text x="0" y="${y+4}" class="row-lab">${d.era}</text>`;
+      s += `<line x1="${X(d.lo)}" y1="${y}" x2="${X(d.hi)}" y2="${y}" stroke="${col}" stroke-width="2"/>`;
+      s += `<line x1="${X(d.lo)}" y1="${y-5}" x2="${X(d.lo)}" y2="${y+5}" stroke="${col}" stroke-width="2"/>`;
+      s += `<line x1="${X(d.hi)}" y1="${y-5}" x2="${X(d.hi)}" y2="${y+5}" stroke="${col}" stroke-width="2"/>`;
+      s += `<circle cx="${X(d.gap)}" cy="${y}" r="5.5" fill="${col}"/>`;
+      s += `<text x="${X(d.hi)+8}" y="${y+4}" class="row-sub" fill="${ink}">${d.gap>0?'+':''}${d.gap.toFixed(2)}</text>`;
+    });
+    s += `</svg>`;
+    box.innerHTML = s;
+  }
+
+  // ---- 2026 tables --------------------------------------------------------
+  const shocks = [
+    ["🇩🇪","Germany","🇨🇼","Curaçao","7–1","2.21 · 1.12",6.18,99],
+    ["🇨🇦","Canada","🇶🇦","Qatar","6–0","2.03 · 1.18",5.53,98],
+    ["🇮🇶","Iraq","🇸🇳","Senegal","5–0","2.18 · 1.62",4.69,97],
+    ["🇵🇹","Portugal","🇺🇿","Uzbekistan","5–0","1.89 · 1.16",4.66,96],
+    ["🇳🇱","Netherlands","🇸🇪","Sweden","5–1","2.12 · 1.48",4.23,95],
+    ["🇸🇪","Sweden","🇹🇳","Tunisia","5–1","2.18 · 1.56",4.19,94],
+  ];
+  const upsets = [
+    ["🇪🇨","Ecuador","🇩🇪","Germany","2–1","24%","Group E"],
+    ["🇹🇷","Türkiye","🇺🇸","United States","3–2","30%","Group D"],
+    ["🇿🇦","South Africa","🇰🇷","South Korea","1–0","33%","Group A"],
+    ["🇳🇴","Norway","🇧🇷","Brazil","2–1","34%","Round of 16"],
+    ["🇺🇿","Uzbekistan","🇨🇩","Congo DR","3–1","34%","Group K"],
+  ];
+  function fillTables(){
+    const st = document.querySelector('#shockTable tbody');
+    const maxShock = Math.max.apply(null, shocks.map(r=>r[6]));
+    st.innerHTML = shocks.map(r=>`<tr>
+      <td class="l"><span class="flag">${r[0]}</span> ${r[1]} <span style="color:var(--muted)">v</span> ${r[3]} <span class="flag">${r[2]}</span></td>
+      <td class="mono">${r[4]}</td>
+      <td class="mono" style="color:var(--muted)">${r[5]}</td>
+      <td class="barcell"><span class="mbar" style="width:${(r[6]/maxShock*46).toFixed(0)}px"></span> <span class="mono hi">${r[6].toFixed(2)}</span></td>
+      <td class="mono">${r[7]}</td></tr>`).join('');
+    const ut = document.querySelector('#upsetTable tbody');
+    ut.innerHTML = upsets.map(r=>`<tr>
+      <td class="l"><span class="flag">${r[0]}</span> ${r[1]} <span style="color:var(--muted)">v</span> ${r[3]} <span class="flag">${r[2]}</span></td>
+      <td class="mono">${r[4]}</td>
+      <td class="mono hi">${r[5]}</td>
+      <td class="l" style="color:var(--muted)">${r[6]}</td></tr>`).join('');
+  }
+
+  // ---- render + re-render on theme/resize ---------------------------------
+  function renderAll(){ drawForest(); drawEra(); }
+  fillTables(); renderAll();
+  new MutationObserver(renderAll).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  let rt; addEventListener('resize', ()=>{ clearTimeout(rt); rt = setTimeout(renderAll, 150); });
+
+  // ---- reveal on scroll ---------------------------------------------------
+  const io = new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }}),
+    { rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
