@@ -1,6 +1,6 @@
 {
   "competition": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-10 06:07 UTC",
+  "lastUpdated": "2026-07-10 06:36 UTC",
   "source": "ESPN 2026 FIFA World Cup schedule + FIFA.com match centre, scraped 2026-07-08",
   "note": "Observed completed matches only (group stage through Round of 16). Quarter-finals onward had not been played at scrape time and are omitted.",
   "metricsNote": "shockIndex = scoreline surprisal: -ln P(exact final score) under a Poisson model of each team's observed attack/defense rates (shrunk toward the tournament mean). Higher = less expected. shockPercentile ranks it 0-100 among 2026 matches. winnerPreMatchProb = the model's pre-match probability of the side that actually won (low = upset). Computed by backend/analysis/17_anomaly_enrichment.py from observed scores only.",
@@ -26,8 +26,8 @@
         "away": 0.92
       },
       "shockIndex": 2.3,
-      "shockPercentile": 27,
-      "winnerPreMatchProb": 0.508
+      "shockPercentile": 29,
+      "winnerPreMatchProb": 0.495
     },
     {
       "matchId": "WC2026-KOR-CZE",
@@ -51,7 +51,7 @@
       },
       "shockIndex": 2.43,
       "shockPercentile": 41,
-      "winnerPreMatchProb": 0.427
+      "winnerPreMatchProb": 0.414
     },
     {
       "matchId": "WC2026-CAN-BIH",
@@ -73,9 +73,9 @@
         "home": 1.72,
         "away": 1.32
       },
-      "shockIndex": 2.22,
-      "shockPercentile": 21,
-      "winnerPreMatchProb": 0.236
+      "shockIndex": 2.12,
+      "shockPercentile": 15,
+      "winnerPreMatchProb": 0.258
     },
     {
       "matchId": "WC2026-USA-PAR",
@@ -99,7 +99,7 @@
       },
       "shockIndex": 3.91,
       "shockPercentile": 90,
-      "winnerPreMatchProb": 0.461
+      "winnerPreMatchProb": 0.45
     },
     {
       "matchId": "WC2026-QAT-SUI",
@@ -121,9 +121,9 @@
         "home": 0.99,
         "away": 2.03
       },
-      "shockIndex": 2.32,
-      "shockPercentile": 30,
-      "winnerPreMatchProb": 0.208
+      "shockIndex": 2.23,
+      "shockPercentile": 23,
+      "winnerPreMatchProb": 0.228
     },
     {
       "matchId": "WC2026-BRA-MAR",
@@ -145,9 +145,9 @@
         "home": 1.42,
         "away": 1.42
       },
-      "shockIndex": 2.14,
-      "shockPercentile": 16,
-      "winnerPreMatchProb": 0.251
+      "shockIndex": 2.04,
+      "shockPercentile": 8,
+      "winnerPreMatchProb": 0.274
     },
     {
       "matchId": "WC2026-HAI-SCO",
@@ -169,9 +169,9 @@
         "home": 1.23,
         "away": 1.48
       },
-      "shockIndex": 2.32,
-      "shockPercentile": 30,
-      "winnerPreMatchProb": 0.43
+      "shockIndex": 2.45,
+      "shockPercentile": 45,
+      "winnerPreMatchProb": 0.418
     },
     {
       "matchId": "WC2026-AUS-TUR",
@@ -194,8 +194,8 @@
         "away": 1.14
       },
       "shockIndex": 2.61,
-      "shockPercentile": 51,
-      "winnerPreMatchProb": 0.404
+      "shockPercentile": 52,
+      "winnerPreMatchProb": 0.391
     },
     {
       "matchId": "WC2026-GER-CUW",
@@ -219,7 +219,7 @@
       },
       "shockIndex": 6.18,
       "shockPercentile": 99,
-      "winnerPreMatchProb": 0.622
+      "winnerPreMatchProb": 0.613
     },
     {
       "matchId": "WC2026-NED-JPN",
@@ -243,7 +243,7 @@
       },
       "shockIndex": 2.69,
       "shockPercentile": 55,
-      "winnerPreMatchProb": 0.228
+      "winnerPreMatchProb": 0.248
     },
     {
       "matchId": "WC2026-CIV-ECU",
@@ -265,9 +265,9 @@
         "home": 1.27,
         "away": 1.05
       },
-      "shockIndex": 2.08,
-      "shockPercentile": 8,
-      "winnerPreMatchProb": 0.413
+      "shockIndex": 2.2,
+      "shockPercentile": 20,
+      "winnerPreMatchProb": 0.399
     },
     {
       "matchId": "WC2026-SWE-TUN",
@@ -291,7 +291,7 @@
       },
       "shockIndex": 4.19,
       "shockPercentile": 94,
-      "winnerPreMatchProb": 0.519
+      "winnerPreMatchProb": 0.511
     },
     {
       "matchId": "WC2026-ESP-CPV",
@@ -313,9 +313,9 @@
         "home": 1.51,
         "away": 0.87
       },
-      "shockIndex": 2.38,
-      "shockPercentile": 36,
-      "winnerPreMatchProb": 0.261
+      "shockIndex": 2.25,
+      "shockPercentile": 24,
+      "winnerPreMatchProb": 0.285
     },
     {
       "matchId": "WC2026-BEL-EGY",
@@ -337,9 +337,9 @@
         "home": 1.8,
         "away": 1.36
       },
-      "shockIndex": 2.26,
-      "shockPercentile": 23,
-      "winnerPreMatchProb": 0.23
+      "shockIndex": 2.17,
+      "shockPercentile": 18,
+      "winnerPreMatchProb": 0.251
     },
     {
       "matchId": "WC2026-URU-KSA",
@@ -361,9 +361,9 @@
         "home": 1.4,
         "away": 1.15
       },
-      "shockIndex": 2.07,
-      "shockPercentile": 6,
-      "winnerPreMatchProb": 0.265
+      "shockIndex": 1.98,
+      "shockPercentile": 4,
+      "winnerPreMatchProb": 0.29
     },
     {
       "matchId": "WC2026-IRN-NZL",
@@ -386,8 +386,8 @@
         "away": 1.31
       },
       "shockIndex": 2.78,
-      "shockPercentile": 59,
-      "winnerPreMatchProb": 0.23
+      "shockPercentile": 60,
+      "winnerPreMatchProb": 0.251
     },
     {
       "matchId": "WC2026-FRA-SEN",
@@ -410,8 +410,8 @@
         "away": 1.07
       },
       "shockIndex": 2.55,
-      "shockPercentile": 48,
-      "winnerPreMatchProb": 0.679
+      "shockPercentile": 49,
+      "winnerPreMatchProb": 0.671
     },
     {
       "matchId": "WC2026-NOR-IRQ",
@@ -435,7 +435,7 @@
       },
       "shockIndex": 3.6,
       "shockPercentile": 85,
-      "winnerPreMatchProb": 0.447
+      "winnerPreMatchProb": 0.438
     },
     {
       "matchId": "WC2026-ARG-ALG",
@@ -459,7 +459,7 @@
       },
       "shockIndex": 2.92,
       "shockPercentile": 69,
-      "winnerPreMatchProb": 0.569
+      "winnerPreMatchProb": 0.559
     },
     {
       "matchId": "WC2026-AUT-JOR",
@@ -483,7 +483,7 @@
       },
       "shockIndex": 2.97,
       "shockPercentile": 74,
-      "winnerPreMatchProb": 0.429
+      "winnerPreMatchProb": 0.419
     },
     {
       "matchId": "WC2026-POR-COD",
@@ -505,9 +505,9 @@
         "home": 1.59,
         "away": 0.99
       },
-      "shockIndex": 2.12,
-      "shockPercentile": 14,
-      "winnerPreMatchProb": 0.251
+      "shockIndex": 2.03,
+      "shockPercentile": 7,
+      "winnerPreMatchProb": 0.275
     },
     {
       "matchId": "WC2026-ENG-CRO",
@@ -531,7 +531,7 @@
       },
       "shockIndex": 4.07,
       "shockPercentile": 92,
-      "winnerPreMatchProb": 0.512
+      "winnerPreMatchProb": 0.502
     },
     {
       "matchId": "WC2026-GHA-PAN",
@@ -553,9 +553,9 @@
         "home": 1.22,
         "away": 0.82
       },
-      "shockIndex": 1.84,
+      "shockIndex": 1.93,
       "shockPercentile": 0,
-      "winnerPreMatchProb": 0.456
+      "winnerPreMatchProb": 0.443
     },
     {
       "matchId": "WC2026-COL-UZB",
@@ -578,8 +578,8 @@
         "away": 1.03
       },
       "shockIndex": 2.9,
-      "shockPercentile": 67,
-      "winnerPreMatchProb": 0.53
+      "shockPercentile": 68,
+      "winnerPreMatchProb": 0.518
     },
     {
       "matchId": "WC2026-CZE-RSA",
@@ -601,9 +601,9 @@
         "home": 1.13,
         "away": 1.32
       },
-      "shockIndex": 2.05,
-      "shockPercentile": 4,
-      "winnerPreMatchProb": 0.272
+      "shockIndex": 1.95,
+      "shockPercentile": 1,
+      "winnerPreMatchProb": 0.298
     },
     {
       "matchId": "WC2026-SUI-BIH",
@@ -627,7 +627,7 @@
       },
       "shockIndex": 3.74,
       "shockPercentile": 88,
-      "winnerPreMatchProb": 0.512
+      "winnerPreMatchProb": 0.5
     },
     {
       "matchId": "WC2026-CAN-QAT",
@@ -651,7 +651,7 @@
       },
       "shockIndex": 5.53,
       "shockPercentile": 98,
-      "winnerPreMatchProb": 0.571
+      "winnerPreMatchProb": 0.561
     },
     {
       "matchId": "WC2026-MEX-KOR",
@@ -673,9 +673,9 @@
         "home": 1.51,
         "away": 0.99
       },
-      "shockIndex": 2.09,
-      "shockPercentile": 10,
-      "winnerPreMatchProb": 0.493
+      "shockIndex": 2.2,
+      "shockPercentile": 20,
+      "winnerPreMatchProb": 0.481
     },
     {
       "matchId": "WC2026-USA-AUS",
@@ -699,7 +699,7 @@
       },
       "shockIndex": 2.69,
       "shockPercentile": 55,
-      "winnerPreMatchProb": 0.416
+      "winnerPreMatchProb": 0.405
     },
     {
       "matchId": "WC2026-SCO-MAR",
@@ -721,9 +721,9 @@
         "home": 0.97,
         "away": 1.6
       },
-      "shockIndex": 2.1,
-      "shockPercentile": 11,
-      "winnerPreMatchProb": 0.52
+      "shockIndex": 2.2,
+      "shockPercentile": 20,
+      "winnerPreMatchProb": 0.508
     },
     {
       "matchId": "WC2026-BRA-HAI",
@@ -746,8 +746,8 @@
         "away": 1.05
       },
       "shockIndex": 2.8,
-      "shockPercentile": 61,
-      "winnerPreMatchProb": 0.578
+      "shockPercentile": 62,
+      "winnerPreMatchProb": 0.567
     },
     {
       "matchId": "WC2026-TUR-PAR",
@@ -769,9 +769,9 @@
         "home": 1.26,
         "away": 1.24
       },
-      "shockIndex": 2.29,
-      "shockPercentile": 25,
-      "winnerPreMatchProb": 0.36
+      "shockIndex": 2.42,
+      "shockPercentile": 38,
+      "winnerPreMatchProb": 0.347
     },
     {
       "matchId": "WC2026-NED-SWE",
@@ -795,7 +795,7 @@
       },
       "shockIndex": 4.23,
       "shockPercentile": 95,
-      "winnerPreMatchProb": 0.524
+      "winnerPreMatchProb": 0.515
     },
     {
       "matchId": "WC2026-GER-CIV",
@@ -818,8 +818,8 @@
         "away": 1.34
       },
       "shockIndex": 2.38,
-      "shockPercentile": 36,
-      "winnerPreMatchProb": 0.459
+      "shockPercentile": 35,
+      "winnerPreMatchProb": 0.448
     },
     {
       "matchId": "WC2026-ECU-CUW",
@@ -841,9 +841,9 @@
         "home": 1.57,
         "away": 1.05
       },
-      "shockIndex": 2.62,
-      "shockPercentile": 52,
-      "winnerPreMatchProb": 0.252
+      "shockIndex": 2.46,
+      "shockPercentile": 48,
+      "winnerPreMatchProb": 0.276
     },
     {
       "matchId": "WC2026-JPN-TUN",
@@ -867,7 +867,7 @@
       },
       "shockIndex": 3.39,
       "shockPercentile": 79,
-      "winnerPreMatchProb": 0.61
+      "winnerPreMatchProb": 0.601
     },
     {
       "matchId": "WC2026-ESP-KSA",
@@ -891,7 +891,7 @@
       },
       "shockIndex": 3.59,
       "shockPercentile": 84,
-      "winnerPreMatchProb": 0.589
+      "winnerPreMatchProb": 0.577
     },
     {
       "matchId": "WC2026-BEL-IRN",
@@ -913,9 +913,9 @@
         "home": 1.7,
         "away": 1.2
       },
-      "shockIndex": 2.9,
-      "shockPercentile": 67,
-      "winnerPreMatchProb": 0.239
+      "shockIndex": 2.72,
+      "shockPercentile": 57,
+      "winnerPreMatchProb": 0.262
     },
     {
       "matchId": "WC2026-URU-CPV",
@@ -939,7 +939,7 @@
       },
       "shockIndex": 2.95,
       "shockPercentile": 71,
-      "winnerPreMatchProb": 0.265
+      "winnerPreMatchProb": 0.29
     },
     {
       "matchId": "WC2026-EGY-NZL",
@@ -962,8 +962,8 @@
         "away": 1.41
       },
       "shockIndex": 2.79,
-      "shockPercentile": 60,
-      "winnerPreMatchProb": 0.507
+      "shockPercentile": 61,
+      "winnerPreMatchProb": 0.497
     },
     {
       "matchId": "WC2026-ARG-AUT",
@@ -987,7 +987,7 @@
       },
       "shockIndex": 2.64,
       "shockPercentile": 53,
-      "winnerPreMatchProb": 0.553
+      "winnerPreMatchProb": 0.544
     },
     {
       "matchId": "WC2026-FRA-IRQ",
@@ -1011,7 +1011,7 @@
       },
       "shockIndex": 2.93,
       "shockPercentile": 70,
-      "winnerPreMatchProb": 0.565
+      "winnerPreMatchProb": 0.556
     },
     {
       "matchId": "WC2026-NOR-SEN",
@@ -1035,7 +1035,7 @@
       },
       "shockIndex": 2.96,
       "shockPercentile": 72,
-      "winnerPreMatchProb": 0.562
+      "winnerPreMatchProb": 0.554
     },
     {
       "matchId": "WC2026-ALG-JOR",
@@ -1058,8 +1058,8 @@
         "away": 1.57
       },
       "shockIndex": 2.45,
-      "shockPercentile": 44,
-      "winnerPreMatchProb": 0.412
+      "shockPercentile": 45,
+      "winnerPreMatchProb": 0.402
     },
     {
       "matchId": "WC2026-POR-UZB",
@@ -1083,7 +1083,7 @@
       },
       "shockIndex": 4.66,
       "shockPercentile": 96,
-      "winnerPreMatchProb": 0.544
+      "winnerPreMatchProb": 0.534
     },
     {
       "matchId": "WC2026-ENG-GHA",
@@ -1105,9 +1105,9 @@
         "home": 1.42,
         "away": 1.11
       },
-      "shockIndex": 2.53,
-      "shockPercentile": 47,
-      "winnerPreMatchProb": 0.264
+      "shockIndex": 2.38,
+      "shockPercentile": 35,
+      "winnerPreMatchProb": 0.29
     },
     {
       "matchId": "WC2026-CRO-PAN",
@@ -1129,9 +1129,9 @@
         "home": 1.37,
         "away": 1.25
       },
-      "shockIndex": 2.3,
-      "shockPercentile": 27,
-      "winnerPreMatchProb": 0.397
+      "shockIndex": 2.44,
+      "shockPercentile": 43,
+      "winnerPreMatchProb": 0.384
     },
     {
       "matchId": "WC2026-COL-COD",
@@ -1153,9 +1153,9 @@
         "home": 1.4,
         "away": 0.86
       },
-      "shockIndex": 1.93,
-      "shockPercentile": 2,
-      "winnerPreMatchProb": 0.495
+      "shockIndex": 2.02,
+      "shockPercentile": 6,
+      "winnerPreMatchProb": 0.482
     },
     {
       "matchId": "WC2026-BIH-QAT",
@@ -1178,8 +1178,8 @@
         "away": 1.42
       },
       "shockIndex": 2.85,
-      "shockPercentile": 62,
-      "winnerPreMatchProb": 0.482
+      "shockPercentile": 64,
+      "winnerPreMatchProb": 0.472
     },
     {
       "matchId": "WC2026-SUI-CAN",
@@ -1202,8 +1202,8 @@
         "away": 1.3
       },
       "shockIndex": 2.42,
-      "shockPercentile": 39,
-      "winnerPreMatchProb": 0.416
+      "shockPercentile": 38,
+      "winnerPreMatchProb": 0.404
     },
     {
       "matchId": "WC2026-MAR-HAI",
@@ -1227,7 +1227,7 @@
       },
       "shockIndex": 4.12,
       "shockPercentile": 93,
-      "winnerPreMatchProb": 0.578
+      "winnerPreMatchProb": 0.567
     },
     {
       "matchId": "WC2026-BRA-SCO",
@@ -1251,7 +1251,7 @@
       },
       "shockIndex": 2.96,
       "shockPercentile": 72,
-      "winnerPreMatchProb": 0.52
+      "winnerPreMatchProb": 0.508
     },
     {
       "matchId": "WC2026-MEX-CZE",
@@ -1274,8 +1274,8 @@
         "away": 0.99
       },
       "shockIndex": 2.85,
-      "shockPercentile": 62,
-      "winnerPreMatchProb": 0.555
+      "shockPercentile": 64,
+      "winnerPreMatchProb": 0.544
     },
     {
       "matchId": "WC2026-RSA-KOR",
@@ -1297,9 +1297,9 @@
         "home": 1.07,
         "away": 1.13
       },
-      "shockIndex": 2.13,
-      "shockPercentile": 15,
-      "winnerPreMatchProb": 0.339
+      "shockIndex": 2.25,
+      "shockPercentile": 24,
+      "winnerPreMatchProb": 0.326
     },
     {
       "matchId": "WC2026-CUW-CIV",
@@ -1322,8 +1322,8 @@
         "away": 1.78
       },
       "shockIndex": 2.37,
-      "shockPercentile": 35,
-      "winnerPreMatchProb": 0.547
+      "shockPercentile": 34,
+      "winnerPreMatchProb": 0.536
     },
     {
       "matchId": "WC2026-ECU-GER",
@@ -1346,8 +1346,8 @@
         "away": 1.7
       },
       "shockIndex": 2.75,
-      "shockPercentile": 57,
-      "winnerPreMatchProb": 0.252
+      "shockPercentile": 58,
+      "winnerPreMatchProb": 0.241
     },
     {
       "matchId": "WC2026-JPN-SWE",
@@ -1369,9 +1369,9 @@
         "home": 1.91,
         "away": 1.48
       },
-      "shockIndex": 2.35,
-      "shockPercentile": 33,
-      "winnerPreMatchProb": 0.222
+      "shockIndex": 2.26,
+      "shockPercentile": 26,
+      "winnerPreMatchProb": 0.241
     },
     {
       "matchId": "WC2026-TUN-NED",
@@ -1394,8 +1394,8 @@
         "away": 2.46
       },
       "shockIndex": 2.57,
-      "shockPercentile": 50,
-      "winnerPreMatchProb": 0.65
+      "shockPercentile": 51,
+      "winnerPreMatchProb": 0.643
     },
     {
       "matchId": "WC2026-PAR-AUS",
@@ -1417,9 +1417,9 @@
         "home": 0.99,
         "away": 1.18
       },
-      "shockIndex": 2.16,
-      "shockPercentile": 17,
-      "winnerPreMatchProb": 0.293
+      "shockIndex": 2.05,
+      "shockPercentile": 9,
+      "winnerPreMatchProb": 0.319
     },
     {
       "matchId": "WC2026-TUR-USA",
@@ -1443,7 +1443,7 @@
       },
       "shockIndex": 3.52,
       "shockPercentile": 82,
-      "winnerPreMatchProb": 0.307
+      "winnerPreMatchProb": 0.297
     },
     {
       "matchId": "WC2026-NOR-FRA",
@@ -1467,7 +1467,7 @@
       },
       "shockIndex": 3.49,
       "shockPercentile": 81,
-      "winnerPreMatchProb": 0.507
+      "winnerPreMatchProb": 0.497
     },
     {
       "matchId": "WC2026-IRQ-SEN",
@@ -1491,7 +1491,7 @@
       },
       "shockIndex": 4.69,
       "shockPercentile": 97,
-      "winnerPreMatchProb": 0.507
+      "winnerPreMatchProb": 0.499
     },
     {
       "matchId": "WC2026-CPV-KSA",
@@ -1513,9 +1513,9 @@
         "home": 1.38,
         "away": 1.12
       },
-      "shockIndex": 2.5,
-      "shockPercentile": 46,
-      "winnerPreMatchProb": 0.267
+      "shockIndex": 2.35,
+      "shockPercentile": 32,
+      "winnerPreMatchProb": 0.293
     },
     {
       "matchId": "WC2026-URU-ESP",
@@ -1537,9 +1537,9 @@
         "home": 0.89,
         "away": 1.53
       },
-      "shockIndex": 1.99,
-      "shockPercentile": 3,
-      "winnerPreMatchProb": 0.524
+      "shockIndex": 2.09,
+      "shockPercentile": 11,
+      "winnerPreMatchProb": 0.512
     },
     {
       "matchId": "WC2026-IRN-EGY",
@@ -1561,9 +1561,9 @@
         "home": 1.33,
         "away": 1.39
       },
-      "shockIndex": 2.1,
-      "shockPercentile": 11,
-      "winnerPreMatchProb": 0.257
+      "shockIndex": 2.01,
+      "shockPercentile": 5,
+      "winnerPreMatchProb": 0.282
     },
     {
       "matchId": "WC2026-NZL-BEL",
@@ -1587,7 +1587,7 @@
       },
       "shockIndex": 3.98,
       "shockPercentile": 91,
-      "winnerPreMatchProb": 0.599
+      "winnerPreMatchProb": 0.59
     },
     {
       "matchId": "WC2026-GHA-CRO",
@@ -1610,8 +1610,8 @@
         "away": 1.12
       },
       "shockIndex": 2.42,
-      "shockPercentile": 39,
-      "winnerPreMatchProb": 0.435
+      "shockPercentile": 38,
+      "winnerPreMatchProb": 0.423
     },
     {
       "matchId": "WC2026-PAN-ENG",
@@ -1634,8 +1634,8 @@
         "away": 1.66
       },
       "shockIndex": 2.29,
-      "shockPercentile": 25,
-      "winnerPreMatchProb": 0.54
+      "shockPercentile": 27,
+      "winnerPreMatchProb": 0.529
     },
     {
       "matchId": "WC2026-POR-COL",
@@ -1657,9 +1657,9 @@
         "home": 1.11,
         "away": 1.05
       },
-      "shockIndex": 2.16,
-      "shockPercentile": 17,
-      "winnerPreMatchProb": 0.295
+      "shockIndex": 2.05,
+      "shockPercentile": 9,
+      "winnerPreMatchProb": 0.322
     },
     {
       "matchId": "WC2026-UZB-COD",
@@ -1683,7 +1683,7 @@
       },
       "shockIndex": 3.21,
       "shockPercentile": 76,
-      "winnerPreMatchProb": 0.354
+      "winnerPreMatchProb": 0.343
     },
     {
       "matchId": "WC2026-AUT-ALG",
@@ -1707,7 +1707,7 @@
       },
       "shockIndex": 3.86,
       "shockPercentile": 89,
-      "winnerPreMatchProb": 0.229
+      "winnerPreMatchProb": 0.249
     },
     {
       "matchId": "WC2026-ARG-JOR",
@@ -1731,7 +1731,7 @@
       },
       "shockIndex": 2.65,
       "shockPercentile": 54,
-      "winnerPreMatchProb": 0.596
+      "winnerPreMatchProb": 0.588
     },
     {
       "matchId": "WC2026-RSA-CAN",
@@ -1753,9 +1753,9 @@
         "home": 1.1,
         "away": 1.43
       },
-      "shockIndex": 2.18,
-      "shockPercentile": 19,
-      "winnerPreMatchProb": 0.446
+      "shockIndex": 2.29,
+      "shockPercentile": 27,
+      "winnerPreMatchProb": 0.434
     },
     {
       "matchId": "WC2026-JPN-BRA",
@@ -1779,7 +1779,7 @@
       },
       "shockIndex": 2.43,
       "shockPercentile": 41,
-      "winnerPreMatchProb": 0.414
+      "winnerPreMatchProb": 0.403
     },
     {
       "matchId": "WC2026-PAR-GER",
@@ -1805,9 +1805,9 @@
         "home": 1.13,
         "away": 1.75
       },
-      "shockIndex": 2.2,
-      "shockPercentile": 20,
-      "winnerPreMatchProb": 0.236
+      "shockIndex": 2.1,
+      "shockPercentile": 12,
+      "winnerPreMatchProb": 0.258
     },
     {
       "matchId": "WC2026-MAR-NED",
@@ -1833,9 +1833,9 @@
         "home": 1.57,
         "away": 1.62
       },
-      "shockIndex": 2.26,
-      "shockPercentile": 23,
-      "winnerPreMatchProb": 0.235
+      "shockIndex": 2.16,
+      "shockPercentile": 16,
+      "winnerPreMatchProb": 0.256
     },
     {
       "matchId": "WC2026-CIV-NOR",
@@ -1859,7 +1859,7 @@
       },
       "shockIndex": 2.44,
       "shockPercentile": 43,
-      "winnerPreMatchProb": 0.407
+      "winnerPreMatchProb": 0.396
     },
     {
       "matchId": "WC2026-SWE-FRA",
@@ -1882,8 +1882,8 @@
         "away": 2.18
       },
       "shockIndex": 2.85,
-      "shockPercentile": 62,
-      "winnerPreMatchProb": 0.593
+      "shockPercentile": 64,
+      "winnerPreMatchProb": 0.584
     },
     {
       "matchId": "WC2026-ECU-MEX",
@@ -1906,8 +1906,8 @@
         "away": 1.5
       },
       "shockIndex": 2.3,
-      "shockPercentile": 27,
-      "winnerPreMatchProb": 0.508
+      "shockPercentile": 29,
+      "winnerPreMatchProb": 0.495
     },
     {
       "matchId": "WC2026-COD-ENG",
@@ -1930,8 +1930,8 @@
         "away": 1.77
       },
       "shockIndex": 2.33,
-      "shockPercentile": 32,
-      "winnerPreMatchProb": 0.528
+      "shockPercentile": 31,
+      "winnerPreMatchProb": 0.517
     },
     {
       "matchId": "WC2026-SEN-BEL",
@@ -1955,7 +1955,7 @@
       },
       "shockIndex": 3.06,
       "shockPercentile": 75,
-      "winnerPreMatchProb": 0.627
+      "winnerPreMatchProb": 0.619
     },
     {
       "matchId": "WC2026-BIH-USA",
@@ -1978,8 +1978,8 @@
         "away": 1.84
       },
       "shockIndex": 2.76,
-      "shockPercentile": 58,
-      "winnerPreMatchProb": 0.471
+      "shockPercentile": 59,
+      "winnerPreMatchProb": 0.461
     },
     {
       "matchId": "WC2026-AUT-ESP",
@@ -2002,8 +2002,8 @@
         "away": 1.79
       },
       "shockIndex": 2.85,
-      "shockPercentile": 62,
-      "winnerPreMatchProb": 0.556
+      "shockPercentile": 64,
+      "winnerPreMatchProb": 0.545
     },
     {
       "matchId": "WC2026-CRO-POR",
@@ -2026,8 +2026,8 @@
         "away": 1.66
       },
       "shockIndex": 2.35,
-      "shockPercentile": 33,
-      "winnerPreMatchProb": 0.497
+      "shockPercentile": 32,
+      "winnerPreMatchProb": 0.485
     },
     {
       "matchId": "WC2026-ALG-SUI",
@@ -2050,8 +2050,8 @@
         "away": 1.79
       },
       "shockIndex": 2.45,
-      "shockPercentile": 44,
-      "winnerPreMatchProb": 0.528
+      "shockPercentile": 45,
+      "winnerPreMatchProb": 0.518
     },
     {
       "matchId": "WC2026-EGY-AUS",
@@ -2077,9 +2077,9 @@
         "home": 1.3,
         "away": 1.24
       },
-      "shockIndex": 2.06,
-      "shockPercentile": 5,
-      "winnerPreMatchProb": 0.268
+      "shockIndex": 1.97,
+      "shockPercentile": 3,
+      "winnerPreMatchProb": 0.293
     },
     {
       "matchId": "WC2026-CPV-ARG",
@@ -2103,7 +2103,7 @@
       },
       "shockIndex": 3.36,
       "shockPercentile": 78,
-      "winnerPreMatchProb": 0.522
+      "winnerPreMatchProb": 0.512
     },
     {
       "matchId": "WC2026-GHA-COL",
@@ -2125,9 +2125,9 @@
         "home": 0.86,
         "away": 1.04
       },
-      "shockIndex": 1.86,
+      "shockIndex": 1.95,
       "shockPercentile": 1,
-      "winnerPreMatchProb": 0.39
+      "winnerPreMatchProb": 0.376
     },
     {
       "matchId": "WC2026-MAR-CAN",
@@ -2151,7 +2151,7 @@
       },
       "shockIndex": 3.39,
       "shockPercentile": 79,
-      "winnerPreMatchProb": 0.419
+      "winnerPreMatchProb": 0.407
     },
     {
       "matchId": "WC2026-FRA-PAR",
@@ -2173,9 +2173,9 @@
         "home": 1.8,
         "away": 0.86
       },
-      "shockIndex": 2.07,
-      "shockPercentile": 6,
-      "winnerPreMatchProb": 0.596
+      "shockIndex": 2.16,
+      "shockPercentile": 16,
+      "winnerPreMatchProb": 0.585
     },
     {
       "matchId": "WC2026-BRA-NOR",
@@ -2198,8 +2198,8 @@
         "away": 1.55
       },
       "shockIndex": 2.55,
-      "shockPercentile": 48,
-      "winnerPreMatchProb": 0.345
+      "shockPercentile": 49,
+      "winnerPreMatchProb": 0.335
     },
     {
       "matchId": "WC2026-MEX-ENG",
@@ -2223,7 +2223,7 @@
       },
       "shockIndex": 3.55,
       "shockPercentile": 83,
-      "winnerPreMatchProb": 0.362
+      "winnerPreMatchProb": 0.351
     },
     {
       "matchId": "WC2026-POR-ESP",
@@ -2245,9 +2245,9 @@
         "home": 1.05,
         "away": 1.3
       },
-      "shockIndex": 2.08,
-      "shockPercentile": 8,
-      "winnerPreMatchProb": 0.422
+      "shockIndex": 2.19,
+      "shockPercentile": 19,
+      "winnerPreMatchProb": 0.409
     },
     {
       "matchId": "WC2026-USA-BEL",
@@ -2271,7 +2271,7 @@
       },
       "shockIndex": 3.67,
       "shockPercentile": 86,
-      "winnerPreMatchProb": 0.453
+      "winnerPreMatchProb": 0.443
     },
     {
       "matchId": "WC2026-ARG-EGY",
@@ -2295,7 +2295,7 @@
       },
       "shockIndex": 3.23,
       "shockPercentile": 77,
-      "winnerPreMatchProb": 0.492
+      "winnerPreMatchProb": 0.482
     },
     {
       "matchId": "WC2026-SUI-COL",
@@ -2321,9 +2321,9 @@
         "home": 1.17,
         "away": 1.05
       },
-      "shockIndex": 2.22,
-      "shockPercentile": 21,
-      "winnerPreMatchProb": 0.289
+      "shockIndex": 2.1,
+      "shockPercentile": 12,
+      "winnerPreMatchProb": 0.316
     }
   ]
 }

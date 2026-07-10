@@ -19,8 +19,15 @@ Design
      (c) Difference-in-differences  -> break-vs-baseline, B-vs-A, bootstrap CI
                                        (controls for each team's own baseline)
      (d) Adjusted Poisson GLM        -> covariate control (WBGT, rank gap, leading)
-4. Benjamini-Hochberg FDR control across the confirmatory family.
-5. 2026 per-match shock index from a Poisson goals model (score-only data).
+4. Benjamini-Hochberg FDR control across the confirmatory family (incl. era tests).
+5. Power / equivalence: minimum detectable effect at 80% power, and a TOST
+   equivalence test — because "not significant" with a wide CI is an underpowered
+   null, not proof of no effect. (Added after adversarial review.)
+6. Heat subgroup: cooling breaks are heat-triggered, so the GDP gap is re-tested
+   on the hottest matches (top WBGT tercile), where a real break effect should
+   be strongest. (Added after adversarial review.)
+7. 2026 per-match shock index from a Poisson goals model with a Dixon-Coles
+   low-score correction (score-only data).
 
 Outputs a single results JSON consumed by the report and by the 2026 data
 enrichment. Deterministic (fixed bootstrap seed).
@@ -29,11 +36,13 @@ enrichment. Deterministic (fixed bootstrap seed).
 import os
 import json
 import sqlite3
+import math
 import numpy as np
 import pandas as pd
 from scipy import stats
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
+from statsmodels.stats.power import NormalIndPower
 
 from backend import config
 
@@ -198,10 +207,36 @@ def analyze(panel):
     }
 
     # BH-FDR across the confirmatory family
+    # Per-era trend of the break-window B-A gap, each with its own chi-square p.
+    trend = []
+    era_p = {}
+    for era in ["A", "B", "C"]:
+        pe = panel[panel.era == era]
+        b = pe[pe.group == "B"].conc_break
+        a = pe[pe.group == "A"].conc_break
+        gap = b.mean() - a.mean()
+        se = np.sqrt(b.var(ddof=1) / len(b) + a.var(ddof=1) / len(a))
+        kb, kap = int((b > 0).sum()), int((a > 0).sum())
+        tbl = np.array([[kb, len(b) - kb], [kap, len(a) - kap]])
+        pe_p = stats.chi2_contingency(tbl, correction=False)[1] if tbl.min() >= 0 else 1.0
+        era_p[f"era_{era}"] = float(pe_p)
+        trend.append({
+            "era": era, "n_matches": int(len(pe) / 2),
+            "mean_conc_break_B": round(float(b.mean()), 4),
+            "mean_conc_break_A": round(float(a.mean()), 4),
+            "gap": round(float(gap), 4),
+            "gap_ci": [round(float(gap - 1.96 * se), 4), round(float(gap + 1.96 * se), 4)],
+            "p_value": round(float(pe_p), 4),
+        })
+    res["era_trend"] = trend
+
+    # Benjamini-Hochberg FDR across the FULL confirmatory family, including the
+    # per-era subgroup tests (so a lone "significant" era can't be cherry-picked).
     fam = {
         "unpaired_chi2": res["unpaired"]["p_value"],
         "paired_mcnemar": res["paired_mcnemar"]["p_value"],
         "adjusted_gdp": res["adjusted_poisson"]["gdp_p_value"],
+        **era_p,
     }
     names = list(fam)
     pvals = np.array([fam[n] for n in names])
@@ -215,24 +250,89 @@ def analyze(panel):
         bh[idx] = val
         prev = val
     res["fdr_bh"] = {names[i]: round(float(bh[i]), 4) for i in range(m)}
+    res["fdr_bh_min_q"] = round(float(bh.min()), 4)
 
-    # Per-era trend of the break-window B-A gap
-    trend = []
-    for era in ["A", "B", "C"]:
-        pe = panel[panel.era == era]
-        b = pe[pe.group == "B"].conc_break
-        a = pe[pe.group == "A"].conc_break
-        gap = b.mean() - a.mean()
-        # 95% CI via normal approx on difference of means
-        se = np.sqrt(b.var(ddof=1) / len(b) + a.var(ddof=1) / len(a))
-        trend.append({
-            "era": era, "n_matches": int(len(pe) / 2),
-            "mean_conc_break_B": round(float(b.mean()), 4),
-            "mean_conc_break_A": round(float(a.mean()), 4),
-            "gap": round(float(gap), 4),
-            "gap_ci": [round(float(gap - 1.96 * se), 4), round(float(gap + 1.96 * se), 4)],
-        })
-    res["era_trend"] = trend
+    # ── Power / equivalence: is the null underpowered or genuinely negligible? ──
+    pA = res["unpaired"]["break_concede_rate_A"]
+    n_grp = res["unpaired"]["n_A"]
+    # Minimum detectable rate ratio at 80% power (two-sided, alpha .05).
+    h = NormalIndPower().solve_power(effect_size=None, nobs1=n_grp, alpha=0.05,
+                                     power=0.80, ratio=1.0, alternative="two-sided")
+    pB_det = math.sin(math.asin(math.sqrt(pA)) + h / 2) ** 2
+    mde_rr = pB_det / pA
+    # TOST equivalence on the adjusted GDP log-IRR against ratio margins.
+    log_irr = math.log(res["adjusted_poisson"]["gdp_irr"])
+    lo, hi = [math.log(x) for x in res["adjusted_poisson"]["gdp_irr_ci"]]
+    se_irr = (hi - lo) / (2 * 1.96)
+    def tost_reject(margin):  # can we reject an effect larger than `margin`?
+        z_up = (math.log(margin) - log_irr) / se_irr
+        z_lo = (log_irr - math.log(1 / margin)) / se_irr
+        p_up = 1 - stats.norm.cdf(z_up)   # H0: IRR >= margin
+        p_lo = 1 - stats.norm.cdf(z_lo)   # H0: IRR <= 1/margin
+        return bool(max(p_up, p_lo) < 0.05), round(float(p_up), 4)
+    eq15, p15 = tost_reject(1.5)
+    eq20, p20 = tost_reject(2.0)
+    res["power_equivalence"] = {
+        "min_detectable_rate_ratio_80pct": round(float(mde_rr), 3),
+        "observed_rate_ratio": res["unpaired"]["rate_ratio"],
+        "underpowered_for_observed": bool(mde_rr > res["unpaired"]["rate_ratio"]),
+        "equivalence_margin_1_5_rejected": eq15, "tost_p_upper_1_5": p15,
+        "equivalence_margin_2_0_rejected": eq20, "tost_p_upper_2_0": p20,
+        "reading": ("Study can only reliably detect a rate ratio above "
+                    f"~{mde_rr:.2f}; the observed {res['unpaired']['rate_ratio']} sits "
+                    "below that floor. We can statistically rule out a doubling (IRR 2.0) "
+                    "of the concession rate but NOT a 50% increase (IRR 1.5) — so this is "
+                    "'no evidence of a break-window GDP effect', not 'proof of none'."),
+    }
+
+    # ── Heat: cooling breaks are heat-triggered, so the GDP effect should
+    #    concentrate in hot matches. This is EXPLORATORY (subgroup, uncorrected).
+    # (i) GDP x heat interaction in the full model.
+    inter = smf.glm("conc_break ~ is_B * wbgt_c + rank_gap_c + leading_65 + C(era)",
+                    data=panel, family=sm.families.Poisson()).fit(
+        cov_type="cluster", cov_kwds={"groups": panel["match_id"]})
+    ix = "is_B:wbgt_c"
+    # (ii) hottest tercile: raw gap, and GDP adjusted for ranking (does it survive?).
+    thr = panel["wbgt"].quantile(2 / 3)
+    hot = panel[panel["wbgt"] >= thr].copy()
+    hb, ha = hot[hot.group == "B"].conc_break, hot[hot.group == "A"].conc_break
+    kbh, kah = int((hb > 0).sum()), int((ha > 0).sum())
+    p_hot = float(stats.chi2_contingency(np.array([[kbh, len(hb) - kbh], [kah, len(ha) - kah]]),
+                                         correction=False)[1])
+    hot["rank_gap_c"] = (hot["rank_gap"] - hot["rank_gap"].mean()) / hot["rank_gap"].std()
+    hm = smf.glm("conc_break ~ is_B + rank_gap_c + leading_65", data=hot,
+                 family=sm.families.Poisson()).fit(cov_type="cluster",
+                                                   cov_kwds={"groups": hot["match_id"]})
+    # (iii) is the hot-match gap break-specific? DiD within hot matches.
+    mmh = hot.pivot_table(index="match_id", columns="group",
+                          values=["conc_break", "conc_settle"], aggfunc="max").dropna()
+    dh = ((mmh[("conc_break", "B")] - mmh[("conc_settle", "B")])
+          - (mmh[("conc_break", "A")] - mmh[("conc_settle", "A")])).to_numpy()
+    booth = dh[rng.integers(0, len(dh), size=(5000, len(dh)))].mean(axis=1)
+    dh_lo, dh_hi = np.percentile(booth, [2.5, 97.5])
+    res["heat_subgroup"] = {
+        "wbgt_threshold": round(float(thr), 1),
+        "n_matches": int(len(hot) / 2),
+        "raw_rate_ratio": round(float(((hb > 0).mean()) / max((ha > 0).mean(), 1e-9)), 3),
+        "raw_p_value": round(p_hot, 4),
+        "interaction_irr_per_degree": round(float(np.exp(inter.params[ix])), 3),
+        "interaction_p": round(float(inter.pvalues[ix]), 4),
+        "hot_gdp_irr_rank_adjusted": round(float(np.exp(hm.params["is_B"])), 3),
+        "hot_gdp_irr_ci": [round(float(x), 3) for x in np.exp(hm.conf_int().loc["is_B"])],
+        "hot_gdp_p_rank_adjusted": round(float(hm.pvalues["is_B"]), 4),
+        "hot_did": round(float(dh.mean()), 4),
+        "hot_did_ci": [round(float(dh_lo), 4), round(float(dh_hi), 4)],
+        "hot_did_break_specific": bool(dh_lo > 0),
+        "reading": ("Contrary to the pooled null, the GDP effect GROWS with heat "
+                    "(interaction p<0.05) and, in the hottest third of matches, a lower-GDP "
+                    "team concedes ~2x more in the window even after adjusting for FIFA "
+                    "ranking (p<0.05) — a GDP-specific signal, not mere team strength. BUT "
+                    "the within-hot difference-in-differences spans zero, so it is not shown "
+                    "to be break-SPECIFIC: this reads as general heat vulnerability of lower-GDP "
+                    "sides, not a cooling-break collapse. Exploratory: one uncorrected subgroup, "
+                    "and the ~27C threshold is milder than the ~32C WBGT that triggers real "
+                    "cooling breaks. Warrants a pre-registered confirmatory test."),
+    }
     return res
 
 
@@ -266,19 +366,16 @@ def shock_index_2026(artifact_path):
     for m in matches:
         h, a = m["homeTeam"], m["awayTeam"]
         sh, sa = m["finalScore"]["home"], m["finalScore"]["away"]
-        # expected goals: blend team attack with opponent defense
+        # model-expected goals: blend team attack with opponent defense
         lam_h = max(0.15, (attack(h) + defense(a)) / 2)
         lam_a = max(0.15, (attack(a) + defense(h)) / 2)
-        p_score = stats.poisson.pmf(sh, lam_h) * stats.poisson.pmf(sa, lam_a)
+        joint = _dc_joint(lam_h, lam_a)          # Dixon-Coles-corrected score grid
+        p_score = float(joint[min(sh, 10), min(sa, 10)])
         surprisal = float(-np.log(max(p_score, 1e-9)))
-        # win-probability of the actual winner pre-match (Poisson-Poisson)
-        pw_h, pw_a, pw_d = _match_probs(lam_h, lam_a)
-        if sh > sa:
-            winner_prob = pw_h
-        elif sa > sh:
-            winner_prob = pw_a
-        else:
-            winner_prob = pw_d
+        home = float(np.tril(joint, -1).sum())
+        away = float(np.triu(joint, 1).sum())
+        draw = float(np.trace(joint))
+        winner_prob = home if sh > sa else (away if sa > sh else draw)
         enriched.append({
             "matchId": m["matchId"],
             "expectedGoals": {"home": round(lam_h, 2), "away": round(lam_a, 2)},
@@ -290,17 +387,27 @@ def shock_index_2026(artifact_path):
     shocks = np.array([e["shockIndex"] for e in enriched])
     for e in enriched:
         e["shockPercentile"] = int(round(100 * (shocks < e["shockIndex"]).mean()))
-    return {"league_goals_per_team": round(league_avg, 3), "matches": enriched}
+    return {"league_goals_per_team": round(league_avg, 3),
+            "dixon_coles_rho": DC_RHO, "shrinkage_pseudomatches": K, "matches": enriched}
 
 
-def _match_probs(lam_h, lam_a, max_goals=10):
+# Independent Poisson slightly misprices low, correlated scorelines; the
+# Dixon-Coles tau correction nudges the 0-0/1-0/0-1/1-1 cells (rho fixed at a
+# conventional mild value — we do not have enough matches to fit it cleanly).
+DC_RHO = -0.10
+
+
+def _dc_joint(lam_h, lam_a, max_goals=10):
     ph = stats.poisson.pmf(np.arange(max_goals + 1), lam_h)
     pa = stats.poisson.pmf(np.arange(max_goals + 1), lam_a)
     joint = np.outer(ph, pa)
-    home = np.tril(joint, -1).sum()
-    away = np.triu(joint, 1).sum()
-    draw = np.trace(joint)
-    return float(home), float(away), float(draw)
+    r = DC_RHO
+    joint[0, 0] *= 1 - lam_h * lam_a * r
+    joint[0, 1] *= 1 + lam_h * r
+    joint[1, 0] *= 1 + lam_a * r
+    joint[1, 1] *= 1 - r
+    joint /= joint.sum()  # renormalise after the correction
+    return joint
 
 
 def main():
