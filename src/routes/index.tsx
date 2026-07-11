@@ -110,12 +110,23 @@ function Index() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-24 md:px-6 text-center">
-        <Link
-          to="/historical"
-          className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-all hover:shadow-[0_0_30px_var(--primary)]"
-        >
-          Explore the full analysis <ArrowRight className="h-4 w-4" />
-        </Link>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <Link
+            to="/review"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-all hover:shadow-[0_0_30px_var(--primary)]"
+          >
+            Read the statistical review <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link
+            to="/historical"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold hover:border-primary/40 transition-all"
+          >
+            Explore the data
+          </Link>
+        </div>
+        <p className="mt-4 text-xs text-muted-foreground">
+          The review is the full forensic write-up: effect sizes, the heat finding, the acclimatisation test, and a plain-English glossary.
+        </p>
       </section>
     </PageTransition>
   );

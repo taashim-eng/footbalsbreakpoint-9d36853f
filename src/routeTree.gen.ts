@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ReviewRouteImport } from './routes/review'
 import { Route as MonitorRouteImport } from './routes/monitor'
 import { Route as MethodologyRouteImport } from './routes/methodology'
 import { Route as HistoricalRouteImport } from './routes/historical'
@@ -16,6 +17,11 @@ import { Route as ExplorerRouteImport } from './routes/explorer'
 import { Route as BettingRouteImport } from './routes/betting'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ReviewRoute = ReviewRouteImport.update({
+  id: '/review',
+  path: '/review',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MonitorRoute = MonitorRouteImport.update({
   id: '/monitor',
   path: '/monitor',
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/historical': typeof HistoricalRoute
   '/methodology': typeof MethodologyRoute
   '/monitor': typeof MonitorRoute
+  '/review': typeof ReviewRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/historical': typeof HistoricalRoute
   '/methodology': typeof MethodologyRoute
   '/monitor': typeof MonitorRoute
+  '/review': typeof ReviewRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,14 +79,27 @@ export interface FileRoutesById {
   '/historical': typeof HistoricalRoute
   '/methodology': typeof MethodologyRoute
   '/monitor': typeof MonitorRoute
+  '/review': typeof ReviewRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/betting' | '/explorer' | '/historical' | '/methodology' | '/monitor'
+    | '/'
+    | '/betting'
+    | '/explorer'
+    | '/historical'
+    | '/methodology'
+    | '/monitor'
+    | '/review'
   fileRoutesByTo: FileRoutesByTo
   to:
-    '/' | '/betting' | '/explorer' | '/historical' | '/methodology' | '/monitor'
+    | '/'
+    | '/betting'
+    | '/explorer'
+    | '/historical'
+    | '/methodology'
+    | '/monitor'
+    | '/review'
   id:
     | '__root__'
     | '/'
@@ -87,6 +108,7 @@ export interface FileRouteTypes {
     | '/historical'
     | '/methodology'
     | '/monitor'
+    | '/review'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -96,10 +118,18 @@ export interface RootRouteChildren {
   HistoricalRoute: typeof HistoricalRoute
   MethodologyRoute: typeof MethodologyRoute
   MonitorRoute: typeof MonitorRoute
+  ReviewRoute: typeof ReviewRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/review': {
+      id: '/review'
+      path: '/review'
+      fullPath: '/review'
+      preLoaderRoute: typeof ReviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/monitor': {
       id: '/monitor'
       path: '/monitor'
@@ -152,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   HistoricalRoute: HistoricalRoute,
   MethodologyRoute: MethodologyRoute,
   MonitorRoute: MonitorRoute,
+  ReviewRoute: ReviewRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
