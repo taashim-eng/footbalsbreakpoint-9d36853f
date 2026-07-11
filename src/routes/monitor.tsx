@@ -16,7 +16,7 @@ export const Route = createFileRoute("/monitor")({
   head: () => ({
     meta: [
       { title: "2026 Monitor — The Break Point" },
-      { name: "description", content: "Live results tracker for the 2026 FIFA World Cup — every completed match, sourced from observed final scores." },
+      { name: "description", content: "Live results tracker for the 2026 FIFA World Cup: every completed match, from observed final scores." },
       { property: "og:title", content: "2026 Monitor — The Break Point" },
       { property: "og:description", content: "Real 2026 FIFA World Cup results as they are played." },
     ],
@@ -89,9 +89,9 @@ function Page() {
     <PageTransition>
       <div className="mx-auto max-w-7xl px-4 py-10 md:px-6">
         <div className="text-xs uppercase tracking-[0.3em] text-primary">2026 Monitor</div>
-        <h1 className="mt-2 font-display text-3xl md:text-4xl font-bold">{counts.total} matches played — 2026 FIFA World Cup</h1>
+        <h1 className="mt-2 font-display text-3xl md:text-4xl font-bold">{counts.total} matches played at the 2026 FIFA World Cup</h1>
         <p className="mt-2 text-muted-foreground">
-          Observed final results only, through the Round of 16. Group stage and knockout matches sourced from live fixtures — no projected or simulated fixtures.
+          Observed final results only, through the Round of 16. Group stage and knockout matches come from live fixtures, with nothing projected or simulated.
         </p>
 
         <div className="mt-6 grid gap-3 sm:grid-cols-4">

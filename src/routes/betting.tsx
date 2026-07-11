@@ -51,7 +51,7 @@ function Page() {
         <div className="mt-4 flex items-start gap-3 rounded-xl border border-amber-500/40 bg-amber-500/10 p-4 text-sm">
           <AlertTriangle className="h-4 w-4 text-amber-400 mt-0.5" />
           <p className="text-amber-100">
-            Residuals are computed from real match events. Odds movement is <span className="font-semibold">modeled</span> from those residuals — {data.oddsMoveSource} — not observed exchange data. No licensed in-play betting feed is used.
+            Residuals are computed from real match events. Odds movement is {data.oddsMoveSource}. No licensed in-play betting feed is used, so we chart the residual signal and label the odds figure for what it is.
           </p>
         </div>
 
@@ -115,7 +115,7 @@ function Page() {
             <p className="text-sm text-muted-foreground">
               Minute-by-minute traded-volume analysis requires a licensed betting-exchange feed (e.g. Betfair),
               which is not part of this open dataset. Rather than display a synthesised volume curve, this panel
-              is intentionally left empty — only observed data is charted.
+              is intentionally left empty. We chart only observed data.
             </p>
           </div>
         </GlassCard>

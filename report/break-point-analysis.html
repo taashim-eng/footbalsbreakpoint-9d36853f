@@ -200,21 +200,21 @@
 
   <div class="hero">
     <p class="eyebrow">Statistical review v2 · adversarially re-examined · 2002–2026</p>
-    <h1>The obvious story is wrong. The <em>real</em> one is about heat and inequality — not a fix.</h1>
-    <p class="lede">The dashboard's founding claim — lower-GDP nations collapse during the 65′–80′ hydration break — is, pooled across all matches, a confounded and <strong>underpowered</strong> non-finding. But a five-persona adversarial review pulled a genuine thread loose: in the <strong>hottest matches</strong>, poorer teams concede far more even after adjusting for how good they are. That points to a resource and physiology story, not manipulation — and it sits in a blind spot our goal-based data can't see clearly.</p>
+    <h1>The obvious story is wrong. The <em>real</em> one is about heat and inequality, not a fix.</h1>
+    <p class="lede">The dashboard was built on one claim: lower-GDP nations collapse during the 65′–80′ hydration break. Pooled across every match, that claim is a confounded, underpowered non-finding. Then a five-persona adversarial review pulled a thread loose. In the <strong>hottest matches</strong>, poorer teams concede far more even after you adjust for how good they are. That reads as a resource and physiology story, not manipulation, and it hides in a blind spot our goal-based data can't see into.</p>
     <div class="verdict-strip">
       <span class="k">Bottom line</span>
-      <span class="v">No evidence of a break-specific fix. A real <strong>heat × economics</strong> signal survives as an exploratory lead — read it as unequal preparation for the heat, not a conspiracy. The documented integrity risk lives elsewhere entirely.</span>
+      <span class="v">No sign of a break-specific fix. A <strong>heat × economics</strong> signal does survive, as an exploratory lead. Read it as unequal preparation for the heat, not a conspiracy. The integrity risk that is actually documented lives somewhere else.</span>
     </div>
   </div>
 
   <section class="reveal">
     <p class="kicker">01 · The claim</p>
     <h2>Poorer nations seem to leak goals in the break</h2>
-    <p>We restricted to <strong>308 genuine cross-group matches</strong> — exactly one higher-GDP ("Group A") team against one lower-GDP ("Group B") team — and counted, from real minute-by-minute event data, who conceded during the 65′–80′ window. The raw contrast is the kind of number that launches an investigation:</p>
+    <p>We kept only the <strong>308 genuine cross-group matches</strong>: exactly one higher-GDP ("Group A") team against one lower-GDP ("Group B") team. Then we counted, from real minute-by-minute event data, who conceded during the 65′–80′ window. The raw contrast is the kind of number that launches an investigation.</p>
     <div class="figure-lead">
       <span class="big">+29%</span>
-      <span class="cap">Lower-GDP teams conceded in the break window in <b>21.4%</b> of matches, versus <b>16.6%</b> for higher-GDP teams — a rate ratio of <b>1.29</b>. Suggestive. But "suggestive" is where the work begins, not ends.</span>
+      <span class="cap">Lower-GDP teams conceded in the break window in <b>21.4%</b> of matches, against <b>16.6%</b> for higher-GDP teams. That is a rate ratio of <b>1.29</b>. Suggestive. But "suggestive" is where the work starts, not where it ends.</span>
     </div>
     <p>A responsible analyst treats that first number as a <em>hypothesis</em>, then asks it to survive progressively harder tests. Each rung below removes one innocent explanation for the gap.</p>
   </section>
@@ -244,7 +244,7 @@
       <div class="rung">
         <span class="lvl">L3</span>
         <div>
-          <h3>Is it <em>break-specific</em>? — difference-in-differences</h3>
+          <h3>Is it <em>break-specific</em>? Difference-in-differences</h3>
           <p>Subtract each team's own pre-break baseline (equal-width 50′–65′). If the break is special, Group B should decay <em>extra</em> there.</p>
           <span class="num">DiD = −0.09 goals · 95% CI [−0.20, +0.01] · spans 0</span>
         </div>
@@ -253,38 +253,38 @@
       <div class="rung">
         <span class="lvl">L4</span>
         <div>
-          <h3>Adjust for team strength &amp; heat — Poisson regression</h3>
+          <h3>Adjust for team strength &amp; heat: Poisson regression</h3>
           <p>Hold FIFA-ranking gap, heat (WBGT), lead state and era constant, then read the GDP effect alone.</p>
           <span class="num">GDP IRR = 1.32 · 95% CI [0.92, 1.89] · p = 0.135</span>
         </div>
         <span class="chip warn">Not established</span>
       </div>
     </div>
-    <p>Pooled across every match, the signal <strong>erodes</strong>: weakly present when nothing is controlled, and not statistically distinguishable from zero once you compare like-with-like. The first version of this report stopped here and called it "debunked." That was too quick — as the next two sections show.</p>
+    <p>Pooled across every match, the signal <strong>erodes</strong>. It's weakly present when nothing is controlled, then not distinguishable from zero once you compare like with like. The first version of this report stopped here and called it "debunked." The next two sections show why that was too quick.</p>
   </section>
 
   <section class="reveal">
     <p class="kicker">03 · The pooled picture in one chart</p>
-    <h2>The GDP estimates hug the line — but heat splits the room</h2>
+    <h2>The GDP estimates hug the line. Then heat splits the room</h2>
     <figure>
       <p class="ftitle">Effect sizes with 95% confidence intervals (ratio scale, log axis)</p>
       <div class="chart" id="forest"></div>
-      <figcaption>Right of <span class="mono">1.0</span> = "more break-window concessions." Pooled, the three GDP estimates <strong>straddle 1.0</strong> (grey — no clear effect); <strong>FIFA ranking</strong> clears it (green — team strength is a real, all-game driver). But restrict to the <strong>hottest third of matches</strong> and the strength-adjusted GDP effect jumps clear of the line (amber — the exploratory lead of §05).</figcaption>
+      <figcaption>Right of <span class="mono">1.0</span> means "more break-window concessions." Pooled, the three GDP estimates <strong>straddle 1.0</strong> (grey: no clear effect). <strong>FIFA ranking</strong> clears it (green: team strength is a real, all-game driver). Restrict to the <strong>hottest third of matches</strong> and the strength-adjusted GDP effect jumps clear of the line (amber: the exploratory lead of §05).</figcaption>
     </figure>
     <div class="eli5">
       <span class="tag">ELI5 · confidence interval</span>
-      <p>A confidence interval is the honest version of a single number: the range the true value plausibly sits in, given how much data we have. If it <b>includes 1.0</b> (for a ratio), we can't rule out "nothing is happening." Like guessing a height as "5′2″ to 6′4″" — honest, but too wide to call. The pooled GDP bars are exactly that; the amber hot-match bar is the one that finally stands apart from the fence.</p>
+      <p>A confidence interval is the honest version of a single number: the range the true value plausibly sits in, given how much data we have. If it <b>includes 1.0</b> (for a ratio), we can't rule out "nothing is happening." Think of guessing a height as "5′2″ to 6′4″". Honest, but too wide to call. The pooled GDP bars are exactly that. The amber hot-match bar is the one that finally stands apart from the fence.</p>
     </div>
   </section>
 
   <section class="reveal">
     <p class="kicker">04 · The honest limit of a null</p>
     <h2>"Not significant" is not the same as "nothing there"</h2>
-    <p>Before celebrating a null, ask what it could even have detected. With 308 matches and a ~17% base rate, this study can only reliably catch a rate ratio above <span class="stat">1.55</span> — and the observed effect is <span class="stat">1.29</span>, <em>below that floor</em>. A formal equivalence test (TOST) confirms the asymmetry: we can statistically rule out a <strong>doubling</strong> of the concession rate <span class="mono">(IRR 2.0, p = 0.011)</span>, but we <strong>cannot</strong> rule out a 50% increase <span class="mono">(IRR 1.5, p = 0.24)</span>.</p>
-    <p>So the pooled result is precisely: <strong>no evidence of a break-window GDP effect — not proof there is none.</strong> The original report's "explained away" over-reached. This is an underpowered null with room for a moderate real effect.</p>
+    <p>Before celebrating a null, ask what it could even have detected. With 308 matches and a ~17% base rate, this study can only reliably catch a rate ratio above <span class="stat">1.55</span>. The observed effect is <span class="stat">1.29</span>, <em>below that floor</em>. A formal equivalence test (TOST) confirms the asymmetry. We can statistically rule out a <strong>doubling</strong> of the concession rate <span class="mono">(IRR 2.0, p = 0.011)</span>, but we <strong>cannot</strong> rule out a 50% increase <span class="mono">(IRR 1.5, p = 0.24)</span>.</p>
+    <p>So the pooled result is precise: <strong>no evidence of a break-window GDP effect, not proof there is none.</strong> The original report's "explained away" over-reached. This is an underpowered null with room for a moderate real effect.</p>
     <div class="eli5">
       <span class="tag">ELI5 · statistical power &amp; equivalence</span>
-      <p>Absence of evidence isn't evidence of absence. If you search a dark room with a dim torch and find nothing, you haven't proven the room is empty — your torch was just too weak to see a small object. "Power" is how bright your torch is; a small sample is a dim one. An <b>equivalence test</b> is the honest flashlight check: it can only declare "nothing meaningful here" if the beam was actually strong enough to have seen it. Ours could see an elephant (a doubling) but not a large dog (a 50% rise).</p>
+      <p>Absence of evidence isn't evidence of absence. Search a dark room with a dim torch and find nothing, and you haven't proven the room is empty. Your torch was just too weak to catch a small object. "Power" is how bright your torch is, and a small sample is a dim one. An <b>equivalence test</b> is the honest flashlight check: it can only declare "nothing meaningful here" if the beam was strong enough to have seen it. Ours could spot an elephant (a doubling) but not a large dog (a 50% rise).</p>
     </div>
   </section>
 
@@ -293,59 +293,59 @@
     <h2>Where the review changed the answer</h2>
     <p>The sports scientist on the panel made the sharpest point: cooling breaks are <em>heat-triggered</em>. If they matter, the effect should live in <strong>hot</strong> matches, not the average one. Testing that flipped the story:</p>
     <ul>
-      <li>The GDP effect <strong>grows with temperature</strong> — a significant heat × GDP interaction <span class="mono">(IRR 1.13 per °C, p = 0.024)</span>.</li>
-      <li>In the <strong>hottest third of matches</strong>, a lower-GDP team concedes in the break window at <span class="stat">2.1×</span> the higher-GDP rate — and, crucially, this <strong>survives adjustment for FIFA ranking</strong> <span class="mono">(IRR 2.21, 95% CI [1.18, 4.15], p = 0.014)</span>. It is <em>not</em> merely team strength this time.</li>
-      <li>But within those hot matches the difference-in-differences <span class="mono">(+0.03, CI [−0.17, +0.21])</span> spans zero — so it is <strong>not shown to be break-specific</strong>. It reads as general heat vulnerability, not a cooling-break collapse.</li>
+      <li>The GDP effect <strong>grows with temperature</strong>: a significant heat × GDP interaction <span class="mono">(IRR 1.13 per °C, p = 0.024)</span>.</li>
+      <li>In the <strong>hottest third of matches</strong>, a lower-GDP team concedes in the break window at <span class="stat">2.1×</span> the higher-GDP rate. Crucially, this <strong>survives adjustment for FIFA ranking</strong> <span class="mono">(IRR 2.21, 95% CI [1.18, 4.15], p = 0.014)</span>. It is <em>not</em> merely team strength this time.</li>
+      <li>But within those hot matches the difference-in-differences <span class="mono">(+0.03, CI [−0.17, +0.21])</span> spans zero, so it is <strong>not shown to be break-specific</strong>. It reads as general heat vulnerability, not a cooling-break collapse.</li>
     </ul>
-    <p>Read plainly: in the heat, poorer-nation sides concede more even accounting for how good they are — but we can't pin it to the break itself, and our "hot" cut (WBGT ≈ 27°C) is milder than the ~32°C that actually triggers a cooling break. This is a real, pre-registerable <strong>lead</strong>, not a confirmed finding. It is one uncorrected subgroup, reported as exploratory.</p>
+    <p>Read plainly: in the heat, poorer-nation sides concede more even after accounting for how good they are. We just can't pin it to the break itself, and our "hot" cut (WBGT ≈ 27°C) is milder than the ~32°C that actually triggers a cooling break. Treat it as a real, pre-registerable <strong>lead</strong>, not a confirmed finding. It is one uncorrected subgroup, reported as exploratory.</p>
     <div class="eli5">
       <span class="tag">ELI5 · interaction &amp; the forking-paths trap</span>
-      <p>An <b>interaction</b> is "it depends." Sunscreen's benefit depends on sun; here, GDP's effect depends on heat. That's a real, testable idea. The danger: if you slice data enough ways, one slice will look exciting by luck — the "garden of forking paths." That's why we label this <b>exploratory</b> and say it needs a fresh, pre-committed test before anyone believes it. Confirmatory conclusions and interesting leads are different currencies; we don't spend one as the other. And it invites an obvious objection — answered next.</p>
+      <p>An <b>interaction</b> is "it depends." Sunscreen's benefit depends on sun; here, GDP's effect depends on heat. That's a real, testable idea. The danger is that if you slice data enough ways, one slice will look exciting by luck. Statisticians call it the "garden of forking paths." That's why we label this <b>exploratory</b> and say it needs a fresh, pre-committed test before anyone believes it. Confirmatory conclusions and interesting leads are different currencies, and we don't spend one as the other. It also invites an obvious objection, which the next section takes head on.</p>
     </div>
   </section>
 
   <section class="reveal">
     <p class="kicker">06 · The acclimatisation objection</p>
-    <h2>"But poorer nations are hot-climate nations — shouldn't heat <em>help</em> them?"</h2>
-    <p>A fair challenge: distance runners from the Kenyan highlands carry an altitude edge everywhere they race. If poorer footballing nations come from hotter homes, heat should be their <em>advantage</em>, not their undoing — which would turn §05 on its head. So we tested it directly, adding each nation's home climate (absolute latitude of its capital — lower means more tropical) to the models.</p>
+    <h2>"But poorer nations are hot-climate nations, shouldn't heat <em>help</em> them?"</h2>
+    <p>A fair challenge. Distance runners from the Kenyan highlands carry an altitude edge everywhere they race. If poorer footballing nations come from hotter homes, heat should be their <em>advantage</em>, not their undoing, which would turn §05 on its head. So we tested it directly, adding each nation's home climate (absolute latitude of its capital, where lower means more tropical) to the models.</p>
     <div class="tablecard">
       <div class="tscroll"><table><thead>
         <tr><th class="l">Question</th><th class="l">Test</th><th>Result</th><th class="l">Verdict</th></tr>
       </thead><tbody>
-        <tr><td class="l">Are poorer teams from hotter homes?</td><td class="l">Home |latitude| by group</td><td class="mono">28° vs 41°, p = 0.002</td><td class="l"><span style="color:var(--clean)">Yes — premise holds</span></td></tr>
+        <tr><td class="l">Are poorer teams from hotter homes?</td><td class="l">Home |latitude| by group</td><td class="mono">28° vs 41°, p = 0.002</td><td class="l"><span style="color:var(--clean)">Yes, premise holds</span></td></tr>
         <tr><td class="l">Does a hot home protect you in heat?</td><td class="l">Home-climate × heat interaction</td><td class="mono">IRR 0.98, p = 0.43</td><td class="l"><span style="color:var(--muted)">No effect</span></td></tr>
         <tr><td class="l">…in the hottest matches specifically?</td><td class="l">Home climate in hot subgroup</td><td class="mono">IRR 0.99, p = 0.96</td><td class="l"><span style="color:var(--muted)">No effect</span></td></tr>
         <tr><td class="l">Can we even separate GDP from climate?</td><td class="l">Their correlation</td><td class="mono">r = −0.59</td><td class="l"><span style="color:var(--caution)">Entangled</span></td></tr>
         <tr><td class="l">Does the heat lead survive home climate?</td><td class="l">Hot-match GDP effect, ± climate</td><td class="mono">2.21 → 2.19, p 0.014 → 0.056</td><td class="l"><span style="color:var(--caution)">Now borderline</span></td></tr>
       </tbody></table></div>
     </div>
-    <p>So the premise is right — poorer sides here <em>are</em> from significantly hotter climates — but the predicted payoff never materialises: home climate has <strong>no protective effect in the heat</strong>, and hot-climate teams do not concede less. The acclimatisation edge that helps Kenyan runners simply doesn't show up for these footballers.</p>
-    <p>Why the analogy breaks: elite footballers aren't continuously acclimatised to their <em>national</em> climate — they play club seasons across the globe (a Senegalese star spends winters in Europe), so "home latitude" is a weak stand-in for a squad's real heat readiness, unlike a runner who trains at altitude every day. World-Cup venues are neutral and rarely reach the ~32°C that makes acclimatisation decisive; our "hot" cut is only ~27°C. And any edge is plausibly swamped by the very resource gaps §05 points to. Crucially, because GDP and home climate are <strong>collinear (r = −0.59)</strong>, they compete for the same variance: the hot-match GDP effect barely moves when climate is added <span class="mono">(2.21 → 2.19)</span> yet slips just past significance <span class="mono">(p = 0.056)</span>. Home climate doesn't <em>explain it away</em> — but it does mean we can't cleanly credit "poverty" versus "climate." The honest label for the §05 lead tightens from "exploratory" to <strong>exploratory and under-identified</strong>.</p>
+    <p>The premise is right: poorer sides here <em>are</em> from significantly hotter climates. The predicted payoff never materialises, though. Home climate has <strong>no protective effect in the heat</strong>, and hot-climate teams do not concede less. The acclimatisation edge that helps Kenyan runners simply doesn't show up for these footballers.</p>
+    <p>Why does the analogy break? Elite footballers aren't continuously acclimatised to their <em>national</em> climate. They play club seasons across the globe (a Senegalese star spends winters in Europe), so "home latitude" is a weak stand-in for a squad's real heat readiness, unlike a runner who trains at altitude every day. World-Cup venues are neutral and rarely reach the ~32°C that makes acclimatisation decisive, and our "hot" cut is only ~27°C. Any edge is plausibly swamped by the very resource gaps §05 points to. And because GDP and home climate are <strong>collinear (r = −0.59)</strong>, they compete for the same variance: the hot-match GDP effect barely moves when climate is added <span class="mono">(2.21 → 2.19)</span> yet slips just past significance <span class="mono">(p = 0.056)</span>. Home climate doesn't <em>explain it away</em>. It does mean we can't cleanly credit "poverty" versus "climate." So the honest label for the §05 lead tightens from "exploratory" to <strong>exploratory and under-identified</strong>.</p>
     <div class="eli5">
       <span class="tag">ELI5 · acclimatisation &amp; collinearity</span>
-      <p><b>Acclimatisation</b> is your body adapting to conditions it lives in — mountain air, or relentless heat. The intuition that hot-country teams should shrug off hot games is reasonable; it just isn't visible here, because footballers live and play all over the world, not at home.</p>
-      <p><b>Collinearity</b> is two clues that always travel together, so you can't tell which one is talking. "Poorer" and "from a hotter country" are nearly the same teams (they move together with correlation −0.59). Ask a model to split their credit for the heat effect and it throws up its hands — not because there's nothing there, but because the two are too tangled to separate with this much data.</p>
+      <p><b>Acclimatisation</b> is your body adapting to the conditions it lives in, like mountain air or relentless heat. The intuition that hot-country teams should shrug off hot games is reasonable. It just isn't visible here, because footballers live and play all over the world, not at home.</p>
+      <p><b>Collinearity</b> is two clues that always travel together, so you can't tell which one is talking. "Poorer" and "from a hotter country" are nearly the same teams (they move together with correlation −0.59). Ask a model to split their credit for the heat effect and it throws up its hands. Not because there's nothing there, but because the two are too tangled to separate with this much data.</p>
     </div>
   </section>
 
   <section class="reveal">
     <p class="kicker">07 · What "GDP" is really measuring</p>
     <h2>A crude label with a humane explanation</h2>
-    <p>The sociologist's warning matters: splitting nations at the median GDP is a blunt instrument. It conflates <em>economic development</em> with <em>footballing strength</em> — Brazil and Argentina are football-rich without being GDP-rich; strong African sides land in "Group B." That is why <strong>FIFA ranking</strong>, a football-specific measure, behaves so much more cleanly in every model, and why the pooled "GDP effect" is mostly ranking wearing a disguise.</p>
-    <p>But the hot-match signal that <em>survives</em> ranking asks for a different reading. The plausible, benign mechanism is <strong>resource inequality</strong>: heat acclimatisation camps, sports-science and recovery budgets, squad depth and substitution quality all track national wealth, and all blunt late-game defensive fatigue in extreme heat. That is a story about <em>preparation gaps</em>, not fixed matches — and it is exactly the kind of structural inequality a responsible analysis should name rather than dress up as an "anomaly."</p>
+    <p>The sociologist's warning matters. Splitting nations at the median GDP is a blunt instrument. It conflates <em>economic development</em> with <em>footballing strength</em>: Brazil and Argentina are football-rich without being GDP-rich, and strong African sides land in "Group B." That is why <strong>FIFA ranking</strong>, a football-specific measure, behaves so much more cleanly in every model, and why the pooled "GDP effect" is mostly ranking wearing a disguise.</p>
+    <p>But the hot-match signal that <em>survives</em> ranking asks for a different reading. The plausible, benign mechanism is <strong>resource inequality</strong>. Heat acclimatisation camps, sports-science and recovery budgets, squad depth and substitution quality all track national wealth, and all blunt late-game defensive fatigue in extreme heat. That is a story about <em>preparation gaps</em>, not fixed matches. It is exactly the kind of structural inequality a responsible analysis should name rather than dress up as an "anomaly."</p>
     <div class="eli5">
       <span class="tag">ELI5 · construct validity</span>
-      <p>A ruler should measure the thing you care about. If you want "how good at football," national GDP is a bent ruler — rich ≠ good at this sport. FIFA ranking is the straighter one. When a bent-ruler result (GDP) survives only after you've also held the straight ruler (ranking) fixed, whatever's left is telling you about something GDP captures that ranking doesn't — here, most likely money spent preparing bodies for heat.</p>
+      <p>A ruler should measure the thing you care about. If you want "how good at football," national GDP is a bent ruler, because rich doesn't mean good at this sport. FIFA ranking is the straighter one. When a bent-ruler result (GDP) survives only after you've also held the straight ruler (ranking) fixed, whatever's left is telling you about something GDP captures that ranking doesn't. Most likely, money spent preparing bodies for heat.</p>
     </div>
   </section>
 
   <section class="reveal">
     <p class="kicker">08 · Keeping ourselves honest</p>
     <h2>Many tests, one strict bar</h2>
-    <p>Run enough tests and one will look "significant" by luck. Across the pre-specified confirmatory family — the unpaired, paired and adjusted GDP tests, <em>plus</em> the three per-era subgroup tests the review insisted we include — a Benjamini-Hochberg correction leaves the smallest q-value at <span class="stat">0.245</span>. Nothing in the confirmatory set survives. The lone era subgroup that looked significant on its own <span class="mono">(Era C, p = 0.046)</span> does not clear the corrected bar. The heat lead of §05 is deliberately kept <em>outside</em> this family, as exploratory.</p>
+    <p>Run enough tests and one will look "significant" by luck. Take the pre-specified confirmatory family: the unpaired, paired and adjusted GDP tests, <em>plus</em> the three per-era subgroup tests the review insisted we include. A Benjamini-Hochberg correction leaves the smallest q-value at <span class="stat">0.245</span>. Nothing in the confirmatory set survives. The lone era subgroup that looked significant on its own <span class="mono">(Era C, p = 0.046)</span> does not clear the corrected bar. The heat lead of §05 is deliberately kept <em>outside</em> this family, as exploratory.</p>
     <div class="eli5">
       <span class="tag">ELI5 · multiple comparisons</span>
-      <p>Flip twenty coins and one will probably show a streak — luck, because you gave it twenty tries. Testing many hypotheses is the same. The correction is a stricter bar that scales with how many peeks you took, so a fluke among many doesn't get crowned a discovery.</p>
+      <p>Flip twenty coins and one will probably show a streak. That's luck, because you gave it twenty tries. Testing many hypotheses is the same. The correction is a stricter bar that scales with how many peeks you took, so a fluke among many doesn't get crowned a discovery.</p>
     </div>
   </section>
 
@@ -355,7 +355,7 @@
     <figure>
       <p class="ftitle">Break-window concession gap (Group&nbsp;B − Group&nbsp;A), by era, with 95% CI</p>
       <div class="chart" id="eraChart"></div>
-      <figcaption>Two of three intervals span zero; the continental-cup cohort's does not, but it fails multiplicity control (§07). A possible signal in one heterogeneous cohort — not a phenomenon that marches across eras.</figcaption>
+      <figcaption>Two of three intervals span zero. The continental-cup cohort's does not, but it fails multiplicity control (§07). A possible signal in one heterogeneous cohort, not a phenomenon that marches across eras.</figcaption>
     </figure>
   </section>
 
@@ -367,7 +367,7 @@
       <div class="rung">
         <span class="lvl">$</span>
         <div>
-          <h3>The motive is enormous — and real</h3>
+          <h3>The motive is enormous, and real</h3>
           <p>FIFA booked <span class="mono">$7.57 bn</span> for the 2019–22 cycle (45% from broadcast rights) and projects <span class="mono">$11–13 bn</span> for 2026. Global World-Cup wagering runs from tens of billions (regulated) to a UNODC-estimated <span class="mono">$1.7 tn</span> illegal market. Big-market and host teams advancing lifts all of it.</p>
         </div>
         <span class="chip warn">Motive ≠ evidence</span>
@@ -376,7 +376,7 @@
         <span class="lvl">§</span>
         <div>
           <h3>Proven FIFA corruption is administrative</h3>
-          <p>The 2015 US DOJ case (~$150 m in bribes) was about <em>media &amp; marketing rights</em>, bids and elections — not rigging match results. Blatter and Platini were later acquitted of criminal fraud. The money is stolen in boardrooms, not on the pitch.</p>
+          <p>The 2015 US DOJ case (~$150 m in bribes) was about <em>media &amp; marketing rights</em>, bids and elections, not rigging match results. Blatter and Platini were later acquitted of criminal fraud. The money is stolen in boardrooms, not on the pitch.</p>
         </div>
         <span class="chip null">Off-pitch</span>
       </div>
@@ -384,7 +384,7 @@
         <span class="lvl">⚑</span>
         <div>
           <h3>Proven match-fixing sits in the lower tiers</h3>
-          <p>Documented cases target qualifiers, friendlies and officials — Nepal's 2011 qualifiers; life bans for referees (Chaibou) and coaches (Siasia). Not the World-Cup-finals matches in our 2002–2022 sample.</p>
+          <p>Documented cases target qualifiers, friendlies and officials: Nepal's 2011 qualifiers, life bans for referees (Chaibou) and coaches (Siasia). Not the World-Cup-finals matches in our 2002–2022 sample.</p>
         </div>
         <span class="chip null">Out of sample</span>
       </div>
@@ -392,23 +392,23 @@
         <span class="lvl">◉</span>
         <div>
           <h3>Modern risk is invisible to us</h3>
-          <p>2026's integrity flags are <strong>spot-fixing</strong> (cards, corners, throw-ins — e.g. the Wahi referral) and <strong>refereeing</strong> disputes (Egypt's complaint over Argentina's Round of 16). A final-score / goals analysis like ours <em>cannot see</em> either. Allegations are unproven and unadjudicable from scorelines.</p>
+          <p>2026's integrity flags are <strong>spot-fixing</strong> (cards, corners, throw-ins, such as the Wahi referral) and <strong>refereeing</strong> disputes (Egypt's complaint over Argentina's Round of 16). A final-score / goals analysis like ours <em>cannot see</em> either. Allegations are unproven and unadjudicable from scorelines.</p>
         </div>
         <span class="chip warn">Blind spot</span>
       </div>
     </div>
-    <p>So the strongest incentives and the actually-documented failures both concentrate in places our numbers don't reach: administrative money, prop markets, and officiating. That is a reason for humility about scope — not an inference of guilt. Sources are catalogued in <span class="mono">backend/analysis/EXTERNAL_FACTS.md</span>.</p>
+    <p>So the strongest incentives and the actually-documented failures both concentrate in places our numbers don't reach: administrative money, prop markets, and officiating. That is a reason for humility about scope, not an inference of guilt. Sources are catalogued in <span class="mono">backend/analysis/EXTERNAL_FACTS.md</span>.</p>
   </section>
 
   <div class="callout-final reveal">
     <span class="tag">Verdict</span>
-    <p>An anomaly is a <strong>deviation from expectation</strong>, not evidence of wrongdoing. Pooled, the break-window GDP pattern is confounded by team strength and too underpowered to call either way. Conditioned on heat, a <strong>disadvantage for poorer nations appears</strong> — but it is entangled with those nations' hot home climates and so <strong>under-identified</strong>: we can say hot-climate teams get no protective edge (the acclimatisation objection fails), yet we cannot cleanly credit poverty versus climate for what remains. The most defensible reading is unequal readiness for heat, not a fix, and not clearly tied to the break itself. And the corruption that <em>is</em> documented lives in boardrooms, prop bets and officiating — surfaces a scoreline model cannot inspect. The correct report is the careful one: name the plausible inequality, keep the promising lead labelled as a lead, and refuse to let a striking chart imply a story the data won't support.</p>
+    <p>An anomaly is a <strong>deviation from expectation</strong>, not evidence of wrongdoing. Pooled, the break-window GDP pattern is confounded by team strength and too underpowered to call either way. Conditioned on heat, a <strong>disadvantage for poorer nations appears</strong>, but it is entangled with those nations' hot home climates and so <strong>under-identified</strong>. We can say hot-climate teams get no protective edge (the acclimatisation objection fails), yet we cannot cleanly credit poverty versus climate for what remains. The most defensible reading is unequal readiness for heat, not a fix, and not clearly tied to the break itself. Meanwhile the corruption that <em>is</em> documented lives in boardrooms, prop bets and officiating, surfaces a scoreline model cannot inspect. The correct report is the careful one: name the plausible inequality, keep the promising lead labelled as a lead, and refuse to let a striking chart imply a story the data won't support.</p>
   </div>
 
   <section class="reveal">
     <p class="kicker">11 · The live tournament</p>
-    <h2>2026 has no event data — so we measure surprise instead</h2>
-    <p>The 2026 World Cup is in progress and we hold only <strong>observed final scores</strong> for the 96 completed matches — no minute-level events, no market data. Rather than fabricate a trajectory, we attach one honest, self-contained metric to every game: a <strong>shock index</strong>. A Poisson model (with a Dixon-Coles low-score correction) learns each team's scoring and conceding <em>rate</em> so far — shrunk toward the tournament average of <span class="mono">2.92</span> goals/match — predicts the fixture, and measures how <em>surprised</em> it is by the real result. "Model xG" here is that rate-based expectation, <em>not</em> shot-based expected goals.</p>
+    <h2>2026 has no event data, so we measure surprise instead</h2>
+    <p>The 2026 World Cup is in progress, and we hold only <strong>observed final scores</strong> for the 96 completed matches. No minute-level events, no market data. Rather than fabricate a trajectory, we attach one honest, self-contained metric to every game: a <strong>shock index</strong>. A Poisson model (with a Dixon-Coles low-score correction) learns each team's scoring and conceding <em>rate</em> so far, shrunk toward the tournament average of <span class="mono">2.92</span> goals/match, then predicts the fixture and measures how <em>surprised</em> it is by the real result. "Model xG" here is that rate-based expectation, <em>not</em> shot-based expected goals.</p>
     <div class="tablecard">
       <div class="cap">Most surprising scorelines · 2026</div>
       <div class="tscroll"><table id="shockTable"><thead>
@@ -417,8 +417,8 @@
     </div>
     <div class="eli5">
       <span class="tag">ELI5 · shock index (surprisal)</span>
-      <p>Imagine betting on the exact score with a well-informed friend. If the game ends as expected, you shrug. If it ends <b>7–1</b>, you gasp. The shock index is a number for that gasp — the "surprise" (negative log-probability) the model assigns to the real score. Blowouts and out-of-nowhere results score high; routine 1–0s score low.</p>
-      <p><b>Shock ≠ upset.</b> Paraguay knocking out Germany was the headline — but on the pitch it finished <b>1–1</b>, an unremarkable scoreline; the drama was the penalty shootout, which a goals model can't see. For "David beat Goliath," read the <em>upset</em> table.</p>
+      <p>Imagine betting on the exact score with a well-informed friend. If the game ends as expected, you shrug. If it ends <b>7–1</b>, you gasp. The shock index is a number for that gasp: the "surprise" (negative log-probability) the model assigns to the real score. Blowouts and out-of-nowhere results score high, routine 1–0s score low.</p>
+      <p><b>Shock ≠ upset.</b> Paraguay knocking out Germany was the headline, but on the pitch it finished <b>1–1</b>, an unremarkable scoreline. The drama was the penalty shootout, which a goals model can't see. For "David beat Goliath," read the <em>upset</em> table.</p>
     </div>
     <div class="tablecard">
       <div class="cap">Biggest upsets · lowest pre-match win probability for the side that won</div>
@@ -443,19 +443,19 @@
         <tr><td class="l">Mathematician</td><td class="l">Subgroups sold as confirmatory; thin FDR family</td><td class="l">Confirmatory/exploratory split; era tests in FDR (§07)</td></tr>
       </tbody></table></div>
     </div>
-    <p>A sixth challenge — "poorer nations are hot-climate nations, so heat should help them" (§06) — was tested and further tightened the heat lead to <em>under-identified</em>. Full log with severities: <span class="mono">backend/analysis/ADVERSARIAL_REVIEW.md</span>.</p>
+    <p>A sixth challenge, "poorer nations are hot-climate nations, so heat should help them" (§06), was tested and further tightened the heat lead to <em>under-identified</em>. Full log with severities: <span class="mono">backend/analysis/ADVERSARIAL_REVIEW.md</span>.</p>
   </section>
 
   <section class="reveal">
     <p class="kicker">13 · Methods &amp; limitations</p>
-    <h2>What this analysis is — and isn't</h2>
+    <h2>What this analysis is, and what it isn't</h2>
     <ul>
       <li><strong>Real data only.</strong> Historical figures come from observed goal events (jfjelstul World Cup database, 2002–2022, plus continental cups 2003–2019). 2026 is a one-time scrape of completed matches. No values are simulated.</li>
-      <li><strong>Break occurrence is unobserved.</strong> The 65′–80′ window is a fixed proxy; real cooling breaks are heat-triggered (~32°C WBGT) and taken ~30′ and ~75′. We cannot verify which historical matches actually had a break — a core limitation behind the "not break-specific" caveat.</li>
+      <li><strong>Break occurrence is unobserved.</strong> The 65′–80′ window is a fixed proxy; real cooling breaks are heat-triggered (~32°C WBGT) and taken ~30′ and ~75′. We cannot verify which historical matches actually had a break, a core limitation behind the "not break-specific" caveat.</li>
       <li><strong>Home climate is a coarse proxy.</strong> Acclimatisation is approximated by absolute capital latitude, which ignores altitude, humidity and coastal effects, and cannot capture where a squad's players actually live and train year-round. It is a first-order test of the objection, not the last word.</li>
       <li><strong>Blind to spot-fixing &amp; officiating.</strong> Our unit is goals/scorelines; the documented modern risks (props, referees) leave no scoreline signature. "No anomaly" speaks only to result manipulation via goals.</li>
       <li><strong>Betting signals excluded.</strong> The project's earlier odds/volume series were synthetic (no licensed feed) and are not used; any remaining modeled odds in the dashboard are labelled as such.</li>
-      <li><strong>Observational, not causal;</strong> even the ranking and heat effects are associations with residual-confounding risk. External corruption/revenue/gambling figures are context only — never joined to matches.</li>
+      <li><strong>Observational, not causal.</strong> Even the ranking and heat effects are associations with residual-confounding risk. External corruption/revenue/gambling figures are context only, never joined to matches.</li>
       <li><strong>Deterministic &amp; reproducible.</strong> Fixed seed (42); cluster-robust SEs by match; 5,000-sample match-level bootstrap; Dixon-Coles ρ = −0.10 fixed (not fitted at this n).</li>
     </ul>
   </section>
@@ -467,16 +467,16 @@
       <details><summary>p-value <span class="term">"could this be luck?"</span></summary><div class="body">The probability of seeing a gap <b>this big or bigger</b> if nothing were really going on. Small (&lt;0.05) means "hard to explain by chance."</div></details>
       <details><summary>Statistical power <span class="term">"how bright is the torch?"</span></summary><div class="body">The chance your study could detect a real effect of a given size. Low power (small samples) means a "null" might just be a dim torch missing a real thing. Ours could detect a doubling, but not a 50% rise.</div></details>
       <details><summary>Equivalence test (TOST) <span class="term">"is it truly negligible?"</span></summary><div class="body">Flips the usual question: instead of "is there an effect?", it asks "can we rule out an effect bigger than X?". Only then may you claim "nothing meaningful here."</div></details>
-      <details><summary>Effect size / Cramér's V <span class="term">"how big, not just is-it-there"</span></summary><div class="body">Significance asks <b>whether</b>; effect size asks <b>how much</b>. Cramér's V runs 0–1. Ours is 0.06 — trivially small.</div></details>
+      <details><summary>Effect size / Cramér's V <span class="term">"how big, not just is-it-there"</span></summary><div class="body">Significance asks <b>whether</b>; effect size asks <b>how much</b>. Cramér's V runs 0–1. Ours is 0.06, trivially small.</div></details>
       <details><summary>Rate ratio / IRR <span class="term">"how many times more often"</span></summary><div class="body">1.0 = identical. Ranking IRR 1.30 = a standard-deviation-weaker team concedes ~30% more. The hot-match GDP IRR of 2.21 clears 1.0; the pooled 1.32 does not.</div></details>
       <details><summary>Confidence interval <span class="term">"the honest range"</span></summary><div class="body">The band of plausible true values. Crossing the no-effect line (1.0 for ratios, 0 for differences) = consistent with nothing.</div></details>
-      <details><summary>Interaction <span class="term">"it depends"</span></summary><div class="body">When one factor's effect changes with another. Here GDP's effect on concessions grows with heat — a significant interaction and the crux of the surviving lead.</div></details>
+      <details><summary>Interaction <span class="term">"it depends"</span></summary><div class="body">When one factor's effect changes with another. Here GDP's effect on concessions grows with heat, a significant interaction and the crux of the surviving lead.</div></details>
       <details><summary>Difference-in-differences <span class="term">"is the break special?"</span></summary><div class="body">Each team's change from its own pre-break baseline, then compared. Isolates a break-<i>specific</i> effect from simply being weaker. Ours spans zero.</div></details>
-      <details><summary>Confounding &amp; construct validity <span class="term">"the hidden cause; the bent ruler"</span></summary><div class="body">Confounding: a third variable (team strength) fakes a link. Construct validity: whether GDP even measures "football strength" — it doesn't, cleanly; ranking does.</div></details>
+      <details><summary>Confounding &amp; construct validity <span class="term">"the hidden cause; the bent ruler"</span></summary><div class="body">Confounding: a third variable (team strength) fakes a link. Construct validity: whether GDP even measures "football strength." It doesn't, cleanly; ranking does.</div></details>
       <details><summary>FDR correction <span class="term">"don't reward luck"</span></summary><div class="body">A stricter bar for running many tests (Benjamini-Hochberg), so a chance hit among many isn't crowned a discovery.</div></details>
       <details><summary>Dixon-Coles / Poisson shock index <span class="term">"the size of the gasp"</span></summary><div class="body">Poisson models goal counts; Dixon-Coles corrects its known mispricing of low, correlated scores (0–0, 1–1). Surprisal = −log P(actual score): rare results score high. A surprising <i>scoreline</i>, not necessarily an <i>upset</i>.</div></details>
-      <details><summary>Acclimatisation &amp; collinearity <span class="term">"adapted to conditions; clues that travel together"</span></summary><div class="body">Acclimatisation: bodies adapting to their usual environment (heat, altitude). Collinearity: two variables so correlated (here poverty &amp; hot home, r = −0.59) that a model can't tell which is driving an effect — the reason the heat lead is "under-identified."</div></details>
-      <details><summary>Spot-fixing <span class="term">"rigging the small stuff"</span></summary><div class="body">Manipulating in-game events (a card, a corner, a throw-in) for prop bets, without changing who wins. Invisible to a final-score analysis — and where current World-Cup integrity flags actually sit.</div></details>
+      <details><summary>Acclimatisation &amp; collinearity <span class="term">"adapted to conditions; clues that travel together"</span></summary><div class="body">Acclimatisation: bodies adapting to their usual environment (heat, altitude). Collinearity: two variables so correlated (here poverty &amp; hot home, r = −0.59) that a model can't tell which is driving an effect. That's why the heat lead is "under-identified."</div></details>
+      <details><summary>Spot-fixing <span class="term">"rigging the small stuff"</span></summary><div class="body">Manipulating in-game events (a card, a corner, a throw-in) for prop bets, without changing who wins. Invisible to a final-score analysis, and where current World-Cup integrity flags actually sit.</div></details>
     </div>
   </section>
 

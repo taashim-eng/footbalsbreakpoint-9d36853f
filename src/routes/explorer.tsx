@@ -15,7 +15,7 @@ export const Route = createFileRoute("/explorer")({
   head: () => ({
     meta: [
       { title: "Match Explorer — The Break Point" },
-      { name: "description", content: "Explore every completed 2026 FIFA World Cup match — real scores, venues, and stages." },
+      { name: "description", content: "Explore every completed 2026 FIFA World Cup match: real scores, venues, and stages." },
       { property: "og:title", content: "Match Explorer — The Break Point" },
       { property: "og:description", content: "2026 FIFA World Cup match-by-match results explorer." },
     ],
@@ -59,7 +59,7 @@ function Page() {
     <PageTransition>
       <div className="mx-auto max-w-7xl px-4 py-10 md:px-6">
         <div className="text-xs uppercase tracking-[0.3em] text-primary">Match Explorer</div>
-        <h1 className="mt-2 font-display text-3xl md:text-4xl font-bold">2026 FIFA World Cup — match detail</h1>
+        <h1 className="mt-2 font-display text-3xl md:text-4xl font-bold">2026 FIFA World Cup match detail</h1>
 
         <div className="mt-4">
           <select
@@ -108,7 +108,7 @@ function Page() {
                 <Meta label="Total goals" value={totalGoals.toString()} />
               </div>
               <p className="mt-5 text-[11px] text-muted-foreground border-t border-border pt-3">
-                Source: {record.source}. Only observed final results are shown — no per-minute trajectory, odds, or radar data is synthesised for 2026 matches.
+                Source: {record.source}. Only observed final results are shown. No per-minute trajectory, odds, or radar data is synthesised for 2026 matches.
               </p>
             </GlassCard>
 
@@ -130,7 +130,7 @@ function Page() {
                 <div className="mt-4 rounded-lg border border-primary/20 bg-primary/5 p-3 text-xs text-muted-foreground">
                   <span className="font-semibold text-primary">ELI5:</span> A Poisson model guesses each team's goals
                   from how they've scored so far this tournament. The <span className="font-semibold">shock index</span> is
-                  how <em>surprised</em> the model is by the real scoreline — big blowouts and out-of-nowhere results score
+                  how <em>surprised</em> the model is by the real scoreline. Big blowouts and out-of-nowhere results score
                   high, routine 1–0s score low. It measures a surprising <em>scoreline</em>, not necessarily an upset:
                   a tight draw that a favourite lost on penalties won't rank high, because 1–1 itself isn't surprising.
                 </div>
